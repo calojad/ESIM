@@ -4,7 +4,7 @@
             <div class="user-panel" align="center">
                 <div class="image2">
                     {{--<img src="http://infyom.com/images/logo/blue_logo_150x150.jpg" class="img-circle"alt="User Image"/>--}}
-                    <img src="{{asset('images/Logo/LogoUCACUE.jpg')}}" alt="Logo Ucace" height="180">
+                    <img src="{{asset('images/Logo/LogoUCACUE.jpg')}}" alt="Logo Ucace" height="120">
                 </div>
                 {{--<div class="pull-left info">
                     @if (Auth::guest())

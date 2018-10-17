@@ -99,7 +99,9 @@ ul.sidebar-menu .fas,ul.sidebar-menu .fab,ul.sidebar-menu .far{
 }
 /****** Imagen del sidebar *****/
 .user-panel>.image2>img{
-    width:100%;max-width:150px;height:auto
+    width:100%;
+    max-width:120px;
+    height:auto
 }
 /****** Fuente de 14 pt, para iconos en el sidebar *****/
 .font-14pt {

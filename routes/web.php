@@ -35,4 +35,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('unidads', 'UnidadController');
 	//***Carreras
 	Route::resource('carreras', 'CarreraController');
+    //***Usuarios
+    Route::resource('users', 'UserController');
 });
