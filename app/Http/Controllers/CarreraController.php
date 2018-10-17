@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Prettus\Repository\Criteria\RequestCriteria;
 use App\Http\Requests\CreateCarreraRequest;
 use App\Http\Requests\UpdateCarreraRequest;
-use App\Repositories\CarreraRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Repositories\CarreraRepository;
 use Illuminate\Http\Request;
 use Flash;
-use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
 class CarreraController extends AppBaseController

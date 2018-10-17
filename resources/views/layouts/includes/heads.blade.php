@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
-<title>{{config('app.name','Laravel')}} | {{ Request::path()=='/'?'Home':Request::path() }}</title>
+<title>{{config('app.name','Laravel')}} | {{  explode('/', strtoupper(Route::current()->uri()))[0]}}</title>
 <link rel="icon" href="{{asset('images/Logo/índice.png')}}">
 <!-- Bootstrap 3.3.7 -->
 {!! Html::style('/boostrap-3.3.7/css/bootstrap.min.css') !!}

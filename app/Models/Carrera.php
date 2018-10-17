@@ -22,8 +22,11 @@ class Carrera extends Model
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
-
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     public $fillable = [
         'nombre',
         'estado'

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use App\User;
+use Flash;
 
 class UserController extends Controller
 {
@@ -26,7 +28,8 @@ class UserController extends Controller
     public function create()
     {
         $user = null;
-        return view('users.create',compact('user'));
+        $a = 'C';
+        return view('users.create',compact('user','a'));
     }
 
     /**
@@ -37,7 +40,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+             'email' => 'required|string|email|max:255|unique:users',
+             'username' => 'required|string|max:60|unique:users',
+             'password' => 'required|string|min:6|confirmed',
+        ]);
+        $pass = bcrypt(Input::get('password'));
+        $input = $request->all();
+        $input['password'] = $pass;
+        $user = User::create($input);
+        Flash::success('Usuario saved successfully.');
+
+        return redirect(route('users.index'));
     }
 
     /**
@@ -59,7 +73,15 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+
+        if (empty($user)) {
+            Flash::error('Usuario not found');
+
+            return redirect(route('users.index'));
+        }
+        $a = 'E';
+        return view('users.edit',compact('user','a'));
     }
 
     /**
@@ -71,7 +93,30 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Input::all();
+        $user = User::find($id);
+        request()->validate([
+            'email' => 'required|string|email|max:255|unique:users,email,'.$id,
+            'username' => 'required|string|max:60|unique:users,username,'.$id,
+        ]);
+        if(Input::get('password') != null){
+            request()->validate([
+                'email' => 'required|string|email|max:255|unique:users,email,'.$id,
+                'username' => 'required|string|max:60|unique:users,username,'.$id,
+                'password' => 'required|string|min:6|confirmed',
+            ]);
+            $data['password'] = bcrypt(Input::get('password'));
+        }else{
+            $data['password'] = $user->password;
+        }
+        if (empty($user)) {
+            Flash::error('Usuario not found');
+            return redirect(route('users.index'));
+        }
+        $user->update($data);
+        Flash::success('Usuario updated successfully.');
+
+        return redirect(route('users.index'));
     }
 
     /**
@@ -82,6 +127,15 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        if (empty($user)) {
+            Flash::error('Usuario not found');
+
+            return redirect(route('users.index'));
+        }
+        $user->delete();
+        Flash::success('Usuario deleted successfully.');
+
+        return redirect(route('users.index'));
     }
 }

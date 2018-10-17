@@ -5,6 +5,7 @@
         @yield('css')
     </head>
     <body class="hold-transition skin-red fixed sidebar-mini">
+        <div id="preloader" class='preloader'><div class='loaded'>&nbsp;</div></div>
         <div class="wrapper">
             <!-- Main Header -->
             @include('layouts.includes.main_header')
@@ -41,6 +42,15 @@
         </div>
         <!-- REQUIRED JS SCRIPTS -->
         @include('layouts.includes.scripts')
+        <script>
+            $(window).on('load',function() {
+                $(".preloader").fadeOut("slow");
+            });
+            $('.btnLoader').on('click',function () {
+                $(".preloader").fadeIn("slow");
+            });
+            $('div.alert').not('.alert-important').delay(3000).fadeOut(1000);
+        </script>
         @yield('scripts')
     </body>
 </html>
