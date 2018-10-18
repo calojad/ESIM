@@ -2,11 +2,11 @@
 @section('content-header')
     <h1>
         {{config('app.name','EVAL')}}
-        <small>Unidades</small>
+        <small>Unidades Carreras</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
-        <li>Unidades</li>
+        <li>Unidades Carreras</li>
     </ol>
 @endsection
 @section('content')

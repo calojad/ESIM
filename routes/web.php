@@ -37,4 +37,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('carreras', 'CarreraController');
     //***Usuarios
     Route::resource('users', 'UserController');
+    //***Unidades Carreras
+    Route::resource('unidadcarrera', 'UnidadCarreraController');
 });

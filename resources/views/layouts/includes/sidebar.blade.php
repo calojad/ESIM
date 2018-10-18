@@ -28,7 +28,6 @@
         </form>--}}
         <!-- Sidebar Menu -->
             <ul class="sidebar-menu" data-widget="tree">
-                <li class="header" style="font-size: 12pt">Ménu</li>
                 @include('layouts.includes.menu')
             </ul>
             <!-- /.sidebar-menu -->

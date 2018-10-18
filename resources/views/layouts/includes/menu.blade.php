@@ -1,5 +1,6 @@
+<li class="header" style="font-size: 12pt">Mantenimientos</li>
 <li class="treeview {{ Request::is('ubicacions*','tipoUnidads*','tipoPeriodos*','tipoEvaluacions*') ? 'active' : '' }}">
-    <a href="#"><i class="fa fa-desktop  font-14pt"></i> <span>1.- Mantenimientos</span>
+    <a href="#"><i class="fa fa-desktop  font-14pt"></i> <span>Sistema</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
     <ul class="treeview-menu">
@@ -18,7 +19,7 @@
     </ul>
 </li>
 <li class="treeview {{ Request::is('periodos*','unidads*','carreras*','users*') ? 'active' : '' }}">
-    <a href="#"><i class="fa fa-book-reader font-14pt"></i> <span>2.- I.E.S.</span>
+    <a href="#"><i class="fa fa-book-reader font-14pt"></i> <span>I.E.S.</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
     <ul class="treeview-menu">
@@ -37,7 +38,7 @@
     </ul>
 </li>
 <li class="treeview {{ Request::is('calculos*') ? 'active' : '' }}">
-    <a href="#"><i class="fa fa-calculator font-14pt"></i> <span>3.- Cálculo</span>
+    <a href="#"><i class="fa fa-calculator font-14pt"></i> <span>Cálculo</span>
         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -48,7 +49,7 @@
     </ul>
 </li>
 <li class="treeview {{ Request::is('matriz*') ? 'active' : '' }}">
-    <a href="#"><i class="fa fa-table font-14pt"></i> <span>4.- Matriz</span>
+    <a href="#"><i class="fa fa-table font-14pt"></i> <span>Matriz</span>
         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -60,7 +61,7 @@
     </ul>
 </li>
 <li class="treeview {{ Request::is('ponderacions*') ? 'active' : '' }}">
-    <a href="#"><i class="fa fa-balance-scale font-14pt"></i> <span>5.- Ponderación</span>
+    <a href="#"><i class="fa fa-balance-scale font-14pt"></i> <span>Ponderación</span>
         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -69,4 +70,11 @@
         <li><a href="#"><i class="far fa-circle"></i>Pesos Criterios</a></li>
         <li><a href="#"><i class="far fa-circle"></i>Pesos Indicadores</a></li>
     </ul>
+</li>
+<li class="header" style="font-size: 12pt">Agregaciones</li>
+<li class="{{ Request::is('asignacions*') ? 'active' : '' }}">
+    <a href="#" title="Asignar Carreras a Usuarios"><i class="fa fa-glasses font-14pt"></i>Asignaciones</a>
+</li>
+<li class="{{ Request::is('asignacions*') ? 'active' : '' }}">
+    <a href="#"><i class="fa fa-graduation-cap font-14pt"></i>Unidades</a>
 </li>
