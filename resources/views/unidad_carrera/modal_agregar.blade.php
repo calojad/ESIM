@@ -20,7 +20,7 @@
                                 <td>{{ $carrera->nombre }}</td>
                                 <td>
                                     <div class="icheck" align="center">
-                                        {!! Form::checkbox('carreras',$carrera->id,null,['class' => 'chkAgregarC inputIcheck']) !!}
+                                        {!! Form::checkbox('carreras',$carrera,null,['class' => 'chkAgregarC inputIcheck']) !!}
                                     </div>
                                 </td>
                             </tr>
@@ -61,7 +61,8 @@
     $('#btnAgregarSeleccion').on('click',function(event) {
         var carreras = $('input[name=carreras]:checked');
         carreras.each(function(index, el) {
-            alert(el.value);
+            var carrera = JSON.parse(el.value);
+            alert(carrera.nombre);
         });
     });
 </script>
