@@ -11,17 +11,17 @@
     </ol>
 @endsection
 @section('content')
-  <div class="content">
-      @include('adminlte-templates::common.errors')
-      <div class="box box-primary box-solid">
+    <div class="content">
+        @include('adminlte-templates::common.errors')
+        <div class="box box-primary box-solid">
             <div class="box-header"><h3 class="box-title">Periodo</h3></div>
             <div class="box-body">
                 <div class="row">
-                   {!! Form::model($periodo, ['route' => ['periodos.update', $periodo->id], 'method' => 'patch']) !!}
-                        @include('periodos.fields')
-                   {!! Form::close() !!}
+                    {!! Form::model($periodo, ['route' => ['periodos.update', $periodo->id], 'method' => 'patch']) !!}
+                    @include('periodos.fields')
+                    {!! Form::close() !!}
                 </div>
             </div>
-      </div>
-  </div>
+        </div>
+    </div>
 @endsection

@@ -18,7 +18,7 @@
             <div class="box-body">
                 <div class="row">
                     {!! Form::open(['route' => 'ubicacions.store']) !!}
-                        @include('ubicacions.fields')
+                    @include('ubicacions.fields')
                     {!! Form::close() !!}
                 </div>
             </div>
