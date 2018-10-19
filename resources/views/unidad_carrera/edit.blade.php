@@ -16,6 +16,7 @@
         <div class="box box-primary box-solid">
             <div class="box-header"><h3 class="box-title">Unidad</h3></div>
             <div class="box-body">
+                <input id="unidadId" type="hidden" value="{{ $unidad->id }}">
                 <div class="col-md-12">
                     <div class="col-md-4">
                         <dl class="col-md-12">
@@ -45,7 +46,7 @@
             </div>
             <div class="box-body">
                 <div class="col-md-12">
-                    <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable">
+                    <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="tblUnidadCarreras">
                         <thead>
                         <tr>
                             <th>Carrera</th>
@@ -55,8 +56,8 @@
                         <tbody>
                         @foreach ($u_carreras as $uc)
                         <tr>
-                            <td>{{ $uc->nombre }}</td>
-                            {!! Form::open(['route' => ['unidadcarrera.destroy', $$uc->id], 'method' => 'delete']) !!}
+                            <td>{{ $uc->carrera->nombre }}</td>
+                            {!! Form::open(['route' => ['unidadcarrera.destroy', $uc->id], 'method' => 'delete']) !!}
                             <td>{!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')",'title'=>'Quitar Carrera']) !!}</td>
                             {!! Form::close() !!}
                         </tr>

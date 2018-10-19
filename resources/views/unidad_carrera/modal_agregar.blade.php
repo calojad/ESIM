@@ -5,6 +5,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Agregar Carrera</h4>
             </div>
+            {!! Form::model($unidad, ['route' => ['unidadcarrera.update', $unidad->id], 'method' => 'patch']) !!}
             <div class="modal-body">
                 <div class="col-md-12">
                     <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable">
@@ -20,7 +21,7 @@
                                 <td>{{ $carrera->nombre }}</td>
                                 <td>
                                     <div class="icheck" align="center">
-                                        {!! Form::checkbox('carreras',$carrera,null,['class' => 'chkAgregarC inputIcheck']) !!}
+                                        {!! Form::checkbox('carreras[]',$carrera->id,in_array($carrera->id,$uc_array)==true?true:false,['class' => 'chkAgregarC inputIcheck']) !!}
                                     </div>
                                 </td>
                             </tr>
@@ -32,12 +33,24 @@
             <div class="modal-footer icheck">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
                 <label class="text-muted">Seleccionar todo {!! Form::checkbox('todoCa',null,null,['id' => 'chkTodasC','class' => 'inputIcheck']) !!}</label>
-                <button id="btnAgregarSeleccion" type="button" class="btn btn-primary">Agregar</button>
+                <button id="btnAgregarSeleccion" type="submit" class="btn btn-primary btnLoader">Agregar</button>
             </div>
+            {!! Form::close() !!}
         </div>
     </div>
 </div>
 <script type="text/javascript" charset="utf-8" async defer>
+    // Boton para quitar de la tabla una carrera
+    $(document).on('click', '.btnQuitarCarrera', function () {
+        var t = $('#tblUnidadCarreras').DataTable();
+        var fila = $(this).parents('tr');
+        t.row(fila).remove();
+        t.draw();
+    });
+    /*
+    *******FUNCIONES*******
+     */
+    // Funcion iCheck
     $(function () {
         $('.inputIcheck').iCheck({
             checkboxClass: 'icheckbox_square-blue',
@@ -57,12 +70,7 @@
                 $('#chkTodasC').iCheck('uncheck');
         });
     });
-    // Boton Agregar Carreras a la tabla
-    $('#btnAgregarSeleccion').on('click',function(event) {
-        var carreras = $('input[name=carreras]:checked');
-        carreras.each(function(index, el) {
-            var carrera = JSON.parse(el.value);
-            alert(carrera.nombre);
-        });
+    $(document).ready(function(){
+
     });
 </script>

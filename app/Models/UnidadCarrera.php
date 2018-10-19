@@ -12,23 +12,17 @@ class UnidadCarrera extends Model
     const UPDATED_AT = 'updated_at';
 
     public $fillable = [
-        'usuario_id',
-        'carrera_id',
-        'periodo_id'
+        'unidad_id',
+        'carrera_id'
     ];
 
-    public function usuario()
+    public function unidad()
     {
-        return $this->belongsTo('App\User','usuario_id');
+        return $this->belongsTo('App\Unidad','unidad_id');
     }
 
     public function carrera()
     {
         return $this->belongsTo('App\Models\Carrera','carrera_id');
-    }
-
-    public function periodo()
-    {
-        return $this->belongsTo('App\Models\Periodo','periodo_id');
     }
 }

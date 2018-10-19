@@ -62,7 +62,8 @@ class UnidadCarreraController extends Controller
         $unidad = Unidad::find($id);
         $carreras = Carrera::all();
         $u_carreras = UnidadCarrera::where('unidad_id',$id)->get();
-        return view('unidad_carrera.edit',compact('unidad','u_carreras','carreras'));
+        $uc_array = UnidadCarrera::where('unidad_id',$id)->pluck('carrera_id')->toArray();
+        return view('unidad_carrera.edit',compact('unidad','u_carreras','carreras','uc_array'));
     }
 
     /**
@@ -74,7 +75,19 @@ class UnidadCarreraController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $carreras = $request->get('carreras');
+        $unidadcarrera = UnidadCarrera::where('unidad_id',$id)->get();
+        if(count($unidadcarrera) > 0){
+            foreach ($unidadcarrera as $carrera) {
+                $carrera->delete();
+            }
+        }
+        $data['unidad_id'] = $id;
+        foreach ($carreras as $carrera) {
+            $data['carrera_id'] = $carrera;
+            UnidadCarrera::create($data);
+        }
+        return redirect(route('unidadcarrera.edit',$id));
     }
 
     /**
