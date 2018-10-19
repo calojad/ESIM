@@ -39,12 +39,12 @@
             </div>
         </div>
         <div class="box box-primary">
-            <div class="box-header"><h3 class="box-title">Carreras</h3></div>
+            <div class="box-header">
+                <h3 class="box-title">Carreras</h3>
+                <a class="btn btn-primary pull-right" href="" data-toggle="modal" data-target="#modalAgregarCarrera">Agregar</a>
+            </div>
             <div class="box-body">
                 <div class="col-md-12">
-                    <div class="col-md-12" style="margin-top: 10px;margin-bottom: 10px">
-                        <a class="btn btn-primary pull-right" href="">Add New</a>
-                    </div>
                     <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable">
                         <thead>
                         <tr>
@@ -53,10 +53,12 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($u_carreras as $uc)}
+                        @foreach ($u_carreras as $uc)
                         <tr>
                             <td>{{ $uc->nombre }}</td>
-                            <td>{{ $uc->id }}</td>
+                            {!! Form::open(['route' => ['unidadcarrera.destroy', $$uc->id], 'method' => 'delete']) !!}
+                            <td>{!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')",'title'=>'Quitar Carrera']) !!}</td>
+                            {!! Form::close() !!}
                         </tr>
                         @endforeach
                         </tbody>
@@ -65,4 +67,5 @@
             </div>
         </div>
     </div>
+    @include('unidad_carrera.modal_agregar')
 @endsection

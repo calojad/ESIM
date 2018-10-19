@@ -16,7 +16,7 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
-                <div class="col-md-12" style="margin-top: 10px;margin-bottom: 10px">
+                <div class="col-md-12">
                     <a class="btn btn-primary pull-right" href="{!! route('unidads.create') !!}">Add New</a>
                 </div>
                 <div class="col-md-12 table-responsive">

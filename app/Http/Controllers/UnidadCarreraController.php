@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Unidad;
+use App\Models\Carrera;
 use App\Models\UnidadCarrera;
 
 class UnidadCarreraController extends Controller
@@ -59,8 +60,9 @@ class UnidadCarreraController extends Controller
     public function edit($id)
     {
         $unidad = Unidad::find($id);
+        $carreras = Carrera::all();
         $u_carreras = UnidadCarrera::where('unidad_id',$id)->get();
-        return view('unidad_carrera.edit',compact('unidad','u_carreras'));
+        return view('unidad_carrera.edit',compact('unidad','u_carreras','carreras'));
     }
 
     /**
