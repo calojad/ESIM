@@ -11,7 +11,7 @@
     </ol>
 @endsection
 @section('content')
-    <div class="container">
+    <div class="content">
         @include('adminlte-templates::common.errors')
         <div class="box box-primary box-solid">
             <div class="box-header"><h3 class="box-title">Unidad</h3></div>
@@ -58,7 +58,7 @@
                         <tr>
                             <td>{{ $uc->carrera->nombre }}</td>
                             {!! Form::open(['route' => ['unidadcarrera.destroy', $uc->id], 'method' => 'delete']) !!}
-                            <td>{!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')",'title'=>'Quitar Carrera']) !!}</td>
+                            <td>{!! Form::button('<i class="glyphicon glyphicon-erase"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')",'title'=>'Quitar Carrera']) !!}</td>
                             {!! Form::close() !!}
                         </tr>
                         @endforeach

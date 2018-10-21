@@ -61,7 +61,7 @@
         $('#chkTodasC').on('ifChanged', function(e){
             if($(this).prop('checked'))
                 $('.chkAgregarC').iCheck('check');
-            else if($('.chkAgregarC:checked').length == $('.chkAgregarC').length)
+            else if($('.chkAgregarC:checked').length === $('.chkAgregarC').length)
                 $('.chkAgregarC').iCheck('uncheck');
         });
 

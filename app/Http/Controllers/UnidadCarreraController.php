@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Unidad;
 use App\Models\Carrera;
 use App\Models\UnidadCarrera;
+use Laracasts\Flash\Flash;
 
 class UnidadCarreraController extends Controller
 {
@@ -32,7 +33,7 @@ class UnidadCarreraController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -43,7 +44,7 @@ class UnidadCarreraController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -54,30 +55,30 @@ class UnidadCarreraController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         $unidad = Unidad::find($id);
         $carreras = Carrera::all();
-        $u_carreras = UnidadCarrera::where('unidad_id',$id)->get();
-        $uc_array = UnidadCarrera::where('unidad_id',$id)->pluck('carrera_id')->toArray();
-        return view('unidad_carrera.edit',compact('unidad','u_carreras','carreras','uc_array'));
+        $u_carreras = UnidadCarrera::where('unidad_id', $id)->get();
+        $uc_array = UnidadCarrera::where('unidad_id', $id)->pluck('carrera_id')->toArray();
+        return view('unidad_carrera.edit', compact('unidad', 'u_carreras', 'carreras', 'uc_array'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         $carreras = $request->get('carreras');
-        $unidadcarrera = UnidadCarrera::where('unidad_id',$id)->get();
-        if(count($unidadcarrera) > 0){
+        $unidadcarrera = UnidadCarrera::where('unidad_id', $id)->get();
+        if (count($unidadcarrera) > 0) {
             foreach ($unidadcarrera as $carrera) {
                 $carrera->delete();
             }
@@ -87,17 +88,25 @@ class UnidadCarreraController extends Controller
             $data['carrera_id'] = $carrera;
             UnidadCarrera::create($data);
         }
-        return redirect(route('unidadcarrera.edit',$id));
+        return redirect(route('unidadcarrera.edit', $id));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        $ucarrera = UnidadCarrera::find($id);
+        if (empty($ucarrera)) {
+            Flash::error('Carrera en Unidad not found');
+            return redirect(route('unidadcarrera.index'));
+        }
+        $ucarrera->delete();
+        Flash::success('Carrera quitada de Unidada successfully.');
+
+        return redirect(route('unidadcarrera.edit',$ucarrera->unidad_id));
     }
 }

@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3f4dd-1450-4e65-a1d3-4c4798818ff9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/carreras/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/carreras/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/carreras/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/carreras/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/carreras/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/carreras/fields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/carreras/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/carreras/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/carreras/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/carreras/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/periodos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/periodos/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/periodos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/periodos/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tipo_evaluacions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tipo_evaluacions/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tipo_evaluacions/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tipo_evaluacions/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tipo_periodos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tipo_periodos/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tipo_periodos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tipo_periodos/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tipo_unidads/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tipo_unidads/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tipo_unidads/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tipo_unidads/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ubicacions/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ubicacions/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ubicacions/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ubicacions/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UnidadCarreraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UnidadCarreraController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/unidad_carrera/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/unidad_carrera/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/unidad_carrera/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/unidad_carrera/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/unidads/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/unidads/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/unidads/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/unidads/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/unidad_carrera/modal_agregar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/unidad_carrera/modal_agregar.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,29 +49,30 @@
     <session id="-1753838565">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.40" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="11" />
           <entry key="env" value="1" />
-          <entry key="php" value="53" />
+          <entry key="php" value="57" />
           <entry key="sql" value="1" />
           <entry key="users" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="50" />
+          <entry key="Blade" value="52" />
           <entry key="CSS" value="11" />
           <entry key="Database Element" value="1" />
-          <entry key="PHP" value="3" />
+          <entry key="PHP" value="5" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -97,22 +81,22 @@
         <counts>
           <entry key="css" value="89" />
           <entry key="env" value="18" />
-          <entry key="php" value="1171" />
+          <entry key="php" value="1283" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="1083" />
+          <entry key="Blade" value="1093" />
           <entry key="CSS" value="89" />
-          <entry key="PHP" value="88" />
+          <entry key="PHP" value="190" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -161,11 +145,13 @@
         <option value="$PROJECT_DIR$/resources/views/tipo_unidads/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ubicacions/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ubicacions/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/unidad_carrera/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/unidad_carrera/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/unidads/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/unidads/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/users/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/unidad_carrera/modal_agregar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UnidadCarreraController.php" />
+        <option value="$PROJECT_DIR$/resources/views/unidad_carrera/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -300,7 +286,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="SearchEverywhereHistoryKey" value="regis&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/auth/register.blade.php&#10;sty&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/public/css/style.css&#10;styl&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/public/css/style.css&#10;ad&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/public/adminLTE-2.4.5/dist/css/AdminLTE.min.css&#10;app.blade&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/app.blade.php&#10;sideba&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/sidebar.blade.php&#10;main&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/main_header.blade.php&#10;scripts&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/scripts.blade.php&#10;head.blade&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/heads.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="modal&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/unidad_carrera/modal_agregar.blade.php&#10;regis&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/auth/register.blade.php&#10;sty&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/public/css/style.css&#10;styl&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/public/css/style.css&#10;ad&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/public/adminLTE-2.4.5/dist/css/AdminLTE.min.css&#10;app.blade&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/app.blade.php&#10;sideba&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/sidebar.blade.php&#10;main&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/main_header.blade.php&#10;scripts&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/scripts.blade.php&#10;head.blade&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/heads.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -339,16 +325,17 @@
       <workItem from="1539309223541" duration="3686000" />
       <workItem from="1539741258927" duration="3592000" />
       <workItem from="1539920186059" duration="705000" />
+      <workItem from="1540009324699" duration="2292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9438000" />
+    <option name="totallyTimeSpent" value="11730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12298682" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12298682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -368,7 +355,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.1647145" />
+      <window_info anchor="right" id="Database" order="3" weight="0.1647145" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,13 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10504">
           <caret line="6" column="24916" selection-start-line="6" selection-start-column="24916" selection-end-line="6" selection-end-column="24916" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CarreraController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -620,11 +600,39 @@
     <entry file="file://$PROJECT_DIR$/resources/views/ubicacions/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/unidad_carrera/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/unidad_carrera/index.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CarreraController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="154" column="1" lean-forward="true" selection-start-line="154" selection-start-column="1" selection-end-line="154" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UnidadCarreraController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/unidad_carrera/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="60" column="85" selection-start-line="60" selection-start-column="85" selection-end-line="60" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/unidad_carrera/modal_agregar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
