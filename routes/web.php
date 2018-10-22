@@ -39,4 +39,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('users', 'UserController');
     //***Unidades Carreras
     Route::resource('unidadcarrera', 'UnidadCarreraController');
+    //***Usuarios Asignaciones
+    Route::resource('usuarioasignacion', 'UsuarioAsignacionController');
+    Route::get('usuarioasignacion/create/{user}','UsuarioAsignacionController@create')->name('usuarioasignacion.asignar');
 });

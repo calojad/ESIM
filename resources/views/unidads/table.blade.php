@@ -21,7 +21,7 @@
                     {{-- <a href="{!! route('unidads.show', [$unidad->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a> --}}
                     <a href="{!! route('unidads.edit', [$unidad->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                     {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
-                    <a class="btn btn-primary btn-xs" href="{!! route('unidadcarrera.edit', [$unidad->id]) !!}" title="Agergar Carrera"><i class="fa fa-graduation-cap"></i></a>
+                    <a class="btn btn-primary btn-xs" href="{!! route('unidadcarrera.show', [$unidad->id]) !!}" title="Agergar Carrera"><i class="fa fa-graduation-cap"></i></a>
                 </div>
                 {!! Form::close() !!}
             </td>

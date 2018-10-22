@@ -14,15 +14,21 @@
         <div class="clearfix"></div>
         @include('flash::message')
         <div class="clearfix"></div>
-        <div class="box box-primary">
-            <div class="box-body">
-                <div class="col-md-12">
-                    <a class="btn btn-primary pull-right" href="{!! route('unidads.create') !!}">Add New</a>
-                </div>
-                <div class="col-md-12 table-responsive">
-                    @include('unidads.table')
+        <div class="col-md-12">
+            @foreach ($unidades as $unidad)
+            <div class="col-md-4">
+                <div class="small-box {{ $classSede[$unidad->tipo_unidad_id] }}" style="overflow: auto;">
+                    <div class="inner">
+                        <h3>{{ $unidad->nombre }}</h3>
+                        <p>{{ $unidad->num_carreras }} Carreras</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa {{ $iconSede[$unidad->tipo_unidad_id] }}"></i>
+                    </div>
+                    <a href="{!! route('unidadcarrera.edit',$unidad->id) !!}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
+            @endforeach
         </div>
         <div class="text-center">
 

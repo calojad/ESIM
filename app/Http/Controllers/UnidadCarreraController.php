@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Unidad;
 use App\Models\Carrera;
@@ -17,7 +18,12 @@ class UnidadCarreraController extends Controller
      */
     public function index()
     {
-        //
+        $unidades = Unidad::select(DB::raw('unidad.id, unidad.nombre, (SELECT COUNT(unidad_carrera.carrera_id) FROM unidad_carrera WHERE unidad_carrera.unidad_id=unidad.id) as num_carreras, unidad.tipo_unidad_id'))
+                     ->groupBy('unidad.id','unidad.nombre','unidad.tipo_unidad_id')
+                     ->get();
+        $classSede = [1=>'bg-green',2=>'bg-aqua',3=>'bg-yellow'];
+        $iconSede = [1=>'fa-building',2=>'fa-home',3=>'fa-university'];
+        return view('unidad_carrera.index', compact('unidades','classSede','iconSede'));
     }
 
     /**
@@ -49,7 +55,12 @@ class UnidadCarreraController extends Controller
      */
     public function show($id)
     {
-        //
+        $des=2;
+        $unidad = Unidad::find($id);
+        $carreras = Carrera::all();
+        $u_carreras = UnidadCarrera::where('unidad_id', $id)->get();
+        $uc_array = UnidadCarrera::where('unidad_id', $id)->pluck('carrera_id')->toArray();
+        return view('unidad_carrera.edit', compact('unidad', 'u_carreras', 'carreras', 'uc_array','des'));
     }
 
     /**
@@ -60,11 +71,12 @@ class UnidadCarreraController extends Controller
      */
     public function edit($id)
     {
+        $des=1;
         $unidad = Unidad::find($id);
         $carreras = Carrera::all();
         $u_carreras = UnidadCarrera::where('unidad_id', $id)->get();
         $uc_array = UnidadCarrera::where('unidad_id', $id)->pluck('carrera_id')->toArray();
-        return view('unidad_carrera.edit', compact('unidad', 'u_carreras', 'carreras', 'uc_array'));
+        return view('unidad_carrera.edit', compact('unidad', 'u_carreras', 'carreras', 'uc_array','des'));
     }
 
     /**
@@ -77,17 +89,12 @@ class UnidadCarreraController extends Controller
     public function update(Request $request, $id)
     {
         $carreras = $request->get('carreras');
-        $unidadcarrera = UnidadCarrera::where('unidad_id', $id)->get();
-        if (count($unidadcarrera) > 0) {
-            foreach ($unidadcarrera as $carrera) {
-                $carrera->delete();
-            }
-        }
-        $data['unidad_id'] = $id;
         foreach ($carreras as $carrera) {
-            $data['carrera_id'] = $carrera;
-            UnidadCarrera::create($data);
+            UnidadCarrera::updateOrCreate(
+                ['unidad_id' => $id, 'carrera_id' => $carrera ]
+            );
         }
+        
         return redirect(route('unidadcarrera.edit', $id));
     }
 

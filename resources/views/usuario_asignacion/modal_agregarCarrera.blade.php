@@ -1,11 +1,11 @@
-<div class="modal fade in flash-modal" id="modalAgregarCarrera" role="dialog">
+<div class="modal fade in flash-modal" id="modalAsignarCarrera" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="border-radius: 8px">
             <div class="modal-header bg-primary">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Agregar Carrera</h4>
+                <h4 class="modal-title">Asignar Carrera</h4>
             </div>
-            {!! Form::model($unidad, ['route' => ['unidadcarrera.update', $unidad->id], 'method' => 'patch']) !!}
+            {!! Form::model($user, ['route' => ['usuarioasignacion.update', $user->id], 'method' => 'patch']) !!}
             <div class="modal-body">
                 <div class="col-md-12">
                     <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable">
@@ -21,7 +21,7 @@
                                 <td>{{ $carrera->nombre }}</td>
                                 <td>
                                     <div class="icheck" align="center">
-                                        {!! Form::checkbox('carreras[]',$carrera->id,in_array($carrera->id,$uc_array)==true?true:false,['class' => 'chkAgregarC inputIcheck']) !!}
+                                        {!! Form::checkbox('carreras[]',$carrera->id,in_array($carrera->id,$ua_array)==true?true:false,['class' => 'chkAsignarC inputIcheck']) !!}
                                     </div>
                                 </td>
                             </tr>
@@ -33,7 +33,7 @@
             <div class="modal-footer icheck">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
                 <label class="text-muted">Seleccionar todo {!! Form::checkbox('todoCa',null,null,['id' => 'chkTodasC','class' => 'inputIcheck']) !!}</label>
-                <button id="btnAgregarSeleccion" type="submit" class="btn btn-primary btnLoader">Agregar</button>
+                <button type="submit" class="btn btn-primary btnLoader">Asignar</button>
             </div>
             {!! Form::close() !!}
         </div>
@@ -53,12 +53,12 @@
 
         $('#chkTodasC').on('ifChanged', function(e){
             if($(this).prop('checked'))
-                $('.chkAgregarC').iCheck('check');
-            else if($('.chkAgregarC:checked').length === $('.chkAgregarC').length)
-                $('.chkAgregarC').iCheck('uncheck');
+                $('.chkAsignarC').iCheck('check');
+            else if($('.chkAsignarC:checked').length === $('.chkAsignarC').length)
+                $('.chkAsignarC').iCheck('uncheck');
         });
 
-        $('.chkAgregarC').on('ifUnchecked',function(){
+        $('.chkAsignarC').on('ifUnchecked',function(){
             if( $('#chkTodasC').prop('checked'))
                 $('#chkTodasC').iCheck('uncheck');
         });
