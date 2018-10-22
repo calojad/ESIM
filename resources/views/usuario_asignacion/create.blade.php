@@ -17,9 +17,25 @@
         <div class="box box-primary box-solid">
             <div class="box-header"><h3 class="box-title">{{ $user->name }}</h3></div>
             <div class="box-body">
-                <input id="unidadId" type="hidden" value="{{ $user->id }}">
+                <input id="usuarioId" type="hidden" value="{{ $user->id }}">
                 <div class="col-md-12">
-                    
+                    <div class="col-md-6">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Carrera</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
                 </div>
             </div>
             <div class="box-footer">
