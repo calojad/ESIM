@@ -23,14 +23,14 @@
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
     <ul class="treeview-menu">
+        <li class="{{ Request::is('carreras*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{!! route('carreras.index') !!}"><i class="{{ Request::is('carreras*') ? 'fas' : 'far' }} fa-circle"></i>Carreras</a>
+        </li>
         <li class="{{ Request::is('periodos*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('periodos.index') !!}"><i class="{{ Request::is('periodos*') ? 'fas' : 'far' }} fa-circle"></i>Periodos</a>
         </li>
         <li class="{{ Request::is('unidads*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('unidads.index') !!}"><i class="{{ Request::is('unidads*') ? 'fas' : 'far' }} fa-circle"></i>Unidades</a>
-        </li>
-        <li class="{{ Request::is('carreras*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('carreras.index') !!}"><i class="{{ Request::is('carreras*') ? 'fas' : 'far' }} fa-circle"></i>Carreras</a>
         </li>
         <li class="{{ Request::is('users*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('users.index') !!}"><i class="{{ Request::is('users*') ? 'fas' : 'far' }} fa-circle"></i>Usuarios</a>
@@ -76,5 +76,5 @@
     <a class="btnLoader" href="{!! route('usuarioasignacion.index') !!}" title="Asignar Carreras a Usuarios"><i class="fa fa-glasses font-14pt"></i>Asignaciones</a>
 </li>
 <li class="{{ Request::is('asignacions*') ? 'active' : '' }}">
-    <a href="{!! route('unidadcarrera.index') !!}"><i class="fa fa-graduation-cap font-14pt"></i>Unidades</a>
+    <a href="{!! route('unidadcarrera.index') !!}"><i class="fa fa-graduation-cap font-14pt"></i>Campus</a>
 </li>

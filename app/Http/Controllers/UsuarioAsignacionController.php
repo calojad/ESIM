@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\UsuarioAsignacion;
 use App\Models\Carrera;
+use App\Models\Periodo;
 use App\User;
 
 class UsuarioAsignacionController extends Controller
@@ -30,7 +31,12 @@ class UsuarioAsignacionController extends Controller
     public function create($id)
     {
         $user = User::find($id);
-        return view('usuario_asignacion.create',compact('user'));
+        $carreras = Carrera::all();
+        $ua_array = UsuarioAsignacion::where('usuario_id', $id)->pluck('carrera_id')->toArray();
+        $periodos = [0 => '--Seleccionar--']+Periodo::where('estado','=',1)
+                    ->pluck('nombre','id')
+                    ->toArray();
+        return view('usuario_asignacion.create',compact('user','carreras','periodos','ua_array'));
     }
 
     /**
@@ -41,7 +47,7 @@ class UsuarioAsignacionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
@@ -53,9 +59,12 @@ class UsuarioAsignacionController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        $carreras = Carrera::all();
+        $userPeriodos = UsuarioAsignacion::where('usuario_id',$id)
+                        ->select('periodo_id')
+                        ->groupBy('periodo_id')
+                        ->get();
         $userAsignaciones = UsuarioAsignacion::where('usuario_id',$id)->get();
-        $ua_array = UsuarioAsignacion::where('usuario_id', $id)->pluck('carrera_id')->toArray();
+
         return view('usuario_asignacion.show',compact('user','userAsignaciones','carreras','ua_array'));
     }
 

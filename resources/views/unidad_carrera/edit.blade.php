@@ -68,9 +68,9 @@
             </div>
             <div class="box-footer">
                 @if($des == 1)
-                    <a class="btn btn-default" href="{!! route('unidadcarrera.index') !!}">Regresar</a>
+                    <a class="btn btn-default btnLoader" href="{!! route('unidadcarrera.index') !!}">Regresar</a>
                 @else
-                    <a class="btn btn-default" href="{!! route('unidads.index') !!}">Regresar</a>
+                    <a class="btn btn-default btnLoader" href="{!! route('unidads.index') !!}">Regresar</a>
                 @endif
             </div>
         </div>

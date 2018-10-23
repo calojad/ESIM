@@ -38,13 +38,21 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="box box-default">
-            <div class="box-header">
-                <h3 class="box-title">Carreras Asignadas</h3>
+            <div class="box-footer">
+                <a class="btn btn-default btnLoader" href="{!! route('usuarioasignacion.index') !!}">Regresar</a>
                 <a class="btn btn-primary pull-right" href="{!! route('usuarioasignacion.asignar', $user->id) !!}">Agregar</a>
             </div>
-            <div class="box-body">
+        </div>
+        <h3 class="box-title">Carreras Asignadas</h3>
+        @if(count($userAsignaciones) != 0)
+        <div class="box box-warning collapsed-box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Periodo 1</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                </div>
+            </div>
+            <div class="box-body" style="display: none;">
                 <div class="col-md-12">
                     <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable">
                         <thead>
@@ -68,13 +76,13 @@
                     </table>
                 </div>
             </div>
-            <div class="box-footer">
-                {{-- @if($des == 1)--}}
-                    <a class="btn btn-default btnLoader" href="{!! route('usuarioasignacion.index') !!}">Regresar</a>
-               {{-- @else
-                    <a class="btn btn-default" href="{!! route('unidads.index') !!}">Regresar</a>
-                @endif --}}
+        </div>
+        @else
+        <div class="box">
+            <div class="box box-header" align="center">
+                <h3 class="text-muted">No hay datos</h3>
             </div>
         </div>
+        @endif
     </div>
 @endsection
