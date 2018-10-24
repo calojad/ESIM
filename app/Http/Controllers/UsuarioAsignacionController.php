@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\UsuarioAsignacion;
 use App\Models\Carrera;
 use App\Models\Periodo;
+use Flash;
 use App\User;
 
 class UsuarioAsignacionController extends Controller
@@ -36,7 +37,8 @@ class UsuarioAsignacionController extends Controller
         $periodos = [0 => '--Seleccionar--']+Periodo::where('estado','=',1)
                     ->pluck('nombre','id')
                     ->toArray();
-        return view('usuario_asignacion.create',compact('user','carreras','periodos','ua_array'));
+        $numRow = 0;
+        return view('usuario_asignacion.create',compact('user','carreras','periodos','ua_array','numRow'));
     }
 
     /**
@@ -47,7 +49,16 @@ class UsuarioAsignacionController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $userId = $request->get('usuario');
+        $periodoId = $request->get('periodo');
+        $carreras = $request->get('carreras');
+        foreach ($carreras as $carrera) {
+            UsuarioAsignacion::updateOrCreate(
+                ['usuario_id' => $userId, 'periodo_id' => $periodoId, 'carrera_id' => $carrera]
+            );
+        }
+        Flash::success('Carreras Asignadas exitosamente.');
+        return json_encode(['url' => route('usuarioasignacion.show',$request->get('usuario'))]);
     }
 
     /**
@@ -65,7 +76,7 @@ class UsuarioAsignacionController extends Controller
                         ->get();
         $userAsignaciones = UsuarioAsignacion::where('usuario_id',$id)->get();
 
-        return view('usuario_asignacion.show',compact('user','userAsignaciones','carreras','ua_array'));
+        return view('usuario_asignacion.show',compact('user','userAsignaciones','userPeriodos'));
     }
 
     /**
@@ -88,15 +99,7 @@ class UsuarioAsignacionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        /*$carreras = $request->get('carreras');
-        foreach ($carreras as $carrera) {
-            UsuarioAsignacion::updateOrCreate(
-                ['usuario_id' => $id, 'carrera_id' => $carrera ],
-                ['periodo_id' => 0]
-            );
-        }
-        
-        return redirect(route('unidadcarrera.edit', $id));*/
+        //
     }
 
     /**
@@ -115,6 +118,12 @@ class UsuarioAsignacionController extends Controller
         $uasignacion->delete();
         Flash::success('Asignacion quitada de Usuario successfully.');
 
-        return redirect(route('usuarioasignacion.edit',$uasignacion->usuario_id));
+        return redirect(route('usuarioasignacion.show',$uasignacion->usuario_id));
+    }
+    
+    public function obtCarreraPeriodo($uId,$pId){
+        $ua_array = UsuarioAsignacion::where('usuario_id', $uId)
+                    ->where('periodo_id',$pId)
+                    ->pluck('carrera_id')->toArray();
     }
 }

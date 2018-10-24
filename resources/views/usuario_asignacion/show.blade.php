@@ -45,38 +45,40 @@
         </div>
         <h3 class="box-title">Carreras Asignadas</h3>
         @if(count($userAsignaciones) != 0)
-        <div class="box box-warning collapsed-box">
-            <div class="box-header with-border">
-                <h3 class="box-title">Periodo 1</h3>
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+            @foreach ($userPeriodos as $periodo)
+            <div class="box box-warning collapsed-box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Periodo: {{ $periodo->periodo->nombre }}</h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="box-body" style="display: none;">
+                    <div class="col-md-12">
+                        <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable">
+                            <thead>
+                            <tr>
+                                <th>Carrera</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($userAsignaciones as $ua)
+                            @if($ua->periodo_id == $periodo->periodo_id)
+                            <tr>
+                                <td>{{ $ua->carrera->nombre }}</td>
+                                {!! Form::open(['route' => ['usuarioasignacion.destroy', $ua->id], 'method' => 'delete']) !!}
+                                <td>{!! Form::button('<i class="glyphicon glyphicon-erase"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')",'title'=>'Quitar Carrera']) !!}</td>
+                                {!! Form::close() !!}
+                            </tr>
+                            @endif
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <div class="box-body" style="display: none;">
-                <div class="col-md-12">
-                    <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable">
-                        <thead>
-                        <tr>
-                            <th>Carrera</th>
-                            <th>Periodo(s)</th>
-                            <th>Acciones</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($userAsignaciones as $ua)
-                        <tr>
-                            <td>{{ $ua->carrera->nombre }}</td>
-                            <td>{{ $ua->carrera->nombre }}</td>
-                            {!! Form::open(['route' => ['usuarioasignacion.destroy', $ua->id], 'method' => 'delete']) !!}
-                            <td>{!! Form::button('<i class="glyphicon glyphicon-erase"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')",'title'=>'Quitar Carrera']) !!}</td>
-                            {!! Form::close() !!}
-                        </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+            @endforeach
         @else
         <div class="box">
             <div class="box box-header" align="center">
