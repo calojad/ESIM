@@ -133,10 +133,10 @@
         // Funcion para marcar las carreras asignadas
         function marcarCarrerasAsignadas($periodoId,$usuarioId){
             var chksCarreras = $('.chkAgregarC');
-            var cs = [];
-            var url = "{{ URL::to('usuarioasignacion/obtcarreraceriodo') }}"+"/"+$periodoId+""+$usuarioId;
-            $.get(url, function(){
-                
+            var csp = [];
+            var url = "{{ URL::to('usuarioasignacion/obtcarreraceriodo') }}"+"/"+$periodoId+"/"+$usuarioId;
+            $.get(url, function(json){
+                csp = json;
             },'json');
             
             chksCarreras.each(function(c){
