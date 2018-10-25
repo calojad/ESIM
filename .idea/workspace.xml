@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08c3f4dd-1450-4e65-a1d3-4c4798818ff9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UnidadCarreraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UnidadCarreraController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/unidad_carrera/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/unidad_carrera/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/unidad_carrera/modal_agregar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/unidad_carrera/modal_agregar.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="08c3f4dd-1450-4e65-a1d3-4c4798818ff9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,13 +45,14 @@
     <session id="-1753838565">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.40" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -326,16 +323,17 @@
       <workItem from="1539741258927" duration="3592000" />
       <workItem from="1539920186059" duration="705000" />
       <workItem from="1540009324699" duration="2292000" />
+      <workItem from="1540348632488" duration="646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11730000" />
+    <option name="totallyTimeSpent" value="12376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12298682" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12298682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -350,12 +348,12 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.6041056" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.45614034" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32991204" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.1647145" />
+      <window_info anchor="right" id="Database" order="3" weight="0.15592971" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -614,9 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="980">
           <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
