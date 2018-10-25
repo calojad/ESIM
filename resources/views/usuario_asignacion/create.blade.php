@@ -23,7 +23,7 @@
                     <div class="form-group col-md-6 col-md-offset-3">
                         <label class="col-md-3 control-label" for="selPeriodos" style="text-align: right;">Periodos:</label>
                         <div class="col-md-6">
-                            {!! Form::select('periodo',$periodos,null,['class' => 'form-control', 'required' => true,'id' => 'selPeriodos']) !!}
+                            {!! Form::select('periodo',$periodos,null,['class' => 'form-control', 'required' => true, 'id' => 'selPeriodos']) !!}
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
         // Cuando se carge la Página
         $(document).ready(function(){
             // Verificar si el selec tiene un periodo seleccionado
-            if($('#selPeriodos').val() != 0){
+            if($('#selPeriodos').val() !== 0){
                 $('#divBoxCarreras').show();
             }else{
                 $('#divBoxCarreras').hide();
@@ -83,7 +83,7 @@
         $('#selPeriodos').on('change', function(){
             $("#overlayDivCarreras").fadeIn();
             var selPeriodo = $(this).val();
-            if(selPeriodo != 0){
+            if(selPeriodo !== 0){
                 $('#divBoxCarreras').show();
             }else{
                 $('#divBoxCarreras').hide();
@@ -140,7 +140,7 @@
             },'json');
             
             chksCarreras.each(function(c){
-                
+                in_array($carrera->id,$uc_array);
             });
         }
     </script>
