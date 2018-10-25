@@ -42,4 +42,5 @@ Route::group(['middleware' => 'auth'], function () {
     //***Usuarios Asignaciones
     Route::resource('usuarioasignacion', 'UsuarioAsignacionController');
     Route::get('usuarioasignacion/create/{user}','UsuarioAsignacionController@create')->name('usuarioasignacion.asignar');
+    Route::get('usuarioasignacion/obtcarreraceriodo/{periodo}/{user}','UsuarioAsignacionController@obtCarreraPeriodo')->name('usuarioasignacion.cargartabla');
 });

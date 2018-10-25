@@ -14,7 +14,6 @@
 @section('content')
     <div class="content">
         @include('adminlte-templates::common.errors')
-        {{-- {!! Form::open(['route' => 'usuarioasignacion.store']) !!} --}}
         <div class="box box-primary box-solid">
             <div class="box-header"><h3 class="box-title">{{ $user->name }}</h3></div>
             <div class="box-body">
@@ -45,7 +44,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($carreras as $carrera)
+                    {{--@foreach ($carreras as $carrera)
                     <tr>
                         <td>{{ $carrera->nombre }}</td>
                         <td align="center">
@@ -53,7 +52,7 @@
                         </td>
                     </tr>
                     @php $numRow++; @endphp
-                    @endforeach
+                    @endforeach--}}
                     </tbody>
                 </table>
             </div>
@@ -65,25 +64,32 @@
                 <i class="fa fa-sync-alt fa-spin"></i>
             </div>
         </div>
-        {{-- {!! Form::close() !!} --}}
     </div>
     <script type="text/javascript" charset="utf-8" async defer>
         // Cuando se carge la Página
         $(document).ready(function(){
+            var usuario = $('#usuarioId').val();
+            var periodo = $('#selPeriodos').val();
+            // Cargar las carreras asignadas
+            marcarCarrerasAsignadas(periodo,usuario);
             // Verificar si el selec tiene un periodo seleccionado
-            if($('#selPeriodos').val() !== 0){
+            if(periodo != 0){
                 $('#divBoxCarreras').show();
             }else{
                 $('#divBoxCarreras').hide();
             }
             // Quitar el overlay del box
-            $("#overlayDivCarreras").fadeOut();
+            $("#overlayDivCarreras").fadeOut(1000);
         });
         // Al Seleccionar el Periodo
         $('#selPeriodos').on('change', function(){
             $("#overlayDivCarreras").fadeIn();
+            var userId = $('#usuarioId').val();
             var selPeriodo = $(this).val();
-            if(selPeriodo !== 0){
+
+            marcarCarrerasAsignadas(selPeriodo,userId);
+
+            if(selPeriodo != 0){
                 $('#divBoxCarreras').show();
             }else{
                 $('#divBoxCarreras').hide();
@@ -110,38 +116,26 @@
 /*
 *******FUNCIONES*******
  */
-        // Funcion iCheck
-        $(function () {
-            $('.inputIcheck').iCheck({
-                checkboxClass: 'icheckbox_square-blue',
-                radioClass: 'iradio_square-green',
-                increaseArea: '20%'
-            });
-
-            $('#chkTodasC').on('ifChanged', function(e){
-                if($(this).prop('checked'))
-                    $('.chkAsignarC').iCheck('check');
-                else if($('.chkAsignarC:checked').length === $('.chkAsignarC').length)
-                    $('.chkAsignarC').iCheck('uncheck');
-            });
-
-            $('.chkAsignarC').on('ifUnchecked',function(){
-                if( $('#chkTodasC').prop('checked'))
-                    $('#chkTodasC').iCheck('uncheck');
-            });
-        });
-        // Funcion para marcar las carreras asignadas
-        function marcarCarrerasAsignadas($periodoId,$usuarioId){
-            var chksCarreras = $('.chkAgregarC');
-            var csp = [];
-            var url = "{{ URL::to('usuarioasignacion/obtcarreraceriodo') }}"+"/"+$periodoId+"/"+$usuarioId;
+        // Funcion Cargar tabla de carreras segun periodo
+        function marcarCarrerasAsignadas(periodoId,usuarioId){
+            var url = "{{ URL::to('usuarioasignacion/obtcarreraceriodo') }}"+"/"+periodoId+"/"+usuarioId;
+            var t = $('#tblCarrerasAsig').DataTable();
+            var aux;
             $.get(url, function(json){
-                csp = json;
+                t.clear().draw();
+                json.carreras.forEach(function(c){
+                    aux = jQuery.inArray(c.id,json.caAsig) != -1 ? 'checked' : '';
+                    t.row.add([
+                        c.nombre,
+                        '<div class="icheck" align="center"><input class="inputIcheck" type="checkbox" value="'+c.id+'" name="carreras[]" '+aux+'></div>'
+                    ]).draw(false);
+                });
+                $('.inputIcheck').iCheck({
+                    checkboxClass: 'icheckbox_square-blue',
+                    radioClass: 'iradio_square-green',
+                    increaseArea: '20%'
+                });
             },'json');
-            
-            chksCarreras.each(function(c){
-                in_array($carrera->id,$uc_array);
-            });
         }
     </script>
 @endsection

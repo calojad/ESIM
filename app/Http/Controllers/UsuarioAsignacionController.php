@@ -121,9 +121,11 @@ class UsuarioAsignacionController extends Controller
         return redirect(route('usuarioasignacion.show',$uasignacion->usuario_id));
     }
     
-    public function obtCarreraPeriodo($uId,$pId){
-        $ua_array = UsuarioAsignacion::where('usuario_id', $uId)
+    public function obtCarreraPeriodo($pId,$uId){
+        $caAsig = UsuarioAsignacion::where('usuario_id', $uId)
                     ->where('periodo_id',$pId)
                     ->pluck('carrera_id')->toArray();
+        $carreras = Carrera::all();
+        return json_encode(['carreras' => $carreras,'caAsig' => $caAsig]);
     }
 }
