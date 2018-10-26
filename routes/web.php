@@ -29,6 +29,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('tipoPeriodos', 'TipoPeriodoController');
 	//***Tipo Evaluaciones
 	Route::resource('tipoEvaluacions', 'TipoEvaluacionController');
+	//***Tipo Indicadores
+	Route::resource('tipoIndicadors', 'TipoIndicadorController');
 	//***Periodos
 	Route::resource('periodos', 'PeriodoController');
 	//***Unidades

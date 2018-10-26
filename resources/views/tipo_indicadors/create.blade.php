@@ -2,11 +2,11 @@
 @section('content-header')
     <h1>
         {{config('app.name','EVAL')}}
-        <small>Tipo Evaluación</small>
+        <small>Tipo Indicador</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
-        <li>Tipo Evaluación</li>
+        <li>Tipo Indicador</li>
         <li>Nuevo</li>
     </ol>
 @endsection
@@ -14,11 +14,11 @@
     <div class="content">
         @include('adminlte-templates::common.errors')
         <div class="box box-primary box-solid">
-            <div class="box-header"><h3 class="box-title">Tipo Evaluación</h3></div>
+            <div class="box-header"><h3 class="box-title">Tipo Indicador</h3></div>
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'tipoEvaluacions.store']) !!}
-                        @include('tipo_evaluacions.fields')
+                    {!! Form::open(['route' => 'tipoIndicadors.store']) !!}
+                        @include('tipo_indicadors.fields')
                     {!! Form::close() !!}
                 </div>
             </div>

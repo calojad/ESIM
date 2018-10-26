@@ -7,6 +7,9 @@
         <li class="{{ Request::is('tipoEvaluacions*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('tipoEvaluacions.index') !!}"><i class="{{ Request::is('tipoEvaluacions*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Evaluacions</a>
         </li>
+        <li class="{{ Request::is('tipoIndicadors*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{!! route('tipoIndicadors.index') !!}"><i class="{{ Request::is('tipoEvaluacions*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Indicador</a>
+        </li>
         <li class="{{ Request::is('tipoPeriodos*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('tipoPeriodos.index') !!}"><i class="{{ Request::is('tipoPeriodos*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Periodo</a>
         </li>
