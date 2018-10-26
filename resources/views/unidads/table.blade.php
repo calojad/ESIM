@@ -1,9 +1,9 @@
 <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="unidads-table">
     <thead>
         <tr>
+            <th>Nombre</th>
             <th>Tipo Unidad</th>
             <th>Ubicacion</th>
-            <th>Nombre</th>
             <th>Estado</th>
             <th>Action</th>
         </tr>
@@ -11,9 +11,9 @@
     <tbody>
     @foreach($unidads as $unidad)
         <tr>
+            <td>{!! $unidad->nombre !!}</td>
             <td>{!! $unidad->tipoUnidad->nombre !!}</td>
             <td>{!! $unidad->ubicacion->nombre !!}</td>
-            <td>{!! $unidad->nombre !!}</td>
             <td><label class="label {!! $unidad->estado==1?'label-success':'label-danger' !!}">{!! $unidad->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['unidads.destroy', $unidad->id], 'method' => 'delete']) !!}
