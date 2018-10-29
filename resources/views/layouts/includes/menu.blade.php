@@ -1,4 +1,5 @@
 <li class="header" style="font-size: 12pt">Mantenimientos</li>
+{{-- ********* SISTEMA ********* --}}
 <li class="treeview {{ Request::is('ubicacions*','tipoUnidads*','tipoPeriodos*','tipoEvaluacions*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-desktop  font-14pt"></i> <span>Sistema</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -21,6 +22,7 @@
         </li>
     </ul>
 </li>
+{{-- ********* IES ********* --}}
 <li class="treeview {{ Request::is('periodos*','unidads*','carreras*','users*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-book-reader font-14pt"></i> <span>I.E.S.</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
@@ -40,22 +42,24 @@
         </li>
     </ul>
 </li>
-<li class="treeview {{ Request::is('calculos*') ? 'active' : '' }}">
+{{-- ********* CALCULOS ********* --}}
+<li class="treeview {{ Request::is('grupoValors*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-calculator font-14pt"></i> <span>Cálculo</span>
-        <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
     <ul class="treeview-menu">
-        <li><a href="#"><i class="far fa-circle"></i>Cualitativos</a></li>
+        <li class="{{ Request::is('grupoValors*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{{ route('grupoValors.index') }}"><i class="{{ Request::is('grupoValors*') ? 'fas' : 'far' }} fa-circle"></i>Cualitativos</a>
+        </li>
         <li><a href="#"><i class="far fa-circle"></i>Cuantitativos</a></li>
     </ul>
 </li>
+{{-- ********* MATRIZ ********* --}}
 <li class="treeview {{ Request::is('matriz*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-table font-14pt"></i> <span>Matriz</span>
         <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
     </a>
     <ul class="treeview-menu">
         <li><a href="#"><i class="far fa-circle"></i>Modelos</a></li>
@@ -63,17 +67,19 @@
         <li><a href="#"><i class="far fa-circle"></i>Matrices</a></li>
     </ul>
 </li>
+{{-- ********* PONDERACION ********* --}}
 <li class="treeview {{ Request::is('ponderacions*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-balance-scale font-14pt"></i> <span>Ponderación</span>
         <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
     </a>
     <ul class="treeview-menu">
         <li><a href="#"><i class="far fa-circle"></i>Pesos Criterios</a></li>
         <li><a href="#"><i class="far fa-circle"></i>Pesos Indicadores</a></li>
     </ul>
 </li>
+{{-- ********* ********* --}}
 <li class="header" style="font-size: 12pt">Agregaciones</li>
 <li class="{{ Request::is('asignacions*') ? 'active' : '' }}">
     <a class="btnLoader" href="{!! route('usuarioasignacion.index') !!}" title="Asignar Carreras a Usuarios"><i class="fa fa-glasses font-14pt"></i>Asignaciones</a>

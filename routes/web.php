@@ -45,4 +45,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('usuarioasignacion', 'UsuarioAsignacionController');
     Route::get('usuarioasignacion/create/{user}','UsuarioAsignacionController@create')->name('usuarioasignacion.asignar');
     Route::get('usuarioasignacion/obtcarreraceriodo/{periodo}/{user}','UsuarioAsignacionController@obtCarreraPeriodo')->name('usuarioasignacion.cargartabla');
+    //***Grupos de Valor
+    Route::resource('grupoValors', 'GrupoValorController');
+    //***Valoraciones
+    Route::resource('valoracions', 'ValoracionController');
+    Route::get('valoracions/create/{grupo}', 'ValoracionController@create')->name('valoracions.valoracioncrear');
 });

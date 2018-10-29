@@ -10,9 +10,7 @@
     @foreach($carreras as $carrera)
         <tr>
             <td>{!! $carrera->nombre !!}</td>
-            <td>
-                <label class="label {!! $carrera->estado==1?'label-success':'label-danger' !!}">{!! $carrera->estado==1?'Activo':'Inactivo' !!}</label>
-            </td>
+            <td><label class="label {!! $carrera->estado==1?'label-success':'label-danger' !!}">{!! $carrera->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['carreras.destroy', $carrera->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

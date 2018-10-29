@@ -44,15 +44,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    {{--@foreach ($carreras as $carrera)
-                    <tr>
-                        <td>{{ $carrera->nombre }}</td>
-                        <td align="center">
-                            {!! Form::checkbox('carreras[]',$carrera->id,null,['class' => 'chkAgregarC inputIcheck','id' => $numRow]) !!}
-                        </td>
-                    </tr>
-                    @php $numRow++; @endphp
-                    @endforeach--}}
+                    {{-- Carga las carreras correspondientes --}}
                     </tbody>
                 </table>
             </div>
@@ -73,7 +65,7 @@
             // Cargar las carreras asignadas
             marcarCarrerasAsignadas(periodo,usuario);
             // Verificar si el selec tiene un periodo seleccionado
-            if(periodo != 0){
+            if(periodo !== '0'){
                 $('#divBoxCarreras').show();
             }else{
                 $('#divBoxCarreras').hide();
@@ -83,18 +75,19 @@
         });
         // Al Seleccionar el Periodo
         $('#selPeriodos').on('change', function(){
-            $("#overlayDivCarreras").fadeIn();
+            var box = $("#overlayDivCarreras");
+            box.fadeIn();
             var userId = $('#usuarioId').val();
             var selPeriodo = $(this).val();
 
             marcarCarrerasAsignadas(selPeriodo,userId);
 
-            if(selPeriodo != 0){
+            if(selPeriodo !== '0'){
                 $('#divBoxCarreras').show();
             }else{
                 $('#divBoxCarreras').hide();
             }
-            $("#overlayDivCarreras").fadeOut();
+            box.fadeOut();
         });
         // Boton Guardar carreras la tabla
         $('#btnGuardarChecks').on('click', function(){
@@ -124,7 +117,7 @@
             $.get(url, function(json){
                 t.clear().draw();
                 json.carreras.forEach(function(c){
-                    aux = jQuery.inArray(c.id,json.caAsig) != -1 ? 'checked' : '';
+                    aux = jQuery.inArray(c.id,json.caAsig) !== -1 ? 'checked' : '';
                     t.row.add([
                         c.nombre,
                         '<div class="icheck" align="center"><input class="inputIcheck" type="checkbox" value="'+c.id+'" name="carreras[]" '+aux+'></div>'

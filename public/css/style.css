@@ -27,7 +27,7 @@
 }
 /*********** Inputs ***********/
 select, input[type="text"], input[type="password"], input[type="email"], input[type="number"]
-,input[type="date"], input[type="select"] {
+,input[type="date"], input[type="select"], textarea {
     -moz-box-sizing: border-box;
     -moz-border-radius: 2px;
     -webkit-box-sizing: border-box;
