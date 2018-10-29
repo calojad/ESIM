@@ -50,7 +50,7 @@ class CreateTablesMenuCalculo extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('abreviatura');
-            $table->string('formula');
+            $table->text('formula');
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });

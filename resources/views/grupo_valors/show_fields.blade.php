@@ -27,7 +27,7 @@
     <div class="col-md-12">
         <dl class="col-md-12">
             <dt>Descripcion:</dt>
-            <dd>{!! $grupoValor->descripcion !!}</dd>
+            <dd><textarea class="form-control" rows="5" readonly style="background-color: white">{{ $grupoValor->descripcion }}</textarea></dd>
         </dl>
     </div>
 </div>

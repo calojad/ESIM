@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Prettus\Repository\Criteria\RequestCriteria;
 use App\Http\Requests\CreateValoracionRequest;
 use App\Http\Requests\UpdateValoracionRequest;
 use App\Repositories\ValoracionRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\Models\GrupoValor;
 use Flash;
-use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
 class ValoracionController extends AppBaseController
@@ -43,7 +44,10 @@ class ValoracionController extends AppBaseController
      */
     public function create($id)
     {
-        return view('valoracions.create',compact('id'));
+        $grupoValor = GrupoValor::find($id);
+        $valoracion = null;
+        $colorsClass = ['bg-green' => 'Verde','bg-aqua' => 'Aqua','bg-yellow' => 'Amarillo','bg-red' => 'Rojo','bg-gray' => 'Gris','bg-teal' => 'Teal','bg-purple' => 'Purpura','bg-orange' => 'Naranja','bg-maroon' => 'Marron'];
+        return view('valoracions.create',compact('grupoValor','colorsClass','valoracion'));
     }
 
     /**
@@ -92,14 +96,15 @@ class ValoracionController extends AppBaseController
     public function edit($id)
     {
         $valoracion = $this->valoracionRepository->findWithoutFail($id);
-
         if (empty($valoracion)) {
             Flash::error('Valoracion not found');
 
             return redirect(route('valoracions.index'));
         }
+        $grupoValor = GrupoValor::find($valoracion->grupo_valor_id);
+        $colorsClass = ['bg-green' => 'Verde','bg-aqua' => 'Aqua','bg-yellow' => 'Amarillo','bg-red' => 'Rojo','bg-gray' => 'Gris','bg-teal' => 'Teal','bg-purple' => 'Purpura','bg-orange' => 'Naranja','bg-maroon' => 'Marron'];
 
-        return view('valoracions.edit')->with('valoracion', $valoracion);
+        return view('valoracions.edit',compact('valoracion','grupoValor','colorsClass'));
     }
 
     /**

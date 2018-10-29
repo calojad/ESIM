@@ -1,0 +1,1 @@
+{"result":{"text":"square root of fraction numerator begin display style D T end style over denominator begin display style D P end style end fraction end root"},"status":"ok"}

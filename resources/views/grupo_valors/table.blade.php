@@ -11,7 +11,7 @@
     @foreach($grupoValors as $grupoValor)
         <tr>
             <td>{!! $grupoValor->nombre !!}</td>
-            <td>{!! $grupoValor->tipoIndicador->nombre !!}</td><
+            <td>{!! $grupoValor->tipoIndicador->nombre !!}</td>
             <td><label class="label {!! $grupoValor->estado==1?'label-success':'label-danger' !!}">{!! $grupoValor->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['grupoValors.destroy', $grupoValor->id], 'method' => 'delete']) !!}

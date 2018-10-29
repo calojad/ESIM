@@ -14,7 +14,8 @@
 @section('content')
     <div class="content">
         @include('adminlte-templates::common.errors')
-        <div class="box box-primary">
+        <div class="box box-primary box-solid">
+            <div class="box-header"><h3 class="box-title">{{ $grupoValor->nombre }} - Valoración</h3></div>
             <div class="box-body">
                 <div class="row">
                     {!! Form::open(['route' => 'valoracions.store']) !!}

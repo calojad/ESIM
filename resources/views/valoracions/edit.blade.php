@@ -1,23 +1,28 @@
 @extends('layouts.app')
-
+@section('content-header')
+    <h1>
+        {{config('app.name','EVAL')}}
+        <small>Valoración</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
+        <li>Grupo Valor</li>
+        <li>Valores</li>
+        <li>Editar</li>
+    </ol>
+@endsection
 @section('content')
-    <section class="content-header">
-        <h1>
-            Valoracion
-        </h1>
-   </section>
-   <div class="content">
+    <div class="content">
        @include('adminlte-templates::common.errors')
-       <div class="box box-primary">
-           <div class="box-body">
-               <div class="row">
-                   {!! Form::model($valoracion, ['route' => ['valoracions.update', $valoracion->id], 'method' => 'patch']) !!}
-
+       <div class="box box-primary box-solid">
+            <div class="box-header"><h3 class="box-title">{{ $grupoValor->nombre }} - Valoración</h3></div>
+            <div class="box-body">
+                <div class="row">
+                    {!! Form::model($valoracion, ['route' => ['valoracions.update', $valoracion->id], 'method' => 'patch']) !!}
                         @include('valoracions.fields')
-
-                   {!! Form::close() !!}
-               </div>
-           </div>
-       </div>
-   </div>
+                    {!! Form::close() !!}
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

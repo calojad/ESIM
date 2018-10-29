@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="box-footer">
-                <a href="{!! route('grupoValors.index') !!}" class="btn btn-default">Back</a>
+                <a href="{!! route('grupoValors.index') !!}" class="btn btn-default">Regresar</a>
             </div>
         </div>
         <div class="box box-warning">

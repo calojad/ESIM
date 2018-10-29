@@ -1,6 +1,6 @@
 <li class="header" style="font-size: 12pt">Mantenimientos</li>
 {{-- ********* SISTEMA ********* --}}
-<li class="treeview {{ Request::is('ubicacions*','tipoUnidads*','tipoPeriodos*','tipoEvaluacions*') ? 'active' : '' }}">
+<li class="treeview {{ Request::is('ubicacions*','tipoUnidads*','tipoPeriodos*','tipoEvaluacions*','tipoIndicadors*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-desktop  font-14pt"></i> <span>Sistema</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
@@ -9,7 +9,7 @@
             <a class="btnLoader" href="{!! route('tipoEvaluacions.index') !!}"><i class="{{ Request::is('tipoEvaluacions*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Evaluacions</a>
         </li>
         <li class="{{ Request::is('tipoIndicadors*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('tipoIndicadors.index') !!}"><i class="{{ Request::is('tipoEvaluacions*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Indicador</a>
+            <a class="btnLoader" href="{!! route('tipoIndicadors.index') !!}"><i class="{{ Request::is('tipoIndicadors*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Indicador</a>
         </li>
         <li class="{{ Request::is('tipoPeriodos*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('tipoPeriodos.index') !!}"><i class="{{ Request::is('tipoPeriodos*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Periodo</a>
@@ -43,15 +43,17 @@
     </ul>
 </li>
 {{-- ********* CALCULOS ********* --}}
-<li class="treeview {{ Request::is('grupoValors*') ? 'active' : '' }}">
+<li class="treeview {{ Request::is('grupoValors*','valoracions*','formulas*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-calculator font-14pt"></i> <span>Cálculo</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
     <ul class="treeview-menu">
-        <li class="{{ Request::is('grupoValors*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{{ route('grupoValors.index') }}"><i class="{{ Request::is('grupoValors*') ? 'fas' : 'far' }} fa-circle"></i>Cualitativos</a>
+        <li class="{{ Request::is('grupoValors*','valoracions*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{{ route('grupoValors.index') }}"><i class="{{ Request::is('grupoValors*','valoracions*') ? 'fas' : 'far' }} fa-circle"></i>Cualitativos</a>
         </li>
-        <li><a href="#"><i class="far fa-circle"></i>Cuantitativos</a></li>
+        <li class="{{ Request::is('formulas*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{!! route('formulas.index') !!}"><i class="{{ Request::is('formulas*') ? 'fas' : 'far' }} fa-circle"></i>Cuantitativos</a>
+        </li>
     </ul>
 </li>
 {{-- ********* MATRIZ ********* --}}
@@ -81,9 +83,9 @@
 </li>
 {{-- ********* ********* --}}
 <li class="header" style="font-size: 12pt">Agregaciones</li>
-<li class="{{ Request::is('asignacions*') ? 'active' : '' }}">
+<li class="{{ Request::is('usuarioasignacion*') ? 'active' : '' }}">
     <a class="btnLoader" href="{!! route('usuarioasignacion.index') !!}" title="Asignar Carreras a Usuarios"><i class="fa fa-glasses font-14pt"></i>Asignaciones</a>
 </li>
-<li class="{{ Request::is('asignacions*') ? 'active' : '' }}">
+<li class="{{ Request::is('unidadcarrera*') ? 'active' : '' }}">
     <a class="btnLoader" href="{!! route('unidadcarrera.index') !!}"><i class="fa fa-graduation-cap font-14pt"></i>Campus</a>
 </li>

@@ -1,0 +1,1 @@
+{"result":{"text":"raíz cuadrada de fracción numerador estilo mostrar D T fin estilo entre denominador estilo mostrar D P fin estilo fin fracción fin raíz"},"status":"ok"}

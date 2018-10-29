@@ -11,7 +11,7 @@
     </ol>
 @endsection
 @section('content')
-    <div class="container">
+    <div class="content">
         @include('adminlte-templates::common.errors')
         <div class="box box-primary box-solid">
             <div class="box-header"><h3 class="box-title">Ubicación</h3></div>
