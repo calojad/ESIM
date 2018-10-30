@@ -20,6 +20,7 @@
         {!! Form::label('formula', 'Formula:') !!}
         {!! Form::textarea('formula', null, ['class' => 'form-control textarea','id' => 'formula']) !!}
     </div>
+
     <!-- Estado Field -->
     <div class="form-group col-sm-12 col-md-12 icheck">
         <label class="col-sm-12 col-md-12 col-lg-12">Estado:</label>

@@ -50,6 +50,10 @@ Route::group(['middleware' => 'auth'], function () {
     //***Valoraciones
     Route::resource('valoracions', 'ValoracionController');
     Route::get('valoracions/create/{grupo}', 'ValoracionController@create')->name('valoracions.valoracioncrear');
+    //***Cuantitativos
+    AdvancedRoute::controller('/cuantitativos','CuantitativosController');
     //***Formulas
     Route::resource('formulas', 'FormulasController');
+    //***Variables
+    Route::resource('variables', 'VariablesController');
 });

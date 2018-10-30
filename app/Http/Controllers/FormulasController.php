@@ -56,12 +56,10 @@ class FormulasController extends AppBaseController
     public function store(CreateFormulasRequest $request)
     {
         $input = $request->all();
-
         $formulas = $this->formulasRepository->create($input);
-
         Flash::success('Formulas saved successfully.');
 
-        return redirect(route('formulas.index'));
+        return redirect(route('variables.create'));
     }
 
     /**
@@ -74,10 +72,8 @@ class FormulasController extends AppBaseController
     public function show($id)
     {
         $formulas = $this->formulasRepository->findWithoutFail($id);
-
         if (empty($formulas)) {
             Flash::error('Formulas not found');
-
             return redirect(route('formulas.index'));
         }
 
@@ -94,10 +90,8 @@ class FormulasController extends AppBaseController
     public function edit($id)
     {
         $formulas = $this->formulasRepository->findWithoutFail($id);
-
         if (empty($formulas)) {
             Flash::error('Formulas not found');
-
             return redirect(route('formulas.index'));
         }
 
@@ -115,15 +109,11 @@ class FormulasController extends AppBaseController
     public function update($id, UpdateFormulasRequest $request)
     {
         $formulas = $this->formulasRepository->findWithoutFail($id);
-
         if (empty($formulas)) {
             Flash::error('Formulas not found');
-
             return redirect(route('formulas.index'));
         }
-
         $formulas = $this->formulasRepository->update($request->all(), $id);
-
         Flash::success('Formulas updated successfully.');
 
         return redirect(route('formulas.index'));
@@ -139,15 +129,11 @@ class FormulasController extends AppBaseController
     public function destroy($id)
     {
         $formulas = $this->formulasRepository->findWithoutFail($id);
-
         if (empty($formulas)) {
             Flash::error('Formulas not found');
-
             return redirect(route('formulas.index'));
         }
-
         $this->formulasRepository->delete($id);
-
         Flash::success('Formulas deleted successfully.');
 
         return redirect(route('formulas.index'));
