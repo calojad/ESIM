@@ -8,10 +8,10 @@ use App\Models\Formulas;
 
 class CuantitativosController extends Controller
 {
-    public function getIndex(){
+    public function getIndex($tab='V'){
     	$formulas = Formulas::all();
     	$variables = Variables::all();
 
-    	return view('cuantitativos.index',compact('formulas','variables'));
+    	return view('cuantitativos.index',compact('formulas','variables','tab'));
     }
 }

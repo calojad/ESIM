@@ -17,23 +17,23 @@
         <div class="col-md-12">
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Variables</a></li>
-                    <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">Formulas</a></li>
+                    <li class="{{ $tab=='V'?'active' :''}}"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Variables</a></li>
+                    <li class="{{ $tab=='F'?'active' :''}}"><a href="#tab_2" data-toggle="tab" aria-expanded="false">Formulas</a></li>
                 </ul>
                 <div class="tab-content">
                     <!-- TAB DE VARIABLES -->
-                    <div class="tab-pane active" id="tab_1">
+                    <div class="tab-pane {{ $tab=='V'?'active' :''}}" id="tab_1">
                         @include('variables.index')
                     </div>
                     <!-- TAB DE FORMULAS -->
-                    <div class="tab-pane" id="tab_2">
+                    <div class="tab-pane {{ $tab=='F'?'active' :''}}" id="tab_2">
                         @include('formulas.index')
                     </div>
                 </div>
             </div>
         </div>
         <div class="text-center">
-        
+            <span class="text-muted"><b>Nota:</b> Se recomiendo crear primnero las Varibales que pueda necesitar una formula.</span>
         </div>
     </div>
 @endsection
