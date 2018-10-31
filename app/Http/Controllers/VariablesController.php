@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Prettus\Repository\Criteria\RequestCriteria;
 use App\Http\Requests\CreateVariablesRequest;
 use App\Http\Requests\UpdateVariablesRequest;
-use App\Repositories\VariablesRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Repositories\VariablesRepository;
 use Illuminate\Http\Request;
 use Flash;
-use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
 class VariablesController extends AppBaseController
@@ -61,7 +61,7 @@ class VariablesController extends AppBaseController
 
         Flash::success('Variables saved successfully.');
 
-        return redirect(route('variables.index'));
+        return Redirect::to('/cuantitativos/V');
     }
 
     /**
