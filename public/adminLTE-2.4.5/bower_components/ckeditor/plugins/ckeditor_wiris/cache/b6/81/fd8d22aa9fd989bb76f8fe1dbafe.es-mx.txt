@@ -1,0 +1,1 @@
+{"result":{"text":"raíz cuadrada de s d más 9 menos 0.5 fin raíz"},"status":"ok"}

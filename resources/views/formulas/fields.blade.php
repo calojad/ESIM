@@ -38,8 +38,8 @@
 
     <!-- Submit Field -->
     <div class="form-group col-sm-12">
-        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
         <a href="{!! URL::to('cuantitativos/F') !!}" class="btn btn-default">Cancel</a>
+        {!! Form::submit('Siguiente', ['class' => 'btn btn-primary pull-right']) !!}
     </div>
 </div>
 <script type="text/javascript" charset="utf-8" async defer>

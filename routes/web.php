@@ -56,4 +56,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('formulas', 'FormulasController');
     //***Variables
     Route::resource('variables', 'VariablesController');
+    //***Formulas Variables
+    Route::resource('formulaVariables', 'FormulaVariableController');
 });

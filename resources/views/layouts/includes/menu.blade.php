@@ -88,4 +88,7 @@
 </li>
 <li class="{{ Request::is('unidadcarrera*') ? 'active' : '' }}">
     <a class="btnLoader" href="{!! route('unidadcarrera.index') !!}"><i class="fa fa-graduation-cap font-14pt"></i>Campus</a>
+</li><li class="{{ Request::is('formulaVariables*') ? 'active' : '' }}">
+    <a href="{!! route('formulaVariables.index') !!}"><i class="fa fa-edit"></i><span>Formula Variables</span></a>
 </li>
+
