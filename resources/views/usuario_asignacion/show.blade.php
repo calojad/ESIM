@@ -13,6 +13,7 @@
 @section('content')
     <div class="content">
         @include('adminlte-templates::common.errors')
+        @include('flash::message')
         <div class="box box-primary box-solid">
             <div class="box-header"><h3 class="box-title">Usuario Evaluador</h3></div>
             <div class="box-body">

@@ -61,7 +61,7 @@ class VariablesController extends AppBaseController
 
         Flash::success('Variables saved successfully.');
 
-        return Redirect::to('/cuantitativos/V');
+        return redirect('/cuantitativos/V');
     }
 
     /**
@@ -119,14 +119,14 @@ class VariablesController extends AppBaseController
         if (empty($variables)) {
             Flash::error('Variables not found');
 
-            return redirect(route('variables.index'));
+            return redirect('/cuantitativos/V');
         }
 
         $variables = $this->variablesRepository->update($request->all(), $id);
 
         Flash::success('Variables updated successfully.');
 
-        return redirect(route('variables.index'));
+        return redirect('/cuantitativos/V');
     }
 
     /**
@@ -143,13 +143,13 @@ class VariablesController extends AppBaseController
         if (empty($variables)) {
             Flash::error('Variables not found');
 
-            return redirect(route('variables.index'));
+            return redirect('/cuantitativos/V');
         }
 
         $this->variablesRepository->delete($id);
 
         Flash::success('Variables deleted successfully.');
 
-        return redirect(route('variables.index'));
+        return redirect('/cuantitativos/V');
     }
 }

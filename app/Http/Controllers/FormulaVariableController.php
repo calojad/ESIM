@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateFormulaVariableRequest;
 use App\Http\Requests\UpdateFormulaVariableRequest;
+use Prettus\Repository\Criteria\RequestCriteria;
 use App\Repositories\FormulaVariableRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use Flash;
-use Prettus\Repository\Criteria\RequestCriteria;
+use App\Models\Formulas;
 use Response;
+use Flash;
 
 class FormulaVariableController extends AppBaseController
 {
@@ -43,7 +44,8 @@ class FormulaVariableController extends AppBaseController
      */
     public function create()
     {
-        return view('formula_variables.create');
+        $formula = Formula::find($id);
+        return view('formula_variables.create',compact('formula'));
     }
 
     /**
@@ -73,15 +75,15 @@ class FormulaVariableController extends AppBaseController
      */
     public function show($id)
     {
-        $formulaVariable = $this->formulaVariableRepository->findWithoutFail($id);
+        $formula = Formulas::find($id);
 
-        if (empty($formulaVariable)) {
+        if (empty($formula)) {
             Flash::error('Formula Variable not found');
 
-            return redirect(route('formulaVariables.index'));
+            return redirect('cuantitativos/F');
         }
 
-        return view('formula_variables.show')->with('formulaVariable', $formulaVariable);
+         return view('formula_variables.create',compact('formula'));
     }
 
     /**
@@ -143,13 +145,13 @@ class FormulaVariableController extends AppBaseController
         if (empty($formulaVariable)) {
             Flash::error('Formula Variable not found');
 
-            return redirect(route('formulaVariables.index'));
+            return redirect('cuantitativos/F');
         }
 
         $this->formulaVariableRepository->delete($id);
 
         Flash::success('Formula Variable deleted successfully.');
 
-        return redirect(route('formulaVariables.index'));
+        return redirect('cuantitativos/F');
     }
 }

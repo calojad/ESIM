@@ -11,9 +11,6 @@
 @endsection
 @section('content')
     <div class="content">
-        <div class="clearfix"></div>
-        @include('flash::message')
-        <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-header"><h3 class="box-title">Evaluadores</h3></div>
             <div class="box-body">

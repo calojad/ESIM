@@ -58,6 +58,18 @@
         </div>
     </div>
     <script type="text/javascript" charset="utf-8" async defer>
+        $(function () {
+            $('#tblCarrerasAsig').DataTable({
+                paging: false,
+                lengthChange: true,
+                searching: true,
+                ordering: true,
+                autoWidth: true,
+                retrieve: true,
+                responsive: true,
+                scrollY: '50vh'
+            });
+        });
         // Cuando se carge la Página
         $(document).ready(function(){
             var usuario = $('#usuarioId').val();

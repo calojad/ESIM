@@ -59,7 +59,7 @@ class FormulasController extends AppBaseController
         $formulas = $this->formulasRepository->create($input);
         Flash::success('Formulas saved successfully.');
 
-        return redirect(route('variables.create'));
+        return redirect(route('formulaVariables.show',$formulas->id));
     }
 
     /**
@@ -131,11 +131,11 @@ class FormulasController extends AppBaseController
         $formulas = $this->formulasRepository->findWithoutFail($id);
         if (empty($formulas)) {
             Flash::error('Formulas not found');
-            return redirect(route('formulas.index'));
+            return redirect('cuantitativos/F');
         }
         $this->formulasRepository->delete($id);
         Flash::success('Formulas deleted successfully.');
 
-        return redirect(route('formulas.index'));
+        return redirect('cuantitativos/F');
     }
 }

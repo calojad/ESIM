@@ -11,9 +11,9 @@
 @endsection
 @section('content')
     <div class="content">
-        {{--  <div class="clearfix"></div>
+        <div class="clearfix"></div>
         @include('flash::message')
-        <div class="clearfix"></div>--}}
+        <div class="clearfix"></div>
         <div class="col-md-12">
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">

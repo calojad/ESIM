@@ -6,19 +6,19 @@
     <!-- Nombre Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('nombre', 'Nombre:') !!}
-        {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+        {!! Form::text('nombre', null, ['class' => 'form-control','required' => 'required']) !!}
     </div>
 
     <!-- Abreviatura Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('abreviatura', 'Abreviatura:') !!}
-        {!! Form::text('abreviatura', null, ['class' => 'form-control']) !!}
+        {!! Form::text('abreviatura', null, ['class' => 'form-control','required' => 'required']) !!}
     </div>
 
     <!-- Formula Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('formula', 'Formula:') !!}
-        {!! Form::textarea('formula', null, ['class' => 'form-control textarea','id' => 'formula']) !!}
+        {!! Form::textarea('formula', null, ['class' => 'form-control textarea','id' => 'formula', 'required' => 'required']) !!}
     </div>
 
     <!-- Estado Field -->
