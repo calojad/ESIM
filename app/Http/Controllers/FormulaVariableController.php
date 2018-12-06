@@ -8,7 +8,10 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use App\Repositories\FormulaVariableRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\Models\FormulaVariable;
 use App\Models\Formulas;
+use App\Models\Variables;
+
 use Response;
 use Flash;
 
@@ -42,10 +45,11 @@ class FormulaVariableController extends AppBaseController
      *
      * @return Response
      */
-    public function create()
+    public function create($id)
     {
-        $formula = Formula::find($id);
-        return view('formula_variables.create',compact('formula'));
+        $formula = Formulas::find($id);
+        $variables = Variables::where('estado',1)->get();
+        return view('formula_variables.create',compact('formula','variables'));
     }
 
     /**
@@ -57,13 +61,18 @@ class FormulaVariableController extends AppBaseController
      */
     public function store(CreateFormulaVariableRequest $request)
     {
-        $input = $request->all();
+        $formula_id = $request->get('formula_id');
+        $variables = $request->get('chkSelVariable');
 
-        $formulaVariable = $this->formulaVariableRepository->create($input);
+        foreach ($variables as $variable) {
+            FormulaVariable::updateOrCreate(
+                ['formula_id' => $formula_id, 'variable_id' => $variable]
+            );
+        }
 
         Flash::success('Formula Variable saved successfully.');
 
-        return redirect(route('formulaVariables.index'));
+        return redirect('cuantitativos/F');
     }
 
     /**
@@ -75,15 +84,7 @@ class FormulaVariableController extends AppBaseController
      */
     public function show($id)
     {
-        $formula = Formulas::find($id);
-
-        if (empty($formula)) {
-            Flash::error('Formula Variable not found');
-
-            return redirect('cuantitativos/F');
-        }
-
-         return view('formula_variables.create',compact('formula'));
+        //
     }
 
     /**
@@ -95,15 +96,18 @@ class FormulaVariableController extends AppBaseController
      */
     public function edit($id)
     {
-        $formulaVariable = $this->formulaVariableRepository->findWithoutFail($id);
+        $formula = Formulas::find($id);
+        $variables = Variables::where('estado',1)->get();
+        $formulaVariables = FormulaVariable::where
 
-        if (empty($formulaVariable)) {
-            Flash::error('Formula Variable not found');
+        if (empty($formula)) {
+            Flash::error('Formula not found');
 
-            return redirect(route('formulaVariables.index'));
+            return redirect(route('cuantitativos/F'));
         }
 
-        return view('formula_variables.edit')->with('formulaVariable', $formulaVariable);
+
+        return view('formula_variables.edit');
     }
 
     /**

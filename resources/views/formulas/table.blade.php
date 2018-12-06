@@ -18,9 +18,9 @@
             <td>
                 {!! Form::open(['route' => ['formulas.destroy', $formulas->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
-                    {{-- <a href{!! route('formulas.show', [$formulas->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a> --}}
-                    <a href="{!! route('formulas.edit', [$formulas->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    <a href="{!! route('formulas.edit', [$formulas->id]) !!}" class='btn btn-default btn-xs btnLoader' title="Editar"><i class="glyphicon glyphicon-edit"></i></a>
+                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')", 'title' => 'Eliminar']) !!}
+                    <a href="{{ route('formulaVariables.edit', $formulas->id) }}" class='btn btn-success btn-xs' title="Variables"><i class="fa fa-superscript"></i></a>
                 </div>
                 {!! Form::close() !!}
             </td>

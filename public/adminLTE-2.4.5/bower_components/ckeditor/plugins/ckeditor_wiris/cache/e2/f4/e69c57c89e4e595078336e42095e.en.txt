@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator 1.5 cross times N A P h D plus N A M s C over denominator N A end fraction"},"status":"ok"}

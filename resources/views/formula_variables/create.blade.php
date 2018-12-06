@@ -37,22 +37,57 @@
                     </div>
                 </div>
             </div>
-            <div class="box-footer">
-                <button class="btn btn-primary pull-right" type="submit">Guardar</button>
-            </div>
         </div>
-
         <div class="box box-warning box-solid">
-            <div class="box-header"><h3 class="box-title">Variables</h3></div>
+            <div class="box-header"><h3 class="box-title">Seleccione las variables correspondientes a la Formula.</h3></div>
             <div class="box-body">
+                {{ Form::open(['route' => 'formulaVariables.store']) }}
+                <input type="hidden" name="formula_id" value="{{ $formula->id }}">
                 <div class="col-md-12">
-                    <a class="btn btn-success pull-right" href="">Agegar</a>
+                    <button type="submit" class="btn btn-success pull-right">Guardar</button>
                 </div>
                 <hr>
-                <div>
-                    
+                <div class="container" style="border: 1px solid #E1E1E1; padding: 25px; border-radius: 8px">
+                    <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="formulaVariables-table">
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($variables as $v)
+                            <tr>
+                                <td>{!! $v->variable !!}</td>
+                                <td>
+                                    {{ Form::checkbox('chkSelVariable[]', $v->id, null, ['class' => 'inputIcheck']) }}
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                 </div>
+                {{ Form::close() }}
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+    $(function () {
+        $('.inputIcheck').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%'
+        });
+        $('#formulaVariables-table').DataTable({
+            paging: false,
+            lengthChange: true,
+            searching: true,
+            ordering: true,
+            autoWidth: true,
+            retrieve: true,
+            responsive: true,
+            scrollY: '30vh'
+        });
+    });
+</script>
 @endsection
