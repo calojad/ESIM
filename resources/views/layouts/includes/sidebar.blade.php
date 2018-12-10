@@ -1,4 +1,5 @@
 <aside class="main-sidebar" >
+    <div class="slimScrollDiv" style="position: relative; overflow: auto; width: auto; height: 100%;">
         <section class="sidebar">
         <!-- Sidebar user panel (optional) -->
             <div class="user-panel" align="center">
@@ -12,7 +13,6 @@
                     @else
                         <p>{{ Auth::user()->name}}</p>
                     @endif
-                    <!-- Status -->
                     <a href="#"><i class="fas fa-circle text-success"></i> Online</a>
                 </div>--}}
             </div>
@@ -27,11 +27,9 @@
             </div>
         </form>--}}
         <!-- Sidebar Menu -->
-            <ul class="sidebar-menu" data-widget="tree">
+            <ul class="sidebar-menu" data-widget="tree" style="height: 100%">
                 @include('layouts.includes.menu')
             </ul>
-            <!-- /.sidebar-menu -->
         </section>
-        <!-- /.sidebar -->
-    {{--</div>--}}
+    </div>
 </aside>

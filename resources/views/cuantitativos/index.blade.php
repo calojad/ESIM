@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="text-center">
-            <span class="text-muted"><b>Nota:</b> Se recomiendo crear primnero las Varibales que pueda necesitar una formula.</span>
+            <span class="text-muted"><b>Nota:</b> Se recomiendo crear primnero las Varibales y despues la Formula.</span>
         </div>
     </div>
 @endsection
