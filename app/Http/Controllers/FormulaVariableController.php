@@ -98,8 +98,7 @@ class FormulaVariableController extends AppBaseController
     {
         $formula = Formulas::find($id);
         $variables = Variables::where('estado',1)->get();
-        $formulaVariables = FormulaVariable::where
-
+        $formulaVariables = FormulaVariable::where('formula_id',$id)->pluck('variable_id')->toArray();
         if (empty($formula)) {
             Flash::error('Formula not found');
 
@@ -107,7 +106,7 @@ class FormulaVariableController extends AppBaseController
         }
 
 
-        return view('formula_variables.edit');
+        return view('formula_variables.edit', compact('formula','variables','formulaVariables'));
     }
 
     /**
@@ -120,19 +119,29 @@ class FormulaVariableController extends AppBaseController
      */
     public function update($id, UpdateFormulaVariableRequest $request)
     {
-        $formulaVariable = $this->formulaVariableRepository->findWithoutFail($id);
-
-        if (empty($formulaVariable)) {
-            Flash::error('Formula Variable not found');
-
-            return redirect(route('formulaVariables.index'));
+        $variables = $request->get('chkSelVariable');
+        $formulaVariables = FormulaVariable::where('formula_id',$id)->get();
+        if(empty($variables)){
+            foreach ($formulaVariables as $forVar) {
+                $forVar->delete();
+            }
+        }else{
+            foreach ($variables as $variable) {
+                FormulaVariable::updateOrCreate(
+                    ['formula_id' => $id, 'variable_id' => $variable]
+                );
+            }
+        
+            foreach ($formulaVariables as $forVar) {
+                if(!in_array($forVar->variable_id, $variables)){
+                    $forVar->delete();
+                }
+            }
         }
-
-        $formulaVariable = $this->formulaVariableRepository->update($request->all(), $id);
 
         Flash::success('Formula Variable updated successfully.');
 
-        return redirect(route('formulaVariables.index'));
+        return redirect('cuantitativos/F');
     }
 
     /**

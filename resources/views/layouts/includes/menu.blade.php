@@ -46,7 +46,7 @@
 </li>
 
 {{-- ********* CALCULOS ********* --}}
-<li class="treeview {{ Request::is('grupoValors*','valoracions*','formulas*','variables*','cuantitativos','formulaVariables*') ? 'active' : '' }}">
+<li class="treeview {{ Request::is('grupoValors*','valoracions*','formulas*','variables*','cuantitativos*','formulaVariables*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-calculator font-14pt"></i> <span>Cálculo</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
@@ -54,8 +54,8 @@
         <li class="{{ Request::is('grupoValors*','valoracions*') ? 'active' : '' }}">
             <a class="btnLoader" href="{{ route('grupoValors.index') }}"><i class="{{ Request::is('grupoValors*','valoracions*') ? 'fas' : 'far' }} fa-circle"></i>Cualitativos</a>
         </li>
-        <li class="{{ Request::is('formulas*','variables*','cuantitativos','formulaVariables*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{{ URL::to('cuantitativos') }}"><i class="{{ Request::is('formulas*','variables*','cuantitativos','formulaVariables*') ? 'fas' : 'far' }} fa-circle"></i>Cuantitativos</a>
+        <li class="{{ Request::is('formulas*','variables*','cuantitativos*','formulaVariables*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{{ URL::to('cuantitativos') }}"><i class="{{ Request::is('formulas*','variables*','cuantitativos*','formulaVariables*') ? 'fas' : 'far' }} fa-circle"></i>Cuantitativos</a>
         </li>
     </ul>
 </li>
