@@ -61,15 +61,16 @@
 </li>
 
 {{-- ********* MATRIZ ********* --}}
-<li class="treeview {{ Request::is('matriz*') ? 'active' : '' }}">
+<li class="treeview {{ Request::is('matriz*','modelos*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-table font-14pt"></i> <span>Matriz</span>
         <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
         </span>
     </a>
     <ul class="treeview-menu">
-        <li><a href="#"><i class="far fa-circle"></i>Modelos</a></li>
-        <li><a href="#"><i class="far fa-circle"></i>Estructuras</a></li>
+        <li class="{{ Request::is('modelos*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{!! route('modelos.index') !!}"><i class="{{ Request::is('modelos*') ? 'fas' : 'far' }} fa-circle"></i><span>Modelos</span></a>
+        </li>
         <li><a href="#"><i class="far fa-circle"></i>Matrices</a></li>
     </ul>
 </li>
@@ -95,4 +96,7 @@
 </li>
 <li class="{{ Request::is('unidadcarrera*') ? 'active' : '' }}">
     <a class="btnLoader" href="{!! route('unidadcarrera.index') !!}"><i class="fa fa-graduation-cap font-14pt"></i><span>Campus</span></a>
+</li><li class="{{ Request::is('criterios*') ? 'active' : '' }}">
+    <a href="{!! route('criterios.index') !!}"><i class="fa fa-edit"></i><span>Criterios</span></a>
 </li>
+

@@ -5,6 +5,18 @@
         {!! Form::text('nombre', null, ['class' => 'form-control','required' => true,'autofocus' => true]) !!}
     </div>
 
+    <!-- Abreviado Field -->
+    <div class="form-group col-sm-12">
+        {!! Form::label('abreviado', 'Abreviación:') !!}
+        {!! Form::text('abreviado', null, ['class' => 'form-control','required' => true,'autofocus' => true]) !!}
+    </div>
+
+    <!-- Descripcion Field -->
+    <div class="form-group col-sm-12">
+        {!! Form::label('descripcion', 'Descripción:') !!}
+        {!! Form::text('descripcion', null, ['class' => 'form-control','required' => true,'autofocus' => true]) !!}
+    </div>
+
     <!-- Estado Field -->
     <div class="form-group col-sm-12 col-md-12 icheck">
         <label class="col-sm-12 col-md-12 col-lg-12">Estado:</label>
@@ -23,7 +35,7 @@
     <!-- Submit Field -->
     <div class="form-group col-sm-12">
         {!! Form::submit('Save', ['class' => 'btn btn-primary btnLoader']) !!}
-        <a href="{!! route('carreras.index') !!}" class="btn btn-default btnLoader">Cancel</a>
+        <a href="{!! route('modelos.index') !!}" class="btn btn-default btnLoader">Cancel</a>
     </div>
 </div>
 <script type="text/javascript" charset="utf-8" async defer>

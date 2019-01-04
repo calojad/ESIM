@@ -35,7 +35,7 @@
             <div class="box-header">
                 <h3 class="box-title">Carreras</h3>
             </div>
-            <div class="box-body with-border">
+            <div class="box-body" style="border: 1px solid #999999;">
                 <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="tblCarrerasAsig">
                     <thead>
                     <tr>
@@ -67,7 +67,7 @@
                 autoWidth: true,
                 retrieve: true,
                 responsive: true,
-                scrollY: '50vh'
+                scrollY: '70vh'
             });
         });
         // Cuando se carge la Página
