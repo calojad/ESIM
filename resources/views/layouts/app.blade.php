@@ -4,7 +4,7 @@
         @include('layouts.includes.heads')
         @yield('css')
     </head>
-    <body class="hold-transition skin-red sidebar-mini">
+    <body class="hold-transition skin-red fixed sidebar-mini">
         <div id="preloader" class='preloader'><div class='loaded'>&nbsp;</div></div>
         <div class="wrapper">
             <!-- Main Header -->
