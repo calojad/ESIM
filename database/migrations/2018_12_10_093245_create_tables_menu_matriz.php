@@ -33,7 +33,6 @@ class CreateTablesMenuMatriz extends Migration
         });
         Schema::create('criterio', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('modelo_id')->unsigned();
             $table->string('nombre');
             $table->string('abreviado');
             $table->integer('nivel');
@@ -72,6 +71,12 @@ class CreateTablesMenuMatriz extends Migration
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
+        Schema::create('modelo_criterio', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('modelo_id')->unsigned();
+            $table->integer('criterio_id')->unsigned();
+            $table->timestamps();
+        });
         Schema::create('criterio_indicador', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('criterio_id')->unsigned();
@@ -99,6 +104,7 @@ class CreateTablesMenuMatriz extends Migration
         Schema::dropIfExists('indicador');
         Schema::dropIfExists('evidencia');
         Schema::dropIfExists('elemento');
+        Schema::dropIfExists('modelo_criterio');
         Schema::dropIfExists('criterio_indicador');
         Schema::dropIfExists('indicador_evidencia');
     }

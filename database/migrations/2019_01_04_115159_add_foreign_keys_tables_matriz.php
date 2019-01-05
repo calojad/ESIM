@@ -20,8 +20,12 @@ class AddForeignKeysTablesMatriz extends Migration
             $table->foreign('tipo_evaluacion_id')->references('id')->on('tipo_evaluacion');
         });
 
-        Schema::table('criterio', function (Blueprint $table) {
+        Schema::table('modelo_criterio', function (Blueprint $table) {
             $table->foreign('modelo_id')->references('id')->on('modelo');
+            $table->foreign('criterio_id')->references('id')->on('criterio');
+        });
+
+        Schema::table('criterio', function (Blueprint $table) {
             $table->foreign('criterio_padre_id')->references('id')->on('criterio');
         });
 
@@ -60,8 +64,11 @@ class AddForeignKeysTablesMatriz extends Migration
             $table->dropForeign('matriz_carrera_id_foreign');
             $table->dropForeign('matriz_tipo_evaluacion_id_foreign');
         });
+        Schema::table('modelo_criterio', function (Blueprint $table) {
+            $table->dropForeign('modelo_criterio_modelo_id_foreign');
+            $table->dropForeign('modelo_criterio_criterio_id_foreign');
+        });
         Schema::table('criterio', function (Blueprint $table) {
-            $table->dropForeign('criterio_modelo_id_foreign');
             $table->dropForeign('criterio_criterio_id_foreign');
         });
         Schema::table('criterio_indicador', function (Blueprint $table) {

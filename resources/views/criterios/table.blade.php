@@ -1,8 +1,7 @@
 <table class="table table-responsive" id="criterios-table">
     <thead>
         <tr>
-            <th>Modelo Id</th>
-        <th>Nombre</th>
+            <th>Nombre</th>
         <th>Abreviado</th>
         <th>Nivel</th>
         <th>Descripcion</th>
@@ -14,7 +13,6 @@
     <tbody>
     @foreach($criterios as $criterio)
         <tr>
-            <td>{!! $criterio->modelo_id !!}</td>
             <td>{!! $criterio->nombre !!}</td>
             <td>{!! $criterio->abreviado !!}</td>
             <td>{!! $criterio->nivel !!}</td>

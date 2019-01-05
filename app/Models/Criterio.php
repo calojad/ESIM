@@ -7,15 +7,14 @@ use Eloquent as Model;
 /**
  * Class Criterio
  * @package App\Models
- * @version January 4, 2019, 5:39 pm -05
+ * @version January 5, 2019, 11:14 am -05
  *
- * @property \App\Models\Modelo modelo
  * @property \Illuminate\Database\Eloquent\Collection CriterioIndicador
  * @property \Illuminate\Database\Eloquent\Collection formulaVariable
  * @property \Illuminate\Database\Eloquent\Collection indicadorEvidencia
+ * @property \Illuminate\Database\Eloquent\Collection ModeloCriterio
  * @property \Illuminate\Database\Eloquent\Collection unidad
  * @property \Illuminate\Database\Eloquent\Collection unidadCarrera
- * @property integer modelo_id
  * @property string nombre
  * @property string abreviado
  * @property integer nivel
@@ -34,7 +33,6 @@ class Criterio extends Model
 
 
     public $fillable = [
-        'modelo_id',
         'nombre',
         'abreviado',
         'nivel',
@@ -50,7 +48,6 @@ class Criterio extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'modelo_id' => 'integer',
         'nombre' => 'string',
         'abreviado' => 'string',
         'nivel' => 'integer',
@@ -69,18 +66,18 @@ class Criterio extends Model
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     **/
-    public function modelo()
-    {
-        return $this->belongsTo(\App\Models\Modelo::class);
-    }
-
-    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
     public function criterioIndicadors()
     {
         return $this->hasMany(\App\Models\CriterioIndicador::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     **/
+    public function modeloCriterios()
+    {
+        return $this->hasMany(\App\Models\ModeloCriterio::class);
     }
 }

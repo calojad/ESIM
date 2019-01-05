@@ -4,12 +4,6 @@
     <p>{!! $criterio->id !!}</p>
 </div>
 
-<!-- Modelo Id Field -->
-<div class="form-group">
-    {!! Form::label('modelo_id', 'Modelo Id:') !!}
-    <p>{!! $criterio->modelo_id !!}</p>
-</div>
-
 <!-- Nombre Field -->
 <div class="form-group">
     {!! Form::label('nombre', 'Nombre:') !!}

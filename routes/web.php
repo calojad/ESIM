@@ -61,8 +61,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('formulaVariables/create/{formula}', 'FormulaVariableController@create')->name('formulaVariables.formulasVariablesagregar');
     //***Modelos
     Route::resource('modelos', 'ModeloController');
-    //***Estructura
-//    Route::get();
+    //***Criterios
+    Route::resource('criterios', 'CriterioController');
 });
-
-Route::resource('criterios', 'CriterioController');

@@ -96,7 +96,8 @@
 </li>
 <li class="{{ Request::is('unidadcarrera*') ? 'active' : '' }}">
     <a class="btnLoader" href="{!! route('unidadcarrera.index') !!}"><i class="fa fa-graduation-cap font-14pt"></i><span>Campus</span></a>
-</li><li class="{{ Request::is('criterios*') ? 'active' : '' }}">
+</li>
+<li class="{{ Request::is('criterios*') ? 'active' : '' }}">
     <a href="{!! route('criterios.index') !!}"><i class="fa fa-edit"></i><span>Criterios</span></a>
 </li>
 
