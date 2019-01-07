@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateCriterioRequest;
 use App\Http\Requests\UpdateCriterioRequest;
+use App\Models\Criterio;
 use App\Repositories\CriterioRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -43,7 +44,8 @@ class CriterioController extends AppBaseController
      */
     public function create()
     {
-        return view('criterios.create');
+        $criterios = Criterio::where('estado',1)->orderBy('nivel','asc')->pluck('nombre','id');
+        return view('criterios.create',compact('criterios'));
     }
 
     /**
@@ -56,11 +58,8 @@ class CriterioController extends AppBaseController
     public function store(CreateCriterioRequest $request)
     {
         $input = $request->all();
-
         $criterio = $this->criterioRepository->create($input);
-
         Flash::success('Criterio saved successfully.');
-
         return redirect(route('criterios.index'));
     }
 

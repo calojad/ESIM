@@ -4,7 +4,6 @@
             <th>Nombre</th>
             <th>Abreviado</th>
             <th>Nivel</th>
-            <th>Descripcion</th>
             <th>Estado</th>
             <th>Action</th>
         </tr>
@@ -15,7 +14,6 @@
             <td>{!! $criterio->nombre !!}</td>
             <td>{!! $criterio->abreviado !!}</td>
             <td>{!! $criterio->nivel !!}</td>
-            <td>{!! $criterio->descripcion !!}</td>
             <td><label class="label {!! $criterio->estado==1?'label-success':'label-danger' !!}">{!! $criterio->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['criterios.destroy', $criterio->id], 'method' => 'delete']) !!}

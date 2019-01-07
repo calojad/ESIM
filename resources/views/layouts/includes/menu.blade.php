@@ -68,9 +68,11 @@
         </span>
     </a>
     <ul class="treeview-menu">
-        <li><a href="#"><i class="far fa-circle"></i>Estructura</a></li>
         <li class="{{ Request::is('criterios*') ? 'active' : '' }}">
             <a href="{!! route('criterios.index') !!}"><i class="{{ Request::is('criterios*') ? 'fas' : 'far' }} fa-circle"></i><span>Criterios</span></a>
+        </li>
+        <li class="{{ Request::is('indicadores*') ? 'active' : '' }}">
+            <a href=""><i class="{{ Request::is('indicadores*') ? 'fas' : 'far' }} fa-circle"></i><span>Indicadores</span></a>
         </li>
         <li class="{{ Request::is('modelos*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('modelos.index') !!}"><i class="{{ Request::is('modelos*') ? 'fas' : 'far' }} fa-circle"></i><span>Modelos</span></a>

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="cal_esim@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.11">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.14">
     <root id="1">
-      <ServerVersion>5.5.5</ServerVersion>
-      <RdbmsFlavour>MariaDB</RdbmsFlavour>
+      <ServerVersion>10.1.33</ServerVersion>
+      <Dbms>MARIADB</Dbms>
       <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
       <DefaultCasing>lower/lower</DefaultCasing>
     </root>
     <schema id="2" parent="1" name="cal_calidad">
@@ -980,882 +979,1495 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="247" parent="4" name="carrera"/>
-    <table id="248" parent="4" name="formula_variable"/>
-    <table id="249" parent="4" name="formulas"/>
-    <table id="250" parent="4" name="grupo_valor"/>
-    <table id="251" parent="4" name="migrations"/>
-    <table id="252" parent="4" name="password_resets"/>
-    <table id="253" parent="4" name="periodo"/>
-    <table id="254" parent="4" name="tipo_evaluacion"/>
-    <table id="255" parent="4" name="tipo_indicador"/>
-    <table id="256" parent="4" name="tipo_periodo"/>
-    <table id="257" parent="4" name="tipo_unidad"/>
-    <table id="258" parent="4" name="ubicacion"/>
-    <table id="259" parent="4" name="unidad"/>
-    <table id="260" parent="4" name="unidad_carrera"/>
-    <table id="261" parent="4" name="users"/>
-    <table id="262" parent="4" name="usuario_asignacion"/>
-    <table id="263" parent="4" name="valoracion"/>
-    <table id="264" parent="4" name="variables"/>
-    <column id="265" parent="247" name="id">
+    <table id="248" parent="4" name="criterio"/>
+    <table id="249" parent="4" name="criterio_indicador"/>
+    <table id="250" parent="4" name="elemento"/>
+    <table id="251" parent="4" name="evidencia"/>
+    <table id="252" parent="4" name="formula_variable"/>
+    <table id="253" parent="4" name="formulas"/>
+    <table id="254" parent="4" name="grupo_valor"/>
+    <table id="255" parent="4" name="indicador"/>
+    <table id="256" parent="4" name="indicador_evidencia"/>
+    <table id="257" parent="4" name="matriz"/>
+    <table id="258" parent="4" name="migrations"/>
+    <table id="259" parent="4" name="modelo"/>
+    <table id="260" parent="4" name="modelo_criterio"/>
+    <table id="261" parent="4" name="password_resets"/>
+    <table id="262" parent="4" name="periodo"/>
+    <table id="263" parent="4" name="tipo_evaluacion"/>
+    <table id="264" parent="4" name="tipo_indicador"/>
+    <table id="265" parent="4" name="tipo_periodo"/>
+    <table id="266" parent="4" name="tipo_unidad"/>
+    <table id="267" parent="4" name="ubicacion"/>
+    <table id="268" parent="4" name="unidad"/>
+    <table id="269" parent="4" name="unidad_carrera"/>
+    <table id="270" parent="4" name="users"/>
+    <table id="271" parent="4" name="usuario_asignacion"/>
+    <table id="272" parent="4" name="valoracion"/>
+    <table id="273" parent="4" name="variables"/>
+    <column id="274" parent="247" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="247" name="nombre">
+    <column id="275" parent="247" name="nombre">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="247" name="estado">
+    <column id="276" parent="247" name="estado">
       <Position>3</Position>
       <Comment>1=Activo|0=Inactivo</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="247" name="created_at">
+    <column id="277" parent="247" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="247" name="updated_at">
+    <column id="278" parent="247" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="270" parent="247" name="PRIMARY">
+    <key id="279" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="271" parent="248" name="id">
+    <column id="280" parent="248" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="248" name="formula_id">
+    <column id="281" parent="248" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="282" parent="248" name="abreviado">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="283" parent="248" name="nivel">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="284" parent="248" name="descripcion">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="285" parent="248" name="criterio_padre_id">
+      <Position>6</Position>
+      <Comment>Indica a que criterio pertenece, si es un subcriterio</Comment>
+      <DataType>int(10) unsigned|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="286" parent="248" name="estado">
+      <Position>7</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="287" parent="248" name="created_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="288" parent="248" name="updated_at">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="289" parent="248" name="criterio_criterio_padre_id_foreign">
+      <ColNames>criterio_padre_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="290" parent="248" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="291" parent="248" name="criterio_criterio_padre_id_foreign">
+      <ColNames>criterio_padre_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>criterio</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="292" parent="249" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="293" parent="249" name="criterio_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="248" name="variable_id">
+    <column id="294" parent="249" name="indicador_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="248" name="created_at">
+    <column id="295" parent="249" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="248" name="updated_at">
+    <column id="296" parent="249" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="276" parent="248" name="formula_variable_formula_id_foreign">
-      <ColNames>formula_id</ColNames>
+    <index id="297" parent="249" name="criterio_indicador_criterio_id_foreign">
+      <ColNames>criterio_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="277" parent="248" name="formula_variable_variable_id_foreign">
-      <ColNames>variable_id</ColNames>
+    <index id="298" parent="249" name="criterio_indicador_indicador_id_foreign">
+      <ColNames>indicador_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="278" parent="248" name="PRIMARY">
+    <key id="299" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="279" parent="248" name="formula_variable_formula_id_foreign">
+    <foreign-key id="300" parent="249" name="criterio_indicador_criterio_id_foreign">
+      <ColNames>criterio_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>criterio</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="301" parent="249" name="criterio_indicador_indicador_id_foreign">
+      <ColNames>indicador_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>indicador</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="302" parent="250" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="303" parent="250" name="evidencia_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="304" parent="250" name="secuencia">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="305" parent="250" name="nombre">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="306" parent="250" name="importancia">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="307" parent="250" name="estado">
+      <Position>6</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="308" parent="250" name="created_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="309" parent="250" name="updated_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="310" parent="250" name="elemento_evidencia_id_foreign">
+      <ColNames>evidencia_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="311" parent="250" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="312" parent="250" name="elemento_evidencia_id_foreign">
+      <ColNames>evidencia_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>evidencia</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="313" parent="251" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="314" parent="251" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="315" parent="251" name="estado">
+      <Position>3</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="316" parent="251" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="317" parent="251" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="318" parent="251" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="319" parent="252" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="320" parent="252" name="formula_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="321" parent="252" name="variable_id">
+      <Position>3</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="322" parent="252" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="323" parent="252" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="324" parent="252" name="formula_variable_formula_id_foreign">
+      <ColNames>formula_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="325" parent="252" name="formula_variable_variable_id_foreign">
+      <ColNames>variable_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="326" parent="252" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="327" parent="252" name="formula_variable_formula_id_foreign">
       <ColNames>formula_id</ColNames>
       <RefSchemaName>cal_esim</RefSchemaName>
       <RefTableName>formulas</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="280" parent="248" name="formula_variable_variable_id_foreign">
+    <foreign-key id="328" parent="252" name="formula_variable_variable_id_foreign">
       <ColNames>variable_id</ColNames>
       <RefSchemaName>cal_esim</RefSchemaName>
       <RefTableName>variables</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="281" parent="249" name="id">
+    <column id="329" parent="253" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="249" name="nombre">
+    <column id="330" parent="253" name="nombre">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="249" name="abreviatura">
+    <column id="331" parent="253" name="abreviatura">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="249" name="formula">
+    <column id="332" parent="253" name="formula">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="249" name="estado">
+    <column id="333" parent="253" name="estado">
       <Position>5</Position>
       <Comment>1=Activo|0=Inactivo</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="249" name="created_at">
+    <column id="334" parent="253" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="249" name="updated_at">
+    <column id="335" parent="253" name="updated_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="288" parent="249" name="PRIMARY">
+    <key id="336" parent="253" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="289" parent="250" name="id">
+    <column id="337" parent="254" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="250" name="tipo_indicador_id">
+    <column id="338" parent="254" name="tipo_indicador_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="250" name="nombre">
+    <column id="339" parent="254" name="nombre">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="250" name="descripcion">
+    <column id="340" parent="254" name="descripcion">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="250" name="estado">
+    <column id="341" parent="254" name="estado">
       <Position>5</Position>
       <Comment>1=Activo|0=Inactivo</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="250" name="created_at">
+    <column id="342" parent="254" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="250" name="updated_at">
+    <column id="343" parent="254" name="updated_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="296" parent="250" name="grupo_valor_tipo_indicador_id_foreign">
+    <index id="344" parent="254" name="grupo_valor_tipo_indicador_id_foreign">
       <ColNames>tipo_indicador_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="297" parent="250" name="PRIMARY">
+    <key id="345" parent="254" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="298" parent="250" name="grupo_valor_tipo_indicador_id_foreign">
+    <foreign-key id="346" parent="254" name="grupo_valor_tipo_indicador_id_foreign">
       <ColNames>tipo_indicador_id</ColNames>
       <RefSchemaName>cal_esim</RefSchemaName>
       <RefTableName>tipo_indicador</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="299" parent="251" name="id">
+    <column id="347" parent="255" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="251" name="migration">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="301" parent="251" name="batch">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="302" parent="251" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="303" parent="252" name="email">
-      <Position>1</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="304" parent="252" name="token">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="305" parent="252" name="created_at">
-      <Position>3</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="306" parent="252" name="password_resets_email_index">
-      <ColNames>email</ColNames>
-      <Type>btree</Type>
-    </index>
-    <column id="307" parent="253" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="308" parent="253" name="tipo_periodo_id">
+    <column id="348" parent="255" name="modelo_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="253" name="nombre">
+    <column id="349" parent="255" name="tipo_indicador_id">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="253" name="fecha_inicio">
+    <column id="350" parent="255" name="grupo_valor_id">
       <Position>4</Position>
-      <DataType>date|0s</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="253" name="fecha_fin">
+    <column id="351" parent="255" name="formula_id">
       <Position>5</Position>
-      <DataType>date|0s</DataType>
+      <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="253" name="estado">
+    <column id="352" parent="255" name="nombre">
       <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="353" parent="255" name="descripcion">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="354" parent="255" name="estandar">
+      <Position>8</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="355" parent="255" name="vigencia">
+      <Position>9</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="356" parent="255" name="marco_normativo">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="357" parent="255" name="fuente_info">
+      <Position>11</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="358" parent="255" name="estado">
+      <Position>12</Position>
       <Comment>1=Activo|0=Inactivo</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="253" name="created_at">
-      <Position>7</Position>
+    <column id="359" parent="255" name="created_at">
+      <Position>13</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="253" name="updated_at">
+    <column id="360" parent="255" name="updated_at">
+      <Position>14</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="361" parent="255" name="indicador_modelo_id_foreign">
+      <ColNames>modelo_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="362" parent="255" name="indicador_tipo_indicador_id_foreign">
+      <ColNames>tipo_indicador_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="363" parent="255" name="indicador_grupo_valor_id_foreign">
+      <ColNames>grupo_valor_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="364" parent="255" name="indicador_formula_id_foreign">
+      <ColNames>formula_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="365" parent="255" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="366" parent="255" name="indicador_modelo_id_foreign">
+      <ColNames>modelo_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>modelo</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="367" parent="255" name="indicador_tipo_indicador_id_foreign">
+      <ColNames>tipo_indicador_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>tipo_indicador</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="368" parent="255" name="indicador_grupo_valor_id_foreign">
+      <ColNames>grupo_valor_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>grupo_valor</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="369" parent="255" name="indicador_formula_id_foreign">
+      <ColNames>formula_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>formulas</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="370" parent="256" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="371" parent="256" name="indicador_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="372" parent="256" name="evidencia_id">
+      <Position>3</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="373" parent="256" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="374" parent="256" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="375" parent="256" name="indicador_evidencia_indicador_id_foreign">
+      <ColNames>indicador_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="376" parent="256" name="indicador_evidencia_evidencia_id_foreign">
+      <ColNames>evidencia_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="377" parent="256" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="378" parent="256" name="indicador_evidencia_indicador_id_foreign">
+      <ColNames>indicador_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>indicador</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="379" parent="256" name="indicador_evidencia_evidencia_id_foreign">
+      <ColNames>evidencia_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>evidencia</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="380" parent="257" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="381" parent="257" name="modelo_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="382" parent="257" name="periodo_id">
+      <Position>3</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="383" parent="257" name="carrera_id">
+      <Position>4</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="384" parent="257" name="tipo_evaluacion_id">
+      <Position>5</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="385" parent="257" name="nombre">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="386" parent="257" name="estado">
+      <Position>7</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="387" parent="257" name="created_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="315" parent="253" name="periodo_tipo_periodo_id_foreign">
-      <ColNames>tipo_periodo_id</ColNames>
+    <column id="388" parent="257" name="updated_at">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="389" parent="257" name="matriz_modelo_id_foreign">
+      <ColNames>modelo_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="316" parent="253" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="317" parent="253" name="periodo_tipo_periodo_id_foreign">
-      <ColNames>tipo_periodo_id</ColNames>
-      <RefSchemaName>cal_esim</RefSchemaName>
-      <RefTableName>tipo_periodo</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="318" parent="254" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="319" parent="254" name="nombre">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="320" parent="254" name="estado">
-      <Position>3</Position>
-      <Comment>1=Activo|0=Inactivo</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="321" parent="254" name="created_at">
-      <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="322" parent="254" name="updated_at">
-      <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="323" parent="254" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="324" parent="255" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="325" parent="255" name="nombre">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="326" parent="255" name="estado">
-      <Position>3</Position>
-      <Comment>1=Activo|0=Inactivo</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="327" parent="255" name="created_at">
-      <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="328" parent="255" name="updated_at">
-      <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="329" parent="255" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="330" parent="256" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="331" parent="256" name="nombre">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="332" parent="256" name="estado">
-      <Position>3</Position>
-      <Comment>1=Activo|0=Inactivo</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="333" parent="256" name="created_at">
-      <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="334" parent="256" name="updated_at">
-      <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="335" parent="256" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="336" parent="257" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="337" parent="257" name="nombre">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="338" parent="257" name="estado">
-      <Position>3</Position>
-      <Comment>1=Activo|0=Inactivo</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="339" parent="257" name="created_at">
-      <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="340" parent="257" name="updated_at">
-      <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="341" parent="257" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="342" parent="258" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="343" parent="258" name="nombre">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="344" parent="258" name="estado">
-      <Position>3</Position>
-      <Comment>1=Activo|0=Inactivo</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="345" parent="258" name="created_at">
-      <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="346" parent="258" name="updated_at">
-      <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="347" parent="258" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="348" parent="259" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="349" parent="259" name="tipo_unidad_id">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="350" parent="259" name="ubicacion_id">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="351" parent="259" name="nombre">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="352" parent="259" name="estado">
-      <Position>5</Position>
-      <Comment>1=Activo|0=Inactivo</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="353" parent="259" name="created_at">
-      <Position>6</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="354" parent="259" name="updated_at">
-      <Position>7</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="355" parent="259" name="unidad_tipo_unidad_id_foreign">
-      <ColNames>tipo_unidad_id</ColNames>
+    <index id="390" parent="257" name="matriz_periodo_id_foreign">
+      <ColNames>periodo_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="356" parent="259" name="unidad_ubicacion_id_foreign">
-      <ColNames>ubicacion_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="357" parent="259" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="358" parent="259" name="unidad_tipo_unidad_id_foreign">
-      <ColNames>tipo_unidad_id</ColNames>
-      <RefSchemaName>cal_esim</RefSchemaName>
-      <RefTableName>tipo_unidad</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="359" parent="259" name="unidad_ubicacion_id_foreign">
-      <ColNames>ubicacion_id</ColNames>
-      <RefSchemaName>cal_esim</RefSchemaName>
-      <RefTableName>ubicacion</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="360" parent="260" name="id">
-      <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="361" parent="260" name="unidad_id">
-      <Position>2</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="362" parent="260" name="carrera_id">
-      <Position>3</Position>
-      <DataType>int(10) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="363" parent="260" name="created_at">
-      <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="364" parent="260" name="updated_at">
-      <Position>5</Position>
-      <DataType>timestamp|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="365" parent="260" name="unidad_carrera_unidad_id_foreign">
-      <ColNames>unidad_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="366" parent="260" name="unidad_carrera_carrera_id_foreign">
+    <index id="391" parent="257" name="matriz_carrera_id_foreign">
       <ColNames>carrera_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="367" parent="260" name="PRIMARY">
+    <index id="392" parent="257" name="matriz_tipo_evaluacion_id_foreign">
+      <ColNames>tipo_evaluacion_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="393" parent="257" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="368" parent="260" name="unidad_carrera_unidad_id_foreign">
-      <ColNames>unidad_id</ColNames>
+    <foreign-key id="394" parent="257" name="matriz_modelo_id_foreign">
+      <ColNames>modelo_id</ColNames>
       <RefSchemaName>cal_esim</RefSchemaName>
-      <RefTableName>unidad</RefTableName>
+      <RefTableName>modelo</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="369" parent="260" name="unidad_carrera_carrera_id_foreign">
+    <foreign-key id="395" parent="257" name="matriz_periodo_id_foreign">
+      <ColNames>periodo_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>periodo</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="396" parent="257" name="matriz_carrera_id_foreign">
       <ColNames>carrera_id</ColNames>
       <RefSchemaName>cal_esim</RefSchemaName>
       <RefTableName>carrera</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="370" parent="261" name="id">
+    <foreign-key id="397" parent="257" name="matriz_tipo_evaluacion_id_foreign">
+      <ColNames>tipo_evaluacion_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>tipo_evaluacion</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="398" parent="258" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="371" parent="261" name="name">
+    <column id="399" parent="258" name="migration">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="372" parent="261" name="username">
+    <column id="400" parent="258" name="batch">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="401" parent="258" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="402" parent="259" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="403" parent="259" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="404" parent="259" name="abreviado">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="373" parent="261" name="email">
+    <column id="405" parent="259" name="descripcion">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="374" parent="261" name="password">
+    <column id="406" parent="259" name="estado">
       <Position>5</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="407" parent="259" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="408" parent="259" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="409" parent="259" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="410" parent="260" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="411" parent="260" name="modelo_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="412" parent="260" name="criterio_id">
+      <Position>3</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="413" parent="260" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="414" parent="260" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="415" parent="260" name="modelo_criterio_modelo_id_foreign">
+      <ColNames>modelo_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="416" parent="260" name="modelo_criterio_criterio_id_foreign">
+      <ColNames>criterio_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="417" parent="260" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="418" parent="260" name="modelo_criterio_modelo_id_foreign">
+      <ColNames>modelo_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>modelo</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="419" parent="260" name="modelo_criterio_criterio_id_foreign">
+      <ColNames>criterio_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>criterio</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="420" parent="261" name="email">
+      <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="375" parent="261" name="estado">
+    <column id="421" parent="261" name="token">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="422" parent="261" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="423" parent="261" name="password_resets_email_index">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+    </index>
+    <column id="424" parent="262" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="425" parent="262" name="tipo_periodo_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="426" parent="262" name="nombre">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="427" parent="262" name="fecha_inicio">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="428" parent="262" name="fecha_fin">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="429" parent="262" name="estado">
       <Position>6</Position>
       <Comment>1=Activo|0=Inactivo</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="376" parent="261" name="rol">
+    <column id="430" parent="262" name="created_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="431" parent="262" name="updated_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="432" parent="262" name="periodo_tipo_periodo_id_foreign">
+      <ColNames>tipo_periodo_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="433" parent="262" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="434" parent="262" name="periodo_tipo_periodo_id_foreign">
+      <ColNames>tipo_periodo_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>tipo_periodo</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="435" parent="263" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="436" parent="263" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="437" parent="263" name="estado">
+      <Position>3</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="438" parent="263" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="439" parent="263" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="440" parent="263" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="441" parent="264" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="442" parent="264" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="443" parent="264" name="estado">
+      <Position>3</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="444" parent="264" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="445" parent="264" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="446" parent="264" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="447" parent="265" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="448" parent="265" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="449" parent="265" name="estado">
+      <Position>3</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="450" parent="265" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="451" parent="265" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="452" parent="265" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="453" parent="266" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="454" parent="266" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="455" parent="266" name="estado">
+      <Position>3</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="456" parent="266" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="457" parent="266" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="458" parent="266" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="459" parent="267" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="460" parent="267" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="461" parent="267" name="estado">
+      <Position>3</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="462" parent="267" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="463" parent="267" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="464" parent="267" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="465" parent="268" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="466" parent="268" name="tipo_unidad_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="467" parent="268" name="ubicacion_id">
+      <Position>3</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="468" parent="268" name="nombre">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="469" parent="268" name="estado">
+      <Position>5</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="470" parent="268" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="471" parent="268" name="updated_at">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="472" parent="268" name="unidad_tipo_unidad_id_foreign">
+      <ColNames>tipo_unidad_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="473" parent="268" name="unidad_ubicacion_id_foreign">
+      <ColNames>ubicacion_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="474" parent="268" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="475" parent="268" name="unidad_tipo_unidad_id_foreign">
+      <ColNames>tipo_unidad_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>tipo_unidad</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="476" parent="268" name="unidad_ubicacion_id_foreign">
+      <ColNames>ubicacion_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>ubicacion</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="477" parent="269" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="478" parent="269" name="unidad_id">
+      <Position>2</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="479" parent="269" name="carrera_id">
+      <Position>3</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="480" parent="269" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="481" parent="269" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="482" parent="269" name="unidad_carrera_unidad_id_foreign">
+      <ColNames>unidad_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="483" parent="269" name="unidad_carrera_carrera_id_foreign">
+      <ColNames>carrera_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="484" parent="269" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="485" parent="269" name="unidad_carrera_unidad_id_foreign">
+      <ColNames>unidad_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>unidad</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="486" parent="269" name="unidad_carrera_carrera_id_foreign">
+      <ColNames>carrera_id</ColNames>
+      <RefSchemaName>cal_esim</RefSchemaName>
+      <RefTableName>carrera</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="487" parent="270" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="488" parent="270" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="489" parent="270" name="username">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="490" parent="270" name="email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="491" parent="270" name="password">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="492" parent="270" name="estado">
+      <Position>6</Position>
+      <Comment>1=Activo|0=Inactivo</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="493" parent="270" name="rol">
       <Position>7</Position>
       <Comment>1=Admin|2=Evaluador</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="377" parent="261" name="remember_token">
+    <column id="494" parent="270" name="remember_token">
       <Position>8</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="378" parent="261" name="created_at">
+    <column id="495" parent="270" name="created_at">
       <Position>9</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="379" parent="261" name="updated_at">
+    <column id="496" parent="270" name="updated_at">
       <Position>10</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="380" parent="261" name="users_username_unique">
+    <index id="497" parent="270" name="users_username_unique">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="381" parent="261" name="PRIMARY">
+    <key id="498" parent="270" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="382" parent="261" name="users_username_unique">
+    <key id="499" parent="270" name="users_username_unique">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>users_username_unique</UnderlyingIndexName>
     </key>
-    <column id="383" parent="262" name="id">
+    <column id="500" parent="271" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="384" parent="262" name="usuario_id">
+    <column id="501" parent="271" name="usuario_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="385" parent="262" name="carrera_id">
+    <column id="502" parent="271" name="carrera_id">
       <Position>3</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="386" parent="262" name="periodo_id">
+    <column id="503" parent="271" name="periodo_id">
       <Position>4</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="387" parent="262" name="created_at">
+    <column id="504" parent="271" name="created_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="388" parent="262" name="updated_at">
+    <column id="505" parent="271" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="389" parent="262" name="usuario_asignacion_usuario_id_foreign">
+    <index id="506" parent="271" name="usuario_asignacion_usuario_id_foreign">
       <ColNames>usuario_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="390" parent="262" name="usuario_asignacion_carrera_id_foreign">
+    <index id="507" parent="271" name="usuario_asignacion_carrera_id_foreign">
       <ColNames>carrera_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="391" parent="262" name="usuario_asignacion_periodo_id_foreign">
+    <index id="508" parent="271" name="usuario_asignacion_periodo_id_foreign">
       <ColNames>periodo_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="392" parent="262" name="PRIMARY">
+    <key id="509" parent="271" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="393" parent="262" name="usuario_asignacion_usuario_id_foreign">
+    <foreign-key id="510" parent="271" name="usuario_asignacion_usuario_id_foreign">
       <ColNames>usuario_id</ColNames>
       <RefSchemaName>cal_esim</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="394" parent="262" name="usuario_asignacion_carrera_id_foreign">
+    <foreign-key id="511" parent="271" name="usuario_asignacion_carrera_id_foreign">
       <ColNames>carrera_id</ColNames>
       <RefSchemaName>cal_esim</RefSchemaName>
       <RefTableName>carrera</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="395" parent="262" name="usuario_asignacion_periodo_id_foreign">
+    <foreign-key id="512" parent="271" name="usuario_asignacion_periodo_id_foreign">
       <ColNames>periodo_id</ColNames>
       <RefSchemaName>cal_esim</RefSchemaName>
       <RefTableName>periodo</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="396" parent="263" name="id">
+    <column id="513" parent="272" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="397" parent="263" name="grupo_valor_id">
+    <column id="514" parent="272" name="grupo_valor_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="398" parent="263" name="nombre">
+    <column id="515" parent="272" name="nombre">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="399" parent="263" name="abreviatura">
+    <column id="516" parent="272" name="abreviatura">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="400" parent="263" name="valor">
+    <column id="517" parent="272" name="valor">
       <Position>5</Position>
       <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="401" parent="263" name="rango_inicio">
+    <column id="518" parent="272" name="rango_inicio">
       <Position>6</Position>
       <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="402" parent="263" name="rango_fin">
+    <column id="519" parent="272" name="rango_fin">
       <Position>7</Position>
       <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="403" parent="263" name="color">
+    <column id="520" parent="272" name="color">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="404" parent="263" name="estado">
+    <column id="521" parent="272" name="estado">
       <Position>9</Position>
       <Comment>1=Activo|0=Inactivo</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="405" parent="263" name="created_at">
+    <column id="522" parent="272" name="created_at">
       <Position>10</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="406" parent="263" name="updated_at">
+    <column id="523" parent="272" name="updated_at">
       <Position>11</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="407" parent="263" name="valoracion_grupo_valor_id_foreign">
+    <index id="524" parent="272" name="valoracion_grupo_valor_id_foreign">
       <ColNames>grupo_valor_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="408" parent="263" name="PRIMARY">
+    <key id="525" parent="272" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="409" parent="263" name="valoracion_grupo_valor_id_foreign">
+    <foreign-key id="526" parent="272" name="valoracion_grupo_valor_id_foreign">
       <ColNames>grupo_valor_id</ColNames>
       <RefSchemaName>cal_esim</RefSchemaName>
       <RefTableName>grupo_valor</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="410" parent="264" name="id">
+    <column id="527" parent="273" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="411" parent="264" name="descripcion">
+    <column id="528" parent="273" name="descripcion">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="412" parent="264" name="variable">
+    <column id="529" parent="273" name="variable">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="413" parent="264" name="estado">
+    <column id="530" parent="273" name="estado">
       <Position>4</Position>
       <Comment>1=Activo|0=Inactivo</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="414" parent="264" name="created_at">
+    <column id="531" parent="273" name="created_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="415" parent="264" name="updated_at">
+    <column id="532" parent="273" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="416" parent="264" name="PRIMARY">
+    <key id="533" parent="273" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

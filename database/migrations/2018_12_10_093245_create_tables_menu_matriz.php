@@ -35,58 +35,64 @@ class CreateTablesMenuMatriz extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('abreviado');
-            $table->integer('nivel');
             $table->string('descripcion');
-            $table->integer('criterio_padre_id')->unsigned()->comment('Indica a que criterio pertenece, si es un subcriterio');
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
         Schema::create('indicador', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('modelo_id')->unsigned();
             $table->integer('tipo_indicador_id')->unsigned();
             $table->integer('grupo_valor_id')->unsigned();
             $table->integer('formula_id')->unsigned();
             $table->string('nombre');
             $table->string('descripcion');
-            $table->text('estandar');
-            $table->string('vigencia');
-            $table->text('marco_normativo');
-            $table->text('fuente_info');
+            $table->text('estandar')->nullable();
+            $table->string('vigencia')->nullable();
+            $table->text('marco_normativo')->nullable();
+            $table->text('fuente_info')->nullable();
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
         Schema::create('evidencia', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
+            $table->string('descripcion');
+            $table->integer('importancia')->default(0);
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
         Schema::create('elemento', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('evidencia_id')->unsigned();
             $table->integer('secuencia');
             $table->string('nombre');
-            $table->integer('importancia');
+            $table->integer('importancia')->default(0);
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
-        Schema::create('modelo_criterio', function (Blueprint $table) {
+        Schema::create('estructura_criterios', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('modelo_id')->unsigned();
             $table->integer('criterio_id')->unsigned();
+            $table->integer('criterio_padre_id')->unsigned()->nullable();
+            $table->integer('nivel');
             $table->timestamps();
         });
-        Schema::create('criterio_indicador', function (Blueprint $table) {
+        Schema::create('estructura_indicadores', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('criterio_id')->unsigned();
+            $table->integer('estruc_crite_id')->unsigned();
             $table->integer('indicador_id')->unsigned();
             $table->timestamps();
         });
-        Schema::create('indicador_evidencia', function (Blueprint $table) {
+        Schema::create('estructura_evidencias', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('indicador_id')->unsigned();
+            $table->integer('estruc_indic_id')->unsigned();
             $table->integer('evidencia_id')->unsigned();
+            $table->timestamps();
+        });
+        Schema::create('estructura_elementos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('estruc_evide_id')->unsigned();
+            $table->integer('elemento_id')->unsigned();
             $table->timestamps();
         });
     }
