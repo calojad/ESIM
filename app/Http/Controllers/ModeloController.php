@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateModeloRequest;
 use App\Http\Requests\UpdateModeloRequest;
 use App\Models\Criterio;
+use App\Models\ModeloCriterio;
 use App\Repositories\ModeloRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -79,7 +80,7 @@ class ModeloController extends AppBaseController
             Flash::error('Modelo not found');
             return redirect(route('modelos.index'));
         }
-        $criterios = Criterio::where('modelo_id',$id)->get();
+        $criterios = ModeloCriterio::where('modelo_id',$id)->get();
 
         return view('modelos.show',compact('modelo','criterios'));
     }

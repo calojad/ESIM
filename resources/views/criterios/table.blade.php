@@ -1,13 +1,12 @@
-<table class="table table-responsive" id="criterios-table">
+<table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="criterios-table">
     <thead>
         <tr>
             <th>Nombre</th>
-        <th>Abreviado</th>
-        <th>Nivel</th>
-        <th>Descripcion</th>
-        <th>Criterio Padre Id</th>
-        <th>Estado</th>
-            <th colspan="3">Action</th>
+            <th>Abreviado</th>
+            <th>Nivel</th>
+            <th>Descripcion</th>
+            <th>Estado</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -17,12 +16,11 @@
             <td>{!! $criterio->abreviado !!}</td>
             <td>{!! $criterio->nivel !!}</td>
             <td>{!! $criterio->descripcion !!}</td>
-            <td>{!! $criterio->criterio_padre_id !!}</td>
-            <td>{!! $criterio->estado !!}</td>
+            <td><label class="label {!! $criterio->estado==1?'label-success':'label-danger' !!}">{!! $criterio->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['criterios.destroy', $criterio->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
-                    <a href="{!! route('criterios.show', [$criterio->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                    {{--<a href="{!! route('criterios.show', [$criterio->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>--}}
                     <a href="{!! route('criterios.edit', [$criterio->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                     {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                 </div>

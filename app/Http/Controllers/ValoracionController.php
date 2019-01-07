@@ -118,18 +118,14 @@ class ValoracionController extends AppBaseController
     public function update($id, UpdateValoracionRequest $request)
     {
         $valoracion = $this->valoracionRepository->findWithoutFail($id);
-
         if (empty($valoracion)) {
             Flash::error('Valoracion not found');
 
-            return redirect(route('valoracions.index'));
+            return redirect(route('grupoValors.show',$request->get('grupo_valor_id')));
         }
-
         $valoracion = $this->valoracionRepository->update($request->all(), $id);
-
         Flash::success('Valoracion updated successfully.');
-
-        return redirect(route('valoracions.index'));
+        return redirect(route('grupoValors.show',$request->get('grupo_valor_id')));
     }
 
     /**

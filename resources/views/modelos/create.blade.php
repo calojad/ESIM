@@ -18,7 +18,7 @@
             <div class="box-body">
                 <div class="row">
                     {!! Form::open(['route' => 'modelos.store']) !!}
-                    @include('modelos.fields')
+                        @include('modelos.fields')
                     {!! Form::close() !!}
                 </div>
             </div>
