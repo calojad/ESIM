@@ -75,14 +75,13 @@ class ModeloController extends AppBaseController
      */
     public function show($id)
     {
-        $modelo = $this->modeloRepository->findWithoutFail($id);
+        /*$modelo = $this->modeloRepository->findWithoutFail($id);
         if (empty($modelo)) {
             Flash::error('Modelo not found');
             return redirect(route('modelos.index'));
         }
-        $criterios = ModeloCriterio::where('modelo_id',$id)->get();
 
-        return view('modelos.show',compact('modelo','criterios'));
+        return view('modelos.show',compact('modelo','criterios'));*/
     }
 
     /**

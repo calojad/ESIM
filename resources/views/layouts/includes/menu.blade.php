@@ -7,19 +7,19 @@
     </a>
     <ul class="treeview-menu">
         <li class="{{ Request::is('tipoEvaluacions*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('tipoEvaluacions.index') !!}"><i class="{{ Request::is('tipoEvaluacions*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Evaluacions</a>
+            <a class="btnLoader" href="{!! route('tipoEvaluacions.index') !!}"><i class="{{ Request::is('tipoEvaluacions*') ? 'fas' : 'far' }} fa-circle"></i><span>Tipo Evaluacions</span></a>
         </li>
         <li class="{{ Request::is('tipoIndicadors*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('tipoIndicadors.index') !!}"><i class="{{ Request::is('tipoIndicadors*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Indicador</a>
+            <a class="btnLoader" href="{!! route('tipoIndicadors.index') !!}"><i class="{{ Request::is('tipoIndicadors*') ? 'fas' : 'far' }} fa-circle"></i><span>Tipo Indicador</span></a>
         </li>
         <li class="{{ Request::is('tipoPeriodos*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('tipoPeriodos.index') !!}"><i class="{{ Request::is('tipoPeriodos*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Periodo</a>
+            <a class="btnLoader" href="{!! route('tipoPeriodos.index') !!}"><i class="{{ Request::is('tipoPeriodos*') ? 'fas' : 'far' }} fa-circle"></i><span>Tipo Periodo</span></a>
         </li>
         <li class="{{ Request::is('tipoUnidads*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('tipoUnidads.index') !!}"><i class="{{ Request::is('tipoUnidads*') ? 'fas' : 'far' }} fa-circle"></i>Tipo Unidad</a>
+            <a class="btnLoader" href="{!! route('tipoUnidads.index') !!}"><i class="{{ Request::is('tipoUnidads*') ? 'fas' : 'far' }} fa-circle"></i><span>Tipo Unidad</span></a>
         </li>
         <li class="{{ Request::is('ubicacions*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('ubicacions.index') !!}"><i class="{{ Request::is('ubicacions*') ? 'fas' : 'far' }} fa-circle"></i>Ubicaciones</a>
+            <a class="btnLoader" href="{!! route('ubicacions.index') !!}"><i class="{{ Request::is('ubicacions*') ? 'fas' : 'far' }} fa-circle"></i><span>Ubicaciones</span></a>
         </li>
     </ul>
 </li>
@@ -31,16 +31,16 @@
     </a>
     <ul class="treeview-menu">
         <li class="{{ Request::is('carreras*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('carreras.index') !!}"><i class="{{ Request::is('carreras*') ? 'fas' : 'far' }} fa-circle"></i>Carreras</a>
+            <a class="btnLoader" href="{!! route('carreras.index') !!}"><i class="{{ Request::is('carreras*') ? 'fas' : 'far' }} fa-circle"></i><span>Carreras</span></a>
         </li>
         <li class="{{ Request::is('periodos*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('periodos.index') !!}"><i class="{{ Request::is('periodos*') ? 'fas' : 'far' }} fa-circle"></i>Periodos</a>
+            <a class="btnLoader" href="{!! route('periodos.index') !!}"><i class="{{ Request::is('periodos*') ? 'fas' : 'far' }} fa-circle"></i><span>Periodos</span></a>
         </li>
         <li class="{{ Request::is('unidads*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('unidads.index') !!}"><i class="{{ Request::is('unidads*') ? 'fas' : 'far' }} fa-circle"></i>Unidades</a>
+            <a class="btnLoader" href="{!! route('unidads.index') !!}"><i class="{{ Request::is('unidads*') ? 'fas' : 'far' }} fa-circle"></i><span>Unidades</span></a>
         </li>
         <li class="{{ Request::is('users*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('users.index') !!}"><i class="{{ Request::is('users*') ? 'fas' : 'far' }} fa-circle"></i>Usuarios</a>
+            <a class="btnLoader" href="{!! route('users.index') !!}"><i class="{{ Request::is('users*') ? 'fas' : 'far' }} fa-circle"></i><span>Usuarios</span></a>
         </li>
     </ul>
 </li>
@@ -52,16 +52,16 @@
     </a>
     <ul class="treeview-menu">
         <li class="{{ Request::is('grupoValors*','valoracions*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{{ route('grupoValors.index') }}"><i class="{{ Request::is('grupoValors*','valoracions*') ? 'fas' : 'far' }} fa-circle"></i>Cualitativos</a>
+            <a class="btnLoader" href="{{ route('grupoValors.index') }}"><i class="{{ Request::is('grupoValors*','valoracions*') ? 'fas' : 'far' }} fa-circle"></i><span>Cualitativos</span></a>
         </li>
         <li class="{{ Request::is('formulas*','variables*','cuantitativos*','formulaVariables*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{{ URL::to('cuantitativos') }}"><i class="{{ Request::is('formulas*','variables*','cuantitativos*','formulaVariables*') ? 'fas' : 'far' }} fa-circle"></i>Cuantitativos</a>
+            <a class="btnLoader" href="{{ URL::to('cuantitativos') }}"><i class="{{ Request::is('formulas*','variables*','cuantitativos*','formulaVariables*') ? 'fas' : 'far' }} fa-circle"></i><span>Cuantitativos</span></a>
         </li>
     </ul>
 </li>
 
 {{-- ********* MATRIZ ********* --}}
-<li class="treeview {{ Request::is('matriz*','modelos*','criterios*') ? 'active' : '' }}">
+<li class="treeview {{ Request::is('matriz*','modelos*','criterios*','indicadors*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-table font-14pt"></i> <span>Matriz</span>
         <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
@@ -71,9 +71,10 @@
         <li class="{{ Request::is('criterios*') ? 'active' : '' }}">
             <a href="{!! route('criterios.index') !!}"><i class="{{ Request::is('criterios*') ? 'fas' : 'far' }} fa-circle"></i><span>Criterios</span></a>
         </li>
-        <li class="{{ Request::is('indicadores*') ? 'active' : '' }}">
-            <a href=""><i class="{{ Request::is('indicadores*') ? 'fas' : 'far' }} fa-circle"></i><span>Indicadores</span></a>
+        <li class="{{ Request::is('indicadors*') ? 'active' : '' }}">
+            <a href="{!! route('indicadors.index') !!}"><i class="{{ Request::is('indicadors*') ? 'fas' : 'far' }} fa-circle"></i><span>Indicadores</span></a>
         </li>
+        <hr style="margin: 7px 3px;">
         <li class="{{ Request::is('modelos*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('modelos.index') !!}"><i class="{{ Request::is('modelos*') ? 'fas' : 'far' }} fa-circle"></i><span>Modelos</span></a>
         </li>

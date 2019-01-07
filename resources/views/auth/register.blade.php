@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="col-xs-4">
-                    <button id="btnRegistre" type="submit" class="btn btn-primary btn-block btn-flat">Registrar</button>
+                    <button id="btnRegistre" type="submit" class="btn btn-primary btn-block btn-flat btnLoader">Registrar</button>
                 </div>
             </div>
         </form>
@@ -118,7 +118,7 @@
         });
     });
     $(window).on('load',function() {
-        $(".preloader").fadeOut("slow");;
+        $(".preloader").fadeOut("slow");
     });
     $('#btnRegistre').on('click',function () {
         const name = $('input[name=name]').val();
@@ -127,9 +127,9 @@
         const pass = $('input[name=password]').val();
         const passconf = $('input[name=password_confirmation]').val();
         const checkbox = $('#chbTerminos').prop('checked');
-        if( name != '' && username != '' && email != '' && pass != '' && passconf != '' && checkbox != false)
+        if( name !== '' && username !== '' && email !== '' && pass !== '' && passconf !== '' && checkbox !== false)
             $(".preloader").fadeIn("slow");
-    })
+    });
     $(document).ready(function () {
         $('input[name=name]').focus();
     });

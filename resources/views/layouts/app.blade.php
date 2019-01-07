@@ -47,7 +47,19 @@
                 $(".preloader").fadeOut("slow");
             });
             $('.btnLoader').on('click',function () {
-                $(".preloader").fadeIn("slow");
+                var sum=0;
+                $("form input:required").each(function() {
+                    if ($(this).val() === '') {
+                        sum = sum + 1;
+                    }
+                });
+                $("form textarea:required").each(function() {
+                    if ($(this).val() === '') {
+                        sum = sum + 1;
+                    }
+                });
+                if(sum === 0)
+                    $(".preloader").fadeIn("slow");
             });
             $('div.alert').not('.alert-important').delay(3000).fadeOut(1000);
         </script>

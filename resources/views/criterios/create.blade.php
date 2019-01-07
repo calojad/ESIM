@@ -6,7 +6,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
-        <li>Criterios</li>
+        <li>Criterio</li>
         <li>Nuevo</li>
     </ol>
 @endsection

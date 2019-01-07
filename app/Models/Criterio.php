@@ -7,19 +7,19 @@ use Eloquent as Model;
 /**
  * Class Criterio
  * @package App\Models
- * @version January 5, 2019, 11:14 am -05
+ * @version January 7, 2019, 2:23 pm -05
  *
- * @property \Illuminate\Database\Eloquent\Collection CriterioIndicador
+ * @property \Illuminate\Database\Eloquent\Collection EstructuraCriterio
+// * @property \Illuminate\Database\Eloquent\Collection EstructuraCriterio
+ * @property \Illuminate\Database\Eloquent\Collection estructuraElementos
+ * @property \Illuminate\Database\Eloquent\Collection estructuraEvidencias
+ * @property \Illuminate\Database\Eloquent\Collection estructuraIndicadores
  * @property \Illuminate\Database\Eloquent\Collection formulaVariable
- * @property \Illuminate\Database\Eloquent\Collection indicadorEvidencia
- * @property \Illuminate\Database\Eloquent\Collection ModeloCriterio
  * @property \Illuminate\Database\Eloquent\Collection unidad
  * @property \Illuminate\Database\Eloquent\Collection unidadCarrera
  * @property string nombre
  * @property string abreviado
- * @property integer nivel
  * @property string descripcion
- * @property integer criterio_padre_id
  * @property integer estado
  */
 class Criterio extends Model
@@ -35,9 +35,7 @@ class Criterio extends Model
     public $fillable = [
         'nombre',
         'abreviado',
-        'nivel',
         'descripcion',
-        'criterio_padre_id',
         'estado'
     ];
 
@@ -50,9 +48,7 @@ class Criterio extends Model
         'id' => 'integer',
         'nombre' => 'string',
         'abreviado' => 'string',
-        'nivel' => 'integer',
         'descripcion' => 'string',
-        'criterio_padre_id' => 'integer',
         'estado' => 'integer'
     ];
 
@@ -68,16 +64,16 @@ class Criterio extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function criterioIndicadors()
+    /*public function estructuraCriterios()
     {
-        return $this->hasMany(\App\Models\CriterioIndicador::class);
-    }
+        return $this->hasMany(\App\Models\EstructuraCriterio::class);
+    }*/
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function modeloCriterios()
+    /*public function estructuraCriterios()
     {
-        return $this->hasMany(\App\Models\ModeloCriterio::class);
-    }
+        return $this->hasMany(\App\Models\EstructuraCriterio::class);
+    }*/
 }

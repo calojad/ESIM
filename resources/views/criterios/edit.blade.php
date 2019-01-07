@@ -5,22 +5,22 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
-        <li>Criterios</li>
+        <li>Criterio</li>
         <li>Editar</li>
     </ol>
 @endsection
 @section('content')
-   <div class="content">
-       @include('adminlte-templates::common.errors')
-       <div class="box box-primary">
-           <div class="box-header"><h3 class="box-title">Criterio</h3></div>
-           <div class="box-body">
-               <div class="row">
-                   {!! Form::model($criterio, ['route' => ['criterios.update', $criterio->id], 'method' => 'patch']) !!}
-                        @include('criterios.fields')
-                   {!! Form::close() !!}
-               </div>
-           </div>
-       </div>
-   </div>
+    <div class="content">
+        @include('adminlte-templates::common.errors')
+        <div class="box box-primary box-solid">
+            <div class="box-header"><h3 class="box-title">Modelo</h3></div>
+            <div class="box-body">
+                <div class="row">
+                    {!! Form::model($criterio, ['route' => ['criterios.update', $criterio->id], 'method' => 'patch']) !!}
+                    @include('criterios.fields')
+                    {!! Form::close() !!}
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

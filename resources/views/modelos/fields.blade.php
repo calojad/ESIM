@@ -8,13 +8,13 @@
     <!-- Abreviado Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('abreviado', 'Abreviación:') !!}
-        {!! Form::text('abreviado', null, ['class' => 'form-control','required' => true,'autofocus' => true]) !!}
+        {!! Form::text('abreviado', null, ['class' => 'form-control','required' => true]) !!}
     </div>
 
     <!-- Descripcion Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('descripcion', 'Descripción:') !!}
-        {!! Form::text('descripcion', null, ['class' => 'form-control','required' => true,'autofocus' => true]) !!}
+        {!! Form::text('descripcion', null, ['class' => 'form-control','required' => true]) !!}
     </div>
 
     <!-- Estado Field -->

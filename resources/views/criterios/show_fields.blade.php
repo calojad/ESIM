@@ -16,22 +16,10 @@
     <p>{!! $criterio->abreviado !!}</p>
 </div>
 
-<!-- Nivel Field -->
-<div class="form-group">
-    {!! Form::label('nivel', 'Nivel:') !!}
-    <p>{!! $criterio->nivel !!}</p>
-</div>
-
 <!-- Descripcion Field -->
 <div class="form-group">
     {!! Form::label('descripcion', 'Descripcion:') !!}
     <p>{!! $criterio->descripcion !!}</p>
-</div>
-
-<!-- Criterio Padre Id Field -->
-<div class="form-group">
-    {!! Form::label('criterio_padre_id', 'Criterio Padre Id:') !!}
-    <p>{!! $criterio->criterio_padre_id !!}</p>
 </div>
 
 <!-- Estado Field -->

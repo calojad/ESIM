@@ -17,7 +17,7 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="col-md-12" style="margin-top: 10px;margin-bottom: 10px">
-                    <a class="btn btn-primary pull-right btnLoader" href="{!! route('criterios.create') !!}">Add New</a>
+                    <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('criterios.create') !!}">Add New</a>
                 </div>
                 <div class="col-md-12 table-responsive">
                     @include('criterios.table')

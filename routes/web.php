@@ -64,3 +64,5 @@ Route::group(['middleware' => 'auth'], function () {
     //***Criterios
     Route::resource('criterios', 'CriterioController');
 });
+
+Route::resource('indicadors', 'IndicadorController');

@@ -110,8 +110,9 @@ class CreateTablesMenuMatriz extends Migration
         Schema::dropIfExists('indicador');
         Schema::dropIfExists('evidencia');
         Schema::dropIfExists('elemento');
-        Schema::dropIfExists('modelo_criterio');
-        Schema::dropIfExists('criterio_indicador');
-        Schema::dropIfExists('indicador_evidencia');
+        Schema::dropIfExists('estructura_criterios');
+        Schema::dropIfExists('estructura_indicadores');
+        Schema::dropIfExists('estructura_evidencias');
+        Schema::dropIfExists('estructura_elementos');
     }
 }

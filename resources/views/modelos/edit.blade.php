@@ -5,7 +5,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
-        <li>Modelos</li>
+        <li>Modelo</li>
         <li>Editar</li>
     </ol>
 @endsection
