@@ -56,7 +56,6 @@ class EvidenciaController extends AppBaseController
     public function store(CreateEvidenciaRequest $request)
     {
         $input = $request->all();
-
         $evidencia = $this->evidenciaRepository->create($input);
 
         Flash::success('Evidencia saved successfully.');

@@ -45,7 +45,7 @@
             </div>
         </div>
         <h3 class="box-title">Criterios y Subcriterios</h3>
-        @if(count($criterios) != 0)
+        @if(count($estruCriterios) != 0)
             {{--@foreach ($userPeriodos as $periodo)
                 <div class="box box-warning collapsed-box">
                     <div class="box-header with-border">

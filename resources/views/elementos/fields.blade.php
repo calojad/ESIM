@@ -9,22 +9,14 @@
     <!-- Secuencia Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('secuencia', 'Secuencia:') !!}
-        {!! Form::number('secuencia', null, ['class' => 'form-control']) !!}
+        {!! Form::number('secuencia', null, ['class' => 'form-control','required'=>true]) !!}
     </div>
 
     <!-- Importancia Field -->
     <div class="form-group col-sm-12 col-md-12 icheck">
-        <label class="col-sm-12 col-md-12 col-lg-12">Importancia:</label>
-        <div class="col-sm-12 col-md-5 col-lg-5">
-            <label class="text-success">
-                {!! Form::radio('importancia',1,null,['id'=>'radImport']) !!} Importante
-            </label>
-        </div>
-        <div class="col-sm-12 col-md-5 col-lg-5">
-            <label class="text-danger">
-                {!! Form::radio('importancia',0,true,['id'=>'radNoImport']) !!} No Importante
-            </label>
-        </div>
+        <label class="col-sm-12 col-md-12 col-lg-12">Importante:
+            {!! Form::checkbox('importancia',1,null,['id'=>'chkImport']) !!}
+        </label>
     </div>
 
     <!-- Estado Field -->
@@ -50,12 +42,12 @@
 </div>
 <script type="text/javascript">
     $(function () {
-        $('#radActivo,#radImport').iCheck({
+        $('#radActivo,#chkImport').iCheck({
             checkboxClass: 'icheckbox_square-blue',
             radioClass: 'iradio_square-green',
             increaseArea: '20%'
         });
-        $('#radInactivo,#radNoImport').iCheck({
+        $('#radInactivo').iCheck({
             checkboxClass: 'icheckbox_square-blue',
             radioClass: 'iradio_square-red',
             increaseArea: '20%'

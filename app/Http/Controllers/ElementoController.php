@@ -56,7 +56,6 @@ class ElementoController extends AppBaseController
     public function store(CreateElementoRequest $request)
     {
         $input = $request->all();
-
         $elemento = $this->elementoRepository->create($input);
 
         Flash::success('Elemento saved successfully.');

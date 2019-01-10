@@ -13,7 +13,7 @@
         <tr>
             <td>{!! $elemento->secuencia !!}</td>
             <td>{!! $elemento->nombre !!}</td>
-            <td>{!! $elemento->importancia !!}</td>
+            <td style="text-align: center"><span style="font-size: 14pt;" class="fa {!! $elemento->importancia==1?'fa-check-square':'fa-minus' !!}"></span></td>
             <td><label class="label {!! $elemento->estado==1?'label-success':'label-danger' !!}">{!! $elemento->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['elementos.destroy', $elemento->id], 'method' => 'delete']) !!}

@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateModeloRequest;
 use App\Http\Requests\UpdateModeloRequest;
-use App\Models\Criterio;
-use App\Models\ModeloCriterio;
+use App\Models\EstructuraCriterios;
 use App\Repositories\ModeloRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -75,13 +73,14 @@ class ModeloController extends AppBaseController
      */
     public function show($id)
     {
-        /*$modelo = $this->modeloRepository->findWithoutFail($id);
+        $modelo = $this->modeloRepository->findWithoutFail($id);
         if (empty($modelo)) {
             Flash::error('Modelo not found');
             return redirect(route('modelos.index'));
         }
+        $estruCriterios=EstructuraCriterios::where('modelo_id',$id)->get();
 
-        return view('modelos.show',compact('modelo','criterios'));*/
+        return view('modelos.show',compact('modelo','estruCriterios'));
     }
 
     /**

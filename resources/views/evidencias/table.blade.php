@@ -13,7 +13,7 @@
         <tr>
             <td>{!! $evidencia->nombre !!}</td>
             <td>{!! $evidencia->descripcion !!}</td>
-            <td>{!! $evidencia->importancia !!}</td>
+            <td style="text-align: center"><span style="font-size: 14pt;" class="fa {!! $evidencia->importancia==1?'fa-check-square':'fa-minus' !!}"></span></td>
             <td><label class="label {!! $evidencia->estado==1?'label-success':'label-danger' !!}">{!! $evidencia->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['evidencias.destroy', $evidencia->id], 'method' => 'delete']) !!}
