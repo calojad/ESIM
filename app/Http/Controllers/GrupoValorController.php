@@ -46,7 +46,9 @@ class GrupoValorController extends AppBaseController
     public function create()
     {
         $grupoValor = null;
-        $tipoIndicadores = TipoIndicador::all()->pluck('nombre','id');
+        $tipoIndicadores = [0=>'--Seleccione--']+TipoIndicador::where('estado',1)
+                ->pluck('nombre','id')
+                ->toArray();
         return view('grupo_valors.create', compact('grupoValor','tipoIndicadores'));
     }
 
@@ -102,7 +104,9 @@ class GrupoValorController extends AppBaseController
 
             return redirect(route('grupoValors.index'));
         }
-        $tipoIndicadores = TipoIndicador::all()->pluck('nombre','id');
+        $tipoIndicadores = [0=>'--Seleccione--']+TipoIndicador::where('estado',1)
+                ->pluck('nombre','id')
+                ->toArray();
 
         return view('grupo_valors.edit',compact('grupoValor','tipoIndicadores'));
     }

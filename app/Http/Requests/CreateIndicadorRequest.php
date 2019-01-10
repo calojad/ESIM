@@ -27,4 +27,14 @@ class CreateIndicadorRequest extends FormRequest
     {
         return Indicador::$rules;
     }
+
+    /**
+     * Get the messages of validations that apply to the request.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return Indicador::$messages;
+    }
 }

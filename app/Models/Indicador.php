@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Rules\MayoraCero;
 use Eloquent as Model;
 
 /**
@@ -77,7 +78,15 @@ class Indicador extends Model
      * @var array
      */
     public static $rules = [
-        
+
+    ];
+    /**
+     * Validation rules
+     *
+     * @var array
+     */
+    public static $messages = [
+
     ];
 
     /**

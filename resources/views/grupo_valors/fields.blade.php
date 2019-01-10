@@ -8,7 +8,7 @@
     <!-- Tipo Indicador Id Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('tipo_indicador_id', 'Tipo Indicador Id:') !!}
-        {!! Form::select('tipo_indicador_id', $tipoIndicadores, $grupoValor!=null?$grupoValor->tipo_indicador_id:1,['class' => 'form-control', 'required' => true]) !!}
+        {!! Form::select('tipo_indicador_id', $tipoIndicadores, $grupoValor!=null?$grupoValor->tipo_indicador_id:0,['class' => 'form-control', 'required' => true]) !!}
     </div>
 
     <!-- Descripcion Field -->

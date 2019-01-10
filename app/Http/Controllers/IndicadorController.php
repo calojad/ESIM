@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateIndicadorRequest;
 use App\Http\Requests\UpdateIndicadorRequest;
+use App\Models\Formulas;
+use App\Models\GrupoValor;
+use App\Models\TipoIndicador;
 use App\Repositories\IndicadorRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
+use App\Rules\MayoraCero;
 use Flash;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -43,7 +48,14 @@ class IndicadorController extends AppBaseController
      */
     public function create()
     {
-        return view('indicadors.create');
+        $tiposIndicador = [0 => '--Seleccionar--']+TipoIndicador::where('estado',1)
+            ->pluck('nombre','id')
+            ->toArray();
+        $gruposValor = GrupoValor::where('estado',1)
+            ->pluck('nombre','id');
+        $formulas = Formulas::where('estado',1)
+            ->pluck('nombre','id');
+        return view('indicadors.create',compact('tiposIndicador','gruposValor','formulas'));
     }
 
     /**
@@ -53,12 +65,11 @@ class IndicadorController extends AppBaseController
      *
      * @return Response
      */
-    public function store(CreateIndicadorRequest $request)
+    public function store(Request $request)
     {
+        $this->validator($request);
         $input = $request->all();
-
         $indicador = $this->indicadorRepository->create($input);
-
         Flash::success('Indicador saved successfully.');
 
         return redirect(route('indicadors.index'));
@@ -94,14 +105,20 @@ class IndicadorController extends AppBaseController
     public function edit($id)
     {
         $indicador = $this->indicadorRepository->findWithoutFail($id);
-
         if (empty($indicador)) {
             Flash::error('Indicador not found');
-
             return redirect(route('indicadors.index'));
         }
 
-        return view('indicadors.edit')->with('indicador', $indicador);
+        $tiposIndicador = [0 => '--Seleccionar--']+TipoIndicador::where('estado',1)
+                ->pluck('nombre','id')
+                ->toArray();
+        $gruposValor = GrupoValor::where('estado',1)
+            ->pluck('nombre','id');
+        $formulas = Formulas::where('estado',1)
+            ->pluck('nombre','id');
+
+        return view('indicadors.edit',compact('tiposIndicador','gruposValor','formulas','indicador'));
     }
 
     /**
@@ -151,5 +168,11 @@ class IndicadorController extends AppBaseController
         Flash::success('Indicador deleted successfully.');
 
         return redirect(route('indicadors.index'));
+    }
+
+    public function validator(Request $request){
+        $request->validate([
+            'tipo_indicador_id' => ['required', new MayoraCero],
+        ]);
     }
 }

@@ -42,8 +42,8 @@ class CreateTablesMenuMatriz extends Migration
         Schema::create('indicador', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('tipo_indicador_id')->unsigned();
-            $table->integer('grupo_valor_id')->unsigned();
-            $table->integer('formula_id')->unsigned();
+            $table->integer('grupo_valor_id')->unsigned()->nullable()->default(null);
+            $table->integer('formula_id')->unsigned()->nullable()->default(null);
             $table->string('nombre');
             $table->string('descripcion');
             $table->text('estandar')->nullable();
@@ -81,18 +81,21 @@ class CreateTablesMenuMatriz extends Migration
             $table->increments('id');
             $table->integer('estruc_crite_id')->unsigned();
             $table->integer('indicador_id')->unsigned();
+            $table->string('abrebiado')->nullable()->default(null);
             $table->timestamps();
         });
         Schema::create('estructura_evidencias', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('estruc_indic_id')->unsigned();
             $table->integer('evidencia_id')->unsigned();
+            $table->string('abrebiado')->nullable()->default(null);
             $table->timestamps();
         });
         Schema::create('estructura_elementos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('estruc_evide_id')->unsigned();
             $table->integer('elemento_id')->unsigned();
+            $table->string('abrebiado')->nullable()->default(null);
             $table->timestamps();
         });
     }

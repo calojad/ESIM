@@ -43,9 +43,11 @@
         <!-- REQUIRED JS SCRIPTS -->
         @include('layouts.includes.scripts')
         <script>
+            //Muestra el overlay
             $(window).on('load',function() {
                 $(".preloader").fadeOut("slow");
             });
+            //Al dar click en un boton Loader mostrar el overlay
             $('.btnLoader').on('click',function () {
                 var sum=0;
                 $("form input:required").each(function() {
@@ -61,7 +63,15 @@
                 if(sum === 0)
                     $(".preloader").fadeIn("slow");
             });
+            //Las alertar desaparecen solas
             $('div.alert').not('.alert-important').delay(3000).fadeOut(1000);
+            //Inicializar select2
+            $('.select2').select2({
+                language: {
+                    noResults: function() {return "No hay resultado";},
+                    searching: function() {return "Buscando...";}
+                }
+            });
         </script>
         @yield('scripts')
     </body>
