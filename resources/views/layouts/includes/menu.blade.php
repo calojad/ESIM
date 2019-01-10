@@ -61,7 +61,7 @@
 </li>
 
 {{-- ********* MATRIZ ********* --}}
-<li class="treeview {{ Request::is('matriz*','modelos*','criterios*','indicadors*') ? 'active' : '' }}">
+<li class="treeview {{ Request::is('matriz*','modelos*','criterios*','indicadors*','evidencias*','elementos*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-table font-14pt"></i> <span>Matriz</span>
         <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
@@ -73,6 +73,12 @@
         </li>
         <li class="{{ Request::is('indicadors*') ? 'active' : '' }}">
             <a href="{!! route('indicadors.index') !!}"><i class="{{ Request::is('indicadors*') ? 'fas' : 'far' }} fa-circle"></i><span>Indicadores</span></a>
+        </li>
+        <li class="{{ Request::is('evidencias*') ? 'active' : '' }}">
+            <a href="{!! route('evidencias.index') !!}"><i class="{{ Request::is('evidencias*') ? 'fas' : 'far' }} fa-circle"></i><span>Evidencias</span></a>
+        </li>
+        <li class="{{ Request::is('elementos*') ? 'active' : '' }}">
+            <a href="{!! route('elementos.index') !!}"><i class="{{ Request::is('elementos*') ? 'fas' : 'far' }} fa-circle"></i><span>Elementos</span></a>
         </li>
         <hr style="margin: 7px 3px;">
         <li class="{{ Request::is('modelos*') ? 'active' : '' }}">

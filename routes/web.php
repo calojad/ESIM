@@ -66,3 +66,7 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::resource('indicadors', 'IndicadorController');
+
+Route::resource('evidencias', 'EvidenciaController');
+
+Route::resource('elementos', 'ElementoController');
