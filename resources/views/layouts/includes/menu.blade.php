@@ -61,7 +61,7 @@
 </li>
 
 {{-- ********* MATRIZ ********* --}}
-<li class="treeview {{ Request::is('matriz*','modelos*','criterios*','indicadors*','evidencias*','elementos*') ? 'active' : '' }}">
+<li class="treeview {{ Request::is('matriz*','modelos*','criterios*','indicadors*','evidencias*','elementos*','estructura*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-table font-14pt"></i> <span>Matriz</span>
         <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
@@ -81,8 +81,8 @@
             <a href="{!! route('elementos.index') !!}"><i class="{{ Request::is('elementos*') ? 'fas' : 'far' }} fa-circle"></i><span>Elementos</span></a>
         </li>
         <hr style="margin: 7px 3px;">
-        <li class="{{ Request::is('modelos*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('modelos.index') !!}"><i class="{{ Request::is('modelos*') ? 'fas' : 'far' }} fa-circle"></i><span>Modelos</span></a>
+        <li class="{{ Request::is('modelos*','estructura*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{!! route('modelos.index') !!}"><i class="{{ Request::is('modelos*','estructura*') ? 'fas' : 'far' }} fa-circle"></i><span>Modelos</span></a>
         </li>
         <li><a href="#"><i class="far fa-circle"></i>Matrices</a></li>
     </ul>

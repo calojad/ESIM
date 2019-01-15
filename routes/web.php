@@ -63,10 +63,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('modelos', 'ModeloController');
     //***Criterios
     Route::resource('criterios', 'CriterioController');
+    //***Indicadores
+    Route::resource('indicadors', 'IndicadorController');
+    //***Evidencias
+    Route::resource('evidencias', 'EvidenciaController');
+    //***Elementos
+    Route::resource('elementos', 'ElementoController');
+    //***Estructura
+    AdvancedRoute::controller('/estructura','EstructuraController');
+    Route::get('/agregar/criterio',function (){return view('estructura.modal_criterios');});
 });
-
-Route::resource('indicadors', 'IndicadorController');
-
-Route::resource('evidencias', 'EvidenciaController');
-
-Route::resource('elementos', 'ElementoController');

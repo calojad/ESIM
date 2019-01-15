@@ -1,3 +1,7 @@
+{{--MUESTRA LA ESTRUCTURA DEL MODELO
+** CRITERIOS
+** SUBCRITERIOS
+--}}
 @extends('layouts.app')
 @section('content-header')
     <h1>
@@ -17,7 +21,6 @@
         <div class="box box-primary box-solid">
             <div class="box-header"><h3 class="box-title">Modelo</h3></div>
             <div class="box-body">
-                <input id="unidadId" type="hidden" value="">
                 <div class="col-md-12">
                     <div class="col-md-4">
                         <dl class="col-md-12">
@@ -41,51 +44,57 @@
             </div>
             <div class="box-footer">
                 <a class="btn btn-default btnLoader" href="{!! route('modelos.index') !!}">Regresar</a>
-                <a class="btn btn-primary pull-right" href="">Agregar</a>
             </div>
         </div>
         <h3 class="box-title">Criterios y Subcriterios</h3>
-        @if(count($estruCriterios) != 0)
-            {{--@foreach ($userPeriodos as $periodo)
-                <div class="box box-warning collapsed-box">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Periodo: {{ $periodo->periodo->nombre }}</h3>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
-                        </div>
+        <div class="box box-warning">
+            <div class="box-header with-border">
+                <h3 class="box-title">Modelo: {{$modelo->descripcion}}</h3>
+                <a class="btn btn-primary pull-right" href="">Guardar</a>
+            </div>
+            <div class="box-body">
+                <div id="divEstructura" class="col-md-12" style="background-color: #cccccc;height: 70vh;margin-top: 10px;">
+                    <div class="col-md-12" style="margin-top: 10px">
+                        @foreach($estruCriterios as $criterio1)
+                            <div class="box box-info collapsed-box">
+                                <div class="box-header with-border">
+                                    <a class="text-navy" href="" data-widget="collapse"><h3 class="box-title">{{ $criterio1->criterio->abreviado }} - {{ $criterio1->criterio->nombre }}</h3></a>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div class="box-body" style="display: none;">
+                                    <div class="col-md-12" style="margin-top: 10px">
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <button type="button" class="btn btn-block btn-default" style="margin: 10px 0px" title="Agregar un Subcriterio" data-toggle="modal" data-target="#modalAgregarSubcriterio"><i class="fa fa-plus-circle text-info"></i> Agregar Subcriterio</button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="button" class="btn btn-block btn-default" style="margin: 10px 0px" title="Agregar un Indicador" data-toggle="modal" data-target="#modalAgregarIndicador"><i class="fa fa-plus-circle text-warning"></i> Agregar Indicador</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-                    <div class="box-body" style="display: none;">
-                        <div class="col-md-12">
-                            <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable">
-                                <thead>
-                                <tr>
-                                    <th>Carrera</th>
-                                    <th>Acciones</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach ($userAsignaciones as $ua)
-                                    @if($ua->periodo_id == $periodo->periodo_id)
-                                        <tr>
-                                            <td>{{ $ua->carrera->nombre }}</td>
-                                            {!! Form::open(['route' => ['usuarioasignacion.destroy', $ua->id], 'method' => 'delete']) !!}
-                                            <td>{!! Form::button('<i class="glyphicon glyphicon-erase"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')",'title'=>'Quitar Carrera']) !!}</td>
-                                            {!! Form::close() !!}
-                                        </tr>
-                                    @endif
-                                @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            @endforeach--}}
-        @else
-            <div class="box">
-                <div class="box box-header" align="center">
-                    <h3 class="text-muted">No hay datos</h3>
+                    <button type="button" class="btn btn-block btn-default" style="margin: 10px 0px" title="Agregar un Criterio" data-toggle="modal" data-target="#modalAgregarCriterio"><i class="fa fa-plus-circle fa-2x"></i></button>
                 </div>
             </div>
-        @endif
+            <div class="box-footer">
+
+            </div>
+        </div>
     </div>
+    @include('estructura.modal_criterios')
+    @include('estructura.modal_subcriterio')
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#divEstructura').slimScroll({
+                height: 'auto',
+                width: '100%'
+            });
+        });
+    </script>
 @endsection

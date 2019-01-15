@@ -74,7 +74,7 @@ class CreateTablesMenuMatriz extends Migration
             $table->integer('modelo_id')->unsigned();
             $table->integer('criterio_id')->unsigned();
             $table->integer('criterio_padre_id')->unsigned()->nullable();
-            $table->integer('nivel');
+            $table->integer('nivel')->default(1);
             $table->timestamps();
         });
         Schema::create('estructura_indicadores', function (Blueprint $table) {

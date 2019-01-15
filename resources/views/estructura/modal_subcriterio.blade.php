@@ -1,38 +1,42 @@
-<div class="modal fade in flash-modal" id="modalAgregarCarrera" role="dialog">
+<div class="modal fade" id="modalAgregarSubcriterio" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="border-radius: 8px">
-            <div class="modal-header bg-primary">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Agregar Carrera</h4>
+            <div class="modal-header bg-yellow">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Agregar Subcriterios</h4>
             </div>
-            {!! Form::model($unidad, ['route' => ['unidadcarrera.update', $unidad->id], 'method' => 'patch']) !!}
+            {!! Form::open(['url' => '/estructura/addcriterios/', 'method' => 'post']) !!}
+            <input type="hidden" value="{{$modelo->id}}" name="modelo_id">
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable">
+                        <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="tblCriteriosAdd">
                             <thead>
-                                <tr>
-                                    <th>Carrera</th>
-                                    <th>Agregar</th>
-                                </tr>
+                            <tr>
+                                <th>Abrebiación</th>
+                                <th>Criterio</th>
+                                <th>Seleccionar</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                @foreach ($carreras as $carrera)
+                            @foreach ($criterios as $criterio)
                                 <tr>
-                                    <td>{{ $carrera->nombre }}</td>
+                                    <td>{{ $criterio->abreviado }}</td>
+                                    <td>{{ $criterio->nombre }}</td>
                                     <td>
                                         <div class="icheck" align="center">
-                                            {!! Form::checkbox('carreras[]',$carrera->id,in_array($carrera->id,$uc_array),['class' => 'chkAgregarC inputIcheck']) !!}
+                                            {!! Form::checkbox('criteriosSel[]',$criterio->id,in_array($criterio->id,$ec_array),['class' => 'chkAgregarC inputIcheck']) !!}
                                         </div>
                                     </td>
                                 </tr>
-                                @endforeach
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer icheck">
+            <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
                 <label class="text-muted">Seleccionar todo {!! Form::checkbox('todoCa',null,null,['id' => 'chkTodasC','class' => 'inputIcheck']) !!}</label>
                 <button id="btnAgregarSeleccion" type="submit" class="btn btn-primary btnLoader">Agregar</button>
@@ -45,6 +49,19 @@
     /*
     *******FUNCIONES*******
      */
+    //Inicializacion DataTable
+    $(function () {
+        $('#tblCriteriosAdd').DataTable({
+            paging: false,
+            lengthChange: true,
+            searching: true,
+            ordering: true,
+            autoWidth: true,
+            retrieve: true,
+            responsive: true,
+            scrollY: '50vh'
+        });
+    });
     // Funcion iCheck
     $(function () {
         $('.inputIcheck').iCheck({
@@ -61,8 +78,9 @@
         });
 
         $('.chkAgregarC').on('ifUnchecked',function(){
-            if( $('#chkTodasC').prop('checked'))
-                $('#chkTodasC').iCheck('uncheck');
+            var chkTodo = $('#chkTodasC');
+            if( chkTodo.prop('checked'))
+                chkTodo.iCheck('uncheck');
         });
     });
 </script>
