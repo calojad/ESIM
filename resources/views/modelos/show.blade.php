@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <button type="button" class="btn btn-block btn-default" style="margin: 10px 0px" title="Agregar un Subcriterio" data-toggle="modal" data-target="#modalAgregarSubcriterio"><i class="fa fa-plus-circle text-info"></i> Agregar Subcriterio</button>
+                                            <button type="button" class="btn btn-block btn-default btnModalAddSub" style="margin: 10px 0px" title="Agregar un Subcriterio" data-toggle="modal" data-target="#modalAgregarSubcriterio" data-crid="{{$criterio1->criterio_id}}"><i class="fa fa-plus-circle text-info"></i> Agregar Subcriterio</button>
                                         </div>
                                         <div class="col-md-6">
                                             <button type="button" class="btn btn-block btn-default" style="margin: 10px 0px" title="Agregar un Indicador" data-toggle="modal" data-target="#modalAgregarIndicador"><i class="fa fa-plus-circle text-warning"></i> Agregar Indicador</button>
@@ -79,7 +79,9 @@
                             </div>
                         @endforeach
                     </div>
-                    <button type="button" class="btn btn-block btn-default" style="margin: 10px 0px" title="Agregar un Criterio" data-toggle="modal" data-target="#modalAgregarCriterio"><i class="fa fa-plus-circle fa-2x"></i></button>
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-block btn-default" style="margin: 10px 0" title="Agregar un Criterio" data-toggle="modal" data-target="#modalAgregarCriterio"><i class="fa fa-plus-circle fa-2x"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="box-footer">
@@ -89,6 +91,7 @@
     </div>
     @include('estructura.modal_criterios')
     @include('estructura.modal_subcriterio')
+    @include('estructura.modal_indicador')
     <script type="text/javascript">
         $(document).ready(function () {
             $('#divEstructura').slimScroll({

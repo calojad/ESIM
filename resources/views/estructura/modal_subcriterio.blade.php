@@ -6,12 +6,13 @@
                 </button>
                 <h4 class="modal-title">Agregar Subcriterios</h4>
             </div>
-            {!! Form::open(['url' => '/estructura/addcriterios/', 'method' => 'post']) !!}
+            {!! Form::open(['url' => '/estructura/addsubcriterios/', 'method' => 'post']) !!}
             <input type="hidden" value="{{$modelo->id}}" name="modelo_id">
+            <input type="hidden" name="criterioId">
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="tblCriteriosAdd">
+                        <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="tblSubcriteriosAdd">
                             <thead>
                             <tr>
                                 <th>Abrebiación</th>
@@ -21,15 +22,17 @@
                             </thead>
                             <tbody>
                             @foreach ($criterios as $criterio)
+                                @if(!in_array($criterio->id,$ec_array))
                                 <tr>
                                     <td>{{ $criterio->abreviado }}</td>
                                     <td>{{ $criterio->nombre }}</td>
                                     <td>
                                         <div class="icheck" align="center">
-                                            {!! Form::checkbox('criteriosSel[]',$criterio->id,in_array($criterio->id,$ec_array),['class' => 'chkAgregarC inputIcheck']) !!}
+                                            {!! Form::checkbox('criteriosSel[]',$criterio->id,null,['class' => 'chkAgregarC inputIcheck']) !!}
                                         </div>
                                     </td>
                                 </tr>
+                                @endif
                             @endforeach
                             </tbody>
                         </table>
@@ -46,12 +49,15 @@
     </div>
 </div>
 <script type="text/javascript" charset="utf-8" async defer>
+    $('.btnModalAddSub').on('click',function () {
+        $('input[name=criterioId]').val($(this).data('crid'));
+    });
     /*
     *******FUNCIONES*******
      */
     //Inicializacion DataTable
     $(function () {
-        $('#tblCriteriosAdd').DataTable({
+        $('#tblCriteriosAdd, #tblSubcriteriosAdd').DataTable({
             paging: false,
             lengthChange: true,
             searching: true,
