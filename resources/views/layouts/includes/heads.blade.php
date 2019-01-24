@@ -21,5 +21,7 @@
 {!! Html::style('plugins/jquery_alerts/jquery-confirm.min.css') !!}
 <!-- Estilos -->
 {!! Html::style('css/style.css') !!}
+<!-- TreeView -->
+{!! Html::style('plugins/treeview/css/bootstrap-treeview.css') !!}
 <!-- jQuery 3.1.1 -->
 {!! Html::script('plugins/jquery/jquery-3.3.1.min.js') !!}

@@ -17,6 +17,8 @@
 {!! Html::script('adminLTE-2.4.5/bower_components/fastclick/lib/fastclick.js') !!}
 <!-- AdminLTE App -->
 {!! Html::script('adminLTE-2.4.5/dist/js/adminlte.min.js') !!}
+<!-- TreeView -->
+{!! Html::script('plugins/treeview/js/bootstrap-treeview.js') !!}
 <script type="text/javascript">
     $(function () {
         $('.table').DataTable({

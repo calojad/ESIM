@@ -1,0 +1,1 @@
+{"result":{"text":"fracción numerador N E entre denominador N T P fin fracción producto asterisco 100"},"status":"ok"}

@@ -80,13 +80,11 @@ class ModeloController extends AppBaseController
             Flash::error('Modelo not found');
             return redirect(route('modelos.index'));
         }
-
-        $estruCriterios = EstructuraCriterios::where('modelo_id',$id)->get();
         $ec_array = EstructuraCriterios::where('modelo_id',$id)->pluck('criterio_id')->toArray();
 
         $criterios = Criterio::where('estado',1)->get();
 
-        return view('modelos.show',compact('modelo','estruCriterios','criterios','ec_array'));
+        return view('modelos.show',compact('modelo','criterios','ec_array'));
     }
 
     /**

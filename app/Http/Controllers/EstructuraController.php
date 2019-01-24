@@ -20,19 +20,24 @@ class EstructuraController extends Controller
         return redirect(route('modelos.show',$modelo));
     }
     public function postAddsubcriterios(Request $request){
-        dd($request->all());
+//        dd($request->all());
         $modelo = $request->get('modelo_id');
         $criterios = $request->get('criteriosSel');
         $criterioPadre = $request->get('criterioId');
+        $nivel = $request->get('nivel');
         foreach ($criterios as $criterio){
             EstructuraCriterios::updateOrCreate(
                 ['modelo_id' => $modelo, 'criterio_id' => $criterio],
-                ['nivel' => 2,'criterio_padre_id' => $criterioPadre]
+                ['nivel' => $nivel,'criterio_padre_id' => $criterioPadre]
             );
         }
         return redirect(route('modelos.show',$modelo));
     }
-    public function getSubcriterios($criterioPadreId){
-
+    public function getSubcriteriosde($criterioPadreId){
+        $subcriterios = EstructuraCriterios::leftjoin('criterio','estructura_criterios.criterio_id','=','criterio.id')
+            ->where('estructura_criterios.criterio_padre_id',$criterioPadreId)
+            ->select('criterio.id','criterio.nombre','criterio.abreviado')
+            ->get();
+        return json_encode($subcriterios);
     }
 }

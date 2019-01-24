@@ -71,5 +71,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('elementos', 'ElementoController');
     //***Estructura
     AdvancedRoute::controller('/estructura','EstructuraController');
-    Route::get('/agregar/criterio',function (){return view('estructura.modal_criterios');});
 });

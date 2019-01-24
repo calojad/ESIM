@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator N E over denominator N T P end fraction cross times 100"},"status":"ok"}

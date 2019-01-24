@@ -9,6 +9,7 @@
             {!! Form::open(['url' => '/estructura/addsubcriterios/', 'method' => 'post']) !!}
             <input type="hidden" value="{{$modelo->id}}" name="modelo_id">
             <input type="hidden" name="criterioId">
+            <input type="hidden" name="nivel">
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
@@ -51,6 +52,7 @@
 <script type="text/javascript" charset="utf-8" async defer>
     $('.btnModalAddSub').on('click',function () {
         $('input[name=criterioId]').val($(this).data('crid'));
+        $('input[name=nivel]').val($(this).data('nivel'));
     });
     /*
     *******FUNCIONES*******

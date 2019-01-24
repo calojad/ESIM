@@ -9,7 +9,7 @@
         <small>Estructura</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="{{URL::to('/home')}}"><i class="fas fa-home"></i> Home</a></li>
         <li>Modelo</li>
         <li>Estructura</li>
     </ol>
@@ -53,51 +53,29 @@
                 <a class="btn btn-primary pull-right" href="">Guardar</a>
             </div>
             <div class="box-body">
-                <div id="divEstructura" class="col-md-12" style="background-color: #cccccc;height: 70vh;margin-top: 10px;">
+                <div id="divEstructura" class="col-md-12" style="background-color: #cccccc;height: 70vh;">
                     <div class="col-md-12" style="margin-top: 10px">
-                        @foreach($estruCriterios as $criterio1)
-                            <div class="box box-info collapsed-box">
-                                <div class="box-header with-border">
-                                    <a class="text-navy" href="" data-widget="collapse"><h3 class="box-title">{{ $criterio1->criterio->abreviado }} - {{ $criterio1->criterio->nombre }}</h3></a>
-                                    <div class="box-tools pull-right">
-                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
-                                    </div>
-                                </div>
-                                <div class="box-body" style="display: none;">
-                                    <div class="col-md-12" style="margin-top: 10px">
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <button type="button" class="btn btn-block btn-default btnModalAddSub" style="margin: 10px 0px" title="Agregar un Subcriterio" data-toggle="modal" data-target="#modalAgregarSubcriterio" data-crid="{{$criterio1->criterio_id}}"><i class="fa fa-plus-circle text-info"></i> Agregar Subcriterio</button>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <button type="button" class="btn btn-block btn-default" style="margin: 10px 0px" title="Agregar un Indicador" data-toggle="modal" data-target="#modalAgregarIndicador"><i class="fa fa-plus-circle text-warning"></i> Agregar Indicador</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                    <div class="col-md-12">
-                        <button type="button" class="btn btn-block btn-default" style="margin: 10px 0" title="Agregar un Criterio" data-toggle="modal" data-target="#modalAgregarCriterio"><i class="fa fa-plus-circle fa-2x"></i></button>
+                        <div id="default-tree"></div>
                     </div>
                 </div>
             </div>
-            <div class="box-footer">
-
-            </div>
+            <div class="overlay"><i class="fa fa-sync-alt fa-spin"></i></div>
         </div>
     </div>
     @include('estructura.modal_criterios')
     @include('estructura.modal_subcriterio')
     @include('estructura.modal_indicador')
     <script type="text/javascript">
+        var myTree;
         $(document).ready(function () {
             $('#divEstructura').slimScroll({
                 height: 'auto',
                 width: '100%'
             });
+            $('#default-tree').treeview({
+                data: myTree
+            });
+            $('.overlay').hide();
         });
     </script>
 @endsection
