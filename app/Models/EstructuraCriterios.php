@@ -61,6 +61,10 @@ class EstructuraCriterios extends Model
         
     ];
 
+    public function childs() {
+        return $this->hasMany('\App\Models\EstructuraCriterios','criterio_padre_id','id') ;
+    }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      **/

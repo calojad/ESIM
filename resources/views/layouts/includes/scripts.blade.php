@@ -18,7 +18,7 @@
 <!-- AdminLTE App -->
 {!! Html::script('adminLTE-2.4.5/dist/js/adminlte.min.js') !!}
 <!-- TreeView -->
-{!! Html::script('plugins/treeview/js/bootstrap-treeview.js') !!}
+{!! Html::script('plugins/easy-tree/easyTree.js') !!}
 <script type="text/javascript">
     $(function () {
         $('.table').DataTable({

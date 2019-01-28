@@ -18,6 +18,7 @@
     <div class="content">
         @include('adminlte-templates::common.errors')
         @include('flash::message')
+
         <div class="box box-primary box-solid">
             <div class="box-header"><h3 class="box-title">Modelo</h3></div>
             <div class="box-body">
@@ -46,16 +47,22 @@
                 <a class="btn btn-default btnLoader" href="{!! route('modelos.index') !!}">Regresar</a>
             </div>
         </div>
+
         <h3 class="box-title">Criterios y Subcriterios</h3>
+
         <div class="box box-warning">
             <div class="box-header with-border">
                 <h3 class="box-title">Modelo: {{$modelo->descripcion}}</h3>
-                <a class="btn btn-primary pull-right" href="">Guardar</a>
             </div>
             <div class="box-body">
+                <div class="col-md-12 h6">
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCriterio"><i class="fa fa-plus-square" title="Agregar Elemento"></i> Agregar Criterio</a>
+                </div>
                 <div id="divEstructura" class="col-md-12" style="background-color: #cccccc;height: 70vh;">
                     <div class="col-md-12" style="margin-top: 10px">
-                        <div id="default-tree"></div>
+                        <div class="easy-tree">
+                            {!! $treev !!}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,16 +73,41 @@
     @include('estructura.modal_subcriterio')
     @include('estructura.modal_indicador')
     <script type="text/javascript">
-        var myTree;
         $(document).ready(function () {
+            //Inicializar TreeView
+            $('.easy-tree').EasyTree();
+            //Click para contraer nodos
+            $('li.parent_li > span').click();
+            //Inicializar slimscroll
             $('#divEstructura').slimScroll({
                 height: 'auto',
                 width: '100%'
             });
-            $('#default-tree').treeview({
-                data: myTree
-            });
+            //Ocultar overlay de los box
             $('.overlay').hide();
+            //Boton de agregar elemento
+            $('.btnAddElement').on('click',function () {
+                alert('Agregar elemento: '+$(this).data('id'));
+            });
+            //Boton de eliminar elemento
+            $('.btnDeleteElement').on('click',function () {
+                var id = $(this).data('id');
+                $.confirm({
+                    title: '¿Esta Seguro?',
+                    content: 'Se eliminara todos los elementos contenidos en este elemento.',
+                    type: 'red',
+                    buttons: {
+                        eliminar: function () {
+                            var url = '{{URL::to('estructura/destroy/')}}'+'/'+id;
+                            $.get(url,function () {
+                                location.reload()
+                            });
+                        },
+                        cancel: function () {
+                        },
+                    }
+                });
+            });
         });
     </script>
 @endsection

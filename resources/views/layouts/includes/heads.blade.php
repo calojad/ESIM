@@ -22,6 +22,6 @@
 <!-- Estilos -->
 {!! Html::style('css/style.css') !!}
 <!-- TreeView -->
-{!! Html::style('plugins/treeview/css/bootstrap-treeview.css') !!}
+{!! Html::style('plugins/easy-tree/easyTree.css') !!}
 <!-- jQuery 3.1.1 -->
 {!! Html::script('plugins/jquery/jquery-3.3.1.min.js') !!}

@@ -80,11 +80,46 @@ class ModeloController extends AppBaseController
             Flash::error('Modelo not found');
             return redirect(route('modelos.index'));
         }
-        $ec_array = EstructuraCriterios::where('modelo_id',$id)->pluck('criterio_id')->toArray();
 
-        $criterios = Criterio::where('estado',1)->get();
+        $ec_array = EstructuraCriterios::where('modelo_id', $id)->pluck('criterio_id')->toArray();
 
-        return view('modelos.show',compact('modelo','criterios','ec_array'));
+        $criterios = Criterio::where('estado', 1)->get();
+
+        $treev = $this->treeViewCriterios();
+
+        return view('modelos.show', compact('modelo', 'criterios', 'ec_array', 'treev'));
+    }
+
+    public function treeViewCriterios()
+    {
+        $Categorys = EstructuraCriterios::where('nivel', '=', 1)->get();
+        $tree = '<ul>';
+        foreach ($Categorys as $Category) {
+            $tree .= '<li><a data-id="'.$Category->criterio_id.'">' . $Category->criterio->nombre . '</a>';
+            if (count($Category->childs)) {
+                $tree .= $this->childView($Category);
+            }
+        }
+        $tree .= '</ul>';
+        return $tree;
+//        return view('files.treeview', compact('tree'));
+    }
+
+    public function childView($Category)
+    {
+        $html = '<ul>';
+        foreach ($Category->childs as $arr) {
+            if (count($arr->childs)) {
+                $html .= '<li><a data-id="'.$arr->criterio_id.'">' . $arr->criterio->nombre . '</a>';
+                $html .= $this->childView($arr);
+            } else {
+                $html .= '<li><a data-id="'.$arr->criterio_id.'">' . $arr->criterio->nombre . '</a>';
+            }
+            $html .= "</li>";
+        }
+
+        $html .= "</ul>";
+        return $html;
     }
 
     /**
@@ -110,7 +145,7 @@ class ModeloController extends AppBaseController
     /**
      * Update the specified Modelo in storage.
      *
-     * @param  int              $id
+     * @param  int $id
      * @param UpdateModeloRequest $request
      *
      * @return Response
