@@ -34,9 +34,11 @@
             'bg-yellow-active color-palette',
             'bg-green-active color-palette',
             'bg-purple-active color-palette',
+            'bg-teal-active color-palette',
             'bg-maroon-active color-palette',
+            'bg-orange-active color-palette',
+            'bg-navy-active color-palette',
         ];
-        var i = 0;
         var warningAlert = $('<div class="alert alert-warning alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><strong></strong><span class="alert-content"></span> </div> ');
         var dangerAlert = $('<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><strong></strong><span class="alert-content"></span> </div> ');
 
@@ -46,26 +48,40 @@
 
         this.each(function () {
             var easyTree = $(this);
+            var i = 0;
             $.each($(easyTree).find('ul > li'), function() {
                 var text;
                 var id;
+                var nivel;
                 if($(this).is('li:has(ul)')) {
                     id = $(this).find(' > a').data('id');
-                    console.log(id);
+                    nivel = $(this).find(' > a').data('nivel');
                     var children = $(this).find(' > ul');
                     $(children).remove();
                     text = $(this).text();
-                    $(this).html('<span class="'+colors[i]+'"><span class="pull-right glyphicon"></span><a style="color:white" href="javascript: void(0);"></a></span><button class="btnAddElement btn bt-xs btn-success" data-id="'+id+'"><i class="fa fa-plus"></i></button><button class="btnDeleteElement btn bt-xs btn-danger" data-id="'+id+'"><i class="fa fa-trash-alt"></i></button></form>');
+                    $(this).html('<span class="'+colors[i]+'"><span class="pull-right glyphicon"></span><a style="color:white" href="javascript: void(0);"></a>' +
+                        '<div class="btn-group pull-right boxTools" style="margin-right: 20px; border: 1px solid white; border-radius: 4px;">' +
+                            '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarSubcriterio" data-nivel="'+nivel+'" title="Agregar Subcriterio"><i class="fa fa-plus text-sm"></i></button>' +
+                            '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarIndicador" data-nivel="'+nivel+'" title="Agregar Indicador"><i class="fa fa-plus-circle text-sm"></i></button>' +
+                            '<button type="button" class="btnDeleteElement btn btn-danger" data-id="'+id+'"><i class="fa fa-trash-alt text-sm"></i></button>' +
+                        '</div></span>'
+                    );
                     $(this).find(' > span > span').addClass('glyphicon-menu-up');
                     $(this).find(' > span > a').text(' '+text);
                     $(this).append(children);
-                    i===5?i=0:i++;
+                    i===7?i=0:i++;
                 }
                 else {
                     text = $(this).text();
                     id = $(this).find(' > a').data('id');
-                    console.log(id);
-                    $(this).html('<span><span class="pull-right fa"></span><a href="javascript: void(0);"></a></span><button class="btnAddElement btn bt-xs btn-success" data-id="'+id+'"><i class="fa fa-plus"></i></button><button type="submit" onclick="return $.confirm(\'Esta Seguro? Se eliminara todo el contenido.\')" class="btnDeleteElement btn bt-xs btn-danger" data-id="'+id+'"><i class="fa fa-trash-alt"></i></button>');
+                    nivel = $(this).find(' > a').data('nivel');
+                    $(this).html('<span><span class="pull-right fa"></span><a href="javascript: void(0);"></a>' +
+                        '<div class="btn-group pull-right boxTools" style="margin-right: 20px;border: 1px solid white; border-radius: 4px;">' +
+                            '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarSubcriterio" data-nivel="'+nivel+'" title="Agregar Subcriterio"><i class="fa fa-plus text-sm"></i></button>' +
+                            '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarIndicador" data-nivel="'+nivel+'" title="Agregar Indicador"><i class="fa fa-plus-circle text-sm"></i></button>' +
+                            '<button type="button" class="btnDeleteElement btn btn-danger" data-id="'+id+'"><i class="fa fa-trash-alt text-sm"></i></button>' +
+                        '</div></span>'
+                    );
                     $(this).find(' > span > span').addClass('fa-check');
                     $(this).find(' > span > a').text(' '+text);
                 }
@@ -214,18 +230,18 @@
             }
 
             // collapse or expand
-            $(easyTree).delegate('li.parent_li > span', 'click', function (e) {
-                var children = $(this).parent('li.parent_li').find(' > ul > li');
+            $(easyTree).delegate('li.parent_li > span > span', 'click', function (e) {
+                var children = $(this).parent('span').parent('li.parent_li').find(' > ul > li');
                 if (children.is(':visible')) {
                     children.hide('fast');
                     $(this).attr('title', options.i18n.expandTip)
-                        .find(' > span.glyphicon')
+                        // .find(' > span.glyphicon')
                         .addClass('glyphicon-menu-down')
                         .removeClass('glyphicon-menu-up');
                 } else {
                     children.show('fast');
                     $(this).attr('title', options.i18n.collapseTip)
-                        .find(' > span.glyphicon')
+                        // .find(' > span.glyphicon')
                         .addClass('glyphicon-menu-up')
                         .removeClass('glyphicon-menu-down');
                 }

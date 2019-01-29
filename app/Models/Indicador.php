@@ -94,7 +94,7 @@ class Indicador extends Model
      **/
     public function formula()
     {
-        return $this->belongsTo(\App\Models\Formula::class);
+        return $this->belongsTo(\App\Models\Formulas::class);
     }
 
     /**

@@ -80,7 +80,7 @@
 <!-- Bootstrap 3.3.7 -->
 {!! Html::script('boostrap-3.3.7/js/bootstrap.min.js') !!}
 <!-- AdminLTE App -->
-{!! Html::script('adminLTE-2.4.3/dist/js/adminlte.min.js') !!}
+{!! Html::script('adminLTE-2.4.5/dist/js/adminlte.min.js') !!}
 <!-- iCheck -->
 {!! Html::script('plugins/iCheck/icheck.min.js') !!}
 <script>

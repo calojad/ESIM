@@ -19,7 +19,7 @@ use Eloquent as Model;
  * @property \Illuminate\Database\Eloquent\Collection unidadCarrera
  * @property integer modelo_id
  * @property integer criterio_id
- * @property integer criterio_padre_id
+ * @property integer padre_id
  * @property integer nivel
  */
 class EstructuraCriterios extends Model
@@ -35,7 +35,7 @@ class EstructuraCriterios extends Model
     public $fillable = [
         'modelo_id',
         'criterio_id',
-        'criterio_padre_id',
+        'padre_id',
         'nivel'
     ];
 
@@ -48,7 +48,7 @@ class EstructuraCriterios extends Model
         'id' => 'integer',
         'modelo_id' => 'integer',
         'criterio_id' => 'integer',
-        'criterio_padre_id' => 'integer',
+        'padre_id' => 'integer',
         'nivel' => 'integer'
     ];
 
@@ -62,7 +62,7 @@ class EstructuraCriterios extends Model
     ];
 
     public function childs() {
-        return $this->hasMany('\App\Models\EstructuraCriterios','criterio_padre_id','id') ;
+        return $this->hasMany('\App\Models\EstructuraCriterios','padre_id','id') ;
     }
 
     /**
@@ -94,6 +94,6 @@ class EstructuraCriterios extends Model
      **/
     public function estructuraIndicadores()
     {
-        return $this->hasMany(\App\Models\EstructuraIndicadore::class);
+        return $this->hasMany('\App\Models\EstructuraIndicadores','estruc_crite_id','id');
     }
 }

@@ -78,6 +78,6 @@ class EstructuraIndicadores extends Model
      **/
     public function estructuraEvidencias()
     {
-        return $this->hasMany(\App\Models\EstructuraEvidencia::class);
+        return $this->hasMany(\App\Models\EstructuraEvidencias::class,'estruc_indic_id');
     }
 }

@@ -29,7 +29,7 @@ class AddForeignKeysTablesMatriz extends Migration
         Schema::table('estructura_criterios', function (Blueprint $table) {
             $table->foreign('modelo_id')->references('id')->on('modelo');
             $table->foreign('criterio_id')->references('id')->on('criterio');
-            $table->foreign('criterio_padre_id')->references('id')->on('criterio');
+            $table->foreign('padre_id')->references('id')->on('estructura_criterios');
         });
 
         Schema::table('estructura_indicadores', function (Blueprint $table) {
@@ -69,7 +69,7 @@ class AddForeignKeysTablesMatriz extends Migration
         Schema::table('estructura_criterios', function (Blueprint $table) {
             $table->dropForeign('estructura_criterios_modelo_id_foreign');
             $table->dropForeign('estructura_criterios_criterio_id_foreign');
-            $table->dropForeign('estructura_criterios_criterio_padre_id_foreign');
+            $table->dropForeign('estructura_criterios_padre_id_foreign');
         });
         Schema::table('estructura_indicadores', function (Blueprint $table) {
             $table->dropForeign('estructura_indicadores_estruc_crite_id_foreign');

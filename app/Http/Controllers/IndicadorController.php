@@ -11,8 +11,6 @@ use App\Repositories\IndicadorRepository;
 use App\Rules\MayoraCero;
 use Flash;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -69,6 +67,12 @@ class IndicadorController extends AppBaseController
     {
         $this->validator($request);
         $input = $request->all();
+
+        if($input['tipo_indicador_id'] == 1)
+            $input['formula_id']=null;
+        else if($input['tipo_indicador_id'] == 2)
+            $input['grupo_valor_id']=null;
+
         $indicador = $this->indicadorRepository->create($input);
         Flash::success('Indicador saved successfully.');
 
@@ -139,7 +143,13 @@ class IndicadorController extends AppBaseController
             return redirect(route('indicadors.index'));
         }
 
-        $indicador = $this->indicadorRepository->update($request->all(), $id);
+        $input=$request->all();
+
+        if($input['tipo_indicador_id'] == 1)
+            $input['formula_id'] = null;
+        else if($input['tipo_indicador_id'] == 2)
+            $input['grupo_valor_id'] = null;
+        $indicador = $this->indicadorRepository->update($input, $id);
 
         Flash::success('Indicador updated successfully.');
 

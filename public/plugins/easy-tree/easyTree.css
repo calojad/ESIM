@@ -55,12 +55,15 @@
 }
 
 .easy-tree li.parent_li > span {
-    cursor: pointer;
     width: 90%;
     padding: 20px 10px 20px 10px;
     font-size: 14pt;
 }
 
+.easy-tree li.parent_li > span > span{
+    cursor: pointer;
+    padding: 10px;
+}
 
 .easy-tree > ul > li::before, .easy-tree > ul > li::after {
     border: 0
@@ -86,8 +89,8 @@
     /*width: 100%;*/
 }
 
-.easy-tree li > span > span.glyphicon-folder-close, .easy-tree li > span > span.glyphicon-folder-open {
-    margin-right: 5px;
+.easy-tree li > span > span.glyphicon {
+    margin-right: 20px;
 }
 
 .easy-tree li.li_selected > span, .easy-tree li.li_selected > span > a {
