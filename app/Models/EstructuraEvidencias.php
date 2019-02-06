@@ -62,15 +62,15 @@ class EstructuraEvidencias extends Model
      **/
     public function estructuraIndicadore()
     {
-        return $this->belongsTo(\App\Models\EstructuraIndicadore::class);
+        return $this->belongsTo(\App\Models\EstructuraIndicadores::class);
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      **/
-    public function evidencium()
+    public function evidencia()
     {
-        return $this->belongsTo(\App\Models\Evidencium::class);
+        return $this->belongsTo(\App\Models\Evidencia::class);
     }
 
     /**

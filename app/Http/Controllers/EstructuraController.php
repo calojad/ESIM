@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Criterio;
 use App\Models\EstructuraCriterios;
+use App\Models\EstructuraEvidencias;
 use App\Models\EstructuraIndicadores;
+use App\Models\Indicador;
 use Illuminate\Http\Request;
 use Flash;
 
@@ -65,6 +68,33 @@ class EstructuraController extends Controller
         Flash::success('Indicador(es) agregado(s).');
         return redirect(route('modelos.show', $modelo));
 
+    }
+
+    public function postAddevidencias(Request $request){
+        $estruIndicador = $request->get('estrucIndicador');
+        $evidencias = $request->get('evidenciaSel');
+        foreach ($evidencias as $evi) {
+            EstructuraEvidencias::updateOrCreate(
+                ['estruc_indic_id' => $estruIndicador, 'evidencia_id' => $evi]
+            );
+        }
+        $indicador = $request->get('indicador_id');
+
+        Flash::success('Evidencia(s) agregada(s).');
+        return redirect(route('indicadors.show', $indicador));
+    }
+
+    public function postNewCriterio(Request $request){
+        $data = $request->all();
+        dd($data);
+        Criterio::create($data);
+        return redirect(route('modelos.show',$data['modelo_id']));
+    }
+    public function postNewIndicador(Request $request){
+        $data = $request->all();
+        dd($data);
+        Criterio::create($data);
+        return redirect(route('modelos.show',$data['modelo_id']));
     }
 
     public function getSubcriteriosde($criterioPadreId)

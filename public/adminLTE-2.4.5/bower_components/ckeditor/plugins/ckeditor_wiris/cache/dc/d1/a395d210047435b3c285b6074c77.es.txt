@@ -1,1 +1,0 @@
-{"result":{"text":"fracción numerador N E entre denominador N T P fin fracción multiplicación en cruz 100"},"status":"ok"}

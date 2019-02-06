@@ -43,7 +43,8 @@ class FormulasController extends AppBaseController
      */
     public function create()
     {
-        return view('formulas.create');
+        $formulas=null;
+        return view('formulas.create')->with('formulas',$formulas);
     }
 
     /**

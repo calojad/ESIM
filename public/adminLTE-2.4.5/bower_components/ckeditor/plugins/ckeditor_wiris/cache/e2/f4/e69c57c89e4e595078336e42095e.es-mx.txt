@@ -1,1 +1,0 @@
-{"result":{"text":"fracción numerador 1.5 multiplicación en cruz N A P h D más N A M s C entre denominador N A fin fracción"},"status":"ok"}

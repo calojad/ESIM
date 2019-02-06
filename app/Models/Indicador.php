@@ -118,6 +118,6 @@ class Indicador extends Model
      **/
     public function estructuraIndicadores()
     {
-        return $this->hasMany(\App\Models\EstructuraIndicadore::class);
+        return $this->hasMany(\App\Models\EstructuraIndicadores::class);
     }
 }

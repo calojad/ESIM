@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('css')
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML-full"></script>
+@stop
 @section('content-header')
     <h1>
         {{config('app.name','EVAL')}}

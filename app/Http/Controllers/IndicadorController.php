@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateIndicadorRequest;
 use App\Http\Requests\UpdateIndicadorRequest;
+use App\Models\EstructuraCriterios;
+use App\Models\EstructuraEvidencias;
+use App\Models\Evidencia;
 use App\Models\Formulas;
 use App\Models\GrupoValor;
+use App\Models\Indicador;
 use App\Models\TipoIndicador;
 use App\Repositories\IndicadorRepository;
 use App\Rules\MayoraCero;
@@ -96,7 +100,18 @@ class IndicadorController extends AppBaseController
             return redirect(route('indicadors.index'));
         }
 
-        return view('indicadors.show')->with('indicador', $indicador);
+        $modelo = EstructuraCriterios::find($indicador->estructuraIndicadores[0]->estruc_crite_id);
+
+        $evidencias = Evidencia::where('estado',1)->get();
+
+        $ee_array = EstructuraEvidencias::leftjoin('estructura_indicadores','estructura_indicadores.id','=','estructura_evidencias.estruc_indic_id')
+            ->leftjoin('estructura_criterios','estructura_criterios.id','=','estructura_indicadores.estruc_crite_id')
+            ->pluck('estructura_evidencias.evidencia_id')
+            ->toArray();
+
+        $estrucEvidencias = EstructuraEvidencias::where('estruc_indic_id',$indicador->estructuraIndicadores[0]->id)->get();
+
+        return view('indicadors.show',compact('indicador','modelo','evidencias','ee_array','estrucEvidencias'));
     }
 
     /**

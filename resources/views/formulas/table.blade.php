@@ -9,18 +9,18 @@
         </tr>
     </thead>
     <tbody>
-    @foreach($formulas as $formulas)
+    @foreach($formulas as $formula)
         <tr>
-            <td>{!! $formulas->nombre !!}</td>
-            <td>{!! $formulas->abreviatura !!}</td>
-            <td>{!! $formulas->formula !!}</td>
-            <td><label class="label {!! $formulas->estado==1?'label-success':'label-danger' !!}">{!! $formulas->estado==1?'Activo':'Inactivo' !!}</label></td>
+            <td>{!! $formula->nombre !!}</td>
+            <td>{!! $formula->abreviatura !!}</td>
+            <td>`{!! $formula->formula !!}`</td>
+            <td><label class="label {!! $formula->estado==1?'label-success':'label-danger' !!}">{!! $formula->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
-                {!! Form::open(['route' => ['formulas.destroy', $formulas->id], 'method' => 'delete']) !!}
+                {!! Form::open(['route' => ['formulas.destroy', $formula->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
-                    <a href="{!! route('formulas.edit', [$formulas->id]) !!}" class='btn btn-default btn-xs btnLoader' title="Editar"><i class="glyphicon glyphicon-edit"></i></a>
+                    <a href="{!! route('formulas.edit', [$formula->id]) !!}" class='btn btn-default btn-xs btnLoader' title="Editar"><i class="glyphicon glyphicon-edit"></i></a>
                     {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')", 'title' => 'Eliminar']) !!}
-                    <a href="{{ route('formulaVariables.edit', $formulas->id) }}" class='btn btn-success btn-xs' title="Variables"><i class="fa fa-superscript"></i></a>
+                    <a href="{{ route('formulaVariables.edit', $formula->id) }}" class='btn btn-success btn-xs' title="Variables"><i class="fa fa-superscript"></i></a>
                 </div>
                 {!! Form::close() !!}
             </td>

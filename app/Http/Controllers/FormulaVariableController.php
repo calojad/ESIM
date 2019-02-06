@@ -64,10 +64,15 @@ class FormulaVariableController extends AppBaseController
         $formula_id = $request->get('formula_id');
         $variables = $request->get('chkSelVariable');
 
-        foreach ($variables as $variable) {
-            FormulaVariable::updateOrCreate(
-                ['formula_id' => $formula_id, 'variable_id' => $variable]
-            );
+        if(!empty($variables)) {
+            foreach ($variables as $variable) {
+                FormulaVariable::updateOrCreate(
+                    ['formula_id' => $formula_id, 'variable_id' => $variable]
+                );
+            }
+        }else{
+            Flash::warning('Ninguna Variable Seleccionada.');
+            return redirect('cuantitativos/F');
         }
 
         Flash::success('Formula Variable saved successfully.');

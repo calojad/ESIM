@@ -53,6 +53,7 @@
                 var text;
                 var id;
                 var nivel;
+                var href;
                 if($(this).is('li:has(ul)')) {
                     id = $(this).find(' > a').data('id');
                     nivel = $(this).find(' > a').data('nivel');
@@ -75,7 +76,8 @@
                     text = $(this).text();
                     id = $(this).find(' > a').data('id');
                     nivel = $(this).find(' > a').data('nivel');
-                    $(this).html('<span><span class="pull-right fa"></span><a href="javascript: void(0);"></a>' +
+                    href = $(this).find(' > a').data('href');
+                    $(this).html('<span><span class="pull-right fa"></span><a href="'+ (typeof(href)!=="undefined"?href:"javascript: void(0);") +'"></a>' +
                         '<div class="btn-group pull-right boxTools" style="margin-right: 20px;border: 1px solid white; border-radius: 4px;">' +
                             '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarSubcriterio" data-nivel="'+nivel+'" title="Agregar Subcriterio"><i class="fa fa-plus text-sm"></i></button>' +
                             '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarIndicador" data-nivel="'+nivel+'" title="Agregar Indicador"><i class="fa fa-plus-circle text-sm"></i></button>' +

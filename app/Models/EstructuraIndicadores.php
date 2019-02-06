@@ -62,7 +62,7 @@ class EstructuraIndicadores extends Model
      **/
     public function estructuraCriterio()
     {
-        return $this->belongsTo(\App\Models\EstructuraCriterio::class);
+        return $this->belongsTo(\App\Models\EstructuraCriterios::class);
     }
 
     /**

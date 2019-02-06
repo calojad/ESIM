@@ -143,12 +143,12 @@ class ModeloController extends AppBaseController
     {
         $html = '<ul>';
         foreach ($Category->estructuraIndicadores as $arr) {
-            if (count($arr->estructuraEvidencias)) {
-                $html .= '<li><a data-id="'.$arr->indicador_id.'">'.$arr->indicador->nombre.'</a>';
+            /*if (count($arr->estructuraEvidencias)) {
+                $html .= '<li><a data-id="'.$arr->indicador_id.'" data-href="HOLA">'.$arr->indicador->nombre.'</a>';
                 $html .= $this->childViewIndicador($arr);
-            } else {
-                $html .= '<li><a data-id="'.$arr->indicador_id.'">'.$arr->indicador->nombre.'</a>';
-            }
+            } else {*/
+                $html .= '<li><a data-id="'.$arr->id .'" data-href="'.route('indicadors.show',$arr->indicador_id).'">'.$arr->indicador->nombre.'</a>';
+//            }
             $html .= "</li>";
         }
 
