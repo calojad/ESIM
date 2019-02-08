@@ -4,523 +4,18 @@
     <list default="true" id="08c3f4dd-1450-4e65-a1d3-4c4798818ff9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormulaVariableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormulaVariableController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormulasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormulasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Elemento.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Elemento.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/EstructuraIndicadores.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstructuraIndicadores.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Indicador.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Indicador.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/CHANGES.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/adapters/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/build-config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/ckeditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/contents.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/af.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/bn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/bs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/cy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/de-ch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/en-au.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/en-ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/en-gb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/eo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/es-mx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/fo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/fr-ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/gu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/hi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/is.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/ka.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/km.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/ku.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/mk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/mn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/ms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/no.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/oc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/pt-br.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/si.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/sq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/sr-latn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/sr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/tt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/ug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/lang/zh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/about/dialogs/about.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/about/dialogs/logo_ckeditor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/VERSION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/7c/45/1ab67f3e345ee240ed8a427ad9be.es.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/7c/45/1ab67f3e345ee240ed8a427ad9be.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/8a/c8/a650d901c45f24a29f2cb1453f24.en.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/8a/c8/a650d901c45f24a29f2cb1453f24.es.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/8a/c8/a650d901c45f24a29f2cb1453f24.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/96/78/9015ad1e386f34baf765a4598fac.en.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/96/78/9015ad1e386f34baf765a4598fac.es-mx.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/96/78/9015ad1e386f34baf765a4598fac.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/b6/81/fd8d22aa9fd989bb76f8fe1dbafe.es-mx.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/b6/81/fd8d22aa9fd989bb76f8fe1dbafe.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/c5/51/3dd76612b90077b8d07e2d2fdcb2.es.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/c5/51/3dd76612b90077b8d07e2d2fdcb2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/dc/d1/a395d210047435b3c285b6074c77.en.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/dc/d1/a395d210047435b3c285b6074c77.es.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/dc/d1/a395d210047435b3c285b6074c77.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/e2/f4/e69c57c89e4e595078336e42095e.en.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/e2/f4/e69c57c89e4e595078336e42095e.es-mx.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/e2/f4/e69c57c89e4e595078336e42095e.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/f2/24/0e93ecec4ad46f078b3138e56d09.es-mx.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/f2/24/0e93ecec4ad46f078b3138e56d09.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/f4/0c/4b70fe442f5404b1255e502627bc.en.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/f4/0c/4b70fe442f5404b1255e502627bc.es-mx.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/f4/0c/4b70fe442f5404b1255e502627bc.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/cache/info.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/configuration.ini.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/cas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/cas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/display.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/global.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/help.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/cas.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/chem.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/formula.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/general/close_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/general/fulls_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/general/max_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/general/min_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/general/mins_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/hover/close_icon_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/hover/fulls_icon_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/hover/max_icon_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/hover/min_icon_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/hover/mins_icon_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/tiny_mce/cas.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/tiny_mce/chem.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/tiny_mce/formula.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/xinha/cas.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/icons/xinha/formula.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/poweredbywiris.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/accessibility.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/backwardslib.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/cache.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/cas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/configuration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/contentmanager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/core.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/customeditors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/editorlistener.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/event.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/global.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/integrationmodel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/jsvariables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/latex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/listeners.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/mathml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/md5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/modal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/parser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/polyfills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/popupmessage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/serviceprovider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/stringmanager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/src/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/styles.src.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/tutorials/listenerstutorial.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/tutorials/tutorials.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/core/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Bold-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Bold-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Bold-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-BoldItalic-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-BoldItalic-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-BoldItalic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Italic-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Italic-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Italic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Light-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Light-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Light-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-LightItalic-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-LightItalic-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-LightItalic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Regular-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Regular-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/fonts/OpenSans-Regular-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/scripts/linenumber.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/scripts/prettify/Apache-License-2.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/scripts/prettify/lang-css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/scripts/prettify/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/styles/jsdoc-default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/styles/prettify-jsdoc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/styles/prettify-tomorrow.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/doc/tutorial-listenerstutorial.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/13/ac/fb5a77bd3a09135049432f276185.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/29/64/a658cd601fc31f50901cc7d81b4d.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/7c/45/1ab67f3e345ee240ed8a427ad9be.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/8a/c8/a650d901c45f24a29f2cb1453f24.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/96/78/9015ad1e386f34baf765a4598fac.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/b6/81/fd8d22aa9fd989bb76f8fe1dbafe.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/c5/51/3dd76612b90077b8d07e2d2fdcb2.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/dc/d1/a395d210047435b3c285b6074c77.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/e2/f4/e69c57c89e4e595078336e42095e.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/f2/24/0e93ecec4ad46f078b3138e56d09.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/f4/0c/4b70fe442f5404b1255e502627bc.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/formulas/info.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/generic_wiris/generic_demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/global.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/icons/cas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/icons/chem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/icons/formula.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/WIRISplugins.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/cas.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/cleancache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/configurationjs.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/configurationjson.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/createcasimage.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/createimage.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/editor.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/getmathml.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/isphp.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/Date.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/EReg.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/Hash.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/IntIter.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/Main.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/Math.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/Reflect.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/Std.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/StringBuf.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/StringTools.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/Sys.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/Type.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/VERSION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/ValueType.enum.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/cas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/common/WInteger.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/Cas.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/CleanCache.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/Configuration.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/ConfigurationKeys.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/Editor.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/ImageFormatController.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/ParamsProvider.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/PluginBuilder.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/Render.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/ServiceResourceLoader.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/Test.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/api/TextService.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/asyncapi/AsyncRender.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/asyncapi/AsyncTextService.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/asyncapi/BytesCallback.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/asyncapi/StringCallback.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/asyncimpl/AsyncRenderImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/asyncimpl/AsyncTextServiceImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/asyncimpl/CallbackImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/asyncimpl/CreateImageMethod.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/asyncimpl/HttpPostAndContinue.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/configuration/ConfigurationUpdater.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/CacheFormulaImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/CacheImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/CasImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/CleanCacheImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/ConfigurationImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/CustomConfigurationUpdater.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/DefaultConfigurationUpdater.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/EditorImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/FileConfigurationUpdater.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/FileStorageAndCache.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/FolderTreeStorageAndCache.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/GenericParamsProviderImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/HttpImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/HttpListener.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/ImageFormatControllerPng.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/ImageFormatControllerSvg.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/PluginBuilderImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/RenderImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/RenderImplIntegratedServices.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/ServiceResourceLoaderImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/TestImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/TextFilter.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/TextFilterTags.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/TextServiceImpl.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/impl/TextServiceImplIntegratedServices.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/provider/PhpAccessProvider.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/storage/StorageAndCache.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/plugin/web/PhpConfigurationUpdater.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/std/system/HttpProxy.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/std/system/HttpProxyAuth.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/ArrayEx.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/Base64.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/CallWrapper.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/Exception.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/InputEx.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/Md5Tools.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/PropertiesTools.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/Storage.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/StringEx.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/System.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/TypeTools.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/Utf8.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/_Utf8/StringIterator.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/service/HttpRequest.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/system/service/HttpResponse.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/json/JSon.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/json/JSonIntegerFormat.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/json/JsonAPIResponse.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/json/StringParser.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/net/UserAgent.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/sys/AccessProvider.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/sys/Cache.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/sys/IniFile.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/sys/Store.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/type/Arrays.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/type/Comparator.interface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/type/UrlUtils.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/com/wiris/util/xml/WCharacterBase.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/default-configuration.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/BaseCode.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/Http.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/Int32.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/Int64.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/Log.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/Md5.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/Utf8.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/io/Bytes.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/io/BytesBuffer.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/io/BytesInput.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/io/BytesOutput.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/io/Eof.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/io/Error.enum.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/io/Input.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/haxe/io/Output.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/php/Boot.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/php/Lib.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/php/net/SslSocket.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/sys/FileSystem.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/sys/_FileSystem/FileKind.enum.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/sys/io/File.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/sys/io/FileInput.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/sys/io/FileOutput.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/sys/io/FileSeek.enum.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/sys/net/Host.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/sys/net/Socket.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/tech.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/lib/wirisplugin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/moodleparamsprovider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/phpparamsprovider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/plugin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/pluginbuilder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/resource.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/service.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/showcasimage.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/showimage.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/integration/testfilter.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/ar/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/ca/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/cs/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/da/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/de/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/el/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/en/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/es/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/et/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/eu/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/fi/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/fr/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/gl/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/he/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/hr/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/hu/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/it/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/ja/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/ko/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/nl/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/no/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/pl/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/pt/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/pt_br/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/ru/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/sv/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/tr/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/languages/zh/strings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/plugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/plugin.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tech.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/Web.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/ckeditor4/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/css/prism.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/fonts/wiris_icon_font.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/fonts/wiris_icon_font.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/fonts/wiris_icon_font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/fonts/wiris_icon_font.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/generic_demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/img/info_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/img/java_white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/img/net_white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/img/php_white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/img/rails_white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/img/w.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/js/editorlib.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/js/google_analytics.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/js/prism.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/tests/js/wirislib.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/wirisplugin-generic.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/ckeditor_wiris/wirisplugin-generic.src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/clipboard/dialogs/paste.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/dialog/dialogDefinition.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/icons_hidpi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/link/dialogs/anchor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/link/dialogs/link.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/link/images/anchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/plugins/link/images/hidpi/anchor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/css/samples.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/img/github-top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/img/header-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/img/header-separator.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/img/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/img/navigation-tip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/js/sample.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/js/sf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/ajax.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/api.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/appendto.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/assets/inlineall/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/assets/posteddata.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/assets/sample.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/assets/uilanguages/languages.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/datafiltering.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/dialog/assets/my_dialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/dialog/dialog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/divreplace.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/enterkey/enterkey.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/inlineall.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/inlinebycode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/inlinetextarea.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/jquery.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/readonly.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/replacebyclass.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/replacebycode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/sample.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/sample.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/sample_posteddata.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/tabindex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/toolbar/toolbar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/uicolor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/uilanguages.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/wysiwygarea/fullpage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/old/xhtmlstyle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/css/fontello.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/font/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/font/fontello.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/font/fontello.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/font/fontello.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/dialog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/dialog_ie.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/dialog_ie8.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/dialog_iequirks.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/editor.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/editor_gecko.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/editor_ie.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/editor_ie8.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/editor_iequirks.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/icons_hidpi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/images/arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/images/hidpi/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/images/hidpi/lock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/images/hidpi/refresh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/images/lock-open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/images/lock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/images/refresh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/images/spinner.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/skins/moono-lisa/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminLTE-2.4.5/bower_components/ckeditor/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Evidencia.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Evidencia.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cuantitativos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cuantitativos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/formulas/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/formulas/fields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/formulas/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/formulas/table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modelos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modelos/show.blade.php" afterDir="false" />
     </list>
@@ -565,18 +60,30 @@
         <item name="cal_esim@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="cal_esim: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="criterio: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="estructura_elementos: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="117" column="5" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+              <folding>
+                <element signature="e#40#64#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModeloController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="149" column="113" selection-start-line="149" selection-start-column="113" selection-end-line="149" selection-end-column="113" />
+            <state relative-caret-position="3900">
+              <caret line="163" column="15" selection-start-line="163" selection-start-column="15" selection-end-line="163" selection-end-column="15" />
               <folding>
                 <element signature="e#40#82#0#PHP" expanded="true" />
               </folding>
@@ -584,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1144">
-              <caret line="106" column="130" selection-start-line="106" selection-start-column="130" selection-end-line="106" selection-end-column="130" />
+            <state relative-caret-position="2496">
+              <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
               <folding>
                 <element signature="e#40#85#0#PHP" expanded="true" />
               </folding>
@@ -597,82 +104,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1846">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/EstructuraIndicadores.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1664">
+              <caret line="64" column="87" selection-start-line="64" selection-start-column="87" selection-end-line="64" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/EstructuraEvidencias.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1664">
+              <caret line="64" column="86" selection-start-line="64" selection-start-column="86" selection-end-line="64" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Evidencia.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1716">
+              <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/evidencias/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1742">
+              <caret line="67" column="53" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state relative-caret-position="468">
+              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+        <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3458">
-              <caret line="133" column="14" selection-start-line="133" selection-start-column="14" selection-end-line="133" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_criterios.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/modelos/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="66" column="112" selection-start-line="66" selection-start-column="112" selection-end-line="66" selection-end-column="112" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/criterios/modal_form.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="16" column="110" lean-forward="true" selection-start-line="16" selection-start-column="110" selection-end-line="16" selection-end-column="110" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/indicadors/fields.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="129" column="24" lean-forward="true" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="94" column="18" lean-forward="true" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
-              <folding>
-                <element signature="e#40#64#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="728">
+              <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -717,11 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/elementos/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/elementos/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/elementos/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" />
-        <option value="$PROJECT_DIR$/resources/views/evidencias/fields.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/evidencias/table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/elementos/table.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ElementoController.php" />
@@ -730,7 +214,6 @@
         <option value="$PROJECT_DIR$/resources/views/unidad_carrera/modal_agregar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/includes/menu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/carreras/create.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/public/plugins/easy-tree/js/easyTree.js" />
         <option value="$PROJECT_DIR$/public/plugins/treeview/css/bootstrap-treeview.css" />
         <option value="$PROJECT_DIR$/resources/views/layouts/includes/heads.blade.php" />
@@ -748,26 +231,32 @@
         <option value="$PROJECT_DIR$/public/plugins/easy-tree/easyTree.css" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FormulasController.php" />
         <option value="$PROJECT_DIR$/resources/views/formulas/fields.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/cuantitativos/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/formulas/table.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FormulaVariableController.php" />
         <option value="$PROJECT_DIR$/app/Models/Indicador.php" />
-        <option value="$PROJECT_DIR$/app/Models/EstructuraIndicadores.php" />
         <option value="$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" />
-        <option value="$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" />
-        <option value="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" />
         <option value="$PROJECT_DIR$/resources/views/criterios/modal_form.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/indicadors/fields.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/modelos/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/indicadors/fields.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" />
+        <option value="$PROJECT_DIR$/app/Models/Elemento.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Models/Evidencia.php" />
+        <option value="$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" />
+        <option value="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" />
+        <option value="$PROJECT_DIR$/app/Models/EstructuraIndicadores.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" />
+        <option value="$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" />
       </list>
     </option>
   </component>
@@ -863,8 +352,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="196" />
+    <option name="y" value="2" />
     <option name="width" value="1364" />
     <option name="height" value="726" />
   </component>
@@ -893,13 +381,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ESIM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ESIM" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="indicadors" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -915,7 +396,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -990,20 +471,22 @@
       <workItem from="1549286299268" duration="18254000" />
       <workItem from="1549376617988" duration="5346000" />
       <workItem from="1549382124750" duration="12751000" />
-      <workItem from="1549458704014" duration="3658000" />
+      <workItem from="1549458704014" duration="21901000" />
+      <workItem from="1549549478502" duration="12852000" />
+      <workItem from="1549636531729" duration="83000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335117000" />
+    <option name="totallyTimeSpent" value="366295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12371889" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925485" weight="0.12371889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="npm" order="2" sideWeight="0.5007452" side_tool="true" weight="0.12371889" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32935917" />
@@ -1022,7 +505,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.1193265" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.1193265" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12371889" />
@@ -1053,38 +536,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/plugins/jquery-tree/jquery.treeview.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/includes/heads.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/includes/scripts.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/adminLTE-2.4.5/dist/css/AdminLTE.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="6" column="78277" lean-forward="true" selection-start-line="6" selection-start-column="78277" selection-end-line="6" selection-end-column="78277" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/carreras/table.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/estructura/tab_subcriterio.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/estructura/tab_indicador.blade.php" />
     <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/estructura_elementos">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1111,13 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="806">
           <caret line="31" column="128" selection-start-line="31" selection-start-column="128" selection-end-line="31" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/estructura_criterios">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1154,13 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraCriterios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="96" column="88" selection-start-line="96" selection-start-column="88" selection-end-line="96" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/formulas/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-222" />
@@ -1169,13 +606,6 @@
     <entry file="file://$PROJECT_DIR$/resources/views/formulas/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-156" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-        </state>
       </provider>
     </entry>
     <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/formulas">
@@ -1213,20 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cuantitativos/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraIndicadores.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="62" column="38" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1272,13 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraEvidencias.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1291,13 +700,6 @@
             <element signature="n#style#0;n#div#0;n#span#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="73" column="3" lean-forward="true" selection-start-line="73" selection-start-column="3" selection-end-line="73" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1318,78 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/indicadors/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1638">
-          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3458">
-          <caret line="133" column="14" selection-start-line="133" selection-start-column="14" selection-end-line="133" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_criterios.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModeloController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="149" column="113" selection-start-line="149" selection-start-column="113" selection-end-line="149" selection-end-column="113" />
-          <folding>
-            <element signature="e#40#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="94" column="18" lean-forward="true" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
-          <folding>
-            <element signature="e#40#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/modelos/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="66" column="112" selection-start-line="66" selection-start-column="112" selection-end-line="66" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/indicadors/fields.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="129" column="24" lean-forward="true" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/criterios/modal_form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -1400,13 +730,174 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_criterios.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/indicadors/fields.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/modelos/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/estructura_criterios">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraCriterios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="96" column="88" selection-start-line="96" selection-start-column="88" selection-end-line="96" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Elemento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="66" column="61" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="68" column="57" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cuantitativos/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2028" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/indicadors/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1326">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="117" column="5" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModeloController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3900">
+          <caret line="163" column="15" selection-start-line="163" selection-start-column="15" selection-end-line="163" selection-end-column="15" />
+          <folding>
+            <element signature="e#40#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="106" column="130" selection-start-line="106" selection-start-column="130" selection-end-line="106" selection-end-column="130" />
+        <state relative-caret-position="2496">
+          <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
           <folding>
             <element signature="e#40#85#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1846">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraIndicadores.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1664">
+          <caret line="64" column="87" selection-start-line="64" selection-start-column="87" selection-end-line="64" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraEvidencias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1664">
+          <caret line="64" column="86" selection-start-line="64" selection-start-column="86" selection-end-line="64" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Evidencia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1716">
+          <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/evidencias/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1742">
+          <caret line="67" column="53" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
         </state>
       </provider>
     </entry>

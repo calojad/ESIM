@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateEvidenciaRequest;
 use App\Http\Requests\UpdateEvidenciaRequest;
+use App\Models\Elemento;
+use App\Models\EstructuraCriterios;
+use App\Models\EstructuraElementos;
+use App\Models\Evidencia;
 use App\Repositories\EvidenciaRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -80,7 +84,20 @@ class EvidenciaController extends AppBaseController
             return redirect(route('evidencias.index'));
         }
 
-        return view('evidencias.show')->with('evidencia', $evidencia);
+        $estruc_modelo = EstructuraCriterios::find($evidencia->estructuraEvidencias[0]->estructuraIndicadore->estructuraCriterio->modelo_id);
+
+        $elementos = Elemento::where('estado',1)->get();
+
+        $eel_array = EstructuraElementos::leftjoin('estructura_evidencias','estructura_elementos.estruc_evide_id','=','estructura_evidencias.id')
+            ->leftjoin('estructura_indicadores','estructura_evidencias.estruc_indic_id','=','estructura_indicadores.id')
+            ->leftjoin('estructura_criterios','estructura_indicadores.estruc_crite_id','=','estructura_criterios.id')
+            ->where('estructura_criterios.modelo_id',$estruc_modelo)
+            ->pluck('estructura_elementos.elemento_id')
+            ->toArray();
+
+        $estrucElementos = EstructuraElementos::where('estruc_evide_id',$evidencia->estructuraEvidencias[0]->id)->get();
+
+        return view('evidencias.show',compact('evidencia','estruc_modelo','elementos','estrucElementos','eel_array'));
     }
 
     /**
@@ -151,4 +168,5 @@ class EvidenciaController extends AppBaseController
 
         return redirect(route('evidencias.index'));
     }
+
 }

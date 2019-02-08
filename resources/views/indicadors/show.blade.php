@@ -6,12 +6,17 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{route('home')}}"><i class="fas fa-home"></i> Home</a></li>
+        <li>Modelo: {{$modelo->modelo->nombre}}</li>
         <li>Estructura</li>
+        <li>Criterio: {{$modelo->criterio->nombre}}</li>
         <li>Indicador</li>
     </ol>
 @endsection
 @section('content')
     <div class="content">
+        <div class="clearfix"></div>
+        @include('flash::message')
+        <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-header with-border">
                 <div class="col-md-12">
@@ -56,7 +61,10 @@
                             @foreach($estrucEvidencias as $estEvi)
                                 <tr>
                                     <td>{{$estEvi->evidencia->nombre}}</td>
-                                    <td><button type="button" title="Quitar Evidencia" class="btn btn-xs btn-danger"><i class="fa fa-trash-alt"></i></button></td>
+                                    <td>
+                                        <button type="button" title="Quitar Evidencia" class="btn btn-xs btn-danger"><i class="fa fa-trash-alt"></i></button>
+                                        <a href="{{route('evidencias.show',$estEvi->evidencia->id)}}" title="Elementos" class="btn btn-xs btn-primary"><i class="far fa-caret-square-down" style="margin: 0"></i></a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

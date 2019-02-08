@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Criterio;
 use App\Models\EstructuraCriterios;
+use App\Models\EstructuraElementos;
 use App\Models\EstructuraEvidencias;
 use App\Models\EstructuraIndicadores;
 use App\Models\Indicador;
@@ -16,7 +17,7 @@ class EstructuraController extends Controller
     {
         $modelo = $request->get('modelo_id');
         $criterios = $request->get('criteriosSel');
-        if (empty($criterios)){
+        if (empty($criterios)) {
             Flash::error('No se ha seleccionado ningun elemento.');
             return redirect(route('modelos.show', $modelo));
         }
@@ -35,7 +36,7 @@ class EstructuraController extends Controller
 //        dd($request->all());
         $modelo = $request->get('modelo_id');
         $criterios = $request->get('criteriosSel');
-        if (empty($criterios)){
+        if (empty($criterios)) {
             Flash::error('No se ha seleccionado ningun elemento.');
             return redirect(route('modelos.show', $modelo));
         }
@@ -52,10 +53,11 @@ class EstructuraController extends Controller
         return redirect(route('modelos.show', $modelo));
     }
 
-    public function  postAddindicadores(Request $request){
+    public function postAddindicadores(Request $request)
+    {
         $padre = EstructuraCriterios::find($request->get('criterioPadreId'));
         $modelo = $request->get('modelo_id');
-        if(empty($padre)){
+        if (empty($padre)) {
             Flash::error('No se encontró el Criterio.');
             return redirect(route('modelos.show', $modelo));
         }
@@ -70,31 +72,66 @@ class EstructuraController extends Controller
 
     }
 
-    public function postAddevidencias(Request $request){
+    public function postAddevidencias(Request $request)
+    {
         $estruIndicador = $request->get('estrucIndicador');
         $evidencias = $request->get('evidenciaSel');
-        foreach ($evidencias as $evi) {
-            EstructuraEvidencias::updateOrCreate(
-                ['estruc_indic_id' => $estruIndicador, 'evidencia_id' => $evi]
-            );
-        }
         $indicador = $request->get('indicador_id');
+        if (!empty($evidencias)) {
+            foreach ($evidencias as $evi) {
+                EstructuraEvidencias::updateOrCreate(
+                    ['estruc_indic_id' => $estruIndicador, 'evidencia_id' => $evi]
+                );
+            }
+        } else {
+            Flash::error('No se ha seleccionado ningun elemento.');
+            return redirect(route('indicadors.show', $indicador));
+        }
 
         Flash::success('Evidencia(s) agregada(s).');
         return redirect(route('indicadors.show', $indicador));
     }
 
-    public function postNewCriterio(Request $request){
-        $data = $request->all();
-        dd($data);
-        Criterio::create($data);
-        return redirect(route('modelos.show',$data['modelo_id']));
+    public function postAddelemento(Request $request)
+    {
+        dd($request->all());
+        $estrucEvidencia = $request->get('estrucEvidencia');
+        $evidencia = $request->get('evidencia_id');
+        $elementos = $request->get('elementoSel');
+
+        if (!empty($elementos)) {
+            foreach ($elementos as $ele) {
+                EstructuraElementos::updateOrCreate(
+                    ['estruc_evide_id' => $estrucEvidencia, 'elemento_id' => $ele]
+                );
+            }
+        } else {
+            Flash::error('No se ha seleccionado ningun elemento.');
+            return redirect(route('evidencias.show', $evidencia));
+        }
+
+        Flash::success('Evidencia(s) agregada(s).');
+        return redirect(route('evidencias.show', $evidencia));
     }
-    public function postNewIndicador(Request $request){
+
+    public function postNewCriterio(Request $request)
+    {
         $data = $request->all();
-        dd($data);
         Criterio::create($data);
-        return redirect(route('modelos.show',$data['modelo_id']));
+        return redirect(route('modelos.show', $data['modelo_id']));
+    }
+
+    public function postNewIndicador(Request $request)
+    {
+        $data = $request->all();
+
+        if ($data['tipo_indicador_id'] == 1)
+            $data['formula_id'] = null;
+        else if ($data['tipo_indicador_id'] == 2)
+            $data['grupo_valor_id'] = null;
+
+        Indicador::create($data);
+        return redirect(route('modelos.show', $data['modelo_id']));
     }
 
     public function getSubcriteriosde($criterioPadreId)
@@ -106,13 +143,14 @@ class EstructuraController extends Controller
         return json_encode($subcriterios);
     }
 
-    public function getDestroy($id){
+    public function getDestroy($id)
+    {
         $estruCriterio = EstructuraCriterios::find($id);
 
         if (empty($estruCriterio)) {
             Flash::error('Criterio no encontrado en la Estructura');
 
-            return redirect(route('modelos.show',$id));
+            return redirect(route('modelos.show', $id));
         }
 
         $estruCriterio->delete();

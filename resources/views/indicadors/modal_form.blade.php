@@ -1,7 +1,7 @@
 <div class="modal fade" id="modalFormIndicador" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="border-radius: 8px">
-            <div class="modal-header bg-success" style="border-radius: 8px 8px 0 0">
+            <div class="modal-header bg-green" style="border-radius: 8px 8px 0 0">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
                 <h4 class="modal-title">Nuevo Indicador</h4>
@@ -11,32 +11,34 @@
                 <input type="hidden" value="1" name="estado">
                 <div class="row" style="margin-left: 20px">
                     <div class="col-md-12">
-                        <div class="form-group aling-left">
-                            <label class="col-md-2" for="inpNombre">Nombre:</label>
-                            <div class="col-md-8">
-                                <input id="inpNombre" class="form-control" type="text" name="nombre" required>
-                            </div>
+                        <!-- Tipo Indicador Id Field -->
+                        <div id="divGruopTipoIndi" class="form-group col-sm-12 {{$errors->has('tipo_indicador_id')?'has-error':''}}">
+                            {!! Form::label('tipo_indicador_id', 'Tipo Indicador:') !!}
+                            {!! Form::select('tipo_indicador_id', $tiposIndicador, null,['class' => 'form-control','required'=>true,'id'=>'selTipoIndicador']) !!}
                         </div>
-                        <div class="form-group aling-left">
-                            <label class="col-md-2" for="inpAbreviado">Abreviación:</label>
-                            <div class="col-md-8">
-                                <input id="inpAbreviado" class="form-control" type="text" name="abreviado" required>
-                            </div>
+                        <!-- Nombre Field -->
+                        <div class="form-group col-sm-12">
+                            {!! Form::label('nombre', 'Nombre:') !!}
+                            {!! Form::text('nombre', null, ['class' => 'form-control','required'=>true]) !!}
                         </div>
-                        <div class="form-group aling-left">
-                            <label class="col-md-2" for="txareaDescrip">Descripción:</label>
-                            <div class="col-md-8">
-                                <textarea id="txareaDescrip" class="form-control" rows="2" maxlength="255" name="descripcion" required></textarea>
-                                <span id="contador" class="pull-right">255</span>
-                                <script>
-                                    $('#txareaDescrip').on('keyup',function() {
-                                        var count = $('#contador');
-                                        var chars = $(this).val().length;
-                                        var diff = 255 - chars;
-                                        count.html(diff);
-                                    });
-                                </script>
-                            </div>
+
+                        <!-- Descripcion Field -->
+                        <div class="form-group col-sm-12">
+                            {!! Form::label('descripcion', 'Descripcion:') !!}
+                            {!! Form::textarea('descripcion', null, ['class' => 'form-control','required'=>true,'rows'=>3,'maxlength'=>255,'id'=>'txaDescrip']) !!}
+                            <span class="text-muted pull-right" id="contador"></span>
+                        </div>
+
+                        <!-- Grupo Valor Id Field -->
+                        <div id="divGrupoValor" class="form-group col-md-12 hiden">
+                            {!! Form::label('grupo_valor_id', 'Grupo Valor:') !!}
+                            {!! Form::select('grupo_valor_id', $gruposValor,null, ['class' => 'form-control select2']) !!}
+                        </div>
+
+                        <!-- Formula Id Field -->
+                        <div id="divFormula" class="form-group col-md-12 hiden">
+                            {!! Form::label('formula_id', 'Formula:') !!}
+                            {!! Form::select('formula_id', $formulas, null, ['class' => 'form-control select2']) !!}
                         </div>
                     </div>
                 </div>
@@ -50,3 +52,37 @@
         </div>
     </div>
 </div>
+<script>
+    //TextArea contar caracteres
+    $('#txaDescrip').on('keyup',function() {
+        contTextarea($(this),$('#contador'));
+    });
+    //Select tipo indicador
+    $('#selTipoIndicador').on('change',function () {
+        var obj = $('#selTipoIndicador option:selected').text();
+        var divG = $('#divGrupoValor');
+        var divF = $('#divFormula');
+        verTipoIndicador(divF,divG,obj);
+    });
+    //Contar numero de caracteres del textarea
+    function contTextarea(txarea,count){
+        var chars = txarea.val().length;
+        var diff = 255 - chars;
+        count.html(diff+'/255');
+    }
+    // Verificar el tipo de indicador y mostrar la respectiva entrada
+    function verTipoIndicador(divF,divG,obj) {
+        if(obj === 'Cuantitativos'){
+            divF.show();
+            divG.hide();
+            $('#divGruopTipoIndi').removeClass('has-error');
+        }else if(obj === 'Cualitativos'){
+            divF.hide();
+            divG.show();
+            $('#divGruopTipoIndi').removeClass('has-error');
+        }else{
+            divF.hide();
+            divG.hide();
+        }
+    }
+</script>

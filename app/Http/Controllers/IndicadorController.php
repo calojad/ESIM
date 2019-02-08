@@ -106,6 +106,7 @@ class IndicadorController extends AppBaseController
 
         $ee_array = EstructuraEvidencias::leftjoin('estructura_indicadores','estructura_indicadores.id','=','estructura_evidencias.estruc_indic_id')
             ->leftjoin('estructura_criterios','estructura_criterios.id','=','estructura_indicadores.estruc_crite_id')
+            ->where('estructura_criterios.modelo_id',$modelo->modelo_id)
             ->pluck('estructura_evidencias.evidencia_id')
             ->toArray();
 

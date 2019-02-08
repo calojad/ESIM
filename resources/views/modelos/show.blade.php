@@ -63,8 +63,8 @@
                                data-target="#modalAgregarCriterio" style="display: none"><i class="fa fa-plus" title="Agregar Elemento"></i> Agregar Criterio</a>
                         </div>
                         <div class="col-md-6" align="right">
-                            <button class="btn btn-default" data-toggle="modal" data-target="#modalFormCriterio"><i class="fa fa-plus"></i> Nuevo Criterio</button>
-                            <button class="btn btn-default" data-toggle="modal" data-target="#modalFormIndicador"><i class="fa fa-plus-circle"></i> Nuevo Indicador</button>
+                            <button class="btn btn-default text-blue" data-toggle="modal" data-target="#modalFormCriterio"><i class="fa fa-plus"></i> Nuevo Criterio</button>
+                            <button class="btn btn-default text-green" data-toggle="modal" data-target="#modalFormIndicador"><i class="fa fa-plus-circle"></i> Nuevo Indicador</button>
                         </div>
                     </div>
                 </div>
@@ -83,6 +83,7 @@
     @include('estructura.modal_subcriterios')
     @include('estructura.modal_indicadores')
     @include('criterios.modal_form')
+    @include('indicadors.modal_form')
     <script type="text/javascript">
         $(document).ready(function () {
             //Inicializar TreeView

@@ -7,7 +7,10 @@ use App\Http\Requests\UpdateModeloRequest;
 use App\Models\Criterio;
 use App\Models\EstructuraCriterios;
 use App\Models\EstructuraIndicadores;
+use App\Models\Formulas;
+use App\Models\GrupoValor;
 use App\Models\Indicador;
+use App\Models\TipoIndicador;
 use App\Repositories\ModeloRepository;
 use Flash;
 use Illuminate\Http\Request;
@@ -93,7 +96,16 @@ class ModeloController extends AppBaseController
         $indicadores = Indicador::where('estado',1)->get();
 
         $treev = $this->treeViewCriterios($id);
-        return view('modelos.show', compact('modelo', 'criterios', 'ec_array', 'treev','indicadores','ei_array'));
+
+        $tiposIndicador = [0 => '--Seleccionar--']+TipoIndicador::where('estado',1)
+                ->pluck('nombre','id')
+                ->toArray();
+        $gruposValor = GrupoValor::where('estado',1)
+            ->pluck('nombre','id');
+        $formulas = Formulas::where('estado',1)
+            ->pluck('nombre','id');
+
+        return view('modelos.show', compact('modelo', 'criterios', 'ec_array', 'treev','indicadores','ei_array','tiposIndicador','gruposValor','formulas'));
     }
 
     public function treeViewCriterios($id)
@@ -105,11 +117,11 @@ class ModeloController extends AppBaseController
         foreach ($Categorys as $Category) {
             $tree .= '<li><a data-id="'.$Category->id.'" data-nivel="'.$Category->nivel.'">' . $Category->criterio->abreviado.' - '.$Category->criterio->nombre. '</a>';
             // Se verifica si tiene subcriterios
-            if (count($Category->childs)) {
+            if ($Category->childs->count()) {
                 $tree .= $this->childView($Category);
             }
             //Se verifica si tiene indicadores
-            if (count($Category->estructuraIndicadores)){
+            if ($Category->estructuraIndicadores->count()){
                 $tree .= $this->childViewIndicador($Category);
             }
         }
@@ -123,14 +135,14 @@ class ModeloController extends AppBaseController
         $html = '<ul>';
         foreach ($Category->childs as $arr) {
             // Verifica si hay mas subcriterios
-            if (count($arr->childs)) {
+            if ($arr->childs->count()) {
                 $html .= '<li><a data-id="'.$arr->id.'" data-nivel="'.$arr->nivel.'">'.$arr->criterio->abreviado.' - '.$arr->criterio->nombre.'</a>';
                 $html .= $this->childView($arr);
             } else {
                 $html .= '<li><a data-id="'.$arr->id.'" data-nivel="'.$arr->nivel.'">'.$arr->criterio->abreviado.' - '.$arr->criterio->nombre .'</a>';
             }
             // Verifica si hay Indicadores
-            if (count($arr->estructuraIndicadores)){
+            if ($arr->estructuraIndicadores->count()){
                 $html.= $this->childViewIndicador($arr);
             }
             $html .= "</li>";
@@ -139,16 +151,26 @@ class ModeloController extends AppBaseController
         $html .= "</ul>";
         return $html;
     }
-    public function childViewIndicador($Category)
+    public function childViewIndicador($Criterio)
     {
         $html = '<ul>';
-        foreach ($Category->estructuraIndicadores as $arr) {
-            /*if (count($arr->estructuraEvidencias)) {
-                $html .= '<li><a data-id="'.$arr->indicador_id.'" data-href="HOLA">'.$arr->indicador->nombre.'</a>';
-                $html .= $this->childViewIndicador($arr);
+        foreach ($Criterio->estructuraIndicadores as $indi) {
+            /*if ($indi->estructuraEvidencias->count()) {
+                $html .= '<li><a data-id="'.$indi->id.'">'.$indi->indicador->nombre.'</a>';
+                $html .= $this->childViewEvidencia($indi);
             } else {*/
-                $html .= '<li><a data-id="'.$arr->id .'" data-href="'.route('indicadors.show',$arr->indicador_id).'">'.$arr->indicador->nombre.'</a>';
+                $html .= '<li><a data-id="'.$indi->id .'" data-href="'.route('indicadors.show',$indi->indicador_id).'">'.$indi->indicador->nombre.'</a>';
 //            }
+            $html .= "</li>";
+        }
+
+        $html .= "</ul>";
+        return $html;
+    }
+    public function childViewEvidencia($Indicador){
+        $html = '<ul>';
+        foreach ($Indicador->estructuraEvidencias as $evi) {
+            $html .= '<li><a data-id="'.$evi->id .'">'.$evi->evidencia->nombre.'</a>';
             $html .= "</li>";
         }
 

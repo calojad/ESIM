@@ -41,7 +41,7 @@
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>
                 <label class="text-muted">Seleccionar
                     todo {!! Form::checkbox('todoCa',null,null,['id' => 'chkTodasEvi','class' => 'inputIcheck']) !!}</label>
-                <button id="btnAgregarSeleccion" type="submit" class="btn btn-primary btnLoader">Agregar</button>
+                <button type="submit" class="btn btn-primary btnLoader">Agregar</button>
             </div>
             {!! Form::close() !!}
         </div>

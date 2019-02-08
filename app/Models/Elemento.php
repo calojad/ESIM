@@ -64,6 +64,6 @@ class Elemento extends Model
      **/
     public function estructuraElementos()
     {
-        return $this->hasMany(\App\Models\EstructuraElemento::class);
+        return $this->hasMany(\App\Models\EstructuraElementos::class);
     }
 }
