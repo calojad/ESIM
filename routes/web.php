@@ -35,8 +35,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('periodos', 'PeriodoController');
 	//***Unidades
 	Route::resource('unidads', 'UnidadController');
-	//***Carreras
+    //***Carreras
 	Route::resource('carreras', 'CarreraController');
+    //***Departamentos
+    Route::resource('departamentos', 'DepartamentoController');
     //***Usuarios
     Route::resource('users', 'UserController');
     //***Unidades Carreras
@@ -59,8 +61,6 @@ Route::group(['middleware' => 'auth'], function () {
     //***Formulas Variables
     Route::resource('formulaVariables', 'FormulaVariableController');
     Route::get('formulaVariables/create/{formula}', 'FormulaVariableController@create')->name('formulaVariables.formulasVariablesagregar');
-    //***Modelos
-    Route::resource('modelos', 'ModeloController');
     //***Criterios
     Route::resource('criterios', 'CriterioController');
     //***Indicadores
@@ -69,6 +69,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('evidencias', 'EvidenciaController');
     //***Elementos
     Route::resource('elementos', 'ElementoController');
+    //***Modelos
+    Route::resource('modelos', 'ModeloController');
     //***Estructura
     AdvancedRoute::controller('/estructura','EstructuraController');
+    //***Matriz
+    Route::resource('matrizs', 'MatrizController');
 });

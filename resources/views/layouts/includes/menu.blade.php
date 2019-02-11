@@ -25,13 +25,16 @@
 </li>
 
 {{-- ********* IES ********* --}}
-<li class="treeview {{ Request::is('periodos*','unidads*','carreras*','users*') ? 'active' : '' }}">
+<li class="treeview {{ Request::is('periodos*','unidads*','carreras*','users*','departamentos*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-book-reader font-14pt"></i> <span>I.E.S.</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
     <ul class="treeview-menu">
         <li class="{{ Request::is('carreras*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('carreras.index') !!}"><i class="{{ Request::is('carreras*') ? 'fas' : 'far' }} fa-circle"></i><span>Carreras</span></a>
+        </li>
+        <li class="{{ Request::is('departamentos*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{!! route('departamentos.index') !!}"><i class="{{ Request::is('departamentos*') ? 'fas' : 'far' }} fa-circle"></i><span>Departamentos</span></a>
         </li>
         <li class="{{ Request::is('periodos*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('periodos.index') !!}"><i class="{{ Request::is('periodos*') ? 'fas' : 'far' }} fa-circle"></i><span>Periodos</span></a>
@@ -84,7 +87,10 @@
         <li class="{{ Request::is('modelos*','estructura*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('modelos.index') !!}"><i class="{{ Request::is('modelos*','estructura*') ? 'fas' : 'far' }} fa-circle"></i><span>Modelos</span></a>
         </li>
-        <li><a href="#"><i class="far fa-circle"></i>Matrices</a></li>
+
+        <li class="{{ Request::is('matrizs*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{!! route('matrizs.index') !!}"><i class="{{ Request::is('matrizs*') ? 'fas' : 'far' }} fa-circle"></i><span>Matriz</span></a>
+        </li>
     </ul>
 </li>
 

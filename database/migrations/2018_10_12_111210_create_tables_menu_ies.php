@@ -26,6 +26,25 @@ class CreateTablesMenuIes extends Migration
         Schema::create('carrera', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
+            $table->char('tipo')->comment('D=Diseñada;A=Anterior;R=Rediseñada');
+            $table->integer('estado')->comment('1=Activo|0=Inactivo');
+            $table->timestamps();
+        });
+        Schema::create('departamento', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('responsable_id')->unsigned();
+            $table->string('nombre');
+            $table->integer('estado')->comment('1=Activo|0=Inactivo');
+            $table->timestamps();
+        });
+        Schema::create('responsable', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nombre');
+            $table->string('telefono');
+            $table->string('gmail');
+            $table->string('email_institu')->nullable();
+            $table->string('rol')->nullable();
+            $table->string('descripcion')->nullable();
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });

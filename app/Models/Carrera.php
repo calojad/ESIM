@@ -29,6 +29,8 @@ class Carrera extends Model
      */
     public $fillable = [
         'nombre',
+        'responsable_id',
+        'tipo',
         'estado'
     ];
 

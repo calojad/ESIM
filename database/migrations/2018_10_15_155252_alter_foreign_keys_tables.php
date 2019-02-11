@@ -17,6 +17,12 @@ class AlterForeignKeysTables extends Migration
             $table->foreign('tipo_unidad_id')->references('id')->on('tipo_unidad');
             $table->foreign('ubicacion_id')->references('id')->on('ubicacion');
         });
+        Schema::table('carrera', function (Blueprint $table) {
+            $table->foreign('responsable_id')->references('id')->on('responsable');
+        });
+        Schema::table('departamento', function (Blueprint $table) {
+            $table->foreign('responsable_id')->references('id')->on('responsable');
+        });
         // 
         Schema::table('unidad_carrera', function (Blueprint $table) {
             $table->foreign('unidad_id')->references('id')->on('unidad');
@@ -38,6 +44,12 @@ class AlterForeignKeysTables extends Migration
         Schema::table('unidad', function (Blueprint $table) {
             $table->dropForeign('unidad_tipo_unidad_id_foreign');
             $table->dropForeign('unidad_ubicacion_id_foreign');
+        });
+        Schema::table('carrera', function (Blueprint $table) {
+            $table->dropForeign('carrera_responsable_id_foreign');
+        });
+        Schema::table('departamento', function (Blueprint $table) {
+            $table->dropForeign('departamento_responsable_id_foreign');
         });
         Schema::table('unidad_carrera', function (Blueprint $table) {
             $table->dropForeign('unidad_carrera_unidad_id_foreign');
