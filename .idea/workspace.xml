@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3f4dd-1450-4e65-a1d3-4c4798818ff9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ER-ESIM.dia" beforeDir="false" afterPath="$PROJECT_DIR$/ER-ESIM.dia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Carrera.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Carrera.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_10_12_111210_create_tables_menu_ies.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_10_12_111210_create_tables_menu_ies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_10_15_155252_alter_foreign_keys_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_10_15_155252_alter_foreign_keys_tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_04_115159_add_foreign_keys_tables_matriz.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_04_115159_add_foreign_keys_tables_matriz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c81fcab-1bf9-4604-8e90-1edff3e9d213.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c81fcab-1bf9-4604-8e90-1edff3e9d213.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CarreraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CarreraController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/carreras/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/carreras/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/carreras/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/carreras/fields.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/includes/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/matrizs/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/matrizs/fields.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,15 +52,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Matriz.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1988">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
@@ -84,46 +73,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/matrizs/index.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/modelos/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="-118">
+              <caret line="165" column="23" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/matrizs/table.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/matrizs/fields.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+            <state relative-caret-position="324">
+              <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/matrizs/create.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/carreras/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="69" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/matrizs/edit.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="16" column="75" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
+            <state relative-caret-position="364">
+              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/matrizs/fields.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/carreras/fields.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
-              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CarreraController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
+              <folding>
+                <element signature="e#40#67#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,9 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/layouts/includes/scripts.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/estructura/modal_indicador.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/estructura/modal_subcriterio.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/estructura/tab_subcriterio.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/estructura/modal_criterios.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/estructura/modal_subcriterios-indicadores.blade.php" />
@@ -221,6 +210,9 @@
         <option value="$PROJECT_DIR$/resources/views/matrizs/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MatrizController.php" />
         <option value="$PROJECT_DIR$/resources/views/matrizs/fields.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/carreras/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CarreraController.php" />
+        <option value="$PROJECT_DIR$/resources/views/carreras/fields.blade.php" />
       </list>
     </option>
   </component>
@@ -344,13 +336,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ESIM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ESIM" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="indicadors" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -446,18 +431,18 @@
       <workItem from="1549549478502" duration="12852000" />
       <workItem from="1549636531729" duration="83000" />
       <workItem from="1549642914291" duration="11480000" />
-      <workItem from="1549891640947" duration="11170000" />
+      <workItem from="1549891640947" duration="18537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="388945000" />
+    <option name="totallyTimeSpent" value="396312000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49925485" visible="true" weight="0.12371889" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925485" visible="true" weight="0.12371889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5007452" side_tool="true" weight="0.12371889" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -478,7 +463,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.1193265" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.1193265" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12371889" />
@@ -509,47 +494,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/estructura_indicadores">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/estructura_evidencias">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="65" column="29" lean-forward="true" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/indicador">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/criterios/modal_form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="16" column="110" lean-forward="true" selection-start-line="16" selection-start-column="110" selection-end-line="16" selection-end-column="110" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -578,20 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
           <caret line="66" column="61" selection-start-line="66" selection-start-column="61" selection-end-line="66" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="159" selection-start-line="159" selection-end-line="159" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -666,13 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/modelos/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -867,10 +790,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/modelos/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-118">
+          <caret line="165" column="23" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/includes/scripts.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/matrizs/fields.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/carreras/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/responsable">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CarreraController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
+          <folding>
+            <element signature="e#40#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/carrera">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/carreras/fields.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
         </state>
       </provider>
     </entry>

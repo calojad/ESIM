@@ -5,7 +5,7 @@
         <small>Carreras</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{{url::to('/home')}}"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="{{URL::to('/home')}}"><i class="fas fa-home"></i> Home</a></li>
         <li>Carreras</li>
         <li>Nuevo</li>
     </ol>

@@ -76,3 +76,5 @@ Route::group(['middleware' => 'auth'], function () {
     //***Matriz
     Route::resource('matrizs', 'MatrizController');
 });
+
+Route::resource('responsables', 'ResponsableController');

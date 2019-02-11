@@ -26,23 +26,23 @@
     <div class="form-group col-sm-12">
         <div class="col-md-6">
             {!! Form::label('Carrera:') !!}
-            {!! Form::radio('radOrg', null,['class' => 'form-control select2']) !!}
+            {!! Form::radio('radOrg',1,true,['class' => 'form-control radOrganizacion', 'id' => 'radSelCarreras']) !!}
         </div>
         <div class="col-md-6">
             {!! Form::label('Departamento:') !!}
-            {!! Form::radio('radOrg', null,['class' => 'form-control select2']) !!}
+            {!! Form::radio('radOrg',2,null,['class' => 'form-control radOrganizacion', 'id' => 'radSelDepartamentos']) !!}
         </div>
     </div>
 
     <!-- Carrera Id Field -->
-    <div class="form-group col-sm-12 hide">
+    <div id="divSelCarreras" class="form-group col-sm-12">
         {!! Form::label('carrera_id', 'Carrera:') !!}
         {!! Form::select('carrera_id',$carreras, null, ['class' => 'form-control select2','required'=>true]) !!}
     </div>
 
     <!-- Departamento Id Field -->
-    <div class="form-group col-sm-12 hide">
-        {!! Form::label('departamento_id', 'Departamento:') !!}
+    <div id="divSelDepartamentos" class="form-group col-sm-12">
+        {!! Form::label('departamento_id', 'Depart:') !!}
         {!! Form::select('departamento_id',$departamentos, null, ['class' => 'form-control select2','required'=>true]) !!}
     </div>
 
@@ -68,6 +68,19 @@
     </div>
 </div>
 <script type="text/javascript" charset="utf-8" async defer>
+    $(document).ready(function () {
+        var valor = $('.radOrganizacion:checked').val();
+       console.log(valor);
+        if (valor === '1') {
+            console.log(valor);
+            $('#divSelCarreras').show();
+            $('#divSelDepartamentos').hide();
+        } else if (valor === '2') {
+            console.log(valor);
+            $('#divSelCarreras').hide();
+            $('#divSelDepartamentos').show();
+        }
+    });
     $(function () {
         $('#radActivo').iCheck({
             checkboxClass: 'icheckbox_square-blue',
@@ -79,10 +92,18 @@
             radioClass: 'iradio_square-red',
             increaseArea: '20%'
         });
-        $('input[name=radOrg]').iCheck({
+        $('.radOrganizacion').iCheck({
             checkboxClass: 'icheckbox_square-blue',
             radioClass: 'iradio_square-blue',
             increaseArea: '20%'
+        });
+        $('#radSelCarreras').on('ifChecked', function (e) {
+            $('#divSelCarreras').show();
+            $('#divSelDepartamentos').hide();
+        });
+        $('#radSelDepartamentos').on('ifChecked', function (e) {
+            $('#divSelDepartamentos').show();
+            $('#divSelCarreras').hide();
         });
     });
 </script>

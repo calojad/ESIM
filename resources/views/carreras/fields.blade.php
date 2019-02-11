@@ -4,6 +4,16 @@
         {!! Form::label('nombre', 'Nombre:') !!}
         {!! Form::text('nombre', null, ['class' => 'form-control','required' => true,'autofocus' => true]) !!}
     </div>
+    <!-- Tipo Field -->
+    <div class="form-group col-sm-12">
+        {!! Form::label('tipo', 'Tipo:') !!}
+        {!! Form::select('tipo',['D'=>'Diseñada','A'=>'Anterior','R'=>'Rediseñada'],null, ['class' => 'form-control','required' => true]) !!}
+    </div>
+    <!-- Responsable Field -->
+    <div class="form-group col-sm-12">
+        {!! Form::label('responsable_id', 'Responsable:') !!}
+        {!! Form::select('responsable_id',$responsables ,null, ['class' => 'form-control select2','required' => true,'autofocus' => true]) !!}
+    </div>
 
     <!-- Estado Field -->
     <div class="form-group col-sm-12 col-md-12 icheck">

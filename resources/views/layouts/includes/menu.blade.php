@@ -115,4 +115,7 @@
 </li>
 <li class="{{ Request::is('unidadcarrera*') ? 'active' : '' }}">
     <a class="btnLoader" href="{!! route('unidadcarrera.index') !!}"><i class="fa fa-graduation-cap font-14pt"></i><span>Campus</span></a>
+</li><li class="{{ Request::is('responsables*') ? 'active' : '' }}">
+    <a href="{!! route('responsables.index') !!}"><i class="fa fa-edit"></i><span>Responsables</span></a>
 </li>
+

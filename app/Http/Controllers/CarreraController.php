@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Responsable;
 use Prettus\Repository\Criteria\RequestCriteria;
 use App\Http\Requests\CreateCarreraRequest;
 use App\Http\Requests\UpdateCarreraRequest;
@@ -43,7 +44,8 @@ class CarreraController extends AppBaseController
      */
     public function create()
     {
-        return view('carreras.create');
+        $responsables = Responsable::where('estado',1)->pluck('nombre','id');
+        return view('carreras.create', compact('responsables'));
     }
 
     /**
