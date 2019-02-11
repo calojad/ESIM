@@ -88,10 +88,10 @@ class EvidenciaController extends AppBaseController
 
         $elementos = Elemento::where('estado',1)->get();
 
-        $eel_array = EstructuraElementos::leftjoin('estructura_evidencias','estructura_elementos.estruc_evide_id','=','estructura_evidencias.id')
-            ->leftjoin('estructura_indicadores','estructura_evidencias.estruc_indic_id','=','estructura_indicadores.id')
-            ->leftjoin('estructura_criterios','estructura_indicadores.estruc_crite_id','=','estructura_criterios.id')
-            ->where('estructura_criterios.modelo_id',$estruc_modelo)
+        $eel_array = EstructuraElementos::join('estructura_evidencias','estructura_elementos.estruc_evide_id','=','estructura_evidencias.id')
+            ->join('estructura_indicadores','estructura_evidencias.estruc_indic_id','=','estructura_indicadores.id')
+            ->join('estructura_criterios','estructura_indicadores.estruc_crite_id','=','estructura_criterios.id')
+            ->where('estructura_criterios.modelo_id',$estruc_modelo->id)
             ->pluck('estructura_elementos.elemento_id')
             ->toArray();
 

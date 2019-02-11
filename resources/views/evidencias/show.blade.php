@@ -55,8 +55,7 @@
                                 <td>{{$estEle->elemento->secuencia}}</td>
                                 <td>{{$estEle->elemento->nombre}}</td>
                                 <td>
-                                    <button type="button" title="Quitar Evidencia" class="btn btn-xs btn-danger"><i class="fa fa-trash-alt"></i></button>
-                                    <a href="{{route('evidencias.show',$estEle->elemento->id)}}" title="Elementos" class="btn btn-xs btn-primary"><i class="far fa-caret-square-down" style="margin: 0"></i></a>
+                                    <button type="button" title="Quitar Elemento" class="btn btn-xs btn-danger btnQuitarElemento" data-id="{{$estEle->id}}"><i class="fa fa-trash-alt"></i></button>
                                 </td>
                             </tr>
                         @endforeach
@@ -71,6 +70,30 @@
     </div>
     @include('estructura.modal_elemento')
     <script>
+        //Boton para quitar un elemento
+        $('.btnQuitarElemento').on('click', function () {
+            var id = $(this).data('id');
+            $.confirm({
+                title: 'Quitar Elemento',
+                content: '¿Esta seguro de quitar este elemento?',
+                type: 'red',
+                icon: 'fa fa-trash-alt',
+                buttons: {
+                    cancelar: function () {},
+                    quitar: {
+                        text: 'Quitar',
+                        btnClass: 'btn-danger',
+                        action: function () {
+                            var url = '{{URL::to('estructura/destroy-elemento')}}'+'/'+id;
+                            $.get(url,function () {
+                                location.reload();
+                            });
+                        }
+                    },
+                }
+            });
+        });
+
         $(function () {
             $('#tblElementoAdd').DataTable({
                 paging: false,

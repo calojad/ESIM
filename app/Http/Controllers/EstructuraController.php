@@ -94,7 +94,6 @@ class EstructuraController extends Controller
 
     public function postAddelemento(Request $request)
     {
-        dd($request->all());
         $estrucEvidencia = $request->get('estrucEvidencia');
         $evidencia = $request->get('evidencia_id');
         $elementos = $request->get('elementoSel');
@@ -143,18 +142,48 @@ class EstructuraController extends Controller
         return json_encode($subcriterios);
     }
 
-    public function getDestroy($id)
+    public function getDestroy($id,$nivel)
     {
-        $estruCriterio = EstructuraCriterios::find($id);
-
-        if (empty($estruCriterio)) {
-            Flash::error('Criterio no encontrado en la Estructura');
-
-            return redirect(route('modelos.show', $id));
+        $elemento = null;
+        if ($nivel !== 'undefined'){
+            $elemento = EstructuraCriterios::find($id);
+        }else{
+            $elemento = EstructuraIndicadores::find($id);
         }
 
-        $estruCriterio->delete();
+        if (empty($elemento)) {
+            Flash::error('Elemento no encontrado en la Estructura');
+            return json_encode('Error');
+        }
+
+        $elemento->delete();
 
         Flash::success('Elemento quitado de la estructura.');
+        return json_encode('Success');
+    }
+
+    public function getDestroyEvidencia($id){
+        $evidencia = EstructuraEvidencias::find($id);
+        if(empty($evidencia)){
+            Flash::error('Evidencia no encontrado en la Estructura');
+            return json_encode('Error');
+        }
+
+        $evidencia->delete();
+
+        Flash::success('Evidencia Quitada.');
+        return json_encode('Success');
+    }
+    public function getDestroyElemento($id){
+        $elemento = EstructuraElementos::find($id);
+        if(empty($elemento)){
+            Flash::error('Elemento no encontrado en la Estructura');
+            return json_encode('Error');
+        }
+
+        $elemento->delete();
+
+        Flash::success('Elemento Quitada.');
+        return json_encode('Success');
     }
 }

@@ -16,8 +16,6 @@
 @endsection
 @section('content')
     <div class="content">
-        @include('adminlte-templates::common.errors')
-        @include('flash::message')
         <div class="box box-primary box-solid">
             <div class="box-header"><h3 class="box-title">Modelo</h3></div>
             <div class="box-body">
@@ -53,6 +51,8 @@
             <div class="box-header with-border">
                 <h3 class="box-title">Modelo: {{$modelo->descripcion}}</h3>
             </div>
+            @include('adminlte-templates::common.errors')
+            @include('flash::message')
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12" style="margin-bottom: 20px">
@@ -109,21 +109,25 @@
             //Boton de eliminar elemento
             $('.btnDeleteElement').on('click', function () {
                 var id = $(this).data('id');
+                var nivel = $(this).data('tipoelemento');
                 $.confirm({
                     title: '¿Esta Seguro?',
                     content: 'Se eliminara todos los elementos contenidos en esté elemento.',
                     type: 'red',
                     icon: 'glyphicon glyphicon-remove',
                     buttons: {
-                        eliminar: function () {
-                            var url = '{{URL::to('estructura/destroy/')}}' + '/' + id;
-                            $('.preloader').fadeIn("fast");
-                            $.get(url, function () {
-                                location.reload()
-                            });
-                        },
-                        cancel: function () {
-                        },
+                        cancel: function () {},
+                        quitar: {
+                            text: 'Quitar',
+                            btnClass: 'btn-danger',
+                            action: function() {
+                                var url = '{{URL::to('estructura/destroy/')}}' + '/' + id + '/' + nivel;
+                                $('.preloader').fadeIn("fast");
+                                $.get(url, function () {
+                                    location.reload();
+                                });
+                            }
+                        }
                     }
                 });
             });

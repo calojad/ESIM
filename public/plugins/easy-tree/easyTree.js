@@ -64,7 +64,7 @@
                         '<div class="btn-group pull-right boxTools" style="margin-right: 20px; border: 1px solid white; border-radius: 4px;">' +
                             '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarSubcriterio" data-nivel="'+nivel+'" title="Agregar Subcriterio"><i class="fa fa-plus text-sm"></i></button>' +
                             '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarIndicador" data-nivel="'+nivel+'" title="Agregar Indicador"><i class="fa fa-plus-circle text-sm"></i></button>' +
-                            '<button type="button" class="btnDeleteElement btn btn-danger" data-id="'+id+'"><i class="fa fa-trash-alt text-sm"></i></button>' +
+                            '<button type="button" class="btnDeleteElement btn btn-danger" data-id="'+id+'" data-tipoelemento="'+nivel+'"><i class="fa fa-trash-alt text-sm"></i></button>' +
                         '</div></span>'
                     );
                     $(this).find(' > span > span').addClass('glyphicon-menu-up');
@@ -81,7 +81,7 @@
                         '<div class="btn-group pull-right boxTools" style="margin-right: 20px;border: 1px solid white; border-radius: 4px;">' +
                             '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarSubcriterio" data-nivel="'+nivel+'" title="Agregar Subcriterio"><i class="fa fa-plus text-sm"></i></button>' +
                             '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarIndicador" data-nivel="'+nivel+'" title="Agregar Indicador"><i class="fa fa-plus-circle text-sm"></i></button>' +
-                            '<button type="button" class="btnDeleteElement btn btn-danger" data-id="'+id+'"><i class="fa fa-trash-alt text-sm"></i></button>' +
+                            '<button type="button" class="btnDeleteElement btn btn-danger" data-id="'+id+'" data-tipoelemento="'+nivel+'"><i class="fa fa-trash-alt text-sm"></i></button>' +
                         '</div></span>'
                     );
                     $(this).find(' > span > span').addClass('fa-check');

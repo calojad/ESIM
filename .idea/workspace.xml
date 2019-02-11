@@ -5,17 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Elemento.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Elemento.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EstructuraIndicadores.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstructuraIndicadores.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Evidencia.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Evidencia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/modelos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modelos/show.blade.php" afterDir="false" />
     </list>
@@ -55,23 +46,16 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="cal_esim: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="cal_esim@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="cal_esim: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="estructura_elementos: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="117" column="5" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+            <state relative-caret-position="818">
+              <caret line="185" column="32" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
               <folding>
                 <element signature="e#40#64#0#PHP" expanded="true" />
               </folding>
@@ -80,22 +64,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModeloController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3900">
-              <caret line="163" column="15" selection-start-line="163" selection-start-column="15" selection-end-line="163" selection-end-column="15" />
-              <folding>
-                <element signature="e#40#82#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2496">
-              <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
+            <state relative-caret-position="2028">
+              <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
               <folding>
                 <element signature="e#40#85#0#PHP" expanded="true" />
               </folding>
@@ -106,26 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1846">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/EstructuraIndicadores.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1664">
-              <caret line="64" column="87" selection-start-line="64" selection-start-column="87" selection-end-line="64" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/EstructuraEvidencias.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1664">
-              <caret line="64" column="86" selection-start-line="64" selection-start-column="86" selection-end-line="64" selection-end-column="86" />
+            <state relative-caret-position="2184">
+              <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -140,10 +94,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/modelos/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/indicadors/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/evidencias/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1742">
-              <caret line="67" column="53" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
+            <state relative-caret-position="480">
+              <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -237,26 +209,26 @@
         <option value="$PROJECT_DIR$/resources/views/formulas/table.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FormulaVariableController.php" />
         <option value="$PROJECT_DIR$/app/Models/Indicador.php" />
-        <option value="$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js" />
         <option value="$PROJECT_DIR$/resources/views/criterios/modal_form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/indicadors/fields.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/modelos/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" />
         <option value="$PROJECT_DIR$/app/Models/Elemento.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Models/Evidencia.php" />
         <option value="$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" />
         <option value="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" />
         <option value="$PROJECT_DIR$/app/Models/EstructuraIndicadores.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" />
         <option value="$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" />
+        <option value="$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js" />
+        <option value="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/modelos/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" />
+        <option value="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" />
       </list>
     </option>
   </component>
@@ -474,11 +446,13 @@
       <workItem from="1549458704014" duration="21901000" />
       <workItem from="1549549478502" duration="12852000" />
       <workItem from="1549636531729" duration="83000" />
+      <workItem from="1549642914291" duration="11480000" />
+      <workItem from="1549891640947" duration="1474000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366295000" />
+    <option name="totallyTimeSpent" value="379249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -537,13 +511,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/resources/views/estructura/tab_indicador.blade.php" />
-    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/estructura_elementos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_04_115159_add_foreign_keys_tables_matriz.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -688,21 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="79" column="121" selection-start-line="79" selection-start-column="121" selection-end-line="79" selection-end-column="121" />
-          <folding>
-            <element signature="e#127#134#1" expanded="true" />
-            <element signature="e#126#133#1" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -754,20 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/modelos/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/estructura_criterios">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/EstructuraCriterios.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
@@ -796,13 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="68" column="57" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/cuantitativos/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -815,23 +746,6 @@
         <state relative-caret-position="-2028" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/indicadors/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1326">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="117" column="5" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModeloController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3900">
@@ -839,23 +753,6 @@
           <folding>
             <element signature="e#40#82#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2496">
-          <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
-          <folding>
-            <element signature="e#40#85#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1846">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
         </state>
       </provider>
     </entry>
@@ -873,17 +770,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/estructura_elementos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3c81fcab-1bf9-4604-8e90-1edff3e9d213/schema/cal_esim/table/estructura_criterios">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="66" column="135" selection-start-line="66" selection-start-column="135" selection-end-line="66" selection-end-column="135" />
+          <folding>
+            <element signature="e#127#134#1" expanded="true" />
+            <element signature="e#126#133#1" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="68" column="57" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2028">
+          <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+          <folding>
+            <element signature="e#40#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2184">
+          <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Evidencia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1716">
           <caret line="66" column="69" selection-start-line="66" selection-start-column="69" selection-end-line="66" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/evidencias/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1742">
-          <caret line="67" column="53" selection-start-line="67" selection-start-column="53" selection-end-line="67" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -898,6 +841,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="728">
           <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/modelos/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="185" column="32" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
+          <folding>
+            <element signature="e#40#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/indicadors/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/evidencias/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
         </state>
       </provider>
     </entry>

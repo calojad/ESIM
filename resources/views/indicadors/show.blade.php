@@ -41,12 +41,15 @@
                 </div>
             </div>
             <div class="box-body">
-                <div class="col-md-12" style="margin-bottom: 10px;background-color: #DD4B39;padding: 7px;border-radius: 8px;min-height: 55px">
+                <div class="col-md-12"
+                     style="margin-bottom: 10px;background-color: #DD4B39;padding: 7px;border-radius: 8px;min-height: 55px">
                     <div class="col-md-6">
                         <span class="pull-left font-16pt text-withe">Evidencias</span>
                     </div>
                     <div class="col-md-6">
-                        <button class="btn btn-primary pull-right" style="margin-right: 10px" data-toggle="modal" data-target="#modalAgregarEvidencia" type="button">Agregar</button>
+                        <button class="btn btn-primary pull-right" style="margin-right: 10px" data-toggle="modal"
+                                data-target="#modalAgregarEvidencia" type="button">Agregar
+                        </button>
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -58,15 +61,15 @@
                         </tr>
                         </thead>
                         <tbody>
-                            @foreach($estrucEvidencias as $estEvi)
-                                <tr>
-                                    <td>{{$estEvi->evidencia->nombre}}</td>
-                                    <td>
-                                        <button type="button" title="Quitar Evidencia" class="btn btn-xs btn-danger"><i class="fa fa-trash-alt"></i></button>
-                                        <a href="{{route('evidencias.show',$estEvi->evidencia->id)}}" title="Elementos" class="btn btn-xs btn-primary"><i class="far fa-caret-square-down" style="margin: 0"></i></a>
-                                    </td>
-                                </tr>
-                            @endforeach
+                        @foreach($estrucEvidencias as $estEvi)
+                            <tr>
+                                <td>{{$estEvi->evidencia->nombre}}</td>
+                                <td>
+                                    <button type="button" title="Quitar Evidencia" class="btn btn-xs btn-danger btnQuitarEvidencia" data-id="{{$estEvi->id}}"><i class="fa fa-trash-alt"></i></button>
+                                    <a href="{{route('evidencias.show',$estEvi->evidencia->id)}}" title="Elementos" class="btn btn-xs btn-primary"><i class="far fa-caret-square-down" style="margin: 0"></i></a>
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -78,6 +81,30 @@
     </div>
     @include('estructura.modal_evidencia')
     <script>
+        //Boton para quitar una eveidencia
+        $('.btnQuitarEvidencia').on('click', function () {
+            var id = $(this).data('id');
+            $.confirm({
+                title: 'Quitar Evidencia',
+                content: '¿Esta seguro de quitar este elemento?',
+                type: 'red',
+                icon: 'fa fa-trash-alt',
+                buttons: {
+                    cancelar: function () {},
+                    quitar: {
+                        text: 'Quitar',
+                        btnClass: 'btn-danger',
+                        action: function () {
+                            var url = '{{URL::to('estructura/destroy-evidencia')}}'+'/'+id;
+                            $.get(url,function () {
+                                location.reload();
+                            });
+                        }
+                    },
+                }
+            });
+        });
+
         $(function () {
             $('#tblEvidenciasAdd').DataTable({
                 paging: false,
