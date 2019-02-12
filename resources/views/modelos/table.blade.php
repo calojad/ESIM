@@ -3,7 +3,6 @@
         <tr>
             <th>Nombre</th>
             <th>Abreviado</th>
-            <th>Descripcion</th>
             <th>Estado</th>
             <th>Action</th>
         </tr>
@@ -13,7 +12,6 @@
         <tr>
             <td>{!! $modelo->nombre !!}</td>
             <td>{!! $modelo->abreviado !!}</td>
-            <td>{!! $modelo->descripcion !!}</td>
             <td><label class="label {!! $modelo->estado==1?'label-success':'label-danger' !!}">{!! $modelo->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['modelos.destroy', $modelo->id], 'method' => 'delete']) !!}

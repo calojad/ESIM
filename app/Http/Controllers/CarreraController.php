@@ -32,9 +32,8 @@ class CarreraController extends AppBaseController
     {
         $this->carreraRepository->pushCriteria(new RequestCriteria($request));
         $carreras = $this->carreraRepository->all();
-
-        return view('carreras.index')
-            ->with('carreras', $carreras);
+        $tipo = ['D'=>'Diseñada','A'=>'Anterior','R'=>'Rediseñada','P'=>'Plan de Cierre'];
+        return view('carreras.index',compact('carreras','tipo'));
     }
 
     /**
@@ -102,8 +101,8 @@ class CarreraController extends AppBaseController
 
             return redirect(route('carreras.index'));
         }
-
-        return view('carreras.edit')->with('carrera', $carrera);
+        $responsables = Responsable::where('estado',1)->pluck('nombre','id');
+        return view('carreras.edit',compact('carrera','responsables'));
     }
 
     /**

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateDepartamentoRequest;
 use App\Http\Requests\UpdateDepartamentoRequest;
+use App\Models\Responsable;
 use App\Repositories\DepartamentoRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -43,7 +44,8 @@ class DepartamentoController extends AppBaseController
      */
     public function create()
     {
-        return view('departamentos.create');
+        $responsables = Responsable::where('estado',1)->pluck('nombre','id')->toArray();
+        return view('departamentos.create',compact('responsables'));
     }
 
     /**
@@ -101,7 +103,8 @@ class DepartamentoController extends AppBaseController
             return redirect(route('departamentos.index'));
         }
 
-        return view('departamentos.edit')->with('departamento', $departamento);
+        $responsables = Responsable::where('estado',1)->pluck('nombre','id')->toArray();
+        return view('departamentos.edit',compact('departamento','responsables'));
     }
 
     /**

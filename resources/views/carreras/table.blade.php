@@ -2,6 +2,7 @@
     <thead>
         <tr>
             <th>Nombre</th>
+            <th>Tipo</th>
             <th>Estado</th>
             <th>Action</th>
         </tr>
@@ -10,6 +11,7 @@
     @foreach($carreras as $carrera)
         <tr>
             <td>{!! $carrera->nombre !!}</td>
+            <td>{!! $tipo[$carrera->tipo]!!}</td>
             <td><label class="label {!! $carrera->estado==1?'label-success':'label-danger' !!}">{!! $carrera->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['carreras.destroy', $carrera->id], 'method' => 'delete']) !!}

@@ -112,7 +112,13 @@ class MatrizController extends AppBaseController
             return redirect(route('matrizs.index'));
         }
 
-        return view('matrizs.edit')->with('matriz', $matriz);
+        $modelos = [0 => '--Seleccionar--'] + Modelo::where('estado',1)->pluck('nombre','id')->toArray();
+        $periodos = [0 => '--Seleccionar--'] + Periodo::where('estado',1)->pluck('nombre','id')->toArray();
+        $tipoEvaluacion = [0 => '--Seleccionar--'] + TipoEvaluacion::where('estado',1)->pluck('nombre','id')->toArray();
+        $carreras = [0 => '--Seleccionar--'] + Carrera::where('estado',1)->pluck('nombre','id')->toArray();
+        $departamentos = [0 => '--Seleccionar--'] + Departamento::where('estado',1)->pluck('nombre','id')->toArray();
+
+        return view('matrizs.edit',compact('matriz','modelos','periodos','tipoEvaluacion','carreras','departamentos'));
     }
 
     /**

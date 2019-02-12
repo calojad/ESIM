@@ -25,7 +25,7 @@
 </li>
 
 {{-- ********* IES ********* --}}
-<li class="treeview {{ Request::is('periodos*','unidads*','carreras*','users*','departamentos*') ? 'active' : '' }}">
+<li class="treeview {{ Request::is('periodos*','unidads*','carreras*','users*','departamentos*','responsables*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-book-reader font-14pt"></i> <span>I.E.S.</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
@@ -44,6 +44,9 @@
         </li>
         <li class="{{ Request::is('users*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('users.index') !!}"><i class="{{ Request::is('users*') ? 'fas' : 'far' }} fa-circle"></i><span>Usuarios</span></a>
+        </li>
+        <li class="{{ Request::is('responsables*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{!! route('responsables.index') !!}"><i class="{{ Request::is('responsables*') ? 'fas' : 'far' }} fa-circle"></i><span>Responsables</span></a>
         </li>
     </ul>
 </li>
@@ -115,7 +118,4 @@
 </li>
 <li class="{{ Request::is('unidadcarrera*') ? 'active' : '' }}">
     <a class="btnLoader" href="{!! route('unidadcarrera.index') !!}"><i class="fa fa-graduation-cap font-14pt"></i><span>Campus</span></a>
-</li><li class="{{ Request::is('responsables*') ? 'active' : '' }}">
-    <a href="{!! route('responsables.index') !!}"><i class="fa fa-edit"></i><span>Responsables</span></a>
 </li>
-

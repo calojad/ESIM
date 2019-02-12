@@ -7,7 +7,7 @@
     <!-- Tipo Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('tipo', 'Tipo:') !!}
-        {!! Form::select('tipo',['D'=>'Diseñada','A'=>'Anterior','R'=>'Rediseñada'],null, ['class' => 'form-control','required' => true]) !!}
+        {!! Form::select('tipo',['D'=>'Diseñada','A'=>'Anterior','R'=>'Rediseñada','P'=>'Plan de Cierre'],null, ['class' => 'form-control','required' => true]) !!}
     </div>
     <!-- Responsable Field -->
     <div class="form-group col-sm-12">
