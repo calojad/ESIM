@@ -2,19 +2,19 @@
     <!-- Nombre Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('nombre', 'Nombre:') !!}
-        {!! Form::text('nombre', null, ['class' => 'form-control','required' => true]) !!}
+        {!! Form::text('nombre', null, ['class' => 'form-control UpperCase','required' => true]) !!}
     </div>
 
     <!-- Tipo Indicador Id Field -->
     <div class="form-group col-sm-12">
-        {!! Form::label('tipo_indicador_id', 'Tipo Indicador Id:') !!}
+        {!! Form::label('tipo_indicador_id', 'Tipo:') !!}
         {!! Form::select('tipo_indicador_id', $tipoIndicadores, $grupoValor!=null?$grupoValor->tipo_indicador_id:0,['class' => 'form-control', 'required' => true]) !!}
     </div>
 
     <!-- Descripcion Field -->
     <div class="form-group col-sm-12 col-lg-12">
         {!! Form::label('descripcion', 'Descripcion:') !!}
-        {!! Form::textarea('descripcion', null, ['class' => 'form-control','rows' => 4,'required' => true]) !!}
+        {!! Form::textarea('descripcion', null, ['class' => 'form-control','rows' => 4]) !!}
     </div>
 
     <!-- Estado Field -->

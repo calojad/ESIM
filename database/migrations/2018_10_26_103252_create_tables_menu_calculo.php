@@ -23,7 +23,7 @@ class CreateTablesMenuCalculo extends Migration
             $table->increments('id');
             $table->integer('tipo_indicador_id')->unsigned();
             $table->string('nombre');
-            $table->text('descripcion');
+            $table->text('descripcion')->nullable();
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
@@ -31,10 +31,10 @@ class CreateTablesMenuCalculo extends Migration
             $table->increments('id');
             $table->integer('grupo_valor_id')->unsigned();
             $table->string('nombre');
-            $table->string('abreviatura');
-            $table->decimal('valor',8,2);
-            $table->decimal('rango_inicio',8,2);
-            $table->decimal('rango_fin',8,2);
+            $table->string('abreviatura')->nullable();
+            $table->decimal('valor',8,2)->nullable();
+            $table->decimal('rango_inicio',8,2)->nullable();
+            $table->decimal('rango_fin',8,2)->nullable();
             $table->string('color');
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();

@@ -5,7 +5,7 @@
     <!-- Nombre Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('nombre', 'Nombre:') !!}
-        {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+        {!! Form::text('nombre', null, ['class' => 'form-control UpperCase']) !!}
     </div>
 
     <!-- Abreviatura Field -->
@@ -38,7 +38,7 @@
         <select id="selColores" class="form-control {{ $valoracion!==null?$valoracion->color:'' }}" name="color" required>
             <option value="0">-- Seleccione --</option>
             @foreach ($colorsClass as $colorId => $color)
-                <option class="{{ $colorId }}" value="{{ $colorId }}" {{ $valoracion!==null?$valoracion->color==$colorId?'selected':'':'' }}>{{ $color }}</option>
+                <option class="{{ $colorId }}" value="{{ $colorId }}" {{ ($valoracion!==null)?(($valoracion->color==$colorId)?'selected':''):'' }}>{{ $color }}</option>
             @endforeach
         </select>
     </div>

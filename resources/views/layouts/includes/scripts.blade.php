@@ -32,4 +32,10 @@
             responsive: true
         });
     });
+    $(".UpperCase,input[name=nombre]").on("keypress blur", function () {
+        $input=$(this);
+        setTimeout(function () {
+            $input.val($input.val().toUpperCase());
+        },50);
+    })
 </script>

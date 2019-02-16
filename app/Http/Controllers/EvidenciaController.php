@@ -84,14 +84,14 @@ class EvidenciaController extends AppBaseController
             return redirect(route('evidencias.index'));
         }
 
-        $estruc_modelo = EstructuraCriterios::find($evidencia->estructuraEvidencias[0]->estructuraIndicadore->estructuraCriterio->modelo_id);
+        $estruc_modelo = EstructuraCriterios::find($evidencia->estructuraEvidencias[0]->estructuraIndicadore->estructuraCriterio->id);
 
         $elementos = Elemento::where('estado',1)->get();
 
         $eel_array = EstructuraElementos::join('estructura_evidencias','estructura_elementos.estruc_evide_id','=','estructura_evidencias.id')
             ->join('estructura_indicadores','estructura_evidencias.estruc_indic_id','=','estructura_indicadores.id')
             ->join('estructura_criterios','estructura_indicadores.estruc_crite_id','=','estructura_criterios.id')
-            ->where('estructura_criterios.modelo_id',$estruc_modelo->id)
+            ->where('estructura_criterios.modelo_id',$estruc_modelo->modelo_id)
             ->pluck('estructura_elementos.elemento_id')
             ->toArray();
 

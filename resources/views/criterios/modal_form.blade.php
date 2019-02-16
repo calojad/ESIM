@@ -9,6 +9,7 @@
             <div class="modal-body">
                 {!! Form::open(['url' => '/estructura/new-criterio', 'method' => 'post','class' => 'form-horizontal']) !!}
                 <input type="hidden" value="1" name="estado">
+                <input type="hidden" value="{{$modelo->id}}" name="modelo_id">
                 <div class="row" style="margin-left: 20px">
                     <div class="col-md-12">
                         <div class="form-group aling-left">
@@ -27,10 +28,10 @@
                             <label class="col-md-2" for="txareaDescrip">Descripción:</label>
                             <div class="col-md-8">
                                 <textarea id="txareaDescrip" class="form-control" rows="2" maxlength="255" name="descripcion" required></textarea>
-                                <span id="contador" class="pull-right">255</span>
+                                <span id="contadorCriterio" class="pull-right">255</span>
                                 <script>
                                     $('#txareaDescrip').on('keyup',function() {
-                                        var count = $('#contador');
+                                        var count = $('#contadorCriterio');
                                         var chars = $(this).val().length;
                                         var diff = 255 - chars;
                                         count.html(diff);

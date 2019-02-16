@@ -25,7 +25,7 @@
         </div>
         <div class="box box-warning">
             <div class="box-header">
-                <h3 class="box-title">Valoraciones</h3>
+                <h3 class="box-title">Valoraciones - {{$grupoValor->nombre}}</h3>
                 <a class="btn btn-primary pull-right" href="{!! route('valoracions.valoracioncrear',$grupoValor->id) !!}">Agregar</a>
             </div>
             <div class="box-body">

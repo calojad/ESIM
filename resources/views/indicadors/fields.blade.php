@@ -9,7 +9,7 @@
         <!-- Nombre Field -->
         <div class="form-group col-sm-12">
             {!! Form::label('nombre', 'Nombre:') !!}
-            {!! Form::text('nombre', null, ['class' => 'form-control','required'=>true]) !!}
+            {!! Form::text('nombre', null, ['class' => 'form-control UpperCase','required'=>true]) !!}
         </div>
 
         <!-- Descripcion Field -->

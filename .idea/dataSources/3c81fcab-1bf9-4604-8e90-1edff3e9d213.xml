@@ -1086,13 +1086,11 @@
     <column id="290" parent="249" name="abreviado">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="291" parent="249" name="descripcion">
       <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="292" parent="249" name="estado">
@@ -1178,7 +1176,6 @@
     <column id="306" parent="251" name="secuencia">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="307" parent="251" name="nombre">
@@ -1500,8 +1497,7 @@
     </column>
     <column id="362" parent="256" name="descripcion">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="363" parent="256" name="importancia">
@@ -1656,7 +1652,6 @@
     <column id="389" parent="259" name="descripcion">
       <Position>4</Position>
       <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="390" parent="259" name="estado">
@@ -1722,8 +1717,7 @@
     </column>
     <column id="401" parent="260" name="descripcion">
       <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="402" parent="260" name="estandar">
@@ -1733,7 +1727,7 @@
     </column>
     <column id="403" parent="260" name="vigencia">
       <Position>8</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="404" parent="260" name="marco_normativo">
@@ -1951,13 +1945,11 @@
     <column id="443" parent="263" name="abreviado">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="444" parent="263" name="descripcion">
       <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="445" parent="263" name="estado">
@@ -2591,25 +2583,21 @@
     <column id="556" parent="276" name="abreviatura">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="557" parent="276" name="valor">
       <Position>5</Position>
       <DataType>decimal(8,2 digit)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="558" parent="276" name="rango_inicio">
       <Position>6</Position>
       <DataType>decimal(8,2 digit)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="559" parent="276" name="rango_fin">
       <Position>7</Position>
       <DataType>decimal(8,2 digit)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="560" parent="276" name="color">

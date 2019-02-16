@@ -117,6 +117,7 @@ class EstructuraController extends Controller
     {
         $data = $request->all();
         Criterio::create($data);
+        Flash::success('Criterio creado.');
         return redirect(route('modelos.show', $data['modelo_id']));
     }
 
@@ -130,6 +131,7 @@ class EstructuraController extends Controller
             $data['grupo_valor_id'] = null;
 
         Indicador::create($data);
+        Flash::success('Indicador creado.');
         return redirect(route('modelos.show', $data['modelo_id']));
     }
 

@@ -16,8 +16,8 @@ class CreateTablesMenuMatriz extends Migration
         Schema::create('modelo', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('abreviado');
-            $table->string('descripcion');
+            $table->string('abreviado')->nullable();
+            $table->text('descripcion')->nullable();
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
@@ -35,8 +35,8 @@ class CreateTablesMenuMatriz extends Migration
         Schema::create('criterio', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('abreviado');
-            $table->string('descripcion');
+            $table->string('abreviado')->nullable();
+            $table->text('descripcion')->nullable();
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
@@ -46,9 +46,9 @@ class CreateTablesMenuMatriz extends Migration
             $table->integer('grupo_valor_id')->unsigned()->nullable()->default(null);
             $table->integer('formula_id')->unsigned()->nullable()->default(null);
             $table->string('nombre');
-            $table->string('descripcion');
+            $table->text('descripcion')->nullable();
             $table->text('estandar')->nullable();
-            $table->string('vigencia')->nullable();
+            $table->text('vigencia')->nullable();
             $table->text('marco_normativo')->nullable();
             $table->text('fuente_info')->nullable();
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
@@ -57,14 +57,14 @@ class CreateTablesMenuMatriz extends Migration
         Schema::create('evidencia', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('descripcion');
+            $table->text('descripcion')->nullable();
             $table->integer('importancia')->default(0);
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
         Schema::create('elemento', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('secuencia');
+            $table->integer('secuencia')->nullable();
             $table->string('nombre');
             $table->integer('importancia')->default(0);
             $table->integer('estado')->comment('1=Activo|0=Inactivo');

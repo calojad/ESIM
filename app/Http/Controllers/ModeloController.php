@@ -159,7 +159,7 @@ class ModeloController extends AppBaseController
                 $html .= '<li><a data-id="'.$indi->id.'">'.$indi->indicador->nombre.'</a>';
                 $html .= $this->childViewEvidencia($indi);
             } else {*/
-                $html .= '<li><a data-id="'.$indi->id .'" data-href="'.route('indicadors.show',$indi->indicador_id).'">'.$indi->indicador->nombre.'</a>';
+                $html .= '<li><a data-id="'.$indi->id .'" data-href="'.route('indicadors.show',$indi->indicador_id).'" data-nmevide="'.$indi->estructuraEvidencias->count().'">'.$indi->indicador->nombre.'</a>';
 //            }
             $html .= "</li>";
         }

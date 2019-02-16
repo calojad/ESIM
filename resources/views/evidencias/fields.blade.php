@@ -8,7 +8,7 @@
     <!-- Descripcion Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('descripcion', 'Descripcion:') !!}
-        {!! Form::textarea('descripcion', null, ['class' => 'form-control','rows'=>3,'maxlength'=>255,'id'=>'txaDescrip','required'=>true]) !!}
+        {!! Form::textarea('descripcion', null, ['class' => 'form-control','rows'=>3,'maxlength'=>255,'id'=>'txaDescrip']) !!}
         <span class="text-muted pull-right" id="contador"></span>
     </div>
 

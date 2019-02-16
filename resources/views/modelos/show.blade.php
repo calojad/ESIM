@@ -86,6 +86,8 @@
     @include('indicadors.modal_form')
     <script type="text/javascript">
         $(document).ready(function () {
+            //Ocultar grupo valor y formulas
+            $('#divGrupoValor, #divFormula').hide();
             //Inicializar TreeView
             $('.easy-tree').EasyTree();
             //Click para contraer nodos
