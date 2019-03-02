@@ -75,6 +75,6 @@ Route::group(['middleware' => 'auth'], function () {
     AdvancedRoute::controller('/estructura','EstructuraController');
     //***Matriz
     Route::resource('matrizs', 'MatrizController');
+    //***Responsable
+    Route::resource('responsables', 'ResponsableController');
 });
-
-Route::resource('responsables', 'ResponsableController');
