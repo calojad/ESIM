@@ -120,16 +120,6 @@
     $(window).on('load',function() {
         $(".preloader").fadeOut("slow");
     });
-    $('#btnRegistre').on('click',function () {
-        const name = $('input[name=name]').val();
-        const username = $('input[name=username]').val();
-        const email = $('input[name=email]').val();
-        const pass = $('input[name=password]').val();
-        const passconf = $('input[name=password_confirmation]').val();
-        const checkbox = $('#chbTerminos').prop('checked');
-        if( name !== '' && username !== '' && email !== '' && pass !== '' && passconf !== '' && checkbox !== false)
-            $(".preloader").fadeIn("slow");
-    });
     $(document).ready(function () {
         $('input[name=name]').focus();
     });

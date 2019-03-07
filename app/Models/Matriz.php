@@ -42,7 +42,7 @@ class Matriz extends Model
         'modelo_id',
         'periodo_id',
         'carrera_id',
-        'departamento_id',
+        'tipo_matriz_id',
         'tipo_evaluacion_id',
         'nombre',
         'estado'

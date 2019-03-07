@@ -9,6 +9,7 @@ use App\Models\Departamento;
 use App\Models\Modelo;
 use App\Models\Periodo;
 use App\Models\TipoEvaluacion;
+use App\Models\TipoMatriz;
 use App\Repositories\MatrizRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -48,13 +49,13 @@ class MatrizController extends AppBaseController
      */
     public function create()
     {
-        $modelos = [0 => '--Seleccionar--'] + Modelo::where('estado',1)->pluck('nombre','id')->toArray();
-        $periodos = [0 => '--Seleccionar--'] + Periodo::where('estado',1)->pluck('nombre','id')->toArray();
-        $tipoEvaluacion = [0 => '--Seleccionar--'] + TipoEvaluacion::where('estado',1)->pluck('nombre','id')->toArray();
-        $carreras = [0 => '--Seleccionar--'] + Carrera::where('estado',1)->pluck('nombre','id')->toArray();
-        $departamentos = [0 => '--Seleccionar--'] + Departamento::where('estado',1)->pluck('nombre','id')->toArray();
+        $modelos = ['' => '--Seleccionar--'] + Modelo::where('estado',1)->pluck('nombre','id')->toArray();
+        $periodos = ['' => '--Seleccionar--'] + Periodo::where('estado',1)->pluck('nombre','id')->toArray();
+        $tipoEvaluacion = ['' => '--Seleccionar--'] + TipoEvaluacion::where('estado',1)->pluck('nombre','id')->toArray();
+        $carreras = ['' => '--Seleccionar--'] + Carrera::where('estado',1)->pluck('nombre','id')->toArray();
+        $tipoMatriz = ['' => '--Seleccionar--'] + TipoMatriz::where('estado',1)->pluck('nombre','id')->toArray();
 
-        return view('matrizs.create',compact('modelos','periodos','tipoEvaluacion','carreras','departamentos'));
+        return view('matrizs.create',compact('modelos','periodos','tipoEvaluacion','carreras','tipoMatriz'));
     }
 
     /**
@@ -67,7 +68,6 @@ class MatrizController extends AppBaseController
     public function store(CreateMatrizRequest $request)
     {
         $input = $request->all();
-
         $matriz = $this->matrizRepository->create($input);
 
         Flash::success('Matriz saved successfully.');

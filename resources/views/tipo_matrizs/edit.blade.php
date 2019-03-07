@@ -2,11 +2,11 @@
 @section('content-header')
     <h1>
         {{config('app.name','EVAL')}}
-        <small>Tipo Indicador</small>
+        <small>Tipo Matriz</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{URL::to('/home')}}"><i class="fas fa-home"></i> Home</a></li>
-        <li>Tipo Indicador</li>
+        <li>Tipo Matriz</li>
         <li>Editar</li>
     </ol>
 @endsection
@@ -17,8 +17,8 @@
             <div class="box-header"><h3 class="box-title">Tipo Indicador</h3></div>
             <div class="box-body">
                 <div class="row">
-                    {!! Form::model($tipoIndicador, ['route' => ['tipoIndicadors.update', $tipoIndicador->id], 'method' => 'patch']) !!}
-                    @include('tipo_indicadors.fields')
+                    {!! Form::model($tipoMatriz, ['route' => ['tipoMatrizs.update', $tipoMatriz->id], 'method' => 'patch']) !!}
+                    @include('tipo_matrizs.fields')
                     {!! Form::close() !!}
                 </div>
             </div>

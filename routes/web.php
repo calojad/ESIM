@@ -78,3 +78,5 @@ Route::group(['middleware' => 'auth'], function () {
     //***Responsable
     Route::resource('responsables', 'ResponsableController');
 });
+
+Route::resource('tipoMatrizs', 'TipoMatrizController');

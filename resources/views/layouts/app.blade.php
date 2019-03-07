@@ -55,6 +55,11 @@
                         sum = sum + 1;
                     }
                 });
+                $("form select:required").each(function() {
+                    if ($(this).val() === '') {
+                        sum = sum + 1;
+                    }
+                });
                 $("form textarea:required").each(function() {
                     if ($(this).val() === '') {
                         sum = sum + 1;
@@ -70,7 +75,8 @@
                 language: {
                     noResults: function() {return "No hay resultado";},
                     searching: function() {return "Buscando...";}
-                }
+                },
+                placeholder:"Seleccionar",
             });
         </script>
         @yield('scripts')

@@ -5,6 +5,18 @@
         {!! Form::text('nombre', null, ['class' => 'form-control','required'=>true]) !!}
     </div>
 
+    <!-- Tipo Matriz Id Field -->
+    <div class="form-group col-sm-12">
+        {!! Form::label('tipo_matriz_id', 'Tipo Matriz:') !!}
+        {!! Form::select('tipo_matriz_id',$tipoMatriz, null, ['class' => 'form-control select2','required'=>true, 'id'=>'selTipoMatriz']) !!}
+    </div>
+
+    <!-- Carrera Id Field -->
+    <div id="divSelCarreras" class="form-group col-sm-12">
+        {!! Form::label('carrera_id', 'Carrera:') !!}
+        {!! Form::select('carrera_id',$carreras, null, ['class' => 'form-control select2']) !!}
+    </div>
+
     <!-- Modelo Id Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('modelo_id', 'Modelo:') !!}
@@ -21,29 +33,6 @@
     <div class="form-group col-sm-12">
         {!! Form::label('tipo_evaluacion_id', 'Tipo Evaluacion:') !!}
         {!! Form::select('tipo_evaluacion_id', $tipoEvaluacion,null, ['class' => 'form-control select2','required'=>true]) !!}
-    </div>
-
-    <div class="form-group col-sm-12">
-        <div class="col-md-6">
-            {!! Form::label('Carrera:') !!}
-            {!! Form::radio('radOrg',1,true,['class' => 'form-control radOrganizacion', 'id' => 'radSelCarreras']) !!}
-        </div>
-        <div class="col-md-6">
-            {!! Form::label('Departamento:') !!}
-            {!! Form::radio('radOrg',2,null,['class' => 'form-control radOrganizacion', 'id' => 'radSelDepartamentos']) !!}
-        </div>
-    </div>
-
-    <!-- Carrera Id Field -->
-    <div id="divSelCarreras" class="form-group col-sm-12">
-        {!! Form::label('carrera_id', 'Carrera:') !!}
-        {!! Form::select('carrera_id',$carreras, null, ['class' => 'form-control select2','required'=>true]) !!}
-    </div>
-
-    <!-- Departamento Id Field -->
-    <div id="divSelDepartamentos" class="form-group col-sm-12">
-        {!! Form::label('departamento_id', 'Depart:') !!}
-        {!! Form::select('departamento_id',$departamentos, null, ['class' => 'form-control select2','required'=>true]) !!}
     </div>
 
     <!-- Estado Field -->
@@ -63,24 +52,30 @@
 
     <!-- Submit Field -->
     <div class="form-group col-sm-12">
-        {!! Form::submit('Save', ['class' => 'btn btn-primary btnLoader']) !!}
+        {!! Form::submit('Save', ['class' => 'btn btn-primary btnLoader','id'=>'btnSubmitMatriz']) !!}
         <a href="{!! route('matrizs.index') !!}" class="btn btn-default btnLoader">Cancel</a>
     </div>
 </div>
 <script type="text/javascript" charset="utf-8" async defer>
     $(document).ready(function () {
-        var valor = $('.radOrganizacion:checked').val();
-       console.log(valor);
+        var valor = $('#selTipoMatriz').val();
+        console.log(valor);
         if (valor === '1') {
-            console.log(valor);
             $('#divSelCarreras').show();
-            $('#divSelDepartamentos').hide();
-        } else if (valor === '2') {
-            console.log(valor);
+        } else{
             $('#divSelCarreras').hide();
-            $('#divSelDepartamentos').show();
         }
+
+        $('#selTipoMatriz').on('change',function () {
+            var valor = $(this).val();
+            if(valor === '1')
+                $('#divSelCarreras').show();
+            else{
+                $('#divSelCarreras').hide();
+            }
+        });
     });
+
     $(function () {
         $('#radActivo').iCheck({
             checkboxClass: 'icheckbox_square-blue',
@@ -92,18 +87,6 @@
             radioClass: 'iradio_square-red',
             increaseArea: '20%'
         });
-        $('.radOrganizacion').iCheck({
-            checkboxClass: 'icheckbox_square-blue',
-            radioClass: 'iradio_square-blue',
-            increaseArea: '20%'
-        });
-        $('#radSelCarreras').on('ifChecked', function (e) {
-            $('#divSelCarreras').show();
-            $('#divSelDepartamentos').hide();
-        });
-        $('#radSelDepartamentos').on('ifChecked', function (e) {
-            $('#divSelDepartamentos').show();
-            $('#divSelCarreras').hide();
-        });
     });
+
 </script>

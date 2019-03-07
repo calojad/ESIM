@@ -26,7 +26,7 @@ class CreateTablesMenuMatriz extends Migration
             $table->integer('modelo_id')->unsigned();
             $table->integer('periodo_id')->unsigned();
             $table->integer('carrera_id')->unsigned()->nullable();
-            $table->integer('departamento_id')->unsigned()->nullable();
+            $table->integer('tipo_matriz_id')->unsigned();
             $table->integer('tipo_evaluacion_id')->unsigned();
             $table->string('nombre');
             $table->integer('estado')->comment('1=Activo|0=Inactivo');

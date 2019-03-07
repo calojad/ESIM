@@ -1,7 +1,7 @@
 <li class="header" style="font-size: 12pt">Mantenimientos</li>
 
 {{-- ********* SISTEMA ********* --}}
-<li class="treeview {{ Request::is('ubicacions*','tipoUnidads*','tipoPeriodos*','tipoEvaluacions*','tipoIndicadors*') ? 'active' : '' }}">
+<li class="treeview {{ Request::is('ubicacions*','tipoUnidads*','tipoPeriodos*','tipoEvaluacions*','tipoIndicadors*','tipoMatrizs*') ? 'active' : '' }}">
     <a href="#"><i class="fa fa-desktop  font-14pt"></i> <span>Sistema</span>
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
     </a>
@@ -12,6 +12,11 @@
         <li class="{{ Request::is('tipoIndicadors*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('tipoIndicadors.index') !!}"><i class="{{ Request::is('tipoIndicadors*') ? 'fas' : 'far' }} fa-circle"></i><span>Tipo Indicador</span></a>
         </li>
+
+        <li class="{{ Request::is('tipoMatrizs*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{!! route('tipoMatrizs.index') !!}"><i class="{{ Request::is('tipoMatrizs*') ? 'fas' : 'far' }} fa-circle"></i><span>Tipo Matrizs</span></a>
+        </li>
+
         <li class="{{ Request::is('tipoPeriodos*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('tipoPeriodos.index') !!}"><i class="{{ Request::is('tipoPeriodos*') ? 'fas' : 'far' }} fa-circle"></i><span>Tipo Periodo</span></a>
         </li>

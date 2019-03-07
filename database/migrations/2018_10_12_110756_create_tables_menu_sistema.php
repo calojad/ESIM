@@ -27,12 +27,12 @@ class CreateTablesMenuSistema extends Migration
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
-/*        Schema::create('tipomatriz', function (Blueprint $table) {
+        Schema::create('tipo_matriz', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
-        });*/
+        });
         // 
         Schema::create('tipo_evaluacion', function (Blueprint $table) {
             $table->increments('id');
@@ -58,6 +58,7 @@ class CreateTablesMenuSistema extends Migration
     {
         Schema::dropIfExists('tipo_unidad');
         Schema::dropIfExists('tipo_periodo');
+        Schema::dropIfExists('tipo_matriz');
         Schema::dropIfExists('tipo_evaluacion');
         Schema::dropIfExists('ubicacion');
     }
