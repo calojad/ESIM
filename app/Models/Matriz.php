@@ -58,7 +58,7 @@ class Matriz extends Model
         'modelo_id' => 'integer',
         'periodo_id' => 'integer',
         'carrera_id' => 'integer',
-        'departamento_id' => 'integer',
+        'tipo_matriz_id' => 'integer',
         'tipo_evaluacion_id' => 'integer',
         'nombre' => 'string',
         'estado' => 'integer'
@@ -84,9 +84,9 @@ class Matriz extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      **/
-    public function departamento()
+    public function tipoMatriz()
     {
-        return $this->belongsTo(\App\Models\Departamento::class);
+        return $this->belongsTo(\App\Models\TipoMatriz::class);
     }
 
     /**

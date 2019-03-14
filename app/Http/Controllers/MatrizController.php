@@ -6,6 +6,10 @@ use App\Http\Requests\CreateMatrizRequest;
 use App\Http\Requests\UpdateMatrizRequest;
 use App\Models\Carrera;
 use App\Models\Departamento;
+use App\Models\EstructuraCriterios;
+use App\Models\EstructuraElementos;
+use App\Models\EstructuraEvidencias;
+use App\Models\EstructuraIndicadores;
 use App\Models\Modelo;
 use App\Models\Periodo;
 use App\Models\TipoEvaluacion;
@@ -92,7 +96,22 @@ class MatrizController extends AppBaseController
             return redirect(route('matrizs.index'));
         }
 
-        return view('matrizs.show')->with('matriz', $matriz);
+        /*$criterios = EstructuraCriterios::where('modelo_id',$matriz->modelo_id)->get();
+        $indicadores = EstructuraIndicadores::leftjoin('estructura_criterios','estructura_indicadores.estruc_crite_id','=','estructura_criterios.id')
+            ->where('estructura_criterios.modelo_id',$matriz->modelo_id)
+            ->get();
+        $evidencias = EstructuraEvidencias::leftjoin('estructura_indicadores','estructura_evidencias.estruc_indic_id','=','estructura_indicadores.id')
+            ->leftjoin('estructura_criterios','estructura_indicadores.estruc_crite_id','=','estructura_criterios.id')
+            ->where('estructura_criterios.modelo_id',$matriz->modelo_id)
+            ->get();*/
+        $elementos = EstructuraElementos::leftjoin('estructura_evidencias','estructura_elementos.estruc_evide_id','=','estructura_evidencias.id')
+            ->leftjoin('estructura_indicadores','estructura_evidencias.estruc_indic_id','=','estructura_indicadores.id')
+            ->leftjoin('estructura_criterios','estructura_indicadores.estruc_crite_id','=','estructura_criterios.id')
+            ->where('estructura_criterios.modelo_id',$matriz->modelo_id)
+            ->select()
+            ->get();
+
+        return view('matrizs.show',compact('matriz','elementos'));
     }
 
     /**
@@ -112,13 +131,13 @@ class MatrizController extends AppBaseController
             return redirect(route('matrizs.index'));
         }
 
-        $modelos = [0 => '--Seleccionar--'] + Modelo::where('estado',1)->pluck('nombre','id')->toArray();
-        $periodos = [0 => '--Seleccionar--'] + Periodo::where('estado',1)->pluck('nombre','id')->toArray();
-        $tipoEvaluacion = [0 => '--Seleccionar--'] + TipoEvaluacion::where('estado',1)->pluck('nombre','id')->toArray();
-        $carreras = [0 => '--Seleccionar--'] + Carrera::where('estado',1)->pluck('nombre','id')->toArray();
-        $departamentos = [0 => '--Seleccionar--'] + Departamento::where('estado',1)->pluck('nombre','id')->toArray();
+        $modelos = ['' => '--Seleccionar--'] + Modelo::where('estado',1)->pluck('nombre','id')->toArray();
+        $periodos = ['' => '--Seleccionar--'] + Periodo::where('estado',1)->pluck('nombre','id')->toArray();
+        $tipoEvaluacion = ['' => '--Seleccionar--'] + TipoEvaluacion::where('estado',1)->pluck('nombre','id')->toArray();
+        $carreras = ['' => '--Seleccionar--'] + Carrera::where('estado',1)->pluck('nombre','id')->toArray();
+        $tipoMatriz = ['' => '--Seleccionar--'] + TipoMatriz::where('estado',1)->pluck('nombre','id')->toArray();
 
-        return view('matrizs.edit',compact('matriz','modelos','periodos','tipoEvaluacion','carreras','departamentos'));
+        return view('matrizs.edit',compact('matriz','modelos','periodos','tipoEvaluacion','carreras','tipoMatriz'));
     }
 
     /**
