@@ -41,7 +41,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-
+                            @foreach($elementos as $ele)
+                                <tr>
+                                    <td>{{$ele->estrucEvide->estructuraIndicadore->estructuraCriterio->criterio->nombre}}</td>
+                                    <td>{{$ele->estrucEvide->estructuraIndicadore->indicador->nombre}}</td>
+                                    <td>{{$ele->estrucEvide->evidencia->nombre}}</td>
+                                    <td>{{$ele->elemento->nombre}}</td>
+                                    <td>{!! Form::select('valoracion',['Satisfactoio','No Satisfactorio'],null) !!}</td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

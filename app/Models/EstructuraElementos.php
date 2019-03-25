@@ -70,6 +70,11 @@ class EstructuraElementos extends Model
      **/
     public function estructuraEvidencia()
     {
-        return $this->belongsTo(\App\Models\EstructuraEvidencia::class);
+        return $this->belongsTo(\App\Models\EstructuraEvidencias::class);
+    }
+
+    public function estrucEvide()
+    {
+        return $this->belongsTo(\App\Models\EstructuraEvidencias::class,'estruc_evide_id');
     }
 }

@@ -56,7 +56,7 @@ class CreateTablesMenuMatriz extends Migration
         });
         Schema::create('evidencia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
+            $table->text('nombre');
             $table->text('descripcion')->nullable();
             $table->integer('importancia')->default(0);
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
@@ -65,7 +65,7 @@ class CreateTablesMenuMatriz extends Migration
         Schema::create('elemento', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('secuencia')->nullable();
-            $table->string('nombre');
+            $table->text('nombre');
             $table->integer('importancia')->default(0);
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();

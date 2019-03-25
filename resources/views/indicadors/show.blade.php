@@ -66,7 +66,7 @@
                                 <td>{{$estEvi->evidencia->nombre}}</td>
                                 <td>
                                     <button type="button" title="Quitar Evidencia" class="btn btn-xs btn-danger btnQuitarEvidencia" data-id="{{$estEvi->id}}"><i class="fa fa-trash-alt"></i></button>
-                                    <a href="{{route('evidencias.show',$estEvi->evidencia->id)}}" title="Elementos" class="btn btn-xs btn-primary"><i class="far fa-caret-square-down" style="margin: 0"></i></a>
+                                    <a href="{{route('evidencias.show',$estEvi->evidencia->id.'-'.$estEvi->estructuraIndicadore->indicador_id)}}" title="Elementos" class="btn btn-xs btn-primary"><i class="far fa-caret-square-down" style="margin: 0"></i></a>
                                 </td>
                             </tr>
                         @endforeach

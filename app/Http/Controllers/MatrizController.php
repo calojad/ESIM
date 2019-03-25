@@ -108,9 +108,8 @@ class MatrizController extends AppBaseController
             ->leftjoin('estructura_indicadores','estructura_evidencias.estruc_indic_id','=','estructura_indicadores.id')
             ->leftjoin('estructura_criterios','estructura_indicadores.estruc_crite_id','=','estructura_criterios.id')
             ->where('estructura_criterios.modelo_id',$matriz->modelo_id)
-            ->select()
+            ->select('estructura_elementos.estruc_evide_id','estructura_elementos.elemento_id','estructura_evidencias.estruc_indic_id','estructura_evidencias.evidencia_id','estructura_indicadores.estruc_crite_id','estructura_indicadores.indicador_id','estructura_criterios.criterio_id','estructura_criterios.padre_id')
             ->get();
-
         return view('matrizs.show',compact('matriz','elementos'));
     }
 

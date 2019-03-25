@@ -2,13 +2,13 @@
     <!-- Nombre Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('nombre', 'Nombre:') !!}
-        {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+        {!! Form::textarea('nombre', null, ['style'=>'width:100%','rows' => 2,'required'=>true]) !!}
     </div>
 
     <!-- Descripcion Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('descripcion', 'Descripcion:') !!}
-        {!! Form::textarea('descripcion', null, ['class' => 'form-control','rows'=>3,'maxlength'=>255,'id'=>'txaDescrip']) !!}
+        {!! Form::textarea('descripcion', null, ['style'=>'width:100%','rows'=>3,'maxlength'=>255,'id'=>'txaDescrip']) !!}
         <span class="text-muted pull-right" id="contador"></span>
     </div>
 

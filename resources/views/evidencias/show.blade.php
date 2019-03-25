@@ -23,7 +23,7 @@
                 <div class="col-md-11">
                     <dl class="dl-horizontal">
                         <dt>Evidencia</dt>
-                        <dd style="margin-bottom: 15px"><label class="label label-primary font-100p">{{$evidencia->nombre}}</label></dd>
+                        <dd style="margin-bottom: 15px"><label class="label-cal label-primary font-100p">{{$evidencia->nombre}}</label></dd>
                         <dt>Descripción</dt>
                         <dd>{{$evidencia->descripcion}}</dd>
                     </dl>
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="box-footer">
-                <a href="{!! route('indicadors.show',1) !!}" class="btn btn-default">Back</a>
+                <a href="{!! route('indicadors.show',$IdInd[1]) !!}" class="btn btn-default">Back</a>
             </div>
         </div>
     </div>

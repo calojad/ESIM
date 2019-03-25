@@ -76,7 +76,8 @@ class EvidenciaController extends AppBaseController
      */
     public function show($id)
     {
-        $evidencia = $this->evidenciaRepository->findWithoutFail($id);
+        $IdInd = explode('-',$id);
+        $evidencia = $this->evidenciaRepository->findWithoutFail($IdInd[0]);
 
         if (empty($evidencia)) {
             Flash::error('Evidencia not found');
@@ -97,7 +98,7 @@ class EvidenciaController extends AppBaseController
 
         $estrucElementos = EstructuraElementos::where('estruc_evide_id',$evidencia->estructuraEvidencias[0]->id)->get();
 
-        return view('evidencias.show',compact('evidencia','estruc_modelo','elementos','estrucElementos','eel_array'));
+        return view('evidencias.show',compact('evidencia','estruc_modelo','elementos','estrucElementos','eel_array','IdInd'));
     }
 
     /**

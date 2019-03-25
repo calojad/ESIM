@@ -3,13 +3,13 @@
     <!-- Nombre Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('nombre', 'Nombre:') !!}
-        {!! Form::text('nombre', null, ['class' => 'form-control','required'=>true]) !!}
+        {!! Form::textarea('nombre', null, ['style'=>'width:100%','required'=>true,'rows'=>2]) !!}
     </div>
 
     <!-- Secuencia Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('secuencia', 'Secuencia:') !!}
-        {!! Form::number('secuencia', null, ['class' => 'form-control','required'=>true]) !!}
+        {!! Form::number('secuencia', null, ['class' => 'form-control']) !!}
     </div>
 
     <!-- Importancia Field -->

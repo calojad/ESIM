@@ -7,6 +7,7 @@ use App\Models\EstructuraCriterios;
 use App\Models\EstructuraElementos;
 use App\Models\EstructuraEvidencias;
 use App\Models\EstructuraIndicadores;
+use App\Models\Evidencia;
 use App\Models\Indicador;
 use Illuminate\Http\Request;
 use Flash;
@@ -98,6 +99,8 @@ class EstructuraController extends Controller
         $evidencia = $request->get('evidencia_id');
         $elementos = $request->get('elementoSel');
 
+        $EstrucEvide = EstructuraEvidencias::find($estrucEvidencia);
+
         if (!empty($elementos)) {
             foreach ($elementos as $ele) {
                 EstructuraElementos::updateOrCreate(
@@ -106,11 +109,11 @@ class EstructuraController extends Controller
             }
         } else {
             Flash::error('No se ha seleccionado ningun elemento.');
-            return redirect(route('evidencias.show', $evidencia));
+            return redirect(route('evidencias.show', $evidencia.'-'.$EstrucEvide->estructuraIndicadore->indicador_id));
         }
 
         Flash::success('Evidencia(s) agregada(s).');
-        return redirect(route('evidencias.show', $evidencia));
+        return redirect(route('evidencias.show', $evidencia.'-'.$EstrucEvide->estructuraIndicadore->indicador_id));
     }
 
     public function postNewCriterio(Request $request)

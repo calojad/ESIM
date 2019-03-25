@@ -45,6 +45,7 @@ select, input[type="text"], input[type="password"], input[type="email"], input[t
     outline: none;
     vertical-align: middle;
     max-width: 100%;
+    width: 100%;
 }
 
 area:focus, input:focus, textarea:focus {
@@ -166,4 +167,13 @@ ul.sidebar-menu .fas, ul.sidebar-menu .fab, ul.sidebar-menu .far {
 /**********Elemento Oculto*********/
 .hiden {
     display: none;
+}
+
+/**********Label**************/
+.label-cal{
+    display: inline-block;
+    padding: .2em .6em .3em;
+    font-weight: 700;
+    vertical-align: baseline;
+    border-radius: .25em;
 }

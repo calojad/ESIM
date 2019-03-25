@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <title>Login - {{config('app.name','Laravel')}}</title>
-    <link rel="icon" href="{{asset('favicon.ico')}}">
+    <link rel="icon" href="{{asset('images/Logo/indice.png')}}">
 
     <!-- Bootstrap 3.3.7 -->
     {!! Html::style('/boostrap-3.3.7/css/bootstrap.min.css') !!}
