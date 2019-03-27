@@ -5,10 +5,11 @@
         <small>Home</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="{{URL::to('/home')}}"><i class="fas fa-home"></i> Home</a></li>
     </ol>
 @endsection
 @section('content')
+    @include('flash::message')
     <div class="box box-danger">
         <div class="box-header with-border">
             <h3 class="box-title">Blank Box</h3>

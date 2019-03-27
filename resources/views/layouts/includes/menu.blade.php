@@ -1,3 +1,4 @@
+@if(Auth::user()->rol == 1)
 <li class="header" style="font-size: 12pt">Mantenimientos</li>
 
 {{-- ********* SISTEMA ********* --}}
@@ -124,3 +125,8 @@
 <li class="{{ Request::is('unidadcarrera*') ? 'active' : '' }}">
     <a class="btnLoader" href="{!! route('unidadcarrera.index') !!}"><i class="fa fa-graduation-cap font-14pt"></i><span>Campus</span></a>
 </li>
+@else
+    <li class="{{ Request::is('unidadcarrera*') ? 'active' : '' }}">
+        <a class="btnLoader" href="{!! route('unidadcarrera.index') !!}"><i class="fa fa-graduation-cap font-14pt"></i><span>Campus</span></a>
+    </li>
+@endif

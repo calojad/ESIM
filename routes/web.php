@@ -12,15 +12,14 @@
 */
 
 //******RUTAS SIN AUTENTICACION
-
+Route::get('/',function(){return view('welcome');});
 
 //*****RUTAS CON AUTENTICACION
 Auth::routes();
 //*****GRUPO DE RUTAS
-Route::group(['middleware' => 'auth'], function () {
+Route::middleware(['auth','admin'])->group( function () {
 	//***HOME
 	Route::get('/home', 'HomeController@index')->name('home');
-	Route::get('/',function(){return view('home');});
 	//***Ubicaciones
 	Route::resource('ubicacions', 'UbicacionController');
 	//***Tipo Unidades
@@ -77,6 +76,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('matrizs', 'MatrizController');
     //***Responsable
     Route::resource('responsables', 'ResponsableController');
+    //***Tipo Matriz
+    Route::resource('tipoMatrizs', 'TipoMatrizController');
 });
 
-Route::resource('tipoMatrizs', 'TipoMatrizController');
+Route::middleware(['auth'])->group( function () {
+    //***HOME
+    Route::get('/home', 'HomeController@index')->name('home');
+});

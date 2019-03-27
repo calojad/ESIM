@@ -13,8 +13,9 @@
         <!-- Styles -->
         <style>
             html, body {
+                background: url("{{asset('images/texturas-tablero-negro_1203-2629.jpg')}}");
+                background-size: cover;
                 background-color: #fff;
-                color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -47,10 +48,17 @@
 
             .title {
                 font-size: 84px;
+                color: white;
+            }
+            .link-title > a {
+                font-size: 84px;
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
             }
 
             .links > a {
-                color: #636b6f;
+                color: white;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -58,13 +66,10 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
         </style>
     </head>
     <body>
+        @include('flash::message')
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -78,8 +83,11 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    {{ config('app.name','Laravel') }}
+                <div class="">
+                    <img src="{{asset('images/Logo/LogoUCACUE.png')}}" alt="Logo UCACUE">
+                </div>
+                <div class="title link-title">
+                    <a href="{{URL::to('/home')}}">{{ config('app.name','Laravel') }}</a>
                 </div>
             </div>
         </div>
