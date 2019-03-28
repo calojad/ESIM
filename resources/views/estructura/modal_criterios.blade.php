@@ -14,7 +14,6 @@
                         <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="tblCriteriosAdd">
                             <thead>
                             <tr>
-                                <th>Abrebiación</th>
                                 <th>Criterio</th>
                                 <th>Seleccionar</th>
                             </tr>
@@ -23,7 +22,6 @@
                             @foreach ($criterios as $criterio)
                                 @if(!in_array($criterio->id,$ec_array))
                                     <tr>
-                                        <td>{{ $criterio->abreviado }}</td>
                                         <td>{{ $criterio->nombre }}</td>
                                         <td>
                                             <div class="icheck" align="center">

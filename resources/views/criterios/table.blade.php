@@ -1,7 +1,6 @@
 <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="criterios-table">
     <thead>
         <tr>
-            <th>Abrevición</th>
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Estado</th>
@@ -11,7 +10,6 @@
     <tbody>
     @foreach($criterios as $criterio)
         <tr>
-            <td>{!! $criterio->abreviado !!}</td>
             <td>{!! $criterio->nombre !!}</td>
             <td>{!! $criterio->descripcion !!}</td>
             <td><label class="label {!! $criterio->estado==1?'label-success':'label-danger' !!}">{!! $criterio->estado==1?'Activo':'Inactivo' !!}</label></td>

@@ -5,16 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{config('app.name','Laravel')}} | {{  explode('/', strtoupper(Route::current()->uri()))[0]}}</title>
+        <link rel="icon" href="{{asset('images/Logo/indice.png')}}">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+        {{Html::style('boostrap-3.3.7/css/bootstrap.min.css')}}
         <style>
             html, body {
-                background: url("{{asset('images/texturas-tablero-negro_1203-2629.jpg')}}");
-                background-size: cover;
+                background: url("{{asset('images/boxed-bg.jpg')}}");
+                background-size: contain;
                 background-color: #fff;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -23,7 +25,7 @@
             }
 
             .full-height {
-                height: 100vh;
+                height: 90vh;
             }
 
             .flex-center {
@@ -52,13 +54,13 @@
             }
             .link-title > a {
                 font-size: 84px;
-                color: white;
+                font-weight: bold;
+                color: black;
                 text-decoration: none;
                 text-transform: uppercase;
             }
 
             .links > a {
-                color: white;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -74,10 +76,10 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a class="btn btn-default" href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-default" href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
             @endif
