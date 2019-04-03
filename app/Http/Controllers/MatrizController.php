@@ -71,6 +71,10 @@ class MatrizController extends AppBaseController
      */
     public function store(CreateMatrizRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:matriz,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
         $matriz = $this->matrizRepository->create($input);
 
@@ -149,6 +153,10 @@ class MatrizController extends AppBaseController
      */
     public function update($id, UpdateMatrizRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:matriz,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $matriz = $this->matrizRepository->findWithoutFail($id);
 
         if (empty($matriz)) {

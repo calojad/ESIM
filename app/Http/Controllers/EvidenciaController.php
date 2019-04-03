@@ -59,6 +59,10 @@ class EvidenciaController extends AppBaseController
      */
     public function store(CreateEvidenciaRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:evidencia,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
         $evidencia = $this->evidenciaRepository->create($input);
 
@@ -131,6 +135,10 @@ class EvidenciaController extends AppBaseController
      */
     public function update($id, UpdateEvidenciaRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:evidencia,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $evidencia = $this->evidenciaRepository->findWithoutFail($id);
 
         if (empty($evidencia)) {

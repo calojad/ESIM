@@ -55,6 +55,10 @@ class TipoMatrizController extends AppBaseController
      */
     public function store(CreateTipoMatrizRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:tipo_matriz,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $tipoMatriz = $this->tipoMatrizRepository->create($input);
@@ -114,6 +118,10 @@ class TipoMatrizController extends AppBaseController
      */
     public function update($id, UpdateTipoMatrizRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:tipo_matriz,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $tipoMatriz = $this->tipoMatrizRepository->findWithoutFail($id);
 
         if (empty($tipoMatriz)) {

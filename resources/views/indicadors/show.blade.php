@@ -57,6 +57,7 @@
                         <thead>
                         <tr>
                             <th>Evidencia</th>
+                            <th>Elementos</th>
                             <th>Accion</th>
                         </tr>
                         </thead>
@@ -64,9 +65,10 @@
                         @foreach($estrucEvidencias as $estEvi)
                             <tr>
                                 <td>{{$estEvi->evidencia->nombre}}</td>
+                                <td class="text-center"><label class="label label-success" style="font-size:11pt">{{$estEvi->estructuraElementos->count()}}</label></td>
                                 <td>
-                                    <button type="button" title="Quitar Evidencia" class="btn btn-xs btn-danger btnQuitarEvidencia" data-id="{{$estEvi->id}}"><i class="fa fa-trash-alt"></i></button>
                                     <a href="{{route('evidencias.show',$estEvi->evidencia->id.'-'.$estEvi->estructuraIndicadore->indicador_id)}}" title="Elementos" class="btn btn-xs btn-primary"><i class="far fa-caret-square-down" style="margin: 0"></i></a>
+                                    <button type="button" title="Quitar Evidencia" class="btn btn-xs btn-danger btnQuitarEvidencia" data-id="{{$estEvi->id}}"><i class="fa fa-trash-alt"></i></button>
                                 </td>
                             </tr>
                         @endforeach

@@ -18,9 +18,7 @@ class UsuarioAsignacionController extends Controller
      */
     public function index()
     {
-        $evaluadores = User::where('rol',2)
-                        ->where('estado',1)
-                        ->get();
+        $evaluadores = User::where('estado',1)->get();
         return view('usuario_asignacion.index', compact('evaluadores'));
     }
 

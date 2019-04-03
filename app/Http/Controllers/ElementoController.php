@@ -55,6 +55,10 @@ class ElementoController extends AppBaseController
      */
     public function store(CreateElementoRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:elemento,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
         $elemento = $this->elementoRepository->create($input);
 
@@ -113,6 +117,10 @@ class ElementoController extends AppBaseController
      */
     public function update($id, UpdateElementoRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:elemento,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $elemento = $this->elementoRepository->findWithoutFail($id);
 
         if (empty($elemento)) {

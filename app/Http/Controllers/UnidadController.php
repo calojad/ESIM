@@ -60,6 +60,10 @@ class UnidadController extends AppBaseController
      */
     public function store(CreateUnidadRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:unidad,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $unidad = $this->unidadRepository->create($input);
@@ -121,6 +125,10 @@ class UnidadController extends AppBaseController
      */
     public function update($id, UpdateUnidadRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:unidad,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $unidad = $this->unidadRepository->findWithoutFail($id);
 
         if (empty($unidad)) {

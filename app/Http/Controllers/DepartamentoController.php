@@ -57,6 +57,10 @@ class DepartamentoController extends AppBaseController
      */
     public function store(CreateDepartamentoRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:departamento,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $departamento = $this->departamentoRepository->create($input);
@@ -117,6 +121,10 @@ class DepartamentoController extends AppBaseController
      */
     public function update($id, UpdateDepartamentoRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:departamento,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $departamento = $this->departamentoRepository->findWithoutFail($id);
 
         if (empty($departamento)) {

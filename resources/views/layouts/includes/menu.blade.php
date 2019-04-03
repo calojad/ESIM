@@ -45,14 +45,14 @@
         <li class="{{ Request::is('periodos*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('periodos.index') !!}"><i class="{{ Request::is('periodos*') ? 'fas' : 'far' }} fa-circle"></i><span>Periodos</span></a>
         </li>
+        <li class="{{ Request::is('responsables*') ? 'active' : '' }}">
+            <a class="btnLoader" href="{!! route('responsables.index') !!}"><i class="{{ Request::is('responsables*') ? 'fas' : 'far' }} fa-circle"></i><span>Responsables</span></a>
+        </li>
         <li class="{{ Request::is('unidads*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('unidads.index') !!}"><i class="{{ Request::is('unidads*') ? 'fas' : 'far' }} fa-circle"></i><span>Unidades</span></a>
         </li>
         <li class="{{ Request::is('users*') ? 'active' : '' }}">
             <a class="btnLoader" href="{!! route('users.index') !!}"><i class="{{ Request::is('users*') ? 'fas' : 'far' }} fa-circle"></i><span>Usuarios</span></a>
-        </li>
-        <li class="{{ Request::is('responsables*') ? 'active' : '' }}">
-            <a class="btnLoader" href="{!! route('responsables.index') !!}"><i class="{{ Request::is('responsables*') ? 'fas' : 'far' }} fa-circle"></i><span>Responsables</span></a>
         </li>
     </ul>
 </li>

@@ -5,7 +5,7 @@
         <small>Usuarios Evaluadores</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="{{URL::to('/home')}}"><i class="fas fa-home"></i> Home</a></li>
         <li>Usuarios Evaluadores</li>
     </ol>
 @endsection

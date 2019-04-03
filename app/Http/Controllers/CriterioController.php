@@ -55,6 +55,10 @@ class CriterioController extends AppBaseController
      */
     public function store(CreateCriterioRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:criterio,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $criterio = $this->criterioRepository->create($input);
@@ -114,6 +118,10 @@ class CriterioController extends AppBaseController
      */
     public function update($id, UpdateCriterioRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:criterio,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $criterio = $this->criterioRepository->findWithoutFail($id);
 
         if (empty($criterio)) {

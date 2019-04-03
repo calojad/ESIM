@@ -56,6 +56,10 @@ class UbicacionController extends AppBaseController
      */
     public function store(CreateUbicacionRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:ubicacion,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $ubicacion = $this->ubicacionRepository->create($input);
@@ -115,6 +119,10 @@ class UbicacionController extends AppBaseController
      */
     public function update($id, UpdateUbicacionRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:ubicacion,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $ubicacion = $this->ubicacionRepository->findWithoutFail($id);
 
         if (empty($ubicacion)) {

@@ -14,7 +14,7 @@
             <td>{!! $user->username !!}</td>
             <td>{!! $user->rol==1?'Administrador':'Evaluador' !!}</td>
             <td>
-                <a class="btn btn-success btnLoader" href="{!! route('usuarioasignacion.show',$user->id) !!}" title="Asignar Carreras">Asignaciones</a>
+                <a class="btn btn-success btnLoader" href="{!! route('usuarioasignacion.show',$user->id) !!}" title="Asignar Carreras">Asignar</a>
             </td>
         </tr>
     @endforeach

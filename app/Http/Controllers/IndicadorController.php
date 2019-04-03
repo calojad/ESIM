@@ -69,6 +69,10 @@ class IndicadorController extends AppBaseController
      */
     public function store(Request $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:indicador,nombre',
+            'estado' => 'required'
+        ]);
         $this->validator($request);
         $input = $request->all();
 
@@ -151,6 +155,10 @@ class IndicadorController extends AppBaseController
      */
     public function update($id, UpdateIndicadorRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:indicador,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $indicador = $this->indicadorRepository->findWithoutFail($id);
 
         if (empty($indicador)) {

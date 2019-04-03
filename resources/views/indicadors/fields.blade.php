@@ -15,8 +15,7 @@
         <!-- Descripcion Field -->
         <div class="form-group col-sm-12">
             {!! Form::label('descripcion', 'Descripcion:') !!}
-            {!! Form::textarea('descripcion', null, ['class' => 'form-control','required'=>true,'rows'=>3,'maxlength'=>255,'id'=>'txaDescrip']) !!}
-            <span class="text-muted pull-right" id="contador"></span>
+            {!! Form::textarea('descripcion', null, ['class' => 'form-control','required'=>true,'rows'=>3,'id'=>'txaDescrip']) !!}
         </div>
 
         <!-- Grupo Valor Id Field -->
@@ -82,12 +81,7 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-        contTextarea($('#txaDescrip'),$('#contador'));
         verTipoIndicador($('#divFormula'),$('#divGrupoValor'),$('#selTipoIndicador option:selected').text())
-    });
-    //TextArea contar caracteres
-    $('#txaDescrip').on('keyup',function() {
-        contTextarea($(this),$('#contador'));
     });
     //Select tipo indicador
     $('#selTipoIndicador').on('change',function () {
@@ -109,12 +103,6 @@
             increaseArea: '20%'
         });
     });
-    //Contar numero de caracteres del textarea
-    function contTextarea(txarea,count){
-        var chars = txarea.val().length;
-        var diff = 255 - chars;
-        count.html(diff+'/255');
-    }
     // Verificar el tipo de indicador y mostrar la respectiva entrada
     function verTipoIndicador(divF,divG,obj) {
         if(obj === 'Cuantitativos'){

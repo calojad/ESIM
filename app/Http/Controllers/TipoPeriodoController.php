@@ -56,6 +56,10 @@ class TipoPeriodoController extends AppBaseController
      */
     public function store(CreateTipoPeriodoRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:tipo_periodo,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $tipoPeriodo = $this->tipoPeriodoRepository->create($input);
@@ -115,6 +119,10 @@ class TipoPeriodoController extends AppBaseController
      */
     public function update($id, UpdateTipoPeriodoRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:tipo_periodo,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $tipoPeriodo = $this->tipoPeriodoRepository->findWithoutFail($id);
 
         if (empty($tipoPeriodo)) {

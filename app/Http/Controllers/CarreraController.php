@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Responsable;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Http\Requests\CreateCarreraRequest;
 use App\Http\Requests\UpdateCarreraRequest;
-use App\Http\Controllers\AppBaseController;
+use App\Models\Responsable;
 use App\Repositories\CarreraRepository;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
+use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
 class CarreraController extends AppBaseController
@@ -56,12 +55,13 @@ class CarreraController extends AppBaseController
      */
     public function store(CreateCarreraRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:carrera,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
-
         $carrera = $this->carreraRepository->create($input);
-
         Flash::success('Carrera saved successfully.');
-
         return redirect(route('carreras.index'));
     }
 
@@ -78,7 +78,6 @@ class CarreraController extends AppBaseController
 
         if (empty($carrera)) {
             Flash::error('Carrera not found');
-
             return redirect(route('carreras.index'));
         }
 
@@ -98,7 +97,6 @@ class CarreraController extends AppBaseController
 
         if (empty($carrera)) {
             Flash::error('Carrera not found');
-
             return redirect(route('carreras.index'));
         }
         $responsables = Responsable::where('estado',1)->pluck('nombre','id');
@@ -115,16 +113,18 @@ class CarreraController extends AppBaseController
      */
     public function update($id, UpdateCarreraRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:carrera,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $carrera = $this->carreraRepository->findWithoutFail($id);
 
         if (empty($carrera)) {
             Flash::error('Carrera not found');
-
             return redirect(route('carreras.index'));
         }
 
         $carrera = $this->carreraRepository->update($request->all(), $id);
-
         Flash::success('Carrera updated successfully.');
 
         return redirect(route('carreras.index'));
@@ -143,12 +143,10 @@ class CarreraController extends AppBaseController
 
         if (empty($carrera)) {
             Flash::error('Carrera not found');
-
             return redirect(route('carreras.index'));
         }
 
         $this->carreraRepository->delete($id);
-
         Flash::success('Carrera deleted successfully.');
 
         return redirect(route('carreras.index'));

@@ -56,6 +56,10 @@ class TipoEvaluacionController extends AppBaseController
      */
     public function store(CreateTipoEvaluacionRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:tipo_evaluacion,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $tipoEvaluacion = $this->tipoEvaluacionRepository->create($input);
@@ -115,6 +119,10 @@ class TipoEvaluacionController extends AppBaseController
      */
     public function update($id, UpdateTipoEvaluacionRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:tipo_evaluacion,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $tipoEvaluacion = $this->tipoEvaluacionRepository->findWithoutFail($id);
 
         if (empty($tipoEvaluacion)) {

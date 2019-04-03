@@ -5,12 +5,6 @@
         {!! Form::text('nombre', null, ['class' => 'form-control UpperCase','required' => true,'autofocus' => true]) !!}
     </div>
 
-    <!-- Abreviado Field -->
-    <div class="form-group col-sm-12">
-        {!! Form::label('abreviado', 'Abreviado:') !!}
-        {!! Form::text('abreviado', null, ['class' => 'form-control UpperCase']) !!}
-    </div>
-
     <!-- Descripcion Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('descripcion', 'Descripcion:') !!}

@@ -56,6 +56,10 @@ class TipoUnidadController extends AppBaseController
      */
     public function store(CreateTipoUnidadRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:tipo_unidad,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $tipoUnidad = $this->tipoUnidadRepository->create($input);
@@ -115,6 +119,10 @@ class TipoUnidadController extends AppBaseController
      */
     public function update($id, UpdateTipoUnidadRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:tipo_unidad,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $tipoUnidad = $this->tipoUnidadRepository->findWithoutFail($id);
 
         if (empty($tipoUnidad)) {

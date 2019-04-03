@@ -19,15 +19,9 @@
                             </div>
                         </div>
                         <div class="form-group aling-left">
-                            <label class="col-md-2" for="inpAbreviado">Abreviación:</label>
-                            <div class="col-md-8">
-                                <input id="inpAbreviado" class="form-control" type="text" name="abreviado" required>
-                            </div>
-                        </div>
-                        <div class="form-group aling-left">
                             <label class="col-md-2" for="txareaDescrip">Descripción:</label>
                             <div class="col-md-8">
-                                <textarea id="txareaDescrip" class="form-control" rows="2" maxlength="255" name="descripcion" required></textarea>
+                                <textarea id="txareaDescrip" class="form-control" rows="2" maxlength="255" name="descripcion"></textarea>
                                 <span id="contadorCriterio" class="pull-right">255</span>
                                 <script>
                                     $('#txareaDescrip').on('keyup',function() {

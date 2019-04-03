@@ -55,6 +55,10 @@ class TipoIndicadorController extends AppBaseController
      */
     public function store(CreateTipoIndicadorRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:tipo_indicador,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $tipoIndicador = $this->tipoIndicadorRepository->create($input);
@@ -114,6 +118,10 @@ class TipoIndicadorController extends AppBaseController
      */
     public function update($id, UpdateTipoIndicadorRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:tipo_indicador,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $tipoIndicador = $this->tipoIndicadorRepository->findWithoutFail($id);
 
         if (empty($tipoIndicador)) {

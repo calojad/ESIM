@@ -61,6 +61,10 @@ class GrupoValorController extends AppBaseController
      */
     public function store(CreateGrupoValorRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:grupo_valor,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $grupoValor = $this->grupoValorRepository->create($input);
@@ -121,6 +125,10 @@ class GrupoValorController extends AppBaseController
      */
     public function update($id, UpdateGrupoValorRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:grupo_valor,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $grupoValor = $this->grupoValorRepository->findWithoutFail($id);
 
         if (empty($grupoValor)) {

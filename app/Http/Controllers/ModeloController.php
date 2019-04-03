@@ -61,6 +61,10 @@ class ModeloController extends AppBaseController
      */
     public function store(CreateModeloRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:modelo,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $modelo = $this->modeloRepository->create($input);
@@ -208,6 +212,10 @@ class ModeloController extends AppBaseController
      */
     public function update($id, UpdateModeloRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:modelo,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $modelo = $this->modeloRepository->findWithoutFail($id);
 
         if (empty($modelo)) {

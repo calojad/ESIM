@@ -78,6 +78,6 @@ class EstructuraEvidencias extends Model
      **/
     public function estructuraElementos()
     {
-        return $this->hasMany(\App\Models\EstructuraElementos::class);
+        return $this->hasMany(\App\Models\EstructuraElementos::class,'estruc_evide_id');
     }
 }

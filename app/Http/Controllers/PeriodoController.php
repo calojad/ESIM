@@ -56,6 +56,10 @@ class PeriodoController extends AppBaseController
      */
     public function store(CreatePeriodoRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:periodo,nombre',
+            'estado' => 'required'
+        ]);
         $input = $request->all();
 
         $periodo = $this->periodoRepository->create($input);
@@ -116,6 +120,10 @@ class PeriodoController extends AppBaseController
      */
     public function update($id, UpdatePeriodoRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:periodo,nombre,'.$id,
+            'estado' => 'required'
+        ]);
         $periodo = $this->periodoRepository->findWithoutFail($id);
 
         if (empty($periodo)) {
