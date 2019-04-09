@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3f4dd-1450-4e65-a1d3-4c4798818ff9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c81fcab-1bf9-4604-8e90-1edff3e9d213.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c81fcab-1bf9-4604-8e90-1edff3e9d213.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ER-ESIM.dia" beforeDir="false" afterPath="$PROJECT_DIR$/ER-ESIM.dia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CarreraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CarreraController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CriterioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CriterioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DepartamentoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DepartamentoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ElementoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ElementoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GrupoValorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GrupoValorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MatrizController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MatrizController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PeriodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PeriodoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TipoEvaluacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TipoEvaluacionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TipoIndicadorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TipoIndicadorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TipoMatrizController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TipoMatrizController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TipoPeriodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TipoPeriodoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TipoUnidadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TipoUnidadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UbicacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UbicacionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UnidadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UnidadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioAsignacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioAsignacionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/TipoMatriz.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TipoMatriz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/criterios/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/criterios/fields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/criterios/modal_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/criterios/modal_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/indicadors/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/fields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/includes/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuario_asignacion/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuario_asignacion/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuario_asignacion/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuario_asignacion/table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +45,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -123,7 +95,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php" />
         <option value="$PROJECT_DIR$/resources/views/criterios/table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/estructura/modal_criterios.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" />
         <option value="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuario_asignacion/index.blade.php" />
@@ -166,6 +137,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/UbicacionController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UnidadController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
       </list>
     </option>
   </component>
@@ -272,6 +244,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -283,7 +256,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,13 +272,13 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\images" />
       <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\plugins\easy-tree" />
       <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\images\Logo" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -424,11 +396,13 @@
       <workItem from="1554125452217" duration="5008000" />
       <workItem from="1554232566418" duration="81000" />
       <workItem from="1554296674157" duration="5948000" />
+      <workItem from="1554752298103" duration="3356000" />
+      <workItem from="1554815478526" duration="508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="552703000" />
+    <option name="totallyTimeSpent" value="556567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -485,13 +459,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/Elemento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Evidencia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
@@ -816,13 +783,6 @@
     <entry file="file://$PROJECT_DIR$/resources/views/users/index.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/modelos/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/EstructuraCriterios.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -834,6 +794,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/modelos/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="88" column="97" selection-start-line="88" selection-start-column="97" selection-end-line="88" selection-end-column="97" />
         </state>
       </provider>
     </entry>

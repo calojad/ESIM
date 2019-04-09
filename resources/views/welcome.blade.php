@@ -86,7 +86,7 @@
 
             <div class="content">
                 <div class="">
-                    <img src="{{asset('images/Logo/LogoUCACUE.png')}}" alt="Logo UCACUE">
+                    <img src="{{asset('images/Logo/LogoUCACUE.png')}}" alt="Logo UCACUE" width="70%" height="70%">
                 </div>
                 <div class="title link-title">
                     <a href="{{URL::to('/home')}}">{{ config('app.name','Laravel') }}</a>
