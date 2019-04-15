@@ -35,7 +35,6 @@ class CreateTablesMenuMatriz extends Migration
         Schema::create('criterio', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('abreviado')->nullable();
             $table->text('descripcion')->nullable();
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
@@ -77,6 +76,7 @@ class CreateTablesMenuMatriz extends Migration
             $table->integer('padre_id')->unsigned()->nullable();
             $table->integer('nivel')->default(1);
             $table->string('abrebiado')->nullable()->default(null);
+            $table->integer('secuencia')->nullable()->default(null);
             $table->timestamps();
         });
         Schema::create('estructura_indicadores', function (Blueprint $table) {
@@ -84,6 +84,7 @@ class CreateTablesMenuMatriz extends Migration
             $table->integer('estruc_crite_id')->unsigned();
             $table->integer('indicador_id')->unsigned();
             $table->string('abrebiado')->nullable()->default(null);
+            $table->integer('secuencia')->nullable()->default(null);
             $table->timestamps();
         });
         Schema::create('estructura_evidencias', function (Blueprint $table) {
@@ -91,6 +92,7 @@ class CreateTablesMenuMatriz extends Migration
             $table->integer('estruc_indic_id')->unsigned();
             $table->integer('evidencia_id')->unsigned();
             $table->string('abrebiado')->nullable()->default(null);
+            $table->integer('secuencia')->nullable()->default(null);
             $table->timestamps();
         });
         Schema::create('estructura_elementos', function (Blueprint $table) {
@@ -98,6 +100,7 @@ class CreateTablesMenuMatriz extends Migration
             $table->integer('estruc_evide_id')->unsigned();
             $table->integer('elemento_id')->unsigned();
             $table->string('abrebiado')->nullable()->default(null);
+            $table->integer('secuencia')->nullable()->default(null);
             $table->timestamps();
         });
     }

@@ -36,7 +36,9 @@ class EstructuraCriterios extends Model
         'modelo_id',
         'criterio_id',
         'padre_id',
-        'nivel'
+        'nivel',
+        'abrebiado',
+        'secuencia'
     ];
 
     /**
@@ -49,7 +51,9 @@ class EstructuraCriterios extends Model
         'modelo_id' => 'integer',
         'criterio_id' => 'integer',
         'padre_id' => 'integer',
-        'nivel' => 'integer'
+        'nivel' => 'integer',
+        'abrebiado' => 'string',
+        'secuencia' => 'integer'
     ];
 
     /**
@@ -62,7 +66,7 @@ class EstructuraCriterios extends Model
     ];
 
     public function childs() {
-        return $this->hasMany('\App\Models\EstructuraCriterios','padre_id','id') ;
+        return $this->hasMany('\App\Models\EstructuraCriterios','padre_id','id') ->orderBy('secuencia','asc');
     }
 
     /**
@@ -94,6 +98,6 @@ class EstructuraCriterios extends Model
      **/
     public function estructuraIndicadores()
     {
-        return $this->hasMany('\App\Models\EstructuraIndicadores','estruc_crite_id','id');
+        return $this->hasMany('\App\Models\EstructuraIndicadores','estruc_crite_id','id')->orderBy('secuencia','asc');
     }
 }

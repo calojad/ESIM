@@ -116,10 +116,11 @@ class ModeloController extends AppBaseController
     {
         $Categorys = EstructuraCriterios::where('nivel', '=', 1)
             ->where('modelo_id',$id)
+            ->orderby('secuencia','asc')
             ->get();
         $tree = '<ul>';
         foreach ($Categorys as $Category) {
-            $tree .= '<li><a data-id="'.$Category->id.'" data-nivel="'.$Category->nivel.'">' . $Category->criterio->abreviado.' - '.$Category->criterio->nombre. '</a>';
+            $tree .= '<li><a data-id="'.$Category->id.'" data-nivel="'.$Category->nivel.'">' . $Category->secuencia.' - '.$Category->criterio->nombre. '</a>';
             // Se verifica si tiene subcriterios
             if ($Category->childs->count()) {
                 $tree .= $this->childView($Category);
@@ -140,10 +141,10 @@ class ModeloController extends AppBaseController
         foreach ($Category->childs as $arr) {
             // Verifica si hay mas subcriterios
             if ($arr->childs->count()) {
-                $html .= '<li><a data-id="'.$arr->id.'" data-nivel="'.$arr->nivel.'">'.$arr->criterio->abreviado.' - '.$arr->criterio->nombre.'</a>';
+                $html .= '<li><a data-id="'.$arr->id.'" data-nivel="'.$arr->nivel.'">'.$arr->secuencia.' - '.$arr->criterio->nombre.'</a>';
                 $html .= $this->childView($arr);
             } else {
-                $html .= '<li><a data-id="'.$arr->id.'" data-nivel="'.$arr->nivel.'">'.$arr->criterio->abreviado.' - '.$arr->criterio->nombre .'</a>';
+                $html .= '<li><a data-id="'.$arr->id.'" data-nivel="'.$arr->nivel.'">'.$arr->secuencia.' - '.$arr->criterio->nombre .'</a>';
             }
             // Verifica si hay Indicadores
             if ($arr->estructuraIndicadores->count()){
@@ -159,22 +160,8 @@ class ModeloController extends AppBaseController
     {
         $html = '<ul>';
         foreach ($Criterio->estructuraIndicadores as $indi) {
-            /*if ($indi->estructuraEvidencias->count()) {
-                $html .= '<li><a data-id="'.$indi->id.'">'.$indi->indicador->nombre.'</a>';
-                $html .= $this->childViewEvidencia($indi);
-            } else {*/
                 $html .= '<li><a data-id="'.$indi->id .'" data-href="'.route('indicadors.show',$indi->indicador_id).'" data-nmevide="'.$indi->estructuraEvidencias->count().'">'.$indi->indicador->nombre.'</a>';
 //            }
-            $html .= "</li>";
-        }
-
-        $html .= "</ul>";
-        return $html;
-    }
-    public function childViewEvidencia($Indicador){
-        $html = '<ul>';
-        foreach ($Indicador->estructuraEvidencias as $evi) {
-            $html .= '<li><a data-id="'.$evi->id .'">'.$evi->evidencia->nombre.'</a>';
             $html .= "</li>";
         }
 
@@ -216,7 +203,7 @@ class ModeloController extends AppBaseController
             'nombre' => 'required|string|unique:modelo,nombre,'.$id,
             'estado' => 'required'
         ]);
-        $modelo = $this->modeloRepository->findWithoutFail($id);
+        $modelo = $this->modeloRepository->findWithoutFaestructura_evidenciasil($id);
 
         if (empty($modelo)) {
             Flash::error('Modelo not found');

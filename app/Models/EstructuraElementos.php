@@ -33,7 +33,8 @@ class EstructuraElementos extends Model
     public $fillable = [
         'estruc_evide_id',
         'elemento_id',
-        'abrebiado'
+        'abrebiado',
+        'secuencia'
     ];
 
     /**
@@ -45,7 +46,8 @@ class EstructuraElementos extends Model
         'id' => 'integer',
         'estruc_evide_id' => 'integer',
         'elemento_id' => 'integer',
-        'abrebiado' => 'string'
+        'abrebiado' => 'string',
+        'secuencia' => 'integer',
     ];
 
     /**

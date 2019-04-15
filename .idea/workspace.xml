@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="08c3f4dd-1450-4e65-a1d3-4c4798818ff9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ER-ESIM.dia" beforeDir="false" afterPath="$PROJECT_DIR$/ER-ESIM.dia" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Criterio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Criterio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/EstructuraCriterios.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstructuraCriterios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/EstructuraElementos.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstructuraElementos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/EstructuraIndicadores.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/EstructuraIndicadores.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,7 +53,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -71,7 +79,6 @@
       <find>carrera</find>
       <find>pluc</find>
       <find>contador</find>
-      <find>childViewEvidencia</find>
       <find>cont</find>
       <find>selTipoMatriz</find>
       <find>btnRegistre</find>
@@ -79,6 +86,7 @@
       <find>tblCriteriosAdd</find>
       <find>nmevide</find>
       <find>txaDescrip</find>
+      <find>childViewEvidencia</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -87,15 +95,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Middleware/RolEvaluador.php" />
-        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/RolAdmin.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php" />
         <option value="$PROJECT_DIR$/resources/views/criterios/table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/estructura/modal_criterios.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" />
         <option value="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuario_asignacion/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/usuario_asignacion/table.blade.php" />
@@ -104,7 +107,6 @@
         <option value="$PROJECT_DIR$/resources/views/criterios/modal_form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/indicadors/fields.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Carrera.php" />
-        <option value="$PROJECT_DIR$/app/Models/Criterio.php" />
         <option value="$PROJECT_DIR$/app/Models/Departamento.php" />
         <option value="$PROJECT_DIR$/app/Models/Elemento.php" />
         <option value="$PROJECT_DIR$/app/Models/Evidencia.php" />
@@ -127,7 +129,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/GrupoValorController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MatrizController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PeriodoController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TipoEvaluacionController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TipoIndicadorController.php" />
@@ -138,6 +139,13 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/UnidadController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php" />
+        <option value="$PROJECT_DIR$/app/Models/Criterio.php" />
+        <option value="$PROJECT_DIR$/app/Models/EstructuraElementos.php" />
+        <option value="$PROJECT_DIR$/app/Models/EstructuraEvidencias.php" />
+        <option value="$PROJECT_DIR$/app/Models/EstructuraIndicadores.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" />
+        <option value="$PROJECT_DIR$/app/Models/EstructuraCriterios.php" />
       </list>
     </option>
   </component>
@@ -233,8 +241,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-3" />
-    <option name="y" value="-23" />
+    <option name="x" value="-68" />
+    <option name="y" value="-8" />
     <option name="width" value="1364" />
     <option name="height" value="726" />
   </component>
@@ -269,7 +277,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -398,11 +406,17 @@
       <workItem from="1554296674157" duration="5948000" />
       <workItem from="1554752298103" duration="3356000" />
       <workItem from="1554815478526" duration="508000" />
+      <workItem from="1554848924075" duration="620000" />
+      <workItem from="1554901781116" duration="253000" />
+      <workItem from="1554929956124" duration="1390000" />
+      <workItem from="1555339593039" duration="1232000" />
+      <workItem from="1555341048585" duration="4300000" />
+      <workItem from="1555362791610" duration="5261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="556567000" />
+    <option name="totallyTimeSpent" value="569623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -459,62 +473,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/Evidencia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Formulas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-341">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/FormulaVariable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-341">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/GrupoValor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Indicador.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Matriz.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-686">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Modelo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-617">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Periodo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Responsable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-479">
@@ -686,13 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModeloController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="215" column="54" selection-start-line="215" selection-start-column="54" selection-end-line="215" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PeriodoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -783,20 +734,6 @@
     <entry file="file://$PROJECT_DIR$/resources/views/users/index.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraCriterios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/modelos/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -804,10 +741,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="84" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="88" column="97" selection-start-line="88" selection-start-column="97" selection-end-line="88" selection-end-column="97" />
+        <state relative-caret-position="-540">
+          <caret line="57" column="27" lean-forward="true" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Criterio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraElementos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraEvidencias.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Evidencia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraIndicadores.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-341">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1817">
+          <caret line="102" column="68" selection-start-line="102" selection-start-column="68" selection-end-line="102" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/EstructuraCriterios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="68" column="107" selection-start-line="68" selection-start-column="107" selection-end-line="68" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModeloController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="146" column="102" selection-start-line="146" selection-start-column="102" selection-end-line="146" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/plugins/easy-tree/easyTree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="63" column="59" lean-forward="true" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

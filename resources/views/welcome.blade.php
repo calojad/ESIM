@@ -71,15 +71,16 @@
         </style>
     </head>
     <body>
+        <div id="preloader" class='preloader'><div class='loaded'>&nbsp;</div></div>
         @include('flash::message')
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a class="btn btn-default" href="{{ url('/home') }}">Home</a>
+                        <a class="btn btn-default btnLoader" href="{{ url('/home') }}">Home</a>
                     @else
-                        <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
-                        <a class="btn btn-default" href="{{ route('register') }}">Register</a>
+                        <a class="btn btn-primary btnLoader" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-default btnLoader" href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
             @endif
@@ -93,5 +94,29 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            //Al dar click en un boton Loader mostrar el overlay
+            $('.btnLoader').on('click',function () {
+                alert('HOLA');
+                var sum=0;
+                $("form input:required").each(function() {
+                    if ($(this).val() === '') {
+                        sum = sum + 1;
+                    }
+                });
+                $("form select:required").each(function() {
+                    if ($(this).val() === '') {
+                        sum = sum + 1;
+                    }
+                });
+                $("form textarea:required").each(function() {
+                    if ($(this).val() === '') {
+                        sum = sum + 1;
+                    }
+                });
+                if(sum === 0)
+                    $(".preloader").fadeIn("slow");
+            });
+        </script>
     </body>
 </html>

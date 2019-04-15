@@ -34,7 +34,6 @@ class Criterio extends Model
 
     public $fillable = [
         'nombre',
-        'abreviado',
         'descripcion',
         'estado'
     ];

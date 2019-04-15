@@ -33,7 +33,8 @@ class EstructuraEvidencias extends Model
     public $fillable = [
         'estruc_indic_id',
         'evidencia_id',
-        'abrebiado'
+        'abrebiado',
+        'secuencia'
     ];
 
     /**
@@ -45,7 +46,8 @@ class EstructuraEvidencias extends Model
         'id' => 'integer',
         'estruc_indic_id' => 'integer',
         'evidencia_id' => 'integer',
-        'abrebiado' => 'string'
+        'abrebiado' => 'string',
+        'secuencia' => 'integer',
     ];
 
     /**

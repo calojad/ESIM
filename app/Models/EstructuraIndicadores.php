@@ -33,7 +33,8 @@ class EstructuraIndicadores extends Model
     public $fillable = [
         'estruc_crite_id',
         'indicador_id',
-        'abrebiado'
+        'abrebiado',
+        'secuencia'
     ];
 
     /**
@@ -45,7 +46,8 @@ class EstructuraIndicadores extends Model
         'id' => 'integer',
         'estruc_crite_id' => 'integer',
         'indicador_id' => 'integer',
-        'abrebiado' => 'string'
+        'abrebiado' => 'string',
+        'secuencia' => 'integer',
     ];
 
     /**
