@@ -14,7 +14,7 @@
         <tr>
             <td>{!! $user->name!!}</td>
             <td>{!! $user->username !!}</td>
-            <td>{!! $user->rol==1?'Administrador':'Evaluador' !!}</td>
+            <td>{!! $user->rol==1?'Administrador':'Usuario' !!}</td>
             <td>{!! $user->email !!}</td>
             <td><label class="label {!! $user->estado==1?'label-success':'label-danger' !!}">{!! $user->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>

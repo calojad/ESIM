@@ -20,7 +20,7 @@
     <!-- Rol Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('rol', 'Rol:') !!}
-        {!! Form::select('rol', [1=>'Administrador',2=>'Evaluador'], $user!=null?$user->rol:1,['class' => 'form-control', 'required' => true]) !!}
+        {!! Form::select('rol', [1=>'Administrador',2=>'Usuario'], $user!=null?$user->rol:1,['class' => 'form-control', 'required' => true]) !!}
     </div>
 
     <!-- Estado Field -->

@@ -20,10 +20,10 @@ class ElementoRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'secuencia',
         'nombre',
         'importancia',
-        'estado'
+        'estado',
+        'duplicar'
     ];
 
     /**

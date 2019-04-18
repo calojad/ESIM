@@ -16,6 +16,7 @@
                             <thead>
                             <tr>
                                 <th>Evidencia</th>
+                                <th>Descripción</th>
                                 <th>Seleccionar</th>
                             </tr>
                             </thead>
@@ -24,6 +25,7 @@
                                 @if(!in_array($evide->id,$ee_array))
                                     <tr>
                                         <td>{{ $evide->nombre }}</td>
+                                        <td>{{ str_limit($evide->descripcion,50) }}</td>
                                         <td>
                                             <div class="icheck" align="center">
                                                 {!! Form::checkbox('evidenciaSel[]',$evide->id,null,['class' => 'chkAgregarEvi inputIcheck']) !!}

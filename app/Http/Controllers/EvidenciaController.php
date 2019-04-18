@@ -96,7 +96,9 @@ class EvidenciaController extends AppBaseController
         $eel_array = EstructuraElementos::join('estructura_evidencias','estructura_elementos.estruc_evide_id','=','estructura_evidencias.id')
             ->join('estructura_indicadores','estructura_evidencias.estruc_indic_id','=','estructura_indicadores.id')
             ->join('estructura_criterios','estructura_indicadores.estruc_crite_id','=','estructura_criterios.id')
+            ->join('elemento','elemento.id','=','estructura_elementos.elemento_id')
             ->where('estructura_criterios.modelo_id',$estruc_modelo->modelo_id)
+            ->where('elemento.duplicar',0)
             ->pluck('estructura_elementos.elemento_id')
             ->toArray();
 

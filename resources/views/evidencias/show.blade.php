@@ -52,7 +52,7 @@
                         <tbody>
                         @foreach($estrucElementos as $estEle)
                             <tr>
-                                <td>{{$estEle->elemento->secuencia}}</td>
+                                <td>{{$estEle->secuencia}}</td>
                                 <td>{{$estEle->elemento->nombre}}</td>
                                 <td>
                                     <button type="button" title="Quitar Elemento" class="btn btn-xs btn-danger btnQuitarElemento" data-id="{{$estEle->id}}"><i class="fa fa-trash-alt"></i></button>

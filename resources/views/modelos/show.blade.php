@@ -61,6 +61,7 @@
                             <a id="btnCancelBoxTools" class="btn btn-default" style="display: none"><i class="fa fa-times-circle"></i> Cancelar</a>
                             <a id="btnAgregarCriterio1" class="btn btn-success" data-toggle="modal"
                                data-target="#modalAgregarCriterio" style="display: none"><i class="fa fa-plus" title="Agregar Elemento"></i> Agregar Criterio</a>
+                            <a id="btnSaveSecuencia" class="btn btn-primary" href="javascript: void(0);" style="display: none"><i class="fa fa-save"></i> Guardar Secuencia</a>
                         </div>
                         <div class="col-md-6" align="right">
                             <button class="btn btn-default text-blue" data-toggle="modal" data-target="#modalFormCriterio"><i class="fa fa-plus"></i> Nuevo Criterio</button>
@@ -71,7 +72,7 @@
                 <div id="divEstructura" class="col-md-12" style="background-color: #cccccc;height: 70vh;">
                     <div class="col-md-12" style="margin-top: 10px">
                         <div class="easy-tree">
-                            {!! $treev !!}
+                                {!! $treev !!}
                         </div>
                     </div>
                 </div>
@@ -133,6 +134,10 @@
                     }
                 });
             });
+            //Cambios en el input mostrar boton guardar
+            $('.inpSecuencia').on('change',function () {
+                $('#btnSaveSecuencia').show();
+            });
         });
         //Mostrar BoxTools
         $('#btnShowBoxTools').on('click', function () {
@@ -147,7 +152,22 @@
             $('.boxTools').hide();
             $('#btnAgregarCriterio1').hide();
             $('#btnShowBoxTools').show();
+            $('#btnSaveSecuencia').hide();
         });
+        //Boton guardar secuencias
+        $('#btnSaveSecuencia').on('click', function () {
+            var token = '{{ csrf_token() }}';
+            var secuencias = [];
+            $('.inpSecuencia').each(function () {
+                secuencias.push({valor:$(this).val(),id:$(this).data('id'),tb:$(this).data('estructura')});
+            });
+            var datos = {secuencias:secuencias,_token:token};
+            var url = '{{URL::to('estructura/update-secuencia')}}';
+            $.post(url,datos,function (json) {
+                location.reload();
+            },'json')
+        });
+
         /*
         *******FUNCIONES*******
         */

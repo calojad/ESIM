@@ -6,17 +6,20 @@
         {!! Form::textarea('nombre', null, ['style'=>'width:100%','required'=>true,'rows'=>2]) !!}
     </div>
 
-    <!-- Secuencia Field -->
-    <div class="form-group col-sm-12">
-        {!! Form::label('secuencia', 'Secuencia:') !!}
-        {!! Form::number('secuencia', null, ['class' => 'form-control']) !!}
-    </div>
+    <div class="col-md-12">
+        <!-- Importancia Field -->
+        <div class="form-group col-sm-6 col-md-6 icheck">
+            <label class="col-sm-12 col-md-12 col-lg-12">Importante:
+                {!! Form::checkbox('importancia',1,null,['id'=>'chkImport']) !!}
+            </label>
+        </div>
 
-    <!-- Importancia Field -->
-    <div class="form-group col-sm-12 col-md-12 icheck">
-        <label class="col-sm-12 col-md-12 col-lg-12">Importante:
-            {!! Form::checkbox('importancia',1,null,['id'=>'chkImport']) !!}
-        </label>
+        <!-- Duplicar Field -->
+        <div class="form-group col-sm-6 col-md-6 icheck">
+            <label class="col-sm-12 col-md-12 col-lg-12">Duplicar:
+                {!! Form::checkbox('duplicar',1,null,['id'=>'chkDuplica']) !!}
+            </label>
+        </div>
     </div>
 
     <!-- Estado Field -->
@@ -42,7 +45,7 @@
 </div>
 <script type="text/javascript">
     $(function () {
-        $('#radActivo,#chkImport').iCheck({
+        $('#radActivo,#chkImport,#chkDuplica').iCheck({
             checkboxClass: 'icheckbox_square-blue',
             radioClass: 'iradio_square-green',
             increaseArea: '20%'

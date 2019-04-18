@@ -68,6 +68,34 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
+            /*********** PRELOADER ***********/
+            .preloader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #fefefe;
+                opacity: 0.7;
+                z-index: 99999999999;
+                height: 100%;
+                width: 100%;
+                overflow: hidden !important;
+            }
+
+            .loaded {
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                background-image: url(../images/preloading.gif);
+                background-repeat: no-repeat;
+                background-position: center;
+                -moz-background-size: cover;
+                background-size: cover;
+                margin: -20px 0 0 -20px;
+            }
         </style>
     </head>
     <body>
@@ -94,10 +122,14 @@
                 </div>
             </div>
         </div>
+        <!-- jQuery 3.1.1 -->
+        {!! Html::script('plugins/jquery/jquery-3.3.1.min.js') !!}
         <script type="text/javascript">
+            $(window).on('load',function() {
+                $('.preloader').fadeOut("slow");
+            });
             //Al dar click en un boton Loader mostrar el overlay
             $('.btnLoader').on('click',function () {
-                alert('HOLA');
                 var sum=0;
                 $("form input:required").each(function() {
                     if ($(this).val() === '') {

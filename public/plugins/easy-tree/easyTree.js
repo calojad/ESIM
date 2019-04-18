@@ -46,15 +46,17 @@
             var easyTree = $(this);
             var i = 0;
             $.each($(easyTree).find('ul > li'), function() {
-                var text,id,nivel,href,numEvid;
+                var text,id,nivel,href,numEvid,secuencia;
                 if($(this).is('li:has(ul)')) {
                     id = $(this).find(' > a').data('id');
                     nivel = $(this).find(' > a').data('nivel');
+                    secuencia = $(this).find(' > a').data('secuencia');
                     var children = $(this).find(' > ul');
                     $(children).remove();
                     text = $(this).text();
                     $(this).html('<span class="'+colors[i]+'"><span class="pull-right glyphicon"></span><a style="color:white" href="javascript: void(0);"></a>' +
                         '<div class="btn-group pull-right boxTools" style="margin-right: 20px; border: 1px solid white; border-radius: 4px;">' +
+                            '<input class="inpSecuencia" type="number" name="secuencia[]" value="'+secuencia+'" data-id="'+id+'" data-estructura="'+(typeof(nivel) !== 'undefined' ? 'C' : 'I')+'" title="Secuencia" style="width: 40px;margin: 2px 5px;color: black;">' +
                             '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarSubcriterio" data-nivel="'+nivel+'" title="Agregar Subcriterio"><i class="fa fa-plus text-sm"></i></button>' +
                             '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarIndicador" data-nivel="'+nivel+'" title="Agregar Indicador"><i class="fa fa-plus-circle text-sm"></i></button>' +
                             '<button type="button" class="btnDeleteElement btn btn-danger" data-id="'+id+'" data-tipoelemento="'+nivel+'"><i class="fa fa-trash-alt text-sm"></i></button>' +
@@ -71,10 +73,12 @@
                     nivel = $(this).find(' > a').data('nivel');
                     href = $(this).find(' > a').data('href');
                     numEvid = $(this).find(' > a').data('nmevide');
+                    secuencia = $(this).find(' > a').data('secuencia');
                     $(this).html('<span><span class="pull-right fa"></span><label class="label label-success pull-right" style="margin-right: 15px" title="Num. Evidencias">'+numEvid+'</label><a href="'+ (typeof(href)!=="undefined"?href:"javascript: void(0);") +'"></a>' +
                         '<div class="btn-group pull-right boxTools" style="margin-right: 20px;border: 1px solid white; border-radius: 4px;">' +
-                            '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarSubcriterio" data-nivel="'+nivel+'" title="Agregar Subcriterio"><i class="fa fa-plus text-sm"></i></button>' +
-                            '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarIndicador" data-nivel="'+nivel+'" title="Agregar Indicador"><i class="fa fa-plus-circle text-sm"></i></button>' +
+                            '<input class="inpSecuencia" type="number" name="secuencia[]" value="'+secuencia+'" data-id="'+id+'" data-estructura="'+(typeof(nivel) !== 'undefined' ? 'C' : 'I')+'" title="Secuencia" style="width: 40px;margin: 2px 5px;color: black;">' +
+                            (typeof(nivel) !== 'undefined' ? '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarSubcriterio" data-nivel="'+nivel+'" title="Agregar Subcriterio"><i class="fa fa-plus text-sm"></i></button>'+
+                            '<button type="button" class="btnAddElement btn btn-success" data-id="'+id+'" data-toggle="modal" data-target="#modalAgregarIndicador" data-nivel="'+nivel+'" title="Agregar Indicador"><i class="fa fa-plus-circle text-sm"></i></button>' : '') +
                             '<button type="button" class="btnDeleteElement btn btn-danger" data-id="'+id+'" data-tipoelemento="'+nivel+'"><i class="fa fa-trash-alt text-sm"></i></button>' +
                         '</div></span>'
                     );

@@ -31,10 +31,10 @@ class Elemento extends Model
 
 
     public $fillable = [
-        'secuencia',
         'nombre',
         'importancia',
-        'estado'
+        'estado',
+        'duplicar'
     ];
 
     /**
@@ -44,10 +44,10 @@ class Elemento extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'secuencia' => 'integer',
         'nombre' => 'string',
-        'importancia' => 'integer',
-        'estado' => 'integer'
+        'importancia' => 'boolean',
+        'estado' => 'integer',
+        'duplicar' => 'boolean'
     ];
 
     /**

@@ -177,3 +177,14 @@ ul.sidebar-menu .fas, ul.sidebar-menu .fab, ul.sidebar-menu .far {
     vertical-align: baseline;
     border-radius: .25em;
 }
+/*********Input Number sin botones******/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    text-align: center;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+    text-align: center;
+}

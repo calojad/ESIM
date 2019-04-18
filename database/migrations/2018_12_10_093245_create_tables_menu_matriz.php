@@ -63,9 +63,9 @@ class CreateTablesMenuMatriz extends Migration
         });
         Schema::create('elemento', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('secuencia')->nullable();
             $table->text('nombre');
-            $table->integer('importancia')->default(0);
+            $table->boolean('importancia')->default(null)->nullable();
+            $table->boolean('duplicar')->default(false)->comment('Indica si el elemento puede duplicarse en el mismo modelo o matriz.');
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });

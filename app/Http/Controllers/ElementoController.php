@@ -122,14 +122,16 @@ class ElementoController extends AppBaseController
             'estado' => 'required'
         ]);
         $elemento = $this->elementoRepository->findWithoutFail($id);
-
+        $data['nombre'] = $request->get('nombre');
+        $data['importancia'] = ($request->get('importancia') ?? 0);
+        $data['duplicar'] = ($request->get('duplicar') ?? 0);
+        $data['estado'] = $request->get('estado');
         if (empty($elemento)) {
             Flash::error('Elemento not found');
 
             return redirect(route('elementos.index'));
         }
-
-        $elemento = $this->elementoRepository->update($request->all(), $id);
+        $elemento = $this->elementoRepository->update($data, $id);
 
         Flash::success('Elemento updated successfully.');
 

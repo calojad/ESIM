@@ -7,10 +7,9 @@ use App\Models\EstructuraCriterios;
 use App\Models\EstructuraElementos;
 use App\Models\EstructuraEvidencias;
 use App\Models\EstructuraIndicadores;
-use App\Models\Evidencia;
 use App\Models\Indicador;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 
 class EstructuraController extends Controller
 {
@@ -102,9 +101,13 @@ class EstructuraController extends Controller
         $EstrucEvide = EstructuraEvidencias::find($estrucEvidencia);
 
         if (!empty($elementos)) {
+            $sec = EstructuraElementos::where('estruc_evide_id',$estrucEvidencia)->max('secuencia');
+            $sec = ($sec ?? 0);
             foreach ($elementos as $ele) {
+                $sec++;
                 EstructuraElementos::updateOrCreate(
-                    ['estruc_evide_id' => $estrucEvidencia, 'elemento_id' => $ele]
+                    ['estruc_evide_id' => $estrucEvidencia, 'elemento_id' => $ele],
+                    ['secuencia' => $sec]
                 );
             }
         } else {
@@ -136,6 +139,22 @@ class EstructuraController extends Controller
         Indicador::create($data);
         Flash::success('Indicador creado.');
         return redirect(route('modelos.show', $data['modelo_id']));
+    }
+
+    public function postUpdateSecuencia(Request $request){
+        foreach ($request->get('secuencias') as $secuencia){
+            if($secuencia['tb']==='C'){
+                EstructuraCriterios::updateOrCreate(
+                    ['id' => $secuencia['id']], ['secuencia' => $secuencia['valor']]
+                );
+            }else if($secuencia['tb'] === 'I'){
+                EstructuraIndicadores::updateOrCreate(
+                    ['id' => $secuencia['id']], ['secuencia' => $secuencia['valor']]
+                );
+            }
+        }
+
+        return json_encode('Cargando');
     }
 
     public function getSubcriteriosde($criterioPadreId)
