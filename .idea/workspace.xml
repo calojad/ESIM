@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3f4dd-1450-4e65-a1d3-4c4798818ff9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c81fcab-1bf9-4604-8e90-1edff3e9d213.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c81fcab-1bf9-4604-8e90-1edff3e9d213.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/criterios/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/criterios/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/elementos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/elementos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/elementos/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/elementos/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evidencias/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evidencias/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/includes/scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/includes/scripts.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModeloController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="3427">
               <caret line="162" column="141" selection-start-line="162" selection-start-column="126" selection-end-line="162" selection-end-column="141" />
             </state>
           </provider>
@@ -72,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="2047">
               <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
             </state>
           </provider>
@@ -81,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
+            <state relative-caret-position="2047">
               <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
               <folding>
                 <element signature="e#40#64#0#PHP" expanded="true" />
@@ -93,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="104" column="59" lean-forward="true" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
+            <state relative-caret-position="311">
+              <caret line="103" column="24" lean-forward="true" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -102,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/evidencias/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+            <state relative-caret-position="1380">
+              <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -111,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
+            <state relative-caret-position="529">
               <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
             </state>
           </provider>
@@ -129,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/indicadors/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
+            <state relative-caret-position="1633">
               <caret line="71" column="117" selection-start-line="71" selection-start-column="117" selection-end-line="71" selection-end-column="117" />
             </state>
           </provider>
@@ -511,11 +497,12 @@
       <workItem from="1555879905826" duration="760000" />
       <workItem from="1556808809661" duration="6166000" />
       <workItem from="1557149730051" duration="18401000" />
+      <workItem from="1557236559967" duration="1070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="628207000" />
+    <option name="totallyTimeSpent" value="629277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -866,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModeloController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="162" column="141" selection-start-line="162" selection-start-column="126" selection-end-line="162" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Indicador.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -887,10 +867,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ModeloController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3427">
+          <caret line="162" column="141" selection-start-line="162" selection-start-column="126" selection-end-line="162" selection-end-column="141" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
+        <state relative-caret-position="2047">
           <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2047">
+          <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/evidencias/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -901,6 +912,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/indicadors/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1633">
+          <caret line="71" column="117" selection-start-line="71" selection-start-column="117" selection-end-line="71" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_evidencia.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -908,41 +926,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/indicadors/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="71" column="117" selection-start-line="71" selection-start-column="117" selection-end-line="71" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/estructura/modal_elemento.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/evidencias/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EvidenciaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="104" column="59" lean-forward="true" selection-start-line="104" selection-start-column="59" selection-end-line="104" selection-end-column="59" />
+        <state relative-caret-position="311">
+          <caret line="103" column="24" lean-forward="true" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
         </state>
       </provider>
     </entry>
