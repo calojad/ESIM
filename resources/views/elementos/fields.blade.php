@@ -10,7 +10,7 @@
         <!-- Importancia Field -->
         <div class="form-group col-sm-6 col-md-6 icheck">
             <label class="col-sm-12 col-md-12 col-lg-12">Importante:
-                {!! Form::checkbox('importancia',1,null,['id'=>'chkImport']) !!}
+                {!! Form::checkbox('importancia',1,true,['id'=>'chkImport']) !!}
             </label>
         </div>
 
