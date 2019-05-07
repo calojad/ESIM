@@ -8,8 +8,8 @@
             </div>
             <div class="modal-body">
                 {!! Form::open(['url' => '/estructura/addevidencias/', 'method' => 'post']) !!}
-                <input type="hidden" name="estrucIndicador" value="{{$indicador->estructuraIndicadores[0]->id}}">
-                <input type="hidden" name="indicador_id" value="{{$indicador->id}}">
+                <input type="hidden" name="estrucIndicador" value="{{explode('_',$id)[2]}}">
+                <input type="hidden" name="url_id" value="{{$id}}">
                 <div class="row">
                     <div class="col-md-12">
                         <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="tblEvidenciasAdd">

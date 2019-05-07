@@ -160,7 +160,7 @@ class ModeloController extends AppBaseController
     {
         $html = '<ul>';
         foreach ($Criterio->estructuraIndicadores as $indi) {
-                $html .= '<li><a data-id="'.$indi->id .'" data-href="'.route('indicadors.show',$indi->indicador_id).'" data-nmevide="'.$indi->estructuraEvidencias->count().'" data-secuencia="'.$indi->secuencia.'">'.$indi->indicador->nombre.'</a>';
+                $html .= '<li><a data-id="'.$indi->id .'" data-href="'.route('indicadors.show',$indi->indicador_id.'_'.$indi->estruc_crite_id.'_'.$indi->id).'" data-nmevide="'.$indi->estructuraEvidencias->count().'" data-secuencia="'.$indi->secuencia.'">'.$indi->indicador->nombre.'</a>';
 //            }
             $html .= "</li>";
         }

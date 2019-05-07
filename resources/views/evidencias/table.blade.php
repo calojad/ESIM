@@ -12,7 +12,7 @@
     @foreach($evidencias as $evidencia)
         <tr>
             <td>{!! $evidencia->nombre !!}</td>
-            <td>{!! $evidencia->descripcion !!}</td>
+            <td>{!! str_limit($evidencia->descripcion,120) !!}</td>
             <td style="text-align: center"><span style="font-size: 14pt;" class="fa {!! $evidencia->importancia==1?'fa-check-square':'fa-minus' !!}"></span></td>
             <td><label class="label {!! $evidencia->estado==1?'label-success':'label-danger' !!}">{!! $evidencia->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>

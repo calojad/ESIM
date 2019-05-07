@@ -96,7 +96,9 @@ class IndicadorController extends AppBaseController
      */
     public function show($id)
     {
-        $indicador = $this->indicadorRepository->findWithoutFail($id);
+        //@id = EstructuraIndicador -> indicador_id, estruc_crite_id, id
+        $url_par = explode('_',$id);
+        $indicador = $this->indicadorRepository->findWithoutFail($url_par[0]);
 
         if (empty($indicador)) {
             Flash::error('Indicador not found');
@@ -104,7 +106,7 @@ class IndicadorController extends AppBaseController
             return redirect(route('indicadors.index'));
         }
 
-        $modelo = EstructuraCriterios::find($indicador->estructuraIndicadores[0]->estruc_crite_id);
+        $modelo = EstructuraCriterios::findOrFail($url_par[1]);
 
         $evidencias = Evidencia::where('estado',1)->get();
 
@@ -114,9 +116,9 @@ class IndicadorController extends AppBaseController
             ->pluck('estructura_evidencias.evidencia_id')
             ->toArray();
 
-        $estrucEvidencias = EstructuraEvidencias::where('estruc_indic_id',$indicador->estructuraIndicadores[0]->id)->get();
+        $estrucEvidencias = EstructuraEvidencias::where('estruc_indic_id',$url_par[2])->get();
 
-        return view('indicadors.show',compact('indicador','modelo','evidencias','ee_array','estrucEvidencias'));
+        return view('indicadors.show',compact('indicador','modelo','evidencias','ee_array','estrucEvidencias','id'));
     }
 
     /**

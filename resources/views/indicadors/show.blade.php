@@ -69,7 +69,7 @@
                                 <td>{{str_limit($estEvi->evidencia->descripcion,99)}}</td>
                                 <td class="text-center"><label class="label label-success" style="font-size:11pt">{{$estEvi->estructuraElementos->count()}}</label></td>
                                 <td>
-                                    <a href="{{route('evidencias.show',$estEvi->evidencia->id.'-'.$estEvi->estructuraIndicadore->indicador_id)}}" title="Elementos" class="btn btn-xs btn-primary"><i class="far fa-caret-square-down" style="margin: 0"></i></a>
+                                    <a href="{{route('evidencias.show',$id.'_'.$estEvi->evidencia->id.'_'.$estEvi->id)}}" title="Elementos" class="btn btn-xs btn-primary"><i class="far fa-caret-square-down" style="margin: 0"></i></a>
                                     <button type="button" title="Quitar Evidencia" class="btn btn-xs btn-danger btnQuitarEvidencia" data-id="{{$estEvi->id}}"><i class="fa fa-trash-alt"></i></button>
                                 </td>
                             </tr>

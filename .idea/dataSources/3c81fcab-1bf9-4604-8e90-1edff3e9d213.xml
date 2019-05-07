@@ -17,7 +17,7 @@
     <schema id="4" parent="1" name="cal_finanzas">
       <Collation>latin1_swedish_ci</Collation>
     </schema>
-    <schema id="5" parent="1" name="cal_journal">
+    <schema id="5" parent="1" name="cal_ldswebdes">
       <Collation>latin1_swedish_ci</Collation>
     </schema>
     <schema id="6" parent="1" name="information_schema">
@@ -1167,7 +1167,7 @@
     </column>
     <column id="304" parent="248" name="importancia">
       <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>

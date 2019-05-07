@@ -8,8 +8,8 @@
             </div>
             <div class="modal-body">
                 {!! Form::open(['url' => '/estructura/addelemento/', 'method' => 'post']) !!}
-                <input type="hidden" name="estrucEvidencia" value="{{$evidencia->estructuraEvidencias[0]->id}}">
-                <input type="hidden" name="evidencia_id" value="{{$evidencia->id}}">
+                <input type="hidden" name="estrucEvidencia" value="{{$url_par[4]}}">
+                <input type="hidden" name="url_id" value="{{$id}}">
                 <div class="row">
                     <div class="col-md-12">
                         <table class="table table-responsive table-striped table-bordered table-hover table-checkable datatable" id="tblElementoAdd">
@@ -23,7 +23,7 @@
                             @foreach ($elementos as $elem)
                                 @if(!in_array($elem->id,$eel_array))
                                     <tr>
-                                        <td>{{ $elem->nombre }}</td>
+                                        <td style="width: 80%">{{ str_limit($elem->nombre,90) }}</td>
                                         <td>
                                             <div class="icheck" align="center">
                                                 {!! Form::checkbox('elementoSel[]',$elem->id,null,['class' => 'chkAgregarEvi inputIcheck']) !!}

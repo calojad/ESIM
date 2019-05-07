@@ -9,6 +9,7 @@
 <!-- DataTables -->
 {!! Html::script('adminLTE-2.4.5/bower_components/datatables/js/jquery.dataTables.js') !!}
 {!! Html::script('adminLTE-2.4.5/bower_components/datatables/js/dataTables.bootstrap.js') !!}
+{!! Html::script('adminLTE-2.4.5/bower_components/datatables/js/num-html.js') !!}
 <!-- jQuery-Alerts -->
 {!! Html::script('plugins/jquery_alerts/jquery-confirm.min.js') !!}
 <!-- SlimScroll -->
@@ -29,7 +30,7 @@
             ordering: true,
             autoWidth: true,
             retrieve: true,
-            responsive: true
+            responsive: true,
         });
     });
     $(".UpperCase,input[name=nombre]").on("keypress blur", function () {

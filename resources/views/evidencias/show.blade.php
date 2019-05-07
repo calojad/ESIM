@@ -53,7 +53,7 @@
                         @foreach($estrucElementos as $estEle)
                             <tr>
                                 <td>{{$estEle->secuencia}}</td>
-                                <td>{{$estEle->elemento->nombre}}</td>
+                                <td>{{str_limit($estEle->elemento->nombre,150)}}</td>
                                 <td>
                                     <button type="button" title="Quitar Elemento" class="btn btn-xs btn-danger btnQuitarElemento" data-id="{{$estEle->id}}"><i class="fa fa-trash-alt"></i></button>
                                 </td>
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="box-footer">
-                <a href="{!! route('indicadors.show',$IdInd[1]) !!}" class="btn btn-default">Back</a>
+                <a href="{!! route('indicadors.show',$url_par[0].'_'.$url_par[1].'_'.$url_par[2]) !!}" class="btn btn-default">Back</a>
             </div>
         </div>
     </div>
@@ -94,6 +94,10 @@
             });
         });
 
+        $('.modal').on('shown.bs.modal', function (e) {
+            console.log($('.sorting_asc').html());
+        });
+
         $(function () {
             $('#tblElementoAdd').DataTable({
                 paging: false,
@@ -105,13 +109,18 @@
                 responsive: true,
                 scrollY: '50vh'
             });
+
+            console.log($('.sorting_asc').prop('style','width:500px'));
         });
+
+        //Inicializar iCheck's
         $(function () {
             $('.inputIcheck').iCheck({
                 checkboxClass: 'icheckbox_square-blue',
                 radioClass: 'iradio_square-green',
                 increaseArea: '20%'
             });
+
             //Seleccionar todos los elementos
             $('#chkTodasElem').on('ifChanged', function (e) {
                 if ($(this).prop('checked'))

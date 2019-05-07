@@ -5,7 +5,7 @@
         <small>Elementos</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="{{url('/home')}}"><i class="fas fa-home"></i> Home</a></li>
         <li>Elementos</li>
     </ol>
 @endsection
@@ -25,8 +25,24 @@
             </div>
         </div>
         <div class="text-center">
-        
+
         </div>
     </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#elementos-table').DataTable({
+                pagingType: "full_numbers",
+                paging: true,
+                lengthChange: true,
+                searching: true,
+                ordering: true,
+                autoWidth: true,
+                retrieve: true,
+                responsive: true,
+                columnDefs: [
+                    { type: 'num-html', targets: 0 }
+                ]
+            });
+        });
+    </script>
 @endsection
-

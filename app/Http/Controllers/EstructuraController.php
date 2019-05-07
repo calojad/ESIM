@@ -76,7 +76,8 @@ class EstructuraController extends Controller
     {
         $estruIndicador = $request->get('estrucIndicador');
         $evidencias = $request->get('evidenciaSel');
-        $indicador = $request->get('indicador_id');
+        $url_id = $request->get('url_id');
+
         if (!empty($evidencias)) {
             foreach ($evidencias as $evi) {
                 EstructuraEvidencias::updateOrCreate(
@@ -85,20 +86,18 @@ class EstructuraController extends Controller
             }
         } else {
             Flash::error('No se ha seleccionado ningun elemento.');
-            return redirect(route('indicadors.show', $indicador));
+            return redirect(route('indicadors.show', $url_id));
         }
 
         Flash::success('Evidencia(s) agregada(s).');
-        return redirect(route('indicadors.show', $indicador));
+        return redirect(route('indicadors.show', $url_id));
     }
 
     public function postAddelemento(Request $request)
     {
         $estrucEvidencia = $request->get('estrucEvidencia');
-        $evidencia = $request->get('evidencia_id');
         $elementos = $request->get('elementoSel');
-
-        $EstrucEvide = EstructuraEvidencias::find($estrucEvidencia);
+        $id = $request->get('url_id');
 
         if (!empty($elementos)) {
             $sec = EstructuraElementos::where('estruc_evide_id',$estrucEvidencia)->max('secuencia');
@@ -112,11 +111,11 @@ class EstructuraController extends Controller
             }
         } else {
             Flash::error('No se ha seleccionado ningun elemento.');
-            return redirect(route('evidencias.show', $evidencia.'-'.$EstrucEvide->estructuraIndicadore->indicador_id));
+            return redirect(route('evidencias.show', $id));
         }
 
         Flash::success('Evidencia(s) agregada(s).');
-        return redirect(route('evidencias.show', $evidencia.'-'.$EstrucEvide->estructuraIndicadore->indicador_id));
+        return redirect(route('evidencias.show', $id));
     }
 
     public function postNewCriterio(Request $request)

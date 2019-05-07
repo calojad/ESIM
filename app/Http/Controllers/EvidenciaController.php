@@ -80,31 +80,33 @@ class EvidenciaController extends AppBaseController
      */
     public function show($id)
     {
-        $IdInd = explode('-',$id);
-        $evidencia = $this->evidenciaRepository->findWithoutFail($IdInd[0]);
+        //@id = indicador.id, estructuraIndicador.estruc_crite_id, estructuraIndicador.id, evidencia.id, estructuraEvidencia.id
+        $url_par = explode('_',$id);
+        $evidencia = $this->evidenciaRepository->findWithoutFail($url_par[3]);
 
-        if (empty($evidencia)) {
+        if ($evidencia === null) {
             Flash::error('Evidencia not found');
 
             return redirect(route('evidencias.index'));
         }
 
-        $estruc_modelo = EstructuraCriterios::find($evidencia->estructuraEvidencias[0]->estructuraIndicadore->estructuraCriterio->id);
+        $estruc_modelo = EstructuraCriterios::findOrFail($url_par[1]);
 
         $elementos = Elemento::where('estado',1)->get();
 
-        $eel_array = EstructuraElementos::join('estructura_evidencias','estructura_elementos.estruc_evide_id','=','estructura_evidencias.id')
-            ->join('estructura_indicadores','estructura_evidencias.estruc_indic_id','=','estructura_indicadores.id')
-            ->join('estructura_criterios','estructura_indicadores.estruc_crite_id','=','estructura_criterios.id')
-            ->join('elemento','elemento.id','=','estructura_elementos.elemento_id')
-            ->where('estructura_criterios.modelo_id',$estruc_modelo->modelo_id)
-            ->where('elemento.duplicar',0)
+        $eel_array = EstructuraElementos::leftjoin('estructura_evidencias','estructura_evidencias.id','=','estructura_elementos.estruc_evide_id')
+            ->where('estructura_evidencias.estruc_indic_id',$url_par[2])
+            ->where('estructura_evidencias.evidencia_id',$url_par[3])
+            ->select('estructura_elementos.id','estructura_elementos.elemento_id','estructura_elementos.estruc_evide_id','estructura_elementos.secuencia')
             ->pluck('estructura_elementos.elemento_id')
             ->toArray();
 
-        $estrucElementos = EstructuraElementos::where('estruc_evide_id',$evidencia->estructuraEvidencias[0]->id)->get();
+        $estrucElementos = EstructuraElementos::leftjoin('estructura_evidencias','estructura_evidencias.id','=','estructura_elementos.estruc_evide_id')
+            ->where('estructura_evidencias.id',$url_par[4])
+            ->select('estructura_elementos.id','estructura_elementos.elemento_id','estructura_elementos.estruc_evide_id','estructura_elementos.secuencia')
+            ->get();
 
-        return view('evidencias.show',compact('evidencia','estruc_modelo','elementos','estrucElementos','eel_array','IdInd'));
+        return view('evidencias.show',compact('evidencia','estruc_modelo','elementos','estrucElementos','eel_array','url_par','id'));
     }
 
     /**

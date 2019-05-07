@@ -11,7 +11,7 @@
     @foreach($criterios as $criterio)
         <tr>
             <td>{!! $criterio->nombre !!}</td>
-            <td>{!! $criterio->descripcion !!}</td>
+            <td>{{str_limit($criterio->descripcion,99)}}</td>
             <td><label class="label {!! $criterio->estado==1?'label-success':'label-danger' !!}">{!! $criterio->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['criterios.destroy', $criterio->id], 'method' => 'delete']) !!}
