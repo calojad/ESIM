@@ -107,10 +107,11 @@
                 autoWidth: true,
                 retrieve: true,
                 responsive: true,
-                scrollY: '50vh'
+                scrollY: '50vh',
+                columnDefs: [
+                    { type: 'num-html', targets: 0 }
+                ]
             });
-
-            console.log($('.sorting_asc').prop('style','width:500px'));
         });
 
         //Inicializar iCheck's

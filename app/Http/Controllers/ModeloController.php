@@ -203,7 +203,7 @@ class ModeloController extends AppBaseController
             'nombre' => 'required|string|unique:modelo,nombre,'.$id,
             'estado' => 'required'
         ]);
-        $modelo = $this->modeloRepository->findWithoutFaestructura_evidenciasil($id);
+        $modelo = $this->modeloRepository->findWithoutFail($id);
 
         if (empty($modelo)) {
             Flash::error('Modelo not found');

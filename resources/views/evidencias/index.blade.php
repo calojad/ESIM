@@ -28,5 +28,22 @@
         
         </div>
     </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#evidencias-table').DataTable({
+                pagingType: "full_numbers",
+                paging: true,
+                lengthChange: true,
+                searching: true,
+                ordering: true,
+                autoWidth: true,
+                retrieve: true,
+                responsive: true,
+                columnDefs: [
+                    { type: 'num-html', targets: 0 }
+                ]
+            });
+        });
+    </script>
 @endsection
 

@@ -11,7 +11,7 @@
     <tbody>
     @foreach($elementos as $elemento)
         <tr>
-            <td {{--data-order="{{ explode('.', $elemento->nombre)[0] }}"--}}>{!! str_limit($elemento->nombre,105) !!}</td>
+            <td>{!! str_limit($elemento->nombre,105) !!}</td>
             <td style="text-align: center"><span style="font-size: 14pt;" class="fa {!! $elemento->importancia==1?'fa-check-square':'fa-minus' !!}"></span></td>
             <td style="text-align: center"><span style="font-size: 14pt;" class="fa {!! $elemento->duplicar>0?'fa-check-square':'fa-minus' !!}"></span></td>
             <td><label class="label {!! $elemento->estado==1?'label-success':'label-danger' !!}">{!! $elemento->estado==1?'Activo':'Inactivo' !!}</label></td>
