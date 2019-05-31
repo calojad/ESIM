@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Departamento;
 use Illuminate\Http\Request;
 use App\Models\UsuarioAsignacion;
 use App\Models\Carrera;
@@ -23,24 +24,26 @@ class UsuarioAsignacionController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Asignar Carrera.
      *
      * @return \Illuminate\Http\Response
      */
     public function create($id)
     {
         $user = User::find($id);
-        $carreras = Carrera::all();
-        $ua_array = UsuarioAsignacion::where('usuario_id', $id)->pluck('carrera_id')->toArray();
-        $periodos = [0 => '--Seleccionar--']+Periodo::where('estado','=',1)
+        $ua_array = UsuarioAsignacion::where('usuario_id', $id)
+            ->where('carrera_id','>',0)
+            ->pluck('carrera_id')
+            ->toArray();
+        $periodos = [0 => '--Seleccionar--']+Periodo::where('estado',1)
                     ->pluck('nombre','id')
                     ->toArray();
         $numRow = 0;
-        return view('usuario_asignacion.create',compact('user','carreras','periodos','ua_array','numRow'));
+        return view('usuario_asignacion.create',compact('user','periodos','ua_array','numRow'));
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Guardar las carreras asignadas.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -52,7 +55,8 @@ class UsuarioAsignacionController extends Controller
         $carreras = $request->get('carreras');
         foreach ($carreras as $carrera) {
             UsuarioAsignacion::updateOrCreate(
-                ['usuario_id' => $userId, 'periodo_id' => $periodoId, 'carrera_id' => $carrera]
+                ['usuario_id' => $userId, 'periodo_id' => $periodoId, 'carrera_id' => $carrera],
+                ['departamento_id' => null]
             );
         }
         Flash::success('Carreras Asignadas exitosamente.');
@@ -68,36 +72,66 @@ class UsuarioAsignacionController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        $userPeriodos = UsuarioAsignacion::where('usuario_id',$id)
-                        ->select('periodo_id')
-                        ->groupBy('periodo_id')
-                        ->get();
-        $userAsignaciones = UsuarioAsignacion::where('usuario_id',$id)->get();
+        $userPeriodosCarrera = UsuarioAsignacion::where('usuario_id',$id)
+            ->where('carrera_id','>',0)
+            ->select('periodo_id')
+            ->groupBy('periodo_id')
+            ->get();
+        $userPeriodosDeparts = UsuarioAsignacion::where('usuario_id',$id)
+            ->where('departamento_id','>',0)
+            ->select('periodo_id')
+            ->groupBy('periodo_id')
+            ->get();
+        $userAsignacionesCarreras = UsuarioAsignacion::where('usuario_id',$id)
+            ->where('carrera_id','>',0)
+            ->get();
+        $userAsignacionesDepartam = UsuarioAsignacion::where('usuario_id',$id)
+            ->where('departamento_id','>',0)
+            ->get();
 
-        return view('usuario_asignacion.show',compact('user','userAsignaciones','userPeriodos'));
+        return view('usuario_asignacion.show',compact('user','userAsignacionesCarreras','userPeriodosCarrera','userAsignacionesDepartam','userPeriodosDeparts'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Asignar Departamento.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        $ua_array = UsuarioAsignacion::where('usuario_id', $id)
+            ->where('departamento_id','>',0)
+            ->pluck('departamento_id')
+            ->toArray();
+        $periodos = [0 => '--Seleccionar--']+Periodo::where('estado',1)
+                ->pluck('nombre','id')
+                ->toArray();
+        $numRow = 0;
+        return view('usuario_asignacion.edit',compact('user','periodos','ua_array','numRow'));
     }
 
     /**
-     * Update the specified resource in storage.
+     * Guardar los departamentos asignados.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
-        //
+        $userId = $request->get('usuario');
+        $periodoId = $request->get('periodo');
+        $departamentos = $request->get('departamentos');
+        foreach ($departamentos as $depar) {
+            UsuarioAsignacion::updateOrCreate(
+                ['usuario_id' => $userId, 'periodo_id' => $periodoId, 'departamento_id' => $depar],
+                ['carrera_id' => null]
+            );
+        }
+        Flash::success('Departamentos Asignadas exitosamente.');
+        return json_encode(['url' => route('usuarioasignacion.show',$request->get('usuario'))]);
     }
 
     /**
@@ -121,9 +155,21 @@ class UsuarioAsignacionController extends Controller
     
     public function obtCarreraPeriodo($pId,$uId){
         $caAsig = UsuarioAsignacion::where('usuario_id', $uId)
-                    ->where('periodo_id',$pId)
-                    ->pluck('carrera_id')->toArray();
-        $carreras = Carrera::all();
+            ->where('periodo_id',$pId)
+            ->where('carrera_id','>',0)
+            ->pluck('carrera_id')
+            ->toArray();
+        $carreras = Carrera::where('estado',1)->get();
         return json_encode(['carreras' => $carreras,'caAsig' => $caAsig]);
+    }
+
+    public function obtDepartPeriodo($pId,$uId){
+        $deAsig = UsuarioAsignacion::where('usuario_id', $uId)
+            ->where('periodo_id',$pId)
+            ->where('departamento_id','>',0)
+            ->pluck('departamento_id')
+            ->toArray();
+        $departamentos = Departamento::where('estado',1)->get();
+        return json_encode(['departamentos' => $departamentos,'deAsig' => $deAsig]);
     }
 }

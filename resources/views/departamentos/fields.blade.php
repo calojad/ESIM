@@ -2,11 +2,11 @@
     <!-- Nombre Field -->
     <div class="form-group col-sm-12">
         {!! Form::label('nombre', 'Nombre:') !!}
-        {!! Form::text('nombre', null, ['class' => 'form-control','required'=>true]) !!}
+        {!! Form::text('nombre', null, ['class' => 'form-control','required'=>true,'autofocus'=>true]) !!}
     </div>
     <!-- Responsable Id Field -->
     <div class="form-group col-sm-12">
-        {!! Form::label('responsable_id', 'Responsable Id:') !!}
+        {!! Form::label('responsable_id', 'Responsable:') !!}
         {!! Form::select('responsable_id', $responsables,null, ['class' => 'form-control','required'=>true]) !!}
     </div>
 
@@ -27,8 +27,8 @@
 
     <!-- Submit Field -->
     <div class="form-group col-sm-12">
-        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-        <a href="{!! route('departamentos.index') !!}" class="btn btn-default">Cancel</a>
+        {!! Form::submit('Save', ['class' => 'btn btn-primary btnLoader']) !!}
+        <a href="{!! route('departamentos.index') !!}" class="btn btn-default btnLoader">Cancel</a>
     </div>
 </div>
 <script type="text/javascript" charset="utf-8" async defer>

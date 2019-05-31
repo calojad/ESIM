@@ -5,9 +5,9 @@
         <small>Asignar Carrera</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="/home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="{{url('/home')}}"><i class="fas fa-home"></i> Home</a></li>
         <li>Evaluador</li>
-        <li>Asignar</li>
+        <li>Asignar Carrera</li>
         <li>Nuevo</li>
     </ol>
 @endsection
@@ -31,6 +31,7 @@
                 <a class="btn btn-default btnLoader" href="{{ route('usuarioasignacion.show',$user->id) }}">Regresar</a>
             </div>
         </div>
+
         <div id="divBoxCarreras" class="box box-warning content" style="display: none;">
             <div class="box-header">
                 <h3 class="box-title">Carreras</h3>
@@ -56,6 +57,7 @@
                 <i class="fa fa-sync-alt fa-spin"></i>
             </div>
         </div>
+
     </div>
     <script type="text/javascript" charset="utf-8" async defer>
         $(function () {
@@ -123,7 +125,7 @@
  */
         // Funcion Cargar tabla de carreras segun periodo
         function marcarCarrerasAsignadas(periodoId,usuarioId){
-            var url = "{{ URL::to('usuarioasignacion/obtcarreraceriodo') }}"+"/"+periodoId+"/"+usuarioId;
+            var url = "{{ URL::to('usuarioasignacion/obtcarreraperiodo') }}"+"/"+periodoId+"/"+usuarioId;
             var t = $('#tblCarrerasAsig').DataTable();
             var aux;
             $.get(url, function(json){

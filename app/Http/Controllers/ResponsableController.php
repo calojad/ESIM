@@ -55,6 +55,11 @@ class ResponsableController extends AppBaseController
      */
     public function store(CreateResponsableRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:responsable,nombre',
+            'estado' => 'required'
+        ]);
+
         $input = $request->all();
 
         $responsable = $this->responsableRepository->create($input);
@@ -114,6 +119,11 @@ class ResponsableController extends AppBaseController
      */
     public function update($id, UpdateResponsableRequest $request)
     {
+        request()->validate([
+            'nombre' => 'required|string|unique:responsable,nombre,'.$id,
+            'estado' => 'required'
+        ]);
+
         $responsable = $this->responsableRepository->findWithoutFail($id);
 
         if (empty($responsable)) {

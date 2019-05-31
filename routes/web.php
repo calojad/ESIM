@@ -12,30 +12,36 @@
 */
 
 //******RUTAS SIN AUTENTICACION
-Route::get('/',function(){return view('welcome');});
+Route::get('/', function () {
+    return view('welcome');
+});
 
 //*****RUTAS CON AUTENTICACION
 Auth::routes();
-//*****GRUPO DE RUTAS
-Route::middleware(['auth','admin'])->group( function () {
-	//***HOME
-	Route::get('/home', 'HomeController@index')->name('home');
-	//***Ubicaciones
-	Route::resource('ubicacions', 'UbicacionController');
-	//***Tipo Unidades
-	Route::resource('tipoUnidads', 'TipoUnidadController');
-	//***Tipo Periodos
-	Route::resource('tipoPeriodos', 'TipoPeriodoController');
-	//***Tipo Evaluaciones
-	Route::resource('tipoEvaluacions', 'TipoEvaluacionController');
-	//***Tipo Indicadores
-	Route::resource('tipoIndicadors', 'TipoIndicadorController');
-	//***Periodos
-	Route::resource('periodos', 'PeriodoController');
-	//***Unidades
-	Route::resource('unidads', 'UnidadController');
+//****************GRUPO DE RUTAS***************
+
+//***Administrador
+Route::middleware(['auth', 'admin'])->group(function () {
+    //***HOME
+    Route::get('/home', 'HomeController@index')->name('home');
+    //***Matrices a evaluar (Administrador)
+    Route::get('/home/matrices', 'HomeController@homeMatrices');
+    //***Ubicaciones
+    Route::resource('ubicacions', 'UbicacionController');
+    //***Tipo Unidades
+    Route::resource('tipoUnidads', 'TipoUnidadController');
+    //***Tipo Periodos
+    Route::resource('tipoPeriodos', 'TipoPeriodoController');
+    //***Tipo Evaluaciones
+    Route::resource('tipoEvaluacions', 'TipoEvaluacionController');
+    //***Tipo Indicadores
+    Route::resource('tipoIndicadors', 'TipoIndicadorController');
+    //***Periodos
+    Route::resource('periodos', 'PeriodoController');
+    //***Unidades
+    Route::resource('unidads', 'UnidadController');
     //***Carreras
-	Route::resource('carreras', 'CarreraController');
+    Route::resource('carreras', 'CarreraController');
     //***Departamentos
     Route::resource('departamentos', 'DepartamentoController');
     //***Usuarios
@@ -43,16 +49,19 @@ Route::middleware(['auth','admin'])->group( function () {
     //***Unidades Carreras
     Route::resource('unidadcarrera', 'UnidadCarreraController');
     //***Usuarios Asignaciones
-    Route::resource('usuarioasignacion', 'UsuarioAsignacionController');
-    Route::get('usuarioasignacion/create/{user}','UsuarioAsignacionController@create')->name('usuarioasignacion.asignar');
-    Route::get('usuarioasignacion/obtcarreraceriodo/{periodo}/{user}','UsuarioAsignacionController@obtCarreraPeriodo')->name('usuarioasignacion.cargartabla');
+    Route::resource('usuarioasignacion', 'UsuarioAsignacionController', ['except' => ['update']]);
+    Route::get('usuarioasignacion/asing-carrera/{user}', 'UsuarioAsignacionController@create')->name('usuarioasignacion.asignarcarrera');
+    Route::get('usuarioasignacion/asing-departamento/{user}', 'UsuarioAsignacionController@edit')->name('usuarioasignacion.asignardeparta');
+    Route::get('usuarioasignacion/obtcarreraperiodo/{periodo}/{user}', 'UsuarioAsignacionController@obtCarreraPeriodo');
+    Route::get('usuarioasignacion/obtdepartperiodo/{periodo}/{user}', 'UsuarioAsignacionController@obtDepartPeriodo');
+    Route::post('usuarioasignacion/{id}', 'UsuarioAsignacionController@update')->name('usuarioasignacion.update');
     //***Grupos de Valor
     Route::resource('grupoValors', 'GrupoValorController');
     //***Valoraciones
     Route::resource('valoracions', 'ValoracionController');
     Route::get('valoracions/create/{grupo}', 'ValoracionController@create')->name('valoracions.valoracioncrear');
     //***Cuantitativos
-    AdvancedRoute::controller('/cuantitativos','CuantitativosController');
+    AdvancedRoute::controller('/cuantitativos', 'CuantitativosController');
     //***Formulas
     Route::resource('formulas', 'FormulasController');
     //***Variables
@@ -71,7 +80,7 @@ Route::middleware(['auth','admin'])->group( function () {
     //***Modelos
     Route::resource('modelos', 'ModeloController');
     //***Estructura
-    AdvancedRoute::controller('/estructura','EstructuraController');
+    AdvancedRoute::controller('/estructura', 'EstructuraController');
     //***Matriz
     Route::resource('matrizs', 'MatrizController');
     //***Responsable
@@ -80,7 +89,8 @@ Route::middleware(['auth','admin'])->group( function () {
     Route::resource('tipoMatrizs', 'TipoMatrizController');
 });
 
-Route::middleware(['auth'])->group( function () {
-    //***HOME
+//***Usuario
+Route::middleware(['auth'])->group(function () {
+    //***Home usuario
     Route::get('/home', 'HomeController@index')->name('home');
 });

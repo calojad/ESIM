@@ -51,8 +51,8 @@
 
     <!-- Submit Field -->
     <div class="form-group col-md-12">
-        <a href="{!! route('responsables.index') !!}" class="btn btn-default">Cancel</a>
-        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+        <a href="{!! route('responsables.index') !!}" class="btn btn-default btnLoader">Cancel</a>
+        {!! Form::submit('Save', ['class' => 'btn btn-primary btnLoader']) !!}
     </div>
 </div>
 <script type="text/javascript" charset="utf-8" async defer>

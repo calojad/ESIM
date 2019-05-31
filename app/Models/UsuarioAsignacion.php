@@ -31,6 +31,7 @@ class UsuarioAsignacion extends Model
     public $fillable = [
         'usuario_id',
         'carrera_id',
+        'departamento_id',
         'periodo_id'
     ];
 
@@ -43,6 +44,7 @@ class UsuarioAsignacion extends Model
         'id' => 'integer',
         'usuario_id' => 'integer',
         'carrera_id' => 'integer',
+        'departamento_id' => 'integer',
         'periodo_id' => 'integer'
     ];
 
@@ -61,6 +63,11 @@ class UsuarioAsignacion extends Model
     public function carrera()
     {
         return $this->belongsTo(\App\Models\Carrera::class);
+    }
+
+    public function departamento()
+    {
+        return $this->belongsTo(\App\Models\Departamento::class);
     }
 
     /**
