@@ -20,13 +20,21 @@
                     @foreach($matrices as $matriz)
                         <li class="item">
                             <div class="product-img">
-                                <a href="javascript:void(0)"><img src="{{asset('images/Iconos/tablematriz.png')}}"
-                                                                  alt="Matriz"></a>
+                                <a href="javascript:void(0)"><img src="{{asset('images/Iconos/tablematriz.png')}}" alt="Matriz"></a>
                             </div>
                             <div class="product-info">
                                 <a href="javascript:void(0)" class="product-title">{{$matriz->nombre}}
                                     <span class="label label-warning pull-right">0</span></a>
-                                <span class="product-description">{{$matriz->periodo->nombre}}</span>
+
+                                <span class="product-description">
+                                    @if ($matriz->tipo_matriz_id == 1)
+                                        {{$matriz->carrera->nombre}}<br>
+                                    @else
+                                        {{$matriz->tipoMatriz->nombre}}<br>
+                                    @endif
+                                    {{$matriz->periodo->nombre}}<br>
+                                </span>
+
                             </div>
                         </li>
                     @endforeach

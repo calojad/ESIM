@@ -11,7 +11,7 @@ use Eloquent as Model;
  *
  * @property \App\Models\Carrera carrera
  * @property \App\Models\Periodo periodo
- * @property \App\Models\User user
+ * @property \App\User user
  * @property \Illuminate\Database\Eloquent\Collection unidad
  * @property \Illuminate\Database\Eloquent\Collection unidadCarrera
  * @property integer usuario_id
@@ -83,6 +83,10 @@ class UsuarioAsignacion extends Model
      **/
     public function user()
     {
-        return $this->belongsTo(\App\Models\User::class);
+        return $this->belongsTo(\App\User::class);
+    }
+
+    public function tipoMatriz(){
+        return $this->belongsTo(\App\Models\TipoMatriz::class,'tipo_matriz_id');
     }
 }

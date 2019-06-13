@@ -15,6 +15,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/evaluar/matriz', function () {
+    return view('matriz_evaluar.evaluacion');
+});
 
 //*****RUTAS CON AUTENTICACION
 Auth::routes();
