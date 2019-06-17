@@ -15,7 +15,7 @@
     <div class="col-md-12">
         <div class="box box-danger">
             <div class="box-header with-border">
-                <h3 class="box-title">Matrices</h3>
+                <h3 class="box-title">{{$matriz->nombre}}</h3>
             </div>
             <div class="box-body">
                 <div class="col-md-12">
@@ -28,6 +28,10 @@
                             <li><a href="javascript:void(0);">5</a></li>
                         </ul>
                     </div>
+                </div>
+
+                <div class="col-md-12">
+
                 </div>
             </div>
         </div>

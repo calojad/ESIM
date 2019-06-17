@@ -54,7 +54,12 @@ class MatrizController extends AppBaseController
     public function create()
     {
         $modelos = ['' => '--Seleccionar--'] + Modelo::where('estado',1)->pluck('nombre','id')->toArray();
-        $periodos = ['' => '--Seleccionar--'] + Periodo::where('estado',1)->pluck('nombre','id')->toArray();
+
+        $ps = Periodo::where('estado',1)->get();
+        $periodos = [];
+        foreach ($ps as $p){
+            $periodos += [$p->id => $p->tipoPeriodo->nombre.' - '.$p->nombre];
+        }
         $tipoEvaluacion = ['' => '--Seleccionar--'] + TipoEvaluacion::where('estado',1)->pluck('nombre','id')->toArray();
         $carreras = ['' => '--Seleccionar--'] + Carrera::where('estado',1)->pluck('nombre','id')->toArray();
         $tipoMatriz = ['' => '--Seleccionar--'] + TipoMatriz::where('estado',1)->pluck('nombre','id')->toArray();
@@ -135,7 +140,11 @@ class MatrizController extends AppBaseController
         }
 
         $modelos = ['' => '--Seleccionar--'] + Modelo::where('estado',1)->pluck('nombre','id')->toArray();
-        $periodos = ['' => '--Seleccionar--'] + Periodo::where('estado',1)->pluck('nombre','id')->toArray();
+        $ps = Periodo::where('estado',1)->get();
+        $periodos = [];
+        foreach ($ps as $p){
+            $periodos += [$p->id => $p->tipoPeriodo->nombre.' - '.$p->nombre];
+        }
         $tipoEvaluacion = ['' => '--Seleccionar--'] + TipoEvaluacion::where('estado',1)->pluck('nombre','id')->toArray();
         $carreras = ['' => '--Seleccionar--'] + Carrera::where('estado',1)->pluck('nombre','id')->toArray();
         $tipoMatriz = ['' => '--Seleccionar--'] + TipoMatriz::where('estado',1)->pluck('nombre','id')->toArray();

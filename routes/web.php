@@ -15,9 +15,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/evaluar/matriz', function () {
-    return view('matriz_evaluar.evaluacion');
-});
 
 //*****RUTAS CON AUTENTICACION
 Auth::routes();
@@ -86,6 +83,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     AdvancedRoute::controller('/estructura', 'EstructuraController');
     //***Matriz
     Route::resource('matrizs', 'MatrizController');
+    //***MatrizEvaluar
+    AdvancedRoute::controller('/evaluar/matriz', 'MatrizEvaluarController');
     //***Responsable
     Route::resource('responsables', 'ResponsableController');
     //***Tipo Matriz
@@ -96,4 +95,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     //***Home usuario
     Route::get('/home', 'HomeController@index')->name('home');
+    //***MatrizEvaluar
+    AdvancedRoute::controller('/evaluar/matriz', 'MatrizEvaluarController');
 });

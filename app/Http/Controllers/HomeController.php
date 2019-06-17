@@ -20,18 +20,14 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
+    public function index(){
         $rol = Auth::user()->rol;
-        if($rol == 1){
-            return view('home_admin');
-        }elseif($rol == 2){
 
+        if ($rol == 1) {
+            return view('home_admin');
+        }
+
+        if($rol == 2) {
             $asignacionesCarreras = UsuarioAsignacion::where('usuario_id',Auth::user()->id)
                 ->where('carrera_id','>',0)
                 ->get();
@@ -63,7 +59,7 @@ class HomeController extends Controller
         })
             ->where('usuario_asignacion.usuario_id',$id)
             ->groupBy('usuario_asignacion.periodo_id')
-            ->select('usuario_asignacion.carrera_id','usuario_asignacion.periodo_id','matriz.nombre','matriz.periodo_id as mz_periodo','matriz.tipo_matriz_id','matriz.tipo_evaluacion_id','matriz.carrera_id as mz_carrera')
+            ->select('usuario_asignacion.carrera_id','usuario_asignacion.periodo_id','matriz.nombre','matriz.periodo_id as mz_periodo','matriz.tipo_matriz_id','matriz.tipo_evaluacion_id','matriz.carrera_id as mz_carrera','matriz.id')
             ->get();
 
         if(count($asignacionesDeparts)>0){
@@ -72,7 +68,7 @@ class HomeController extends Controller
                 ->where('matriz.tipo_matriz_id',2)
                 ->where('usuario_asignacion.usuario_id', $id)
                 ->groupBy('matriz.periodo_id')
-                ->select('usuario_asignacion.carrera_id', 'usuario_asignacion.periodo_id', 'matriz.nombre', 'matriz.periodo_id as mz_periodo', 'matriz.tipo_matriz_id', 'matriz.tipo_evaluacion_id', 'matriz.carrera_id as mz_carrera')
+                ->select('usuario_asignacion.carrera_id', 'usuario_asignacion.periodo_id', 'matriz.nombre', 'matriz.periodo_id as mz_periodo', 'matriz.tipo_matriz_id', 'matriz.tipo_evaluacion_id', 'matriz.carrera_id as mz_carrera','matriz.id')
                 ->get();
 
             foreach ($m_dep as $md){
