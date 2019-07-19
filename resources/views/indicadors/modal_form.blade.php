@@ -73,11 +73,11 @@
     }
     // Verificar el tipo de indicador y mostrar la respectiva entrada
     function verTipoIndicador(divF,divG,obj) {
-        if(obj === 'Cuantitativos'){
+        if(obj === 'CUANTITATIVOS'){
             divF.show();
             divG.hide();
             $('#divGruopTipoIndi').removeClass('has-error');
-        }else if(obj === 'Cualitativos'){
+        }else if(obj === 'CUALITATIVOS'){
             divF.hide();
             divG.show();
             $('#divGruopTipoIndi').removeClass('has-error');
