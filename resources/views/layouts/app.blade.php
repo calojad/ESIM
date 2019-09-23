@@ -42,7 +42,7 @@
         </div>
         <!-- REQUIRED JS SCRIPTS -->
         @include('layouts.includes.scripts')
-        <script>
+        <script type="text/javascript">
             //Muestra el overlay
             $(window).on('load',function() {
                 $(".preloader").fadeOut("slow");

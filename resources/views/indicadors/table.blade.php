@@ -3,8 +3,6 @@
         <tr>
             <th>Nombre</th>
             <th>Tipo Indicador</th>
-            <th>Grupo Valor</th>
-            <th>Formula</th>
             <th>Estado</th>
             <th>Action</th>
         </tr>
@@ -14,8 +12,6 @@
         <tr>
             <td>{!! $indicador->nombre !!}</td>
             <td>{!! $indicador->tipoIndicador->nombre !!}</td>
-            <td>{!! $indicador->grupo_valor_id === null?'-':$indicador->grupoValor->nombre !!}</td>
-            <td>{!! $indicador->formula_id === null?'-':$indicador->formula->nombre !!}</td>
             <td><label class="label {!! $indicador->estado==1?'label-success':'label-danger' !!}">{!! $indicador->estado==1?'Activo':'Inactivo' !!}</label></td>
             <td>
                 {!! Form::open(['route' => ['indicadors.destroy', $indicador->id], 'method' => 'delete']) !!}

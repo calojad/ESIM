@@ -25,6 +25,7 @@
         $('.table').DataTable({
             pagingType: "full_numbers",
             paging: true,
+            pageLength: 50,
             lengthChange: true,
             searching: true,
             ordering: true,
@@ -33,10 +34,6 @@
             responsive: true,
         });
     });
-    $(".UpperCase,input[name=nombre]").on("keypress blur", function () {
-        $input=$(this);
-        setTimeout(function () {
-            $input.val($input.val().toUpperCase());
-        },50);
-    })
+    //Convertir a mayusculas el campo "Nombre"
+    $(".UpperCase,input[name=nombre]").css('text-transform','uppercase');
 </script>

@@ -33,6 +33,7 @@
             $('#evidencias-table').DataTable({
                 pagingType: "full_numbers",
                 paging: true,
+                pageLength: 50,
                 lengthChange: true,
                 searching: true,
                 ordering: true,

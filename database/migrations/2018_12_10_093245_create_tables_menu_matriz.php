@@ -42,14 +42,8 @@ class CreateTablesMenuMatriz extends Migration
         Schema::create('indicador', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('tipo_indicador_id')->unsigned();
-            $table->integer('grupo_valor_id')->unsigned()->nullable()->default(null);
-            $table->integer('formula_id')->unsigned()->nullable()->default(null);
             $table->string('nombre');
             $table->text('descripcion')->nullable();
-            $table->text('estandar')->nullable();
-            $table->text('vigencia')->nullable();
-            $table->text('marco_normativo')->nullable();
-            $table->text('fuente_info')->nullable();
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
         });
@@ -67,6 +61,14 @@ class CreateTablesMenuMatriz extends Migration
             $table->boolean('importancia')->default(null)->nullable();
             $table->boolean('duplicar')->default(false)->comment('Indica si el elemento puede duplicarse en el mismo modelo o matriz.');
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
+            $table->timestamps();
+        });
+        Schema::create('valoracion_item', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('item_id')->unsigned()->comment('Id del elemento a utilizar la formula: indicador,evidencia o elemento');
+            $table->integer('valora_id')->unsigned()->comment('La formula o grupo de valor a utilizar');
+            $table->integer('tipo_id')->comment('Tipo de valora el elemento Cualitativo o Cuantitativo');
+            $table->string('tabla_ref')->comment('A que tabla hace referencia: Indicador, Evidencia o Elemento');
             $table->timestamps();
         });
         Schema::create('estructura_criterios', function (Blueprint $table) {
@@ -118,6 +120,7 @@ class CreateTablesMenuMatriz extends Migration
         Schema::dropIfExists('indicador');
         Schema::dropIfExists('evidencia');
         Schema::dropIfExists('elemento');
+        Schema::dropIfExists('valoracion_item');
         Schema::dropIfExists('estructura_criterios');
         Schema::dropIfExists('estructura_indicadores');
         Schema::dropIfExists('estructura_evidencias');

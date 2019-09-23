@@ -27,20 +27,8 @@
                         <div class="form-group col-sm-12">
                             {!! Form::label('descripcion', 'Descripcion:') !!}
                             {!! Form::textarea('descripcion', null, ['class' => 'form-control','required'=>true,'rows'=>3,'id'=>'txaDescrip']) !!}
-                            <span class="text-muted pull-right" id="contadorIndicador">0</span>
                         </div>
 
-                        <!-- Grupo Valor Id Field -->
-                        <div id="divGrupoValor" class="form-group col-md-12">
-                            {!! Form::label('grupo_valor_id', 'Grupo Valor:') !!}
-                            {!! Form::select('grupo_valor_id', $gruposValor,null, ['class' => 'form-control select2']) !!}
-                        </div>
-
-                        <!-- Formula Id Field -->
-                        <div id="divFormula" class="form-group col-md-12">
-                            {!! Form::label('formula_id', 'Formula:') !!}
-                            {!! Form::select('formula_id', $formulas, null, ['class' => 'form-control select2']) !!}
-                        </div>
                     </div>
                 </div>
             </div>
@@ -54,36 +42,10 @@
     </div>
 </div>
 <script>
-    //TextArea contar caracteres
-    $('#txaDescrip').on('keyup',function() {
-        contTextarea($(this),$('#contadorIndicador'));
-    });
-    //Select tipo indicador
-    $('#selTipoIndicador').on('change',function () {
-        var obj = $('#selTipoIndicador option:selected').text();
-        var divG = $('#divGrupoValor');
-        var divF = $('#divFormula');
-        verTipoIndicador(divF,divG,obj);
-    });
     //Contar numero de caracteres del textarea
-    function contTextarea(txarea,count){
+    /*function contTextarea(txarea,count){
         var chars = txarea.val().length;
         var diff = chars;
         count.html(diff);
-    }
-    // Verificar el tipo de indicador y mostrar la respectiva entrada
-    function verTipoIndicador(divF,divG,obj) {
-        if(obj === 'CUANTITATIVOS'){
-            divF.show();
-            divG.hide();
-            $('#divGruopTipoIndi').removeClass('has-error');
-        }else if(obj === 'CUALITATIVOS'){
-            divF.hide();
-            divG.show();
-            $('#divGruopTipoIndi').removeClass('has-error');
-        }else{
-            divF.hide();
-            divG.hide();
-        }
-    }
+    }*/
 </script>

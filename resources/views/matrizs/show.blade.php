@@ -56,6 +56,21 @@
                 </div>
             </div>
         </div>
-
     </div>
+    <script type="text/javascript">
+        $(function () {
+            $('.table').DataTable({
+                pagingType: "full_numbers",
+                paging: true,
+                pageLength: 50,
+                lengthChange: true,
+                searching: true,
+                ordering: true,
+                order: [[ 2, "asc" ]],
+                autoWidth: true,
+                retrieve: true,
+                responsive: true,
+            });
+        });
+    </script>
 @endsection

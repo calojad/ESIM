@@ -130,11 +130,6 @@ class EstructuraController extends Controller
     {
         $data = $request->all();
 
-        if ($data['tipo_indicador_id'] == 1)
-            $data['formula_id'] = null;
-        else if ($data['tipo_indicador_id'] == 2)
-            $data['grupo_valor_id'] = null;
-
         Indicador::create($data);
         Flash::success('Indicador creado.');
         return redirect(route('modelos.show', $data['modelo_id']));

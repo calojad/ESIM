@@ -20,7 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 //****************GRUPO DE RUTAS***************
 
-//***Administrador
+//=============Administrador============
 Route::middleware(['auth', 'admin'])->group(function () {
     //***HOME
     Route::get('/home', 'HomeController@index')->name('home');
@@ -91,7 +91,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('tipoMatrizs', 'TipoMatrizController');
 });
 
-//***Usuario
+//================Usuario===================
 Route::middleware(['auth'])->group(function () {
     //***Home usuario
     Route::get('/home', 'HomeController@index')->name('home');

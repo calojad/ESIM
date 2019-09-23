@@ -53,11 +53,8 @@ class IndicadorController extends AppBaseController
         $tiposIndicador = [0 => '--Seleccionar--']+TipoIndicador::where('estado',1)
             ->pluck('nombre','id')
             ->toArray();
-        $gruposValor = GrupoValor::where('estado',1)
-            ->pluck('nombre','id');
-        $formulas = Formulas::where('estado',1)
-            ->pluck('nombre','id');
-        return view('indicadors.create',compact('tiposIndicador','gruposValor','formulas'));
+
+        return view('indicadors.create',compact('tiposIndicador'));
     }
 
     /**
@@ -75,11 +72,6 @@ class IndicadorController extends AppBaseController
         ]);
         $this->validator($request);
         $input = $request->all();
-
-        if($input['tipo_indicador_id'] == 1)
-            $input['formula_id']=null;
-        else if($input['tipo_indicador_id'] == 2)
-            $input['grupo_valor_id']=null;
 
         $indicador = $this->indicadorRepository->create($input);
         Flash::success('Indicador saved successfully.');
@@ -139,12 +131,8 @@ class IndicadorController extends AppBaseController
         $tiposIndicador = [0 => '--Seleccionar--']+TipoIndicador::where('estado',1)
                 ->pluck('nombre','id')
                 ->toArray();
-        $gruposValor = GrupoValor::where('estado',1)
-            ->pluck('nombre','id');
-        $formulas = Formulas::where('estado',1)
-            ->pluck('nombre','id');
 
-        return view('indicadors.edit',compact('tiposIndicador','gruposValor','formulas','indicador'));
+        return view('indicadors.edit',compact('tiposIndicador','indicador'));
     }
 
     /**
@@ -171,10 +159,6 @@ class IndicadorController extends AppBaseController
 
         $input=$request->all();
 
-        if($input['tipo_indicador_id'] == 1)
-            $input['formula_id'] = null;
-        else if($input['tipo_indicador_id'] == 2)
-            $input['grupo_valor_id'] = null;
         $indicador = $this->indicadorRepository->update($input, $id);
 
         Flash::success('Indicador updated successfully.');
