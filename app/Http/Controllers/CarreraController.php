@@ -10,6 +10,7 @@ use Flash;
 use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class CarreraController extends AppBaseController
 {
@@ -60,6 +61,7 @@ class CarreraController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
+        HelperCal::strUp($input);
         $carrera = $this->carreraRepository->create($input);
         Flash::success('Carrera saved successfully.');
         return redirect(route('carreras.index'));
@@ -123,8 +125,9 @@ class CarreraController extends AppBaseController
             Flash::error('Carrera not found');
             return redirect(route('carreras.index'));
         }
-
-        $carrera = $this->carreraRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $carrera = $this->carreraRepository->update($input, $id);
         Flash::success('Carrera updated successfully.');
 
         return redirect(route('carreras.index'));

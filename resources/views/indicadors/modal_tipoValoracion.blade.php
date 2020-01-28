@@ -7,10 +7,17 @@
                 <h4 class="modal-title">Valoración</h4>
             </div>
             <div class="modal-body">
-                <div class="form-group col-sm-12">
-                    {!! Form::label('formula_id', 'Tipo de Valoración:') !!}
-                    {!! Form::text('formula_id', null, ['class' => 'form-control UpperCase','required'=>true]) !!}
+                @if($indicador->tipo_indicador_id == 1)
+                <div id="divTipoGrupoValorSelect" class="form-group col-sm-12">
+                    {!! Form::label('formula_id', 'Grupo de Valoraciones:') !!}
+                    {!! Form::select('formula_id',$grupoValor,null, ['class' => 'form-control UpperCase','required'=>true]) !!}
                 </div>
+                @else
+                <div id="divTipoFormulaSelect" class="form-group col-sm-12">
+                    {!! Form::label('formula_id', 'Formula:') !!}
+                    {!! Form::select('formula_id',$formulas,null, ['class' => 'form-control UpperCase','required'=>true]) !!}
+                </div>
+                    @endif
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancelar</button>

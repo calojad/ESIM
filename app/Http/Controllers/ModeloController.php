@@ -13,6 +13,7 @@ use App\Models\Indicador;
 use App\Models\TipoIndicador;
 use App\Repositories\ModeloRepository;
 use Flash;
+use HelperCal;
 use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
@@ -31,21 +32,20 @@ class ModeloController extends AppBaseController
      * Display a listing of the Modelo.
      *
      * @param Request $request
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(Request $request)
     {
         $this->modeloRepository->pushCriteria(new RequestCriteria($request));
         $modelos = $this->modeloRepository->all();
 
-        return view('modelos.index')
-            ->with('modelos', $modelos);
+        return view('modelos.index')->with('modelos', $modelos);
     }
 
     /**
      * Show the form for creating a new Modelo.
      *
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
@@ -57,7 +57,7 @@ class ModeloController extends AppBaseController
      *
      * @param CreateModeloRequest $request
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(CreateModeloRequest $request)
     {
@@ -66,7 +66,7 @@ class ModeloController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $modelo = $this->modeloRepository->create($input);
 
         Flash::success('Modelo saved successfully.');
@@ -79,13 +79,13 @@ class ModeloController extends AppBaseController
      *
      * @param  int $id
      *
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show($id)
     {
         $modelo = $this->modeloRepository->findWithoutFail($id);
 
-        if (empty($modelo)) {
+        if ($modelo === null) {
             Flash::error('Modelo not found');
             return redirect(route('modelos.index'));
         }
@@ -169,13 +169,6 @@ class ModeloController extends AppBaseController
         return $html;
     }
 
-    /**
-     * Show the form for editing the specified Modelo.
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
     public function edit($id)
     {
         $modelo = $this->modeloRepository->findWithoutFail($id);
@@ -189,14 +182,6 @@ class ModeloController extends AppBaseController
         return view('modelos.edit')->with('modelo', $modelo);
     }
 
-    /**
-     * Update the specified Modelo in storage.
-     *
-     * @param  int $id
-     * @param UpdateModeloRequest $request
-     *
-     * @return Response
-     */
     public function update($id, UpdateModeloRequest $request)
     {
         request()->validate([
@@ -207,24 +192,16 @@ class ModeloController extends AppBaseController
 
         if (empty($modelo)) {
             Flash::error('Modelo not found');
-
             return redirect(route('modelos.index'));
         }
-
-        $modelo = $this->modeloRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $modelo = $this->modeloRepository->update($input, $id);
 
         Flash::success('Modelo updated successfully.');
-
         return redirect(route('modelos.index'));
     }
 
-    /**
-     * Remove the specified Modelo from storage.
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
     public function destroy($id)
     {
         $modelo = $this->modeloRepository->findWithoutFail($id);

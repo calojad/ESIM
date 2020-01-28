@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateTipoUnidadRequest;
 use App\Http\Requests\UpdateTipoUnidadRequest;
 use App\Repositories\TipoUnidadRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class TipoUnidadController extends AppBaseController
 {
@@ -61,7 +61,7 @@ class TipoUnidadController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $tipoUnidad = $this->tipoUnidadRepository->create($input);
 
         Flash::success('Tipo Unidad saved successfully.');
@@ -130,8 +130,9 @@ class TipoUnidadController extends AppBaseController
 
             return redirect(route('tipoUnidads.index'));
         }
-
-        $tipoUnidad = $this->tipoUnidadRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $tipoUnidad = $this->tipoUnidadRepository->update($input, $id);
 
         Flash::success('Tipo Unidad updated successfully.');
 

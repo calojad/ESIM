@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateResponsableRequest;
 use App\Http\Requests\UpdateResponsableRequest;
 use App\Repositories\ResponsableRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class ResponsableController extends AppBaseController
 {
@@ -61,7 +61,7 @@ class ResponsableController extends AppBaseController
         ]);
 
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $responsable = $this->responsableRepository->create($input);
 
         Flash::success('Responsable saved successfully.');
@@ -131,11 +131,11 @@ class ResponsableController extends AppBaseController
 
             return redirect(route('responsables.index'));
         }
-
-        $responsable = $this->responsableRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $responsable = $this->responsableRepository->update($input, $id);
 
         Flash::success('Responsable updated successfully.');
-
         return redirect(route('responsables.index'));
     }
 

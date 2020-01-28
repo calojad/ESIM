@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateTipoEvaluacionRequest;
 use App\Http\Requests\UpdateTipoEvaluacionRequest;
 use App\Repositories\TipoEvaluacionRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class TipoEvaluacionController extends AppBaseController
 {
@@ -61,7 +61,7 @@ class TipoEvaluacionController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $tipoEvaluacion = $this->tipoEvaluacionRepository->create($input);
 
         Flash::success('Tipo Evaluacion saved successfully.');
@@ -130,8 +130,9 @@ class TipoEvaluacionController extends AppBaseController
 
             return redirect(route('tipoEvaluacions.index'));
         }
-
-        $tipoEvaluacion = $this->tipoEvaluacionRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $tipoEvaluacion = $this->tipoEvaluacionRepository->update($input, $id);
 
         Flash::success('Tipo Evaluacion updated successfully.');
 

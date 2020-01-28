@@ -92,7 +92,7 @@
             //Inicializar TreeView
             $('.easy-tree').EasyTree();
             //Click para contraer nodos
-            $('li.parent_li > span > span').click();
+            // $('li.parent_li > span > span').click();
             //Inicializar slimscroll
             $('#divEstructura').slimScroll({
                 height: 'auto',

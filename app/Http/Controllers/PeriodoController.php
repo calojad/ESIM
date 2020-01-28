@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Http\Requests\CreatePeriodoRequest;
 use App\Http\Requests\UpdatePeriodoRequest;
-use App\Repositories\PeriodoRepository;
-use App\Http\Controllers\AppBaseController;
 use App\Models\TipoPeriodo;
-use Illuminate\Http\Request;
+use App\Repositories\PeriodoRepository;
 use Flash;
+use Illuminate\Http\Request;
+use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class PeriodoController extends AppBaseController
 {
@@ -61,7 +61,7 @@ class PeriodoController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $periodo = $this->periodoRepository->create($input);
 
         Flash::success('Periodo saved successfully.');
@@ -128,14 +128,13 @@ class PeriodoController extends AppBaseController
 
         if (empty($periodo)) {
             Flash::error('Periodo not found');
-
             return redirect(route('periodos.index'));
         }
-
-        $periodo = $this->periodoRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $periodo = $this->periodoRepository->update($input, $id);
 
         Flash::success('Periodo updated successfully.');
-
         return redirect(route('periodos.index'));
     }
 

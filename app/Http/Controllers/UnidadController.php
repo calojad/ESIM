@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Http\Requests\CreateUnidadRequest;
 use App\Http\Requests\UpdateUnidadRequest;
-use App\Repositories\UnidadRepository;
-use App\Models\Ubicacion;
 use App\Models\TipoUnidad;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
+use App\Models\Ubicacion;
+use App\Repositories\UnidadRepository;
 use Flash;
+use Illuminate\Http\Request;
+use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class UnidadController extends AppBaseController
 {
@@ -65,7 +65,7 @@ class UnidadController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $unidad = $this->unidadRepository->create($input);
 
         Flash::success('Unidad saved successfully.');
@@ -136,8 +136,9 @@ class UnidadController extends AppBaseController
 
             return redirect(route('unidads.index'));
         }
-
-        $unidad = $this->unidadRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $unidad = $this->unidadRepository->update($input, $id);
 
         Flash::success('Unidad updated successfully.');
 

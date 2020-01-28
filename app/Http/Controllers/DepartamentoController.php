@@ -6,11 +6,11 @@ use App\Http\Requests\CreateDepartamentoRequest;
 use App\Http\Requests\UpdateDepartamentoRequest;
 use App\Models\Responsable;
 use App\Repositories\DepartamentoRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class DepartamentoController extends AppBaseController
 {
@@ -62,7 +62,7 @@ class DepartamentoController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $departamento = $this->departamentoRepository->create($input);
 
         Flash::success('Departamento saved successfully.');
@@ -132,8 +132,9 @@ class DepartamentoController extends AppBaseController
 
             return redirect(route('departamentos.index'));
         }
-
-        $departamento = $this->departamentoRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $departamento = $this->departamentoRepository->update($input, $id);
 
         Flash::success('Departamento updated successfully.');
 

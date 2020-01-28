@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateTipoIndicadorRequest;
 use App\Http\Requests\UpdateTipoIndicadorRequest;
 use App\Repositories\TipoIndicadorRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class TipoIndicadorController extends AppBaseController
 {
@@ -60,7 +60,7 @@ class TipoIndicadorController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $tipoIndicador = $this->tipoIndicadorRepository->create($input);
 
         Flash::success('Tipo Indicador saved successfully.');
@@ -129,8 +129,9 @@ class TipoIndicadorController extends AppBaseController
 
             return redirect(route('tipoIndicadors.index'));
         }
-
-        $tipoIndicador = $this->tipoIndicadorRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $tipoIndicador = $this->tipoIndicadorRepository->update($input, $id);
 
         Flash::success('Tipo Indicador updated successfully.');
 

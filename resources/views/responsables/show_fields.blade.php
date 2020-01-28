@@ -28,10 +28,10 @@
     <p>{!! $responsable->email_institu !!}</p>
 </div>
 
-<!-- Rol Field -->
+<!-- Cargo Field -->
 <div class="form-group">
-    {!! Form::label('rol', 'Rol:') !!}
-    <p>{!! $responsable->rol !!}</p>
+    {!! Form::label('cargo', 'Cargo:') !!}
+    <p>{!! $responsable->cargo !!}</p>
 </div>
 
 <!-- Descripcion Field -->

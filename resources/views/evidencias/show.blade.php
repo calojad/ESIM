@@ -46,7 +46,7 @@
                         <tr>
                             <th>N°</th>
                             <th>Elemento</th>
-                            <th>Accion</th>
+                            <th>Acción</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -56,6 +56,7 @@
                                 <td>{{str_limit($estEle->elemento->nombre,150)}}</td>
                                 <td>
                                     <button type="button" title="Quitar Elemento" class="btn btn-xs btn-danger btnQuitarElemento" data-id="{{$estEle->id}}"><i class="fa fa-trash-alt"></i></button>
+                                    <button type="button" title="Tipo Valoración" class="btn btn-xs btn-info" data-id="{{$estEle->id}}" data-toggle="modal" data-target="#modalVerDetallesElementoValoracion"><i class="fa fa-check-circle"></i></button>
                                 </td>
                             </tr>
                         @endforeach
@@ -63,6 +64,7 @@
                     </table>
                 </div>
             </div>
+            @include('elementos.modal_detalle')
             <div class="box-footer">
                 <a href="{!! route('indicadors.show',$url_par[0].'_'.$url_par[1].'_'.$url_par[2]) !!}" class="btn btn-default">Back</a>
             </div>

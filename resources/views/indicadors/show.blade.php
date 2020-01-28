@@ -29,7 +29,7 @@
                     <div class="col-md-4">
                         <dl>
                             <dt>Tipo Indicador</dt>
-                            <dd>{{$indicador->tipoIndicador->nombre}} <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modalAsigValoracion">Valoracion</button></dd>
+                            <dd>{{$indicador->tipoIndicador->nombre}}</dd>
                         </dl>
                     </div>
                     <div class="col-md-4">
@@ -40,7 +40,6 @@
                     </div>
                 </div>
             </div>
-            @include('indicadors.modal_tipoValoracion')
             <div class="box-body">
                 <div class="col-md-12"
                      style="margin-bottom: 10px;background-color: #DD4B39;padding: 7px;border-radius: 8px;min-height: 55px">

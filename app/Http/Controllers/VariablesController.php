@@ -56,7 +56,7 @@ class VariablesController extends AppBaseController
     public function store(CreateVariablesRequest $request)
     {
         $input = $request->all();
-
+        $input['variable'] = strtoupper($input['variable']);
         $variables = $this->variablesRepository->create($input);
 
         Flash::success('Variables saved successfully.');
@@ -121,8 +121,9 @@ class VariablesController extends AppBaseController
 
             return redirect('/cuantitativos/V');
         }
-
-        $variables = $this->variablesRepository->update($request->all(), $id);
+        $input = $request->all();
+        $input['variable'] = strtoupper($input['variable']);
+        $variables = $this->variablesRepository->update($input, $id);
 
         Flash::success('Variables updated successfully.');
 

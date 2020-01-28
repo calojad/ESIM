@@ -9,7 +9,6 @@ use App\Models\EstructuraEvidencias;
 use App\Models\Evidencia;
 use App\Models\Formulas;
 use App\Models\GrupoValor;
-use App\Models\Indicador;
 use App\Models\TipoIndicador;
 use App\Repositories\IndicadorRepository;
 use App\Rules\MayoraCero;
@@ -17,6 +16,7 @@ use Flash;
 use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class IndicadorController extends AppBaseController
 {
@@ -72,7 +72,7 @@ class IndicadorController extends AppBaseController
         ]);
         $this->validator($request);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $indicador = $this->indicadorRepository->create($input);
         Flash::success('Indicador saved successfully.');
 
@@ -94,23 +94,21 @@ class IndicadorController extends AppBaseController
 
         if (empty($indicador)) {
             Flash::error('Indicador not found');
-
             return redirect(route('indicadors.index'));
         }
 
         $modelo = EstructuraCriterios::findOrFail($url_par[1]);
-
         $evidencias = Evidencia::where('estado',1)->get();
-
         $ee_array = EstructuraEvidencias::leftjoin('estructura_indicadores','estructura_indicadores.id','=','estructura_evidencias.estruc_indic_id')
             ->leftjoin('estructura_criterios','estructura_criterios.id','=','estructura_indicadores.estruc_crite_id')
             ->where('estructura_criterios.modelo_id',$modelo->modelo_id)
             ->pluck('estructura_evidencias.evidencia_id')
             ->toArray();
-
         $estrucEvidencias = EstructuraEvidencias::where('estruc_indic_id',$url_par[2])->get();
+        $grupoValor = GrupoValor::where('estado',1)->pluck('nombre','id');
+        $formulas = Formulas::where('estado',1)->pluck('nombre','id');
 
-        return view('indicadors.show',compact('indicador','modelo','evidencias','ee_array','estrucEvidencias','id'));
+        return view('indicadors.show',compact('indicador','modelo','evidencias','ee_array','estrucEvidencias','id','grupoValor','formulas'));
     }
 
     /**
@@ -153,12 +151,11 @@ class IndicadorController extends AppBaseController
 
         if (empty($indicador)) {
             Flash::error('Indicador not found');
-
             return redirect(route('indicadors.index'));
         }
 
         $input=$request->all();
-
+        HelperCal::strUp($input);
         $indicador = $this->indicadorRepository->update($input, $id);
 
         Flash::success('Indicador updated successfully.');

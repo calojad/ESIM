@@ -7,11 +7,11 @@ use App\Http\Requests\UpdateGrupoValorRequest;
 use App\Models\TipoIndicador;
 use App\Models\Valoracion;
 use App\Repositories\GrupoValorRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class GrupoValorController extends AppBaseController
 {
@@ -66,7 +66,7 @@ class GrupoValorController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $grupoValor = $this->grupoValorRepository->create($input);
 
         Flash::success('Grupo Valor saved successfully.');
@@ -136,8 +136,9 @@ class GrupoValorController extends AppBaseController
 
             return redirect(route('grupoValors.index'));
         }
-
-        $grupoValor = $this->grupoValorRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $grupoValor = $this->grupoValorRepository->update($input, $id);
 
         Flash::success('Grupo Valor updated successfully.');
 

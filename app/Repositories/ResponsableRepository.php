@@ -24,7 +24,7 @@ class ResponsableRepository extends BaseRepository
         'telefono',
         'gmail',
         'email_institu',
-        'rol',
+        'cargo',
         'descripcion'
     ];
 

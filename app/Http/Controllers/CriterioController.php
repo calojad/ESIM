@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateCriterioRequest;
 use App\Http\Requests\UpdateCriterioRequest;
 use App\Repositories\CriterioRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class CriterioController extends AppBaseController
 {
@@ -60,7 +60,7 @@ class CriterioController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $criterio = $this->criterioRepository->create($input);
 
         Flash::success('Criterio saved successfully.');
@@ -129,8 +129,9 @@ class CriterioController extends AppBaseController
 
             return redirect(route('criterios.index'));
         }
-
-        $criterio = $this->criterioRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $criterio = $this->criterioRepository->update($input->all(), $id);
 
         Flash::success('Criterio updated successfully.');
 

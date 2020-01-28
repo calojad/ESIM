@@ -5,21 +5,17 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateMatrizRequest;
 use App\Http\Requests\UpdateMatrizRequest;
 use App\Models\Carrera;
-use App\Models\Departamento;
-use App\Models\EstructuraCriterios;
 use App\Models\EstructuraElementos;
-use App\Models\EstructuraEvidencias;
-use App\Models\EstructuraIndicadores;
 use App\Models\Modelo;
 use App\Models\Periodo;
 use App\Models\TipoEvaluacion;
 use App\Models\TipoMatriz;
 use App\Repositories\MatrizRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class MatrizController extends AppBaseController
 {
@@ -81,6 +77,7 @@ class MatrizController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
+        HelperCal::strUp($input);
         $matriz = $this->matrizRepository->create($input);
 
         Flash::success('Matriz saved successfully.');
@@ -170,11 +167,11 @@ class MatrizController extends AppBaseController
 
         if (empty($matriz)) {
             Flash::error('Matriz not found');
-
             return redirect(route('matrizs.index'));
         }
-
-        $matriz = $this->matrizRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $matriz = $this->matrizRepository->update($input, $id);
 
         Flash::success('Matriz updated successfully.');
 

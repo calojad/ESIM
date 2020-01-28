@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateUbicacionRequest;
 use App\Http\Requests\UpdateUbicacionRequest;
 use App\Repositories\UbicacionRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class UbicacionController extends AppBaseController
 {
@@ -61,7 +61,7 @@ class UbicacionController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $ubicacion = $this->ubicacionRepository->create($input);
 
         Flash::success('Ubicacion saved successfully.');
@@ -130,8 +130,9 @@ class UbicacionController extends AppBaseController
 
             return redirect(route('ubicacions.index'));
         }
-
-        $ubicacion = $this->ubicacionRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $ubicacion = $this->ubicacionRepository->update($input, $id);
 
         Flash::success('Ubicacion updated successfully.');
 

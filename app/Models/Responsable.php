@@ -21,7 +21,7 @@ use Eloquent as Model;
  * @property string telefono
  * @property string gmail
  * @property string email_institu
- * @property string rol
+ * @property string cargo
  * @property string descripcion
  */
 class Responsable extends Model
@@ -39,7 +39,7 @@ class Responsable extends Model
         'telefono',
         'gmail',
         'email_institu',
-        'rol',
+        'cargo',
         'descripcion'
     ];
 
@@ -54,7 +54,7 @@ class Responsable extends Model
         'telefono' => 'string',
         'gmail' => 'string',
         'email_institu' => 'string',
-        'rol' => 'string',
+        'cargo' => 'string',
         'descripcion' => 'string'
     ];
 

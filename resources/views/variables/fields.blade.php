@@ -8,7 +8,7 @@
 	<!-- Variable Field -->
 	<div class="form-group col-sm-6">
 	    {!! Form::label('variable', 'Variable:') !!}
-	    {!! Form::text('variable', null, ['class' => 'form-control','required' => true,]) !!}
+	    {!! Form::text('variable', null, ['class' => 'form-control','required' => true,'style' => 'text-transform:uppercase']) !!}
 	</div>
 
 	<!-- Estado Field -->

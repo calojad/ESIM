@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateFormulasRequest;
 use App\Http\Requests\UpdateFormulasRequest;
 use App\Repositories\FormulasRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class FormulasController extends AppBaseController
 {
@@ -57,6 +57,7 @@ class FormulasController extends AppBaseController
     public function store(CreateFormulasRequest $request)
     {
         $input = $request->all();
+        HelperCal::strUp($input);
         $formulas = $this->formulasRepository->create($input);
         Flash::success('Formulas saved successfully.');
 
@@ -114,7 +115,9 @@ class FormulasController extends AppBaseController
             Flash::error('Formulas not found');
             return redirect('cuantitativos/F');
         }
-        $formulas = $this->formulasRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $formulas = $this->formulasRepository->update($input, $id);
         Flash::success('Formulas updated successfully.');
 
         return redirect('cuantitativos/F');

@@ -2,30 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c3f4dd-1450-4e65-a1d3-4c4798818ff9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ESIM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ESIM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c81fcab-1bf9-4604-8e90-1edff3e9d213.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3c81fcab-1bf9-4604-8e90-1edff3e9d213.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ER-ESIM.dia" beforeDir="false" afterPath="$PROJECT_DIR$/ER-ESIM.dia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstructuraController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CarreraController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CarreraController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CriterioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CriterioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DepartamentoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DepartamentoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ElementoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ElementoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormulasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormulasController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GrupoValorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GrupoValorController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndicadorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Indicador.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Indicador.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_12_10_093245_create_tables_menu_matriz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_04_115159_add_foreign_keys_tables_matriz.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_04_115159_add_foreign_keys_tables_matriz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/elementos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/elementos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/evidencias/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evidencias/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MatrizController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MatrizController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MatrizEvaluarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MatrizEvaluarController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ModeloController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PeriodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PeriodoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ResponsableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ResponsableController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TipoEvaluacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TipoEvaluacionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TipoIndicadorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TipoIndicadorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TipoMatrizController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TipoMatrizController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TipoPeriodoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TipoPeriodoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TipoUnidadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TipoUnidadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UbicacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UbicacionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UnidadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UnidadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ValoracionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ValoracionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VariablesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VariablesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Responsable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Responsable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ResponsableRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ResponsableRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_10_12_111210_create_tables_menu_ies.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2018_10_12_111210_create_tables_menu_ies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/evidencias/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/indicadors/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/fields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/modal_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/indicadors/modal_tipoValoracion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/modal_tipoValoracion.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/indicadors/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/indicadors/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/includes/scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/includes/scripts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/matrizs/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/matrizs/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/matrizs/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/matrizs/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/usuario_asignacion/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/usuario_asignacion/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/valoracions/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/valoracions/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/includes/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/matriz_evaluar/evaluacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/matriz_evaluar/evaluacion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/modelos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/modelos/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/responsables/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/responsables/fields.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/responsables/show_fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/responsables/show_fields.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/variables/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/variables/fields.blade.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +79,13 @@
         <item name="cal_esim@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="cal_esim: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cal_esim@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cal_esim: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="estructura_criterios: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -170,8 +193,15 @@
   </component>
   <component name="ProjectId" id="1Ogona4eRwvwXfXl2uM92KliJvn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="modal&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/unidad_carrera/modal_agregar.blade.php&#10;regis&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/auth/register.blade.php&#10;sty&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/public/css/style.css&#10;styl&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/public/css/style.css&#10;ad&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/public/adminLTE-2.4.5/dist/css/AdminLTE.min.css&#10;app.blade&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/app.blade.php&#10;sideba&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/sidebar.blade.php&#10;main&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/main_header.blade.php&#10;scripts&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/scripts.blade.php&#10;head.blade&#9;FILE&#9;file://C:/Users/Calojad/Documents/ProyectosWeb/ESIM/resources/views/layouts/includes/heads.blade.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -181,28 +211,28 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\adminLTE-2.4.5\bower_components\datatables\js" />
-      <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\images" />
       <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\plugins\easy-tree" />
       <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\images\Logo" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\adminLTE-2.4.5\bower_components\datatables\js" />
+      <recent name="C:\Users\Calojad\Documents\ProyectosWeb\ESIM\public\images" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -380,7 +410,24 @@
       <workItem from="1568823841760" duration="103000" />
       <workItem from="1568824112242" duration="632000" />
       <workItem from="1568901147527" duration="617000" />
-      <workItem from="1569251760080" duration="6347000" />
+      <workItem from="1569251760080" duration="8473000" />
+      <workItem from="1569614752034" duration="65000" />
+      <workItem from="1569615006954" duration="5502000" />
+      <workItem from="1569850199161" duration="23000" />
+      <workItem from="1569850257440" duration="20217000" />
+      <workItem from="1570028191061" duration="122000" />
+      <workItem from="1571062473835" duration="6306000" />
+      <workItem from="1575640483389" duration="53000" />
+      <workItem from="1575640817526" duration="120000" />
+      <workItem from="1575641169456" duration="49000" />
+      <workItem from="1575641250865" duration="85000" />
+      <workItem from="1577997563295" duration="2249000" />
+      <workItem from="1578057716992" duration="5820000" />
+      <workItem from="1578065263469" duration="14743000" />
+      <workItem from="1578329602169" duration="3041000" />
+      <workItem from="1578415322767" duration="5777000" />
+      <workItem from="1578581935956" duration="6442000" />
+      <workItem from="1578925727265" duration="14007000" />
     </task>
     <servers />
   </component>
@@ -399,5 +446,39 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="510" y="130" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578064990743">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="510" y="130" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578064990743" />
+    <state x="363" y="91" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1575641209228" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578064503833">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578064503833" />
+    <state x="414" y="154" key="SettingsEditor" timestamp="1578060066679">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="154" key="SettingsEditor/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578060066679" />
+    <state width="700" height="638" key="SwitcherDM" timestamp="1578070966067">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="700" height="638" key="SwitcherDM/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578070966067" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1575641319273" />
+    <state x="533" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1578925854066">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="533" y="266" key="com.intellij.ide.util.TipDialog/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578925854066" />
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1575641260586" />
+    <state x="533" y="266" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1366.304.1366.728@0.0.1920.1040" timestamp="1578581935157" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1578930947401">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578930947401" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1578070970921">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578070970921" />
   </component>
 </project>

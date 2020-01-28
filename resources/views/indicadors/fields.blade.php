@@ -1,8 +1,25 @@
+<style>
+    .tooltip.right > .tooltip-inner{
+        max-width: 200px;
+        padding: 3px 8px;
+        color: #fff;
+        text-align: center;
+        background-color: #0d6aad;
+        border-radius: 4px
+    }
+</style>
 <div class="col-md-5 col-sm-4 col-md-offset-4 col-sm-offset-0">
     <!-- Tipo Indicador Id Field -->
     <div id="divGruopTipoIndi" class="form-group col-sm-12 {{$errors->has('tipo_indicador_id')?'has-error':''}}">
         {!! Form::label('tipo_indicador_id', 'Tipo Indicador:') !!}
         {!! Form::select('tipo_indicador_id', $tiposIndicador, null,['class' => 'form-control','required'=>true,'id'=>'selTipoIndicador']) !!}
+        <p class="col-md-11">
+            <span>Nota:</span>
+            <span class="text-muted">Los componentes de este indicador heredarán el tipo de indicador.</span>
+        </p>
+        <div class="col-md-1">
+            <i class="iToltipAyuda text-info far fa-question-circle" tabindex="0" data-toggle="tooltip" data-placement="right" data-container="body" style="cursor: pointer" title="Las evidencias que esten por debajo de dicho indicador tendra una valoración del mismo tipo que el indicador por defecto."></i>
+        </div>
     </div>
 
     <!-- Nombre Field -->
@@ -53,6 +70,7 @@
     // });
     //Inicializacion de los radio buttons
     $(function () {
+        $('.iToltipAyuda').tooltip();
         $('#radActivo').iCheck({
             checkboxClass: 'icheckbox_square-blue',
             radioClass: 'iradio_square-green',

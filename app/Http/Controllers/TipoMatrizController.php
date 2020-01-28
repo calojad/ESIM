@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateTipoMatrizRequest;
 use App\Http\Requests\UpdateTipoMatrizRequest;
 use App\Repositories\TipoMatrizRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class TipoMatrizController extends AppBaseController
 {
@@ -60,7 +60,7 @@ class TipoMatrizController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $tipoMatriz = $this->tipoMatrizRepository->create($input);
 
         Flash::success('Tipo Matriz saved successfully.');
@@ -129,8 +129,9 @@ class TipoMatrizController extends AppBaseController
 
             return redirect(route('tipoMatrizs.index'));
         }
-
-        $tipoMatriz = $this->tipoMatrizRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $tipoMatriz = $this->tipoMatrizRepository->update($input, $id);
 
         Flash::success('Tipo Matriz updated successfully.');
 

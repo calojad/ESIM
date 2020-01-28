@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateTipoPeriodoRequest;
 use App\Http\Requests\UpdateTipoPeriodoRequest;
 use App\Repositories\TipoPeriodoRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class TipoPeriodoController extends AppBaseController
 {
@@ -61,7 +61,7 @@ class TipoPeriodoController extends AppBaseController
             'estado' => 'required'
         ]);
         $input = $request->all();
-
+        HelperCal::strUp($input);
         $tipoPeriodo = $this->tipoPeriodoRepository->create($input);
 
         Flash::success('Tipo Periodo saved successfully.');
@@ -130,8 +130,9 @@ class TipoPeriodoController extends AppBaseController
 
             return redirect(route('tipoPeriodos.index'));
         }
-
-        $tipoPeriodo = $this->tipoPeriodoRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $tipoPeriodo = $this->tipoPeriodoRepository->update($input, $id);
 
         Flash::success('Tipo Periodo updated successfully.');
 

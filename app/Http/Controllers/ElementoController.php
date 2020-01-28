@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateElementoRequest;
 use App\Http\Requests\UpdateElementoRequest;
 use App\Repositories\ElementoRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Http\Request;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -61,7 +60,6 @@ class ElementoController extends AppBaseController
         ]);
         $input = $request->all();
         $elemento = $this->elementoRepository->create($input);
-
         Flash::success('Elemento saved successfully.');
 
         return redirect(route('elementos.index'));
@@ -126,13 +124,13 @@ class ElementoController extends AppBaseController
         $data['importancia'] = ($request->get('importancia') ?? 0);
         $data['duplicar'] = ($request->get('duplicar') ?? 0);
         $data['estado'] = $request->get('estado');
+
         if (empty($elemento)) {
             Flash::error('Elemento not found');
-
             return redirect(route('elementos.index'));
         }
-        $elemento = $this->elementoRepository->update($data, $id);
 
+        $elemento = $this->elementoRepository->update($data, $id);
         Flash::success('Elemento updated successfully.');
 
         return redirect(route('elementos.index'));

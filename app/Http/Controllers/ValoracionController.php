@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Http\Requests\CreateValoracionRequest;
 use App\Http\Requests\UpdateValoracionRequest;
-use App\Repositories\ValoracionRepository;
-use App\Http\Controllers\AppBaseController;
-use Illuminate\Http\Request;
 use App\Models\GrupoValor;
+use App\Repositories\ValoracionRepository;
 use Flash;
+use Illuminate\Http\Request;
+use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use HelperCal;
 
 class ValoracionController extends AppBaseController
 {
@@ -60,6 +60,7 @@ class ValoracionController extends AppBaseController
     public function store(CreateValoracionRequest $request)
     {
         $input = $request->all();
+        HelperCal::strUp($input);
         $valoracion = $this->valoracionRepository->create($input);
         Flash::success('Valoracion saved successfully.');
 
@@ -123,7 +124,9 @@ class ValoracionController extends AppBaseController
 
             return redirect(route('grupoValors.show',$request->get('grupo_valor_id')));
         }
-        $valoracion = $this->valoracionRepository->update($request->all(), $id);
+        $input = $request->all();
+        HelperCal::strUp($input);
+        $valoracion = $this->valoracionRepository->update($input, $id);
         Flash::success('Valoracion updated successfully.');
         return redirect(route('grupoValors.show',$request->get('grupo_valor_id')));
     }

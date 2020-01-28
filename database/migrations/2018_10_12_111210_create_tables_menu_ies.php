@@ -43,7 +43,7 @@ class CreateTablesMenuIes extends Migration
             $table->string('telefono');
             $table->string('gmail');
             $table->string('email_institu')->nullable();
-            $table->string('rol')->nullable();
+            $table->string('cargo')->nullable();
             $table->string('descripcion')->nullable();
             $table->integer('estado')->comment('1=Activo|0=Inactivo');
             $table->timestamps();
