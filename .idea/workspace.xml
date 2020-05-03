@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08c3f4dd-1450-4e65-a1d3-4c4798818ff9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/matriz_evaluar/evaluacion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/matriz_evaluar/evaluacion.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,6 +370,9 @@
       <workItem from="1583073355823" duration="332000" />
       <workItem from="1583074061032" duration="625000" />
       <workItem from="1583087122808" duration="3117000" />
+      <workItem from="1584203679857" duration="663000" />
+      <workItem from="1585762397428" duration="1194000" />
+      <workItem from="1588093640436" duration="1263000" />
     </task>
     <servers />
   </component>
@@ -394,37 +396,14 @@
     <state x="363" y="91" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583073572184">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="510" y="130" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578064990743" />
-    <state x="363" y="91" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1575641209228" />
     <state x="363" y="91" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1583073572184" />
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578064503833">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578064503833" />
-    <state x="414" y="154" key="SettingsEditor" timestamp="1578060066679">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="154" key="SettingsEditor/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578060066679" />
-    <state width="700" height="638" key="SwitcherDM" timestamp="1578070966067">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="700" height="638" key="SwitcherDM/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578070966067" />
-    <state width="498" height="446" key="SwitcherDM/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1575641319273" />
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1583087126931">
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1588093810798">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="533" y="266" key="com.intellij.ide.util.TipDialog/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578925854066" />
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1575641260586" />
-    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583087126931" />
-    <state x="533" y="266" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1366.304.1366.728@0.0.1920.1040" timestamp="1578581935157" />
+    <state x="379" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1588093810798" />
     <state x="438" y="168" key="run.anything.popup" timestamp="1583100224837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578930947401" />
     <state x="438" y="168" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1583100224837" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1578070970921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1366.304.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1578070970921" />
   </component>
 </project>
